@@ -1,0 +1,59 @@
+============================================================
+  HAVEN PHAM — WEBSITE PORTFOLIO 4 NGÔN NGỮ (BẢN V2)
+  EN / VI / 繁體中文 / 简体中文
+============================================================
+
+BẠN KHÔNG CẦN CÀI PYTHON, NODE.JS HAY PHẦN MỀM LẬP TRÌNH.
+
+A. XEM WEBSITE NGAY TRÊN MÁY TÍNH (3 BƯỚC)
+1. Nhấp chuột phải file ZIP > Extract All > Extract.
+2. Mở thư mục vừa giải nén: bạn phải thấy trực tiếp file index.html.
+3. Nhấp đúp index.html để mở bằng Chrome/Edge.
+   Dùng nút EN/VI/繁體/简体 ở góc trên bên phải để đổi ngôn ngữ.
+   Dùng nút LIGHT/SÁNG để đổi giao diện sáng/tối.
+
+KHÔNG tải riêng index.html ra khỏi thư mục: website còn cần
+styles.css, content.js, main.js và assets/.
+
+B. ĐĂNG WEBSITE (KHÔNG CẦN CODE) - GITHUB + VERCEL
+1. Tạo hoặc đăng nhập https://github.com
+2. Vào https://github.com/new và tạo repository PUBLIC tên haven-pham-portfolio.
+   Không tick thêm README trong bước tạo repository.
+3. Trong trang repository, chọn "uploading an existing file" hoặc
+   Add file > Upload files.
+4. MỞ THƯ MỤC ĐÃ GIẢI NÉN, CHỌN TẤT CẢ file/thư mục BÊN TRONG,
+   KÉO THẢ LÊN GITHUB. ĐỪNG KÉO FILE ZIP LÊN.
+   Trên GitHub, index.html phải xuất hiện ngay ở thư mục gốc.
+5. Kéo xuống, nhập commit message (ví dụ "Launch Haven portfolio")
+   và nhấn Commit changes.
+6. Vào https://vercel.com/signup, đăng ký/đăng nhập qua GitHub.
+7. Add New > Project > chọn haven-pham-portfolio > Import.
+8. Framework Preset = Other; Root Directory = ./; không cần build command.
+9. Nhấn Deploy. Sau khi hoàn tất, mở đường dẫn *.vercel.app được cấp.
+
+C. CHỈNH THÔNG TIN CÁ NHÂN
+Mở file content.js bằng Notepad hoặc VS Code.
+Ở ĐẦU FILE, tìm PORTFOLIO_CONFIG, sau đó điền URL GitHub vào dòng github.
+Tìm PORTFOLIO_I18N để sửa nội dung 4 phiên bản EN, VI, 繁體, 简体.
+Mở lại index.html để kiểm tra trước khi tải file mới lên GitHub.
+Xem thêm docs/CACH_CAP_NHAT_WEBSITE_VI.md.
+
+D. QUAN TRỌNG TRƯỚC KHI CÔNG KHAI
+- CV có chữ DRAFT vì cần xác nhận ngày làm việc Kodai và điểm TOEIC hiện tại.
+- Các dự án phân biệt ĐANG XÂY DỰNG / CÓ BẢN MẪU / DỰ KIẾN / BÀI TẬP.
+- Mẫu SQL đi kèm dùng dữ liệu GIẢ LẬP, không được giới thiệu là kết quả doanh nghiệp.
+- Website KHÔNG kèm scan chứng chỉ tiếng Trung có số cư trú và giấy tờ hiến máu.
+- Bạn cần thêm ảnh cá nhân và link GitHub thật nếu muốn.
+- Đừng tải dữ liệu nội bộ của công ty hoặc thông tin cá nhân nhạy cảm lên GitHub công khai.
+
+E. FILE CHÍNH
+index.html      = bố cục trang
+styles.css      = màu sắc/giao diện và điện thoại
+content.js      = toàn bộ nội dung 4 ngôn ngữ và liên kết
+main.js         = hiệu ứng, bộ lọc, nút bấm và đổi ngôn ngữ
+assets/         = CV nháp, ảnh chứng chỉ, icon
+projects/       = bài tập SQL mẫu (dữ liệu giả lập)
+docs/           = hướng dẫn, hình preview và ghi chú nội dung
+
+Cần hỗ trợ: gửi ảnh chụp màn hình của bước bạn đang làm.
+============================================================

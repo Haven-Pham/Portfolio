@@ -1,0 +1,13 @@
+order_id,order_date,channel,warehouse,order_value
+O001,2025-02-01,Online,North,125.00
+O002,2025-02-01,Retail,South,210.00
+O003,2025-02-02,Online,North,89.50
+O004,2025-02-02,Online,Central,330.00
+O005,2025-02-03,Retail,South,172.00
+O006,2025-02-03,Retail,North,259.00
+O007,2025-02-04,Online,Central,120.00
+O008,2025-02-04,Online,South,400.00
+O009,2025-02-05,Retail,Central,98.00
+O010,2025-02-05,Online,North,148.00
+O011,2025-02-06,Retail,South,215.00
+O012,2025-02-06,Online,Central,175.00
