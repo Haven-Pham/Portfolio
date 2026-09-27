@@ -1,4 +1,4 @@
-# Haven Pham | Portfolio (EN / VI / 繁體 / 简体)
+# Pham Hong Hieu (Haven-范鴻孝) | Portfolio (EN / VI / 繁體 / 简体)
 
 **Static website. No Node, npm, hosting package, or compilation required.**
 
