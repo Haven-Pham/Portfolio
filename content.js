@@ -2,7 +2,7 @@
 window.PORTFOLIO_CONFIG = Object.freeze({
   email: 'havenpham63729@gmail.com',
   linkedin: 'https://www.linkedin.com/in/havenpham',
-  github: '',  // Example: 'https://github.com/YOUR_USERNAME'
+  github: 'https://github.com/Haven-Pham',
   resume: 'assets/Pham_Hong_Hieu_CV_DRAFT.pdf'
 });
 
