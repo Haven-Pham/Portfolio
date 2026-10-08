@@ -1,8 +1,9 @@
 (() => {
   'use strict';
-  const PACKS = window.PORTFOLIO_I18N;
-  const DATA = window.PORTFOLIO_RECORDS;
-  const CONFIG = window.PORTFOLIO_CONFIG;
+  let PACKS = window.PORTFOLIO_I18N || {};
+  let DATA = window.PORTFOLIO_RECORDS || { experience: [], projects: [], certificates: [] };
+  let CONFIG = window.PORTFOLIO_CONFIG || {};
+  let RESEARCH = [];
   const $ = (s, root = document) => root.querySelector(s);
   const $$ = (s, root = document) => [...root.querySelectorAll(s)];
   const getSaved = (key, fallback) => { try { return localStorage.getItem(key) || fallback; } catch { return fallback; } };
@@ -10,7 +11,33 @@
   const h = (s) => String(s ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
   const language = getSaved('haven-language', 'en');
   const state = { lang: PACKS[language] ? language : 'en', theme: getSaved('haven-theme','dark'), expFilter:'all', projectFilter:'all', certFilter:'all', selectedStage:0, stackView:'workflow' };
-  const t = () => PACKS[state.lang];
+  const t = () => PACKS[state.lang] || PACKS.en || {};
+  async function loadDataFromJSON() {
+    try {
+      const [profileRes, expRes, projRes, certRes, resRes, i18nRes] = await Promise.all([
+        fetch('data/profile.json'),
+        fetch('data/experience.json'),
+        fetch('data/projects.json'),
+        fetch('data/certifications.json'),
+        fetch('data/research.json').catch(() => null),
+        fetch('data/i18n.json')
+      ]);
+      if (profileRes.ok && expRes.ok && projRes.ok && certRes.ok && i18nRes.ok) {
+        CONFIG = await profileRes.json();
+        const experience = await expRes.json();
+        const projects = await projRes.json();
+        const certificates = await certRes.json();
+        DATA = { experience, projects, certificates };
+        if (resRes && resRes.ok) RESEARCH = await resRes.json();
+        PACKS = await i18nRes.json();
+        if (!PACKS[state.lang]) state.lang = 'en';
+        applyTranslation();
+      }
+    } catch {
+      // Graceful fallback: on file:/// protocol or network restrictions,
+      // bundled window.PORTFOLIO_* data from content.js provides seamless offline execution.
+    }
+  }
   let toastTimer;
   function toast(message) { const box = $('#toast'); box.textContent = message; box.classList.add('visible'); clearTimeout(toastTimer); toastTimer = setTimeout(() => box.classList.remove('visible'), 2800); }
   function tab(label, group, value, current) { return `<button class="tab ${current === value ? 'active':''}" type="button" role="tab" aria-selected="${current === value}" data-${group}="${h(value)}">${h(label)}</button>`; }
@@ -30,7 +57,8 @@
     $('#experience-tabs').innerHTML = tab(d.tabAll,'exp','all',state.expFilter) + tab(d.tabPlanning,'exp','planning',state.expFilter) + tab(d.tabLogistics,'exp','logistics',state.expFilter);
     const found = DATA.experience.filter(item => state.expFilter === 'all' || item.category === state.expFilter);
     $('#experience-list').innerHTML = found.map((item,index) => {
-      const x = d.experienceData[item.id];
+      const x = d.experienceData?.[item.id];
+      if (!x) return '';
       return `<article class="experience-card reveal is-visible" style="--entry-delay:${index * 55}ms">
         <div class="company-icon ${item.className}">${h(item.initials)}</div>
         <div class="experience-body"><div class="exp-header"><span class="company-name">${h(x.org)}</span><span class="exp-period">◷ &nbsp;${h(experiencePeriods[state.lang]?.[item.id] || item.period)}</span></div>
@@ -54,7 +82,8 @@
     const d = t();
     $('#project-tabs').innerHTML = tab(d.projAll,'project','all',state.projectFilter) + tab(d.projAnalytics,'project','analytics',state.projectFilter) + tab(d.projSql,'project','sql',state.projectFilter) + tab(d.projSupply,'project','supply',state.projectFilter);
     $('#project-grid').innerHTML = DATA.projects.filter(item => state.projectFilter === 'all' || state.projectFilter === item.category).map(item => {
-      const p = d.projectData[item.id];
+      const p = d.projectData?.[item.id];
+      if (!p) return '';
       return `<article class="project-card reveal is-visible" aria-label="${h(p.title)}">
         <div class="project-top"><div class="project-icon" aria-hidden="true">${h(item.icon)}</div><span class="project-index">/ ${item.number}</span></div>
         <span class="status status-${item.status}"><span class="status-indicator"></span>${h(d[statusKey[item.status]])}</span>
@@ -68,7 +97,8 @@
   function openProject(id) {
     const item = DATA.projects.find(p => p.id === id);
     if (!item) return;
-    const d = t(), p = d.projectData[id];
+    const d = t(), p = d.projectData?.[id];
+    if (!p) return;
     const dl = {en:'DOWNLOAD SYNTHETIC SQL STARTER',vi:'TẢI DỰ ÁN SQL DỮ LIỆU GIẢ LẬP','zh-Hant':'下載模擬 SQL 範例','zh-Hans':'下载模拟 SQL 示例'};
     $('#project-dialog-content').innerHTML = `<div class="dialog-inner"><span class="section-overline">PROJECT / ${h(item.number)}</span><h2>${h(p.title)}</h2><span class="status status-${item.status}">${h(d[statusKey[item.status]])}</span><p class="dialog-lead">${h(p.description)}</p>
       <div class="dialog-section"><h3>${h(d.dialogProblem)}</h3><p>${h(p.goal)}</p></div><div class="dialog-section"><h3>${h(d.dialogMethods)}</h3><p>${h(p.methods)}</p></div><div class="dialog-section"><h3>${h(d.dialogEvidence)}</h3><p>${h(p.evidence)}</p></div><div class="tech-tags">${item.chips.map(chip=>`<span>${h(chip)}</span>`).join('')}</div>
@@ -135,5 +165,5 @@
     const navObserver = new IntersectionObserver((items)=>items.forEach(item=>{if(item.isIntersecting){$$('.primary-nav a').forEach(a=>a.classList.toggle('selected',a.getAttribute('href')==='#'+item.target.id));}}),{rootMargin:'-22% 0px -62% 0px',threshold:0});
     sections.forEach(s=>navObserver.observe(s));
   }
-  setTheme(state.theme==='light'?'light':'dark'); applyTranslation();bind();setupObservers();updateProgress();
+  setTheme(state.theme==='light'?'light':'dark'); applyTranslation();bind();setupObservers();updateProgress();loadDataFromJSON();
 })();

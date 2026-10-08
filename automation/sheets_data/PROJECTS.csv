@@ -1,0 +1,5 @@
+id,slug,category,status,featured,sort_order,github_url,demo_url,cover_file,document_file
+retail,retail-sales-dashboard,analytics,development,TRUE,1,,,,
+sql,sql-supply-chain-analytics,sql,starter,TRUE,2,https://github.com/Haven-Pham,,,projects/sql_supply_chain_starter.zip
+inventory,inventory-optimization-case-study,supply,concept,FALSE,3,,,,
+netflix,netflix-dataset-exploration,analytics,coursework,FALSE,4,,,,

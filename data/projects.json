@@ -1,0 +1,50 @@
+[
+  {
+    "id": "retail",
+    "category": "analytics",
+    "icon": "▥",
+    "chips": [
+      "Power BI",
+      "DAX",
+      "KPIs"
+    ],
+    "status": "development",
+    "number": "01"
+  },
+  {
+    "id": "sql",
+    "category": "sql",
+    "icon": "⛁",
+    "chips": [
+      "SQL",
+      "CTEs",
+      "Window Functions"
+    ],
+    "status": "starter",
+    "number": "02"
+  },
+  {
+    "id": "inventory",
+    "category": "supply",
+    "icon": "◈",
+    "chips": [
+      "Inventory",
+      "Python · Learning",
+      "Excel"
+    ],
+    "status": "concept",
+    "number": "03"
+  },
+  {
+    "id": "netflix",
+    "category": "analytics",
+    "icon": "⌁",
+    "chips": [
+      "Python",
+      "pandas",
+      "EDA"
+    ],
+    "status": "coursework",
+    "number": "04"
+  }
+]

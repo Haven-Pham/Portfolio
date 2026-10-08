@@ -1,0 +1,65 @@
+[
+  {
+    "id": "hr-advanced",
+    "provider": "HackerRank",
+    "type": "hacker",
+    "when": "Jun 26, 2026",
+    "mark": "H",
+    "asset": "assets/certificates/hackerrank-sql-advanced.jpg",
+    "kind": "assessment"
+  },
+  {
+    "id": "hr-intermediate",
+    "provider": "HackerRank",
+    "type": "hacker",
+    "when": "Jun 26, 2026",
+    "mark": "H",
+    "asset": "assets/certificates/hackerrank-sql-intermediate.jpg",
+    "kind": "assessment"
+  },
+  {
+    "id": "dc-powerbi",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Jul 04, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-power-bi.pdf",
+    "kind": "course"
+  },
+  {
+    "id": "dc-intermediate",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Jun 11, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-intermediate-sql.pdf",
+    "kind": "course"
+  },
+  {
+    "id": "dc-ai",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "May 31, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-cleaning-ai.pdf",
+    "kind": "course"
+  },
+  {
+    "id": "dc-intro",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "May 29, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-intro-sql.pdf",
+    "kind": "course"
+  },
+  {
+    "id": "mandarin",
+    "provider": "Yuan Ze University",
+    "type": "language",
+    "when": "Dec 26, 2025",
+    "mark": "YZ",
+    "asset": null,
+    "kind": "course"
+  }
+]

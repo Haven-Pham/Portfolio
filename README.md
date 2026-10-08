@@ -26,6 +26,6 @@ Please read `START_HERE_VI.txt` for a beginner-friendly Vietnamese walk-through 
 
 - The website reflects the attached CVs and certificates, but contains pending fields needing owner confirmation.
 - The original Mandarin scan contains a residency identifier and is deliberately omitted from public assets.
-- None of the research/patent works belonging to a different person are attributed to Haven Pham.
+- None of the research/patent works belonging to a different person are attributed to Pham Hong Hieu (Haven - 范鴻孝).
 - No invented award, accepted publication, employer performance metric or portfolio repository URL is shown.
 - The visual style takes inspiration from the screenshots the owner provided but uses original wording and bespoke CSS/HTML.

@@ -3,7 +3,8 @@ window.PORTFOLIO_CONFIG = Object.freeze({
   email: 'havenpham63729@gmail.com',
   linkedin: 'https://www.linkedin.com/in/havenpham',
   github: 'https://github.com/Haven-Pham',
-  resume: 'assets/Pham_Hong_Hieu_CV_DRAFT.pdf'
+  resume: 'assets/Pham_Hong_Hieu_CV_DRAFT.pdf',
+  profileImage: "assets/profile.jpg",
 });
 
 /* Provider logos and certificate screenshots are from your own supplied files.
@@ -33,9 +34,9 @@ window.PORTFOLIO_RECORDS = {
 
 window.PORTFOLIO_I18N = {
   en: {
-    locale:'English', pageTitle:'Haven Pham | Supply Chain × Data Analytics',
+    locale:'English', pageTitle:'Pham Hong Hieu (Haven - 范鴻孝) | Supply Chain & Data Analytics',
     navAbout:'ABOUT ME',navExperience:'EXPERIENCE',navProjects:'PROJECTS',navStack:'WORKFLOW & STACK',navCommunity:'COMMUNITY',navCerts:'CERTIFICATIONS',navContact:'CONTACT',themeLight:'LIGHT',themeDark:'DARK',
-    heroBadge:'Supply Chain · Data Analytics · Business Intelligence', heroEyebrow:'FROM OPERATIONS TO DATA INSIGHTS', heroGreeting:"Hi there, I'm",heroName:'Haven Pham',
+    heroBadge:'Supply Chain · Data Analytics · Business Intelligence · Patent Analysis · Technology Convergence · ERP Systems', heroEyebrow:'FROM OPERATIONS TO DATA INSIGHTS', heroGreeting:"Hi there, I'm",heroName:'Pham Hong Hieu (Haven - 范鴻孝)',
     heroSummary:'Connecting real-world logistics and supply chain operations with SQL, Power BI and data-driven decisions. Currently pursuing a Global MBA in Taiwan.',heroLocation:'Based in Taoyuan, Taiwan',
     exploreWork:'EXPLORE MY WORK',viewResume:'VIEW CV (DRAFT)',copyEmail:'Copy Email',emailCopied:'Email address copied!',copyFallback:'Please copy this email: ',
     visualRole:'SUPPLY CHAIN × DATA ANALYTICS',visualInput:'OPERATIONS',visualOutput:'INSIGHT',floatRole:'Supply Chain & Logistics',
@@ -70,9 +71,9 @@ window.PORTFOLIO_I18N = {
     contactHeading:'Let’s Connect',contactCaption:'Open to conversations about analytics, operations, learning projects and relevant professional opportunities.',preferredContact:'PREFERRED CONTACT',contactEmail:'Email',contactEmailSub:'Send me a message',contactLinkedIn:'LinkedIn',contactLinkedInSub:'Professional profile',contactGithub:'GitHub',contactGithubSub:'Profile link to be added',contactResume:'Resume',contactResumeSub:'Download draft CV',comingSoon:'COMING SOON',footerNote:'Built as a multilingual, static portfolio · Details pending final review',backToTop:'BACK TO TOP ↑'
   },
   vi: {
-    locale:'Tiếng Việt',pageTitle:'Haven Pham | Chuỗi cung ứng × Phân tích dữ liệu',
+    locale:'Tiếng Việt',pageTitle:'Pham Hong Hieu (Haven - 范鴻孝) | Chuỗi cung ứng × Phân tích dữ liệu',
     navAbout:'GIỚI THIỆU',navExperience:'KINH NGHIỆM',navProjects:'DỰ ÁN',navStack:'QUY TRÌNH & KỸ NĂNG',navCommunity:'CỘNG ĐỒNG',navCerts:'CHỨNG CHỈ',navContact:'LIÊN HỆ',themeLight:'SÁNG',themeDark:'TỐI',
-    heroBadge:'Chuỗi cung ứng · Phân tích dữ liệu · BI',heroEyebrow:'TỪ VẬN HÀNH ĐẾN THÔNG TIN PHÂN TÍCH',heroGreeting:'Xin chào, tôi là',heroName:'Haven Pham',
+    heroBadge:'Chuỗi cung ứng · Phân tích dữ liệu · BI',heroEyebrow:'TỪ VẬN HÀNH ĐẾN THÔNG TIN PHÂN TÍCH',heroGreeting:'Xin chào, tôi là',heroName:'Phạm Hồng Hiếu',
     heroSummary:'Kết hợp kinh nghiệm logistics và quản lý chuỗi cung ứng với SQL, Power BI và tư duy ra quyết định dựa trên dữ liệu. Hiện tôi đang học Global MBA tại Đài Loan.',heroLocation:'Hiện sống tại Đào Viên, Đài Loan',
     exploreWork:'KHÁM PHÁ DỰ ÁN',viewResume:'XEM CV (BẢN NHÁP)',copyEmail:'Sao chép email',emailCopied:'Đã sao chép email!',copyFallback:'Vui lòng sao chép email: ',
     visualRole:'CHUỖI CUNG ỨNG × PHÂN TÍCH DỮ LIỆU',visualInput:'VẬN HÀNH',visualOutput:'THÔNG TIN',floatRole:'Chuỗi cung ứng & Logistics',
@@ -107,9 +108,9 @@ window.PORTFOLIO_I18N = {
     contactHeading:'Hãy kết nối',contactCaption:'Sẵn sàng trao đổi về phân tích dữ liệu, hoạt động logistics, dự án học tập và cơ hội nghề nghiệp phù hợp.',preferredContact:'LIÊN HỆ ƯU TIÊN',contactEmail:'Email',contactEmailSub:'Gửi email cho tôi',contactLinkedIn:'LinkedIn',contactLinkedInSub:'Hồ sơ nghề nghiệp',contactGithub:'GitHub',contactGithubSub:'Sẽ bổ sung đường dẫn',contactResume:'Hồ sơ CV',contactResumeSub:'Tải CV bản nháp',comingSoon:'SẮP CẬP NHẬT',footerNote:'Portfolio tĩnh đa ngôn ngữ · Một số thông tin chờ xác nhận',backToTop:'LÊN ĐẦU TRANG ↑'
   },
   'zh-Hant': {
-    locale:'繁體中文',pageTitle:'Haven Pham | 供應鏈 × 數據分析',
+    locale:'繁體中文',pageTitle:'范鴻孝 · Haven | 供應鏈 × 數據分析',
     navAbout:'關於我',navExperience:'工作經歷',navProjects:'作品專案',navStack:'流程與技能',navCommunity:'社群活動',navCerts:'專業證照',navContact:'聯絡方式',themeLight:'淺色',themeDark:'深色',
-    heroBadge:'供應鏈 · 數據分析 · 商業智慧',heroEyebrow:'從實務營運走向數據洞察',heroGreeting:'你好，我是',heroName:'Haven Pham',
+    heroBadge:'供應鏈 · 數據分析 · 商業智慧',heroEyebrow:'從實務營運走向數據洞察',heroGreeting:'你好，我是',heroName:'范鴻孝 · Haven',
     heroSummary:'結合物流與供應鏈實務經驗，以及 SQL、Power BI 與數據導向的決策能力。目前在臺灣元智大學攻讀 Global MBA。',heroLocation:'現居臺灣桃園',
     exploreWork:'探索我的專案',viewResume:'查看履歷（草稿）',copyEmail:'複製電子郵件',emailCopied:'已複製電子郵件地址！',copyFallback:'請複製電子郵件：',
     visualRole:'供應鏈 × 數據分析',visualInput:'營運',visualOutput:'洞察',floatRole:'供應鏈與物流',
@@ -144,17 +145,17 @@ window.PORTFOLIO_I18N = {
     contactHeading:'保持聯繫',contactCaption:'歡迎交流數據分析、物流營運、學習專案及相關職涯機會。',preferredContact:'建議聯絡方式',contactEmail:'電子郵件',contactEmailSub:'寄信給我',contactLinkedIn:'LinkedIn',contactLinkedInSub:'專業個人檔案',contactGithub:'GitHub',contactGithubSub:'個人檔案連結待新增',contactResume:'履歷',contactResumeSub:'下載履歷草稿',comingSoon:'即將新增',footerNote:'多語言靜態作品集 · 部分資料待確認',backToTop:'返回頂部 ↑'
   },
   'zh-Hans': {
-    locale:'简体中文',pageTitle:'Haven Pham | 供应链 × 数据分析',
+    locale:'简体中文',pageTitle:'范鴻孝 · Haven | 供应链 × 数据分析',
     navAbout:'关于我',navExperience:'工作经历',navProjects:'项目作品',navStack:'流程与技能',navCommunity:'社区活动',navCerts:'专业证书',navContact:'联系方式',themeLight:'浅色',themeDark:'深色',
-    heroBadge:'供应链 · 数据分析 · 商业智能',heroEyebrow:'从实际运营走向数据洞察',heroGreeting:'你好，我是',heroName:'Haven Pham',
+    heroBadge:'供应链 · 数据分析 · 商业智能',heroEyebrow:'从实际运营走向数据洞察',heroGreeting:'你好，我是',heroName:'范鴻孝 · Haven',
     heroSummary:'结合物流与供应链实务经验，以及 SQL、Power BI 与数据驱动的决策能力。目前在台湾元智大学攻读 Global MBA。',heroLocation:'现居台湾桃园',
     exploreWork:'浏览我的项目',viewResume:'查看简历（草稿）',copyEmail:'复制邮箱',emailCopied:'邮箱地址已复制！',copyFallback:'请复制邮箱地址：',
     visualRole:'供应链 × 数据分析',visualInput:'运营',visualOutput:'洞察',floatRole:'供应链与物流',
     aboutHeading:'从实际运营走向数据分析',aboutStatement:'将供应链实务经验运用于商业分析。',aboutParagraph:'我的工作经验涵盖供应商协调、库存跟踪、国际物流及 ERP 运营报表。目前在元智大学继续学习 SQL、Power BI 与企业管理，希望通过清晰、可执行的分析，帮助解决复杂的运营问题。',talkAboutWork:'欢迎与我联系 ↗',
     statRoles:'工作经历',statDegrees:'学位项目',statHackerrank:'HACKERRANK SQL 测试',educationTitle:'教育背景',mbaDegree:'全球工商管理硕士（Global MBA）',mbaSchool:'元智大学 · 台湾',mbaYears:'2025 年至今 · 在读',bachelorDegree:'物流与供应链管理学士',bachelorSchool:'胡志明市师范技术大学 · 越南',bachelorYears:'2020–2024 · GPA 8.46/10 · 优等',
-    experienceHeading:'职业发展与工作经验',experienceCaption:'具有供应规划、国际货运代理及进出口协调的实际经验。',tabAll:'全部岗位',tabPlanning:'供应规划与 ERP',tabLogistics:'货运与物流',dateNote:'备注：旧版中英文简历记录的 Kodai Sangyo 入职月份不一致；目前暂以年份显示，确认后再更新。',
+    experienceHeading:'职业发展与工作经验',experienceCaption:'具有供应规划、国际货运代理及进出口协调的实际经验。',tabAll:'全部岗位',tabPlanning:'供应规划与 ERP',tabLogistics:'货运与物流',dateNote:'备注：旧版中英文简历中的 Kodai Sangyo 到职月份不一致；目前暂以年份呈现，待确认后更新。',
     experienceData:{
-      'hoa-sen':{role:'供应链规划专员',org:'Hoa Sen Group · 越南',summary:'通过 Oracle ERP 协调采购订单、管理库存并制作运营报表。',bullets:['跟踪国内及进口商品的供应商和采购订单。','使用 Oracle ERP 管理库存数据，并与仓库及工厂协作。','制作运营报表，提升库存与配送信息的可视性。']},
+      'hoa-sen':{role:'供应链规划专员',org:'Hoa Sen Group · 越南',summary:'通过 Oracle ERP 协调采购订单、管理库存并制作运营报表。',bullets:['跟踪国内及进口商品的供应商与采购订单。','使用 Oracle ERP 管理库存数据，并与仓库及工厂合作。','制作运营报表，提升库存及配送信息的可视化。']},
       'kodai':{role:'物流销售专员',org:'Kodai Sangyo（越南）',summary:'协调国际货运与客户相关的货运业务。',bullets:['制作运费报价，与船公司及海外代理联络。','协助冷链货运排期、运输文件和报关流程。','与单证及运营团队合作处理运输问题。']},
       'vietlog':{role:'进出口实习生',org:'Viet Logistics · 越南',summary:'协助订舱、运输单证及报关相关工作。',bullets:['准备发票、装箱单、原产地证明与运输指示。','协助选择承运商、安排订舱及 HS Code 相关工作。','与运营团队协作支持国际货运代理业务。']}
     },

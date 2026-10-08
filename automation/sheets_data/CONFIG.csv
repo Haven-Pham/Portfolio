@@ -1,0 +1,10 @@
+key,value
+GITHUB_OWNER,Haven-Pham
+GITHUB_REPO,Portfolio
+GITHUB_BRANCH,main
+PROJECTS_JSON_PATH,data/projects.json
+CERTIFICATIONS_JSON_PATH,data/certifications.json
+EXPERIENCE_JSON_PATH,data/experience.json
+RESEARCH_JSON_PATH,data/research.json
+I18N_JSON_PATH,data/i18n.json
+DRIVE_ROOT_FOLDER_ID,PENDING_SETUP

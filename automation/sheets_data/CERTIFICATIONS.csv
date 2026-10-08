@@ -1,0 +1,8 @@
+id,name,provider,date,category,file,verification_url,featured,sort_order
+hr-advanced,SQL (Advanced),HackerRank,2026-06-26,hacker,assets/certificates/hackerrank-sql-advanced.jpg,https://www.hackerrank.com/certificates/,TRUE,1
+hr-intermediate,SQL (Intermediate),HackerRank,2026-06-26,hacker,assets/certificates/hackerrank-sql-intermediate.jpg,https://www.hackerrank.com/certificates/,TRUE,2
+dc-powerbi,Data Visualization in Power BI,DataCamp,2026-07-04,datacamp,assets/certificates/datacamp-power-bi.pdf,https://www.datacamp.com/statement-of-accomplishment/,TRUE,3
+dc-intermediate,Intermediate SQL,DataCamp,2026-06-11,datacamp,assets/certificates/datacamp-intermediate-sql.pdf,https://www.datacamp.com/statement-of-accomplishment/,FALSE,4
+dc-ai,Cleaning Data with Generative AI,DataCamp,2026-05-31,datacamp,assets/certificates/datacamp-cleaning-ai.pdf,https://www.datacamp.com/statement-of-accomplishment/,FALSE,5
+dc-intro,Introduction to SQL,DataCamp,2026-05-29,datacamp,assets/certificates/datacamp-intro-sql.pdf,https://www.datacamp.com/statement-of-accomplishment/,FALSE,6
+mandarin,Mandarin Intensive Program – Level 2,Yuan Ze University,2025-12-26,language,[PRIVATE RECORD],,FALSE,7

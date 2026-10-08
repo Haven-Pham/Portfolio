@@ -1,0 +1,14 @@
+# Environment and secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Operating System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and runtime
+*.log
+node_modules/
