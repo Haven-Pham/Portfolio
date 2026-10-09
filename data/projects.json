@@ -46,5 +46,15 @@
     ],
     "status": "coursework",
     "number": "04"
+  },
+  {
+    "id": "rfm",
+    "category": "analytics",
+    "icon": "▥",
+    "chips": [
+      "ANALYTICS"
+    ],
+    "status": "coursework",
+    "number": "05"
   }
 ]
