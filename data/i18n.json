@@ -122,6 +122,13 @@
         "goal": "Inspect content distribution and changes across release years and content types.",
         "methods": "pandas cleaning, exploratory charts and explanatory annotations.",
         "evidence": "Coursework referenced in prior learning tasks. Repository and reviewed findings have not yet been published."
+      },
+      "rfm": {
+        "title": "RFM Customer Segmentation Analysis",
+        "description": "Customer segmentation and cohort analysis using Recency, Frequency, and Monetary metrics.",
+        "goal": "Identify high-value customer segments, churn risks, and purchasing behaviors from transactional sales data.",
+        "methods": "SQL/Python quantile scoring, RFM matrix mapping, behavioral clustering, and actionable marketing recommendations.",
+        "evidence": "Coursework assignment (Sessions 1–6). Detailed workbook and segmentation documentation available in project files."
       }
     },
     "stackHeading": "From Data to Decisions",
@@ -419,6 +426,13 @@
         "goal": "Khám phá cơ cấu nội dung và thay đổi theo năm phát hành và loại nội dung.",
         "methods": "Làm sạch dữ liệu với pandas, vẽ biểu đồ EDA và chú giải.",
         "evidence": "Bài tập từng được thực hiện trong quá trình học; chưa công bố repository và kết quả được rà soát."
+      },
+      "rfm": {
+        "title": "Phân khúc Khách hàng theo Mô hình RFM",
+        "description": "Phân khúc khách hàng và phân tích nhóm theo các chỉ số Mới nhất (R), Tần suất (F) và Giá trị (M).",
+        "goal": "Xác định nhóm khách hàng giá trị cao, nguy cơ rời bỏ và hành vi mua sắm từ dữ liệu giao dịch bán hàng.",
+        "methods": "Tính điểm phân vị (quantile scoring) bằng SQL/Python, ma trận phân nhóm RFM, phân cụm hành vi và đề xuất chiến lược tiếp thị.",
+        "evidence": "Bài tập thực hành theo khóa học (Buổi 1–6). Bảng tính chi tiết và tài liệu phân tích được lưu trữ trong thư mục dự án."
       }
     },
     "stackHeading": "Từ dữ liệu đến quyết định",
@@ -716,6 +730,13 @@
         "goal": "觀察節目類型及不同發行年份的內容分布。",
         "methods": "pandas 資料清理、EDA 圖表及結果註解。",
         "evidence": "既有學習作業；尚未公開完成審核的程式碼庫及分析成果。"
+      },
+      "rfm": {
+        "title": "RFM 客戶分群分析",
+        "description": "運用最近購買日 (R)、購買頻率 (F) 與消費金額 (M) 進行客戶分群與客群分析。",
+        "goal": "從交易銷售數據中識別高價值客群、流失風險客戶與購買行為模式。",
+        "methods": "使用 SQL/Python 進行分位數評分、構建 RFM 矩陣、行為分群並提出可行的行銷建議。",
+        "evidence": "課程專題作業（第 1 至 6 堂）。詳細分析工作表與分群報告存檔於專案目錄中。"
       }
     },
     "stackHeading": "從數據走向決策",
@@ -1013,6 +1034,13 @@
         "goal": "观察节目类型及不同发行年份的内容分布。",
         "methods": "pandas 数据清理、EDA 图表及结果注释。",
         "evidence": "已有学习练习；尚未公开完成审核的代码仓库和分析成果。"
+      },
+      "rfm": {
+        "title": "RFM 客户分群分析",
+        "description": "运用最近消费时间 (R)、消费频率 (F) 与消费金额 (M) 进行客户分群与群体分析。",
+        "goal": "从交易销售数据中识别高价值客户群体、流失风险客户与购买行为模式。",
+        "methods": "使用 SQL/Python 进行分位数评分、构建 RFM 矩阵、行为分群并提出可落地的营销建议。",
+        "evidence": "课程实践作业（第 1 至 6 节）。详细分析工作簿与分群文档保存在项目目录中。"
       }
     },
     "stackHeading": "从数据走向决策",
