@@ -49,10 +49,10 @@
   },
   {
     "id": "rfm",
-    "category": "coursework-test",
+    "category": "analytics",
     "icon": "▥",
     "chips": [
-      "COURSEWORK-TEST"
+      "ANALYTICS"
     ],
     "status": "coursework",
     "number": "05"
