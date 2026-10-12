@@ -9,7 +9,10 @@
       "KPIs"
     ],
     "status": "development",
-    "number": "01"
+    "number": "01",
+    "documentFile": "projects/retail_sales_dashboard.pbix",
+    "githubUrl": null,
+    "demoUrl": null
   },
   {
     "id": "sql",
@@ -21,7 +24,10 @@
       "Window Functions"
     ],
     "status": "starter",
-    "number": "02"
+    "number": "02",
+    "documentFile": "projects/sql_supply_chain_starter.zip",
+    "githubUrl": "https://github.com/Haven-Pham",
+    "demoUrl": null
   },
   {
     "id": "inventory",
@@ -33,7 +39,10 @@
       "Excel"
     ],
     "status": "concept",
-    "number": "03"
+    "number": "03",
+    "documentFile": null,
+    "githubUrl": null,
+    "demoUrl": null
   },
   {
     "id": "netflix",
@@ -45,7 +54,10 @@
       "EDA"
     ],
     "status": "coursework",
-    "number": "04"
+    "number": "04",
+    "documentFile": "projects/netflix_eda.ipynb",
+    "githubUrl": null,
+    "demoUrl": null
   },
   {
     "id": "rfm",
@@ -55,6 +67,24 @@
       "ANALYTICS"
     ],
     "status": "coursework",
-    "number": "05"
+    "number": "05",
+    "documentFile": "projects/rfm_segmentation_analysis.xlsx",
+    "githubUrl": null,
+    "demoUrl": null
+  },
+  {
+    "id": "ecommerce-cohort",
+    "category": "analytics",
+    "icon": "⌁",
+    "chips": [
+      "Python",
+      "Cohort Analysis",
+      "Retention"
+    ],
+    "status": "coursework",
+    "number": "06",
+    "documentFile": "projects/ecommerce_customer_cohort_retention_profitability/ecommerce_customer_cohort_retention_profitability_analysis.ipynb",
+    "githubUrl": null,
+    "demoUrl": null
   }
 ]

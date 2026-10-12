@@ -94,6 +94,11 @@
     "dialogMethods": "APPROACH",
     "dialogEvidence": "CURRENT STATE",
     "dialogClose": "CLOSE",
+    "dlPbix": "DOWNLOAD POWER BI FILE",
+    "dlXlsx": "DOWNLOAD EXCEL FILE",
+    "dlIpynb": "DOWNLOAD NOTEBOOK",
+    "dlProject": "DOWNLOAD PROJECT FILE",
+    "viewNotebook": "VIEW NOTEBOOK",
     "projectData": {
       "retail": {
         "title": "Retail Sales Performance Dashboard",
@@ -129,6 +134,13 @@
         "goal": "Identify high-value customer segments, churn risks, and purchasing behaviors from transactional sales data.",
         "methods": "SQL/Python quantile scoring, RFM matrix mapping, behavioral clustering, and actionable marketing recommendations.",
         "evidence": "Coursework assignment (Sessions 1–6). Detailed workbook and segmentation documentation available in project files."
+      },
+      "ecommerce-cohort": {
+        "title": "E-Commerce Customer Cohort, Retention & Profitability Analysis",
+        "description": "Customer cohort, retention, segmentation, and profitability analysis using synthetic e-commerce transaction data.",
+        "goal": "Evaluate customer retention patterns across acquisition cohorts and identify differences in retention and profitability across customer segments and income groups.",
+        "methods": "Python-based cohort construction, monthly and quarterly retention analysis, customer segment comparison, and profitability analysis.",
+        "evidence": "Coursework portfolio project using Python, Pandas, NumPy, Matplotlib, and Seaborn with synthetic educational data."
       }
     },
     "stackHeading": "From Data to Decisions",
@@ -398,6 +410,11 @@
     "dialogMethods": "PHƯƠNG PHÁP",
     "dialogEvidence": "TÌNH TRẠNG HIỆN TẠI",
     "dialogClose": "ĐÓNG",
+    "dlPbix": "TẢI FILE POWER BI",
+    "dlXlsx": "TẢI FILE EXCEL",
+    "dlIpynb": "TẢI NOTEBOOK",
+    "dlProject": "TẢI FILE DỰ ÁN",
+    "viewNotebook": "XEM NOTEBOOK",
     "projectData": {
       "retail": {
         "title": "Dashboard Hiệu suất Bán lẻ",
@@ -433,6 +450,13 @@
         "goal": "Xác định nhóm khách hàng giá trị cao, nguy cơ rời bỏ và hành vi mua sắm từ dữ liệu giao dịch bán hàng.",
         "methods": "Tính điểm phân vị (quantile scoring) bằng SQL/Python, ma trận phân nhóm RFM, phân cụm hành vi và đề xuất chiến lược tiếp thị.",
         "evidence": "Bài tập thực hành theo khóa học (Buổi 1–6). Bảng tính chi tiết và tài liệu phân tích được lưu trữ trong thư mục dự án."
+      },
+      "ecommerce-cohort": {
+        "title": "Phân tích Cohort, Duy trì Khách hàng và Khả năng Sinh lợi trong Thương mại Điện tử",
+        "description": "Phân tích cohort khách hàng, tỷ lệ duy trì, phân khúc và khả năng sinh lợi bằng dữ liệu thương mại điện tử giả lập.",
+        "goal": "Đánh giá xu hướng duy trì khách hàng theo cohort và sự khác biệt về duy trì và khả năng sinh lợi giữa các nhóm khách hàng.",
+        "methods": "Xây dựng cohort bằng Python, phân tích retention theo tháng và quý, so sánh phân khúc khách hàng và phân tích khả năng sinh lợi.",
+        "evidence": "Dự án học thuật sử dụng Python, Pandas, NumPy, Matplotlib và Seaborn với dữ liệu giáo dục giả lập."
       }
     },
     "stackHeading": "Từ dữ liệu đến quyết định",
@@ -702,6 +726,11 @@
     "dialogMethods": "分析方法",
     "dialogEvidence": "目前狀態",
     "dialogClose": "關閉",
+    "dlPbix": "下載 Power BI 檔案",
+    "dlXlsx": "下載 Excel 檔案",
+    "dlIpynb": "下載 Notebook",
+    "dlProject": "下載專案檔案",
+    "viewNotebook": "查看 Notebook",
     "projectData": {
       "retail": {
         "title": "零售業績分析儀表板",
@@ -737,6 +766,13 @@
         "goal": "從交易銷售數據中識別高價值客群、流失風險客戶與購買行為模式。",
         "methods": "使用 SQL/Python 進行分位數評分、構建 RFM 矩陣、行為分群並提出可行的行銷建議。",
         "evidence": "課程專題作業（第 1 至 6 堂）。詳細分析工作表與分群報告存檔於專案目錄中。"
+      },
+      "ecommerce-cohort": {
+        "title": "電子商務客戶 Cohort、留存與獲利能力分析",
+        "description": "使用模擬電子商務交易資料分析客戶 Cohort、留存率、客戶分群與獲利能力。",
+        "goal": "評估不同客戶取得 Cohort 的留存模式，以及不同客戶分群與收入群體之間的留存與獲利差異。",
+        "methods": "使用 Python 建立客戶 Cohort，進行月度與季度留存分析、客戶分群比較與獲利能力分析。",
+        "evidence": "使用 Python、Pandas、NumPy、Matplotlib 與 Seaborn 的課程專題，資料為模擬教育資料。"
       }
     },
     "stackHeading": "從數據走向決策",
@@ -1006,6 +1042,11 @@
     "dialogMethods": "分析方法",
     "dialogEvidence": "当前状态",
     "dialogClose": "关闭",
+    "dlPbix": "下载 Power BI 文件",
+    "dlXlsx": "下载 Excel 文件",
+    "dlIpynb": "下载 Notebook",
+    "dlProject": "下载项目文件",
+    "viewNotebook": "查看 Notebook",
     "projectData": {
       "retail": {
         "title": "零售业绩分析仪表板",
@@ -1041,6 +1082,13 @@
         "goal": "从交易销售数据中识别高价值客户群体、流失风险客户与购买行为模式。",
         "methods": "使用 SQL/Python 进行分位数评分、构建 RFM 矩阵、行为分群并提出可落地的营销建议。",
         "evidence": "课程实践作业（第 1 至 6 节）。详细分析工作簿与分群文档保存在项目目录中。"
+      },
+      "ecommerce-cohort": {
+        "title": "电子商务客户 Cohort、留存与盈利能力分析",
+        "description": "使用模拟电子商务交易数据分析客户 Cohort、留存率、客户分群与盈利能力。",
+        "goal": "评估不同客户获取 Cohort 的留存模式，以及不同客户分群与收入群体之间的留存与盈利差异。",
+        "methods": "使用 Python 建立客户 Cohort，进行月度与季度留存分析、客户分群比较与盈利能力分析。",
+        "evidence": "使用 Python、Pandas、NumPy、Matplotlib 与 Seaborn 的课程项目，数据为模拟教育数据。"
       }
     },
     "stackHeading": "从数据走向决策",

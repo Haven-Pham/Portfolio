@@ -94,15 +94,28 @@
     $$('[data-project]').forEach(btn => btn.addEventListener('click', () => { state.projectFilter = btn.dataset.project; renderProjects(); }));
     $$('[data-project-open]').forEach(btn => btn.addEventListener('click', () => openProject(btn.dataset.projectOpen)));
   }
+  function getAssetLabel(docPath, d) {
+    if (!docPath) return '';
+    const lower = docPath.toLowerCase();
+    if (lower.endsWith('.pbix')) return d.dlPbix || 'DOWNLOAD POWER BI FILE';
+    if (lower.endsWith('.xlsx')) return d.dlXlsx || 'DOWNLOAD EXCEL FILE';
+    if (lower.endsWith('.ipynb')) return d.dlIpynb || 'DOWNLOAD NOTEBOOK';
+    if (lower.endsWith('.zip')) return d.dlProject || 'DOWNLOAD PROJECT FILE';
+    return d.dlProject || 'DOWNLOAD PROJECT FILE';
+  }
   function openProject(id) {
     const item = DATA.projects.find(p => p.id === id);
     if (!item) return;
     const d = t(), p = d.projectData?.[id];
     if (!p) return;
-    const dl = {en:'DOWNLOAD SYNTHETIC SQL STARTER',vi:'TẢI DỰ ÁN SQL DỮ LIỆU GIẢ LẬP','zh-Hant':'下載模擬 SQL 範例','zh-Hans':'下载模拟 SQL 示例'};
+    const isIpynb = Boolean(item.documentFile && item.documentFile.toLowerCase().endsWith('.ipynb'));
+    const downloadBtn = item.documentFile ? `<a class="btn btn-primary dialog-download" href="${h(item.documentFile)}" download>${h(getAssetLabel(item.documentFile, d))} ↓</a>` : '';
+    const viewBtn = (isIpynb && item.githubUrl) ? `<a class="btn btn-outline dialog-download" href="${h(item.githubUrl)}" target="_blank" rel="noopener noreferrer">${h(d.viewNotebook || 'VIEW NOTEBOOK')} ↗</a>` : '';
+    const actionButtons = (downloadBtn || viewBtn) ? `<div style="display:flex;gap:11px;flex-wrap:wrap;align-items:center">${downloadBtn}${viewBtn}</div>` : '';
+
     $('#project-dialog-content').innerHTML = `<div class="dialog-inner"><span class="section-overline">PROJECT / ${h(item.number)}</span><h2>${h(p.title)}</h2><span class="status status-${item.status}">${h(d[statusKey[item.status]])}</span><p class="dialog-lead">${h(p.description)}</p>
       <div class="dialog-section"><h3>${h(d.dialogProblem)}</h3><p>${h(p.goal)}</p></div><div class="dialog-section"><h3>${h(d.dialogMethods)}</h3><p>${h(p.methods)}</p></div><div class="dialog-section"><h3>${h(d.dialogEvidence)}</h3><p>${h(p.evidence)}</p></div><div class="tech-tags">${item.chips.map(chip=>`<span>${h(chip)}</span>`).join('')}</div>
-      ${id === 'sql' ? `<a class="btn btn-primary dialog-download" href="projects/sql_supply_chain_starter.zip" download>${h(dl[state.lang])} ↓</a>` : ''}
+      ${actionButtons}
       </div>`;
     $('#project-dialog').showModal();
   }
