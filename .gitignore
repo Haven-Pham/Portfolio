@@ -12,3 +12,7 @@ desktop.ini
 # Logs and runtime
 *.log
 node_modules/
+
+# Private Reference Documents (Never commit or publish)
+reference_docs/
+scratch/

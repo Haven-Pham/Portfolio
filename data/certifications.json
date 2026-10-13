@@ -61,5 +61,53 @@
     "mark": "YZ",
     "asset": null,
     "kind": "course"
+  },
+  {
+    "id": "toeic",
+    "provider": "ETS · IIG Vietnam",
+    "type": "language",
+    "when": "Oct 02, 2024",
+    "mark": "ETS",
+    "asset": null,
+    "kind": "assessment",
+    "score": "840 / 990 (L: 460, R: 380)"
+  },
+  {
+    "id": "tocfl",
+    "provider": "Ministry of Education, Taiwan",
+    "type": "language",
+    "when": "Jul 25, 2026",
+    "mark": "TOCFL",
+    "asset": null,
+    "kind": "assessment",
+    "score": "Score 940 · Level 2 (CEFR A2 / TBCL 3)",
+    "certId": "TLR11544488"
+  },
+  {
+    "id": "dc-sql-manip",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Jun 27, 2026",
+    "mark": "DC",
+    "asset": null,
+    "kind": "course"
+  },
+  {
+    "id": "dc-dax",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Jun 29, 2026",
+    "mark": "DC",
+    "asset": null,
+    "kind": "course"
+  },
+  {
+    "id": "dc-python-inter",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Sep 28, 2026",
+    "mark": "DC",
+    "asset": null,
+    "kind": "course"
   }
 ]

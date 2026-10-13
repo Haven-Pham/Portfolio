@@ -59,8 +59,9 @@
     $('#experience-list').innerHTML = found.map((item,index) => {
       const x = d.experienceData?.[item.id];
       if (!x) return '';
+      const logoMarkup = item.logo ? `<img src="${h(item.logo)}" alt="${h(x.org)}" class="company-logo-img">` : h(item.initials);
       return `<article class="experience-card reveal is-visible" style="--entry-delay:${index * 55}ms">
-        <div class="company-icon ${item.className}">${h(item.initials)}</div>
+        <div class="company-icon ${item.className}">${logoMarkup}</div>
         <div class="experience-body"><div class="exp-header"><span class="company-name">${h(x.org)}</span><span class="exp-period">◷ &nbsp;${h(experiencePeriods[state.lang]?.[item.id] || item.period)}</span></div>
         <h3>${h(x.role)}</h3><p>${h(x.summary)}</p>
         <ul class="exp-bullets">${x.bullets.map(line => `<li>${h(line)}</li>`).join('')}</ul></div><span class="card-index">${String(index+1).padStart(2,'0')}</span>
@@ -133,7 +134,10 @@
   function renderCerts() {
     const d=t();
     $('#cert-tabs').innerHTML = tab(d.certAll,'cert','all',state.certFilter) + tab(d.certHacker,'cert','hacker',state.certFilter) + tab(d.certDatacamp,'cert','datacamp',state.certFilter) + tab(d.certLang,'cert','language',state.certFilter);
-    $('#cert-grid').innerHTML = DATA.certificates.filter(c => state.certFilter === 'all' || c.type === state.certFilter).map(c => `<article class="cert-card"><div class="cert-heading"><div class="cert-mark ${c.type}">${h(c.mark)}</div><div><h3>${h(d.certNames[c.id])}</h3><span class="cert-provider">${h(c.provider)}</span></div></div><div class="cert-meta">${h(c.kind==='assessment'?d.certKindAssessment:d.certKindCourse)}</div><div class="cert-footer"><span>▦ &nbsp;${h(formatCertDate(c.when))}</span>${c.asset ? `<a href="${h(c.asset)}" target="_blank" rel="noopener noreferrer">${h(d.certView)}</a>`:`<span class="private-record">${h(d.certPrivate)}</span>`}</div></article>`).join('');
+    $('#cert-grid').innerHTML = DATA.certificates.filter(c => state.certFilter === 'all' || c.type === state.certFilter).map(c => {
+      const scoreMarkup = c.score ? ` · <strong style="color:var(--mint);font-size:11px">${h(c.score)}</strong>` : '';
+      return `<article class="cert-card"><div class="cert-heading"><div class="cert-mark ${c.type}">${h(c.mark)}</div><div><h3>${h(d.certNames[c.id] || c.id)}</h3><span class="cert-provider">${h(c.provider)}</span></div></div><div class="cert-meta">${h(c.kind==='assessment'?d.certKindAssessment:d.certKindCourse)}${scoreMarkup}</div><div class="cert-footer"><span>▦ &nbsp;${h(formatCertDate(c.when))}</span>${c.asset ? `<a href="${h(c.asset)}" target="_blank" rel="noopener noreferrer">${h(d.certView)}</a>`:`<span class="private-record">${h(d.certPrivate)}</span>`}</div></article>`;
+    }).join('');
     $$('[data-cert]').forEach(btn => btn.addEventListener('click',()=> { state.certFilter = btn.dataset.cert; renderCerts(); }));
   }
   function renderContacts() {

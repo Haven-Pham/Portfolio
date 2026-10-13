@@ -4,20 +4,23 @@
     "category": "planning",
     "initials": "HS",
     "period": "Oct 2024 – Apr 2025",
-    "className": "hoa"
+    "className": "hoa",
+    "logo": "assets/hoa-sen.png"
   },
   {
     "id": "kodai",
     "category": "logistics",
     "initials": "KS",
     "period": "2023 – Aug 2024",
-    "className": "kodai"
+    "className": "kodai",
+    "logo": "assets/kodai.png"
   },
   {
     "id": "vietlog",
     "category": "logistics",
     "initials": "VL",
     "period": "Jan – Jul 2023",
-    "className": "vietlog"
+    "className": "vietlog",
+    "logo": "assets/vietlog.png"
   }
 ]

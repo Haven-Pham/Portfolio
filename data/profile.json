@@ -3,5 +3,34 @@
   "linkedin": "https://www.linkedin.com/in/havenpham",
   "github": "https://github.com/Haven-Pham",
   "resume": "assets/Pham_Hong_Hieu_CV_DRAFT.pdf",
-  "profileImage": "assets/profile.jpg"
+  "profileImage": "assets/profile.jpg",
+  "location": "Taoyuan, Taiwan",
+  "academicStatus": "Global MBA Candidate at Yuan Ze University",
+  "education": {
+    "yzu": {
+      "institution": "Yuan Ze University",
+      "college": "College of Management",
+      "program": "Global Master of Business Administration (Global MBA)",
+      "period": "2025 – Present",
+      "enrolled": "Feb 2025",
+      "cumulativeGPA": "4.00 / 4.00",
+      "averageGrade": 96.19,
+      "credits": 32,
+      "classRanking": "Semester 2: Rank 1/28 (Semester 1: Rank 8/32)",
+      "honors": [
+        "Outstanding Dedication Award (Global Affairs Office, June 2026)"
+      ]
+    },
+    "hcmute": {
+      "institution": "Ho Chi Minh City University of Technology and Engineering",
+      "abbreviation": "HCM-UTE",
+      "degree": "Bachelor in Logistics and Supply Chain Management",
+      "period": "2020 – 2024",
+      "graduationDate": "July 26, 2024",
+      "gpa": "8.46 / 10",
+      "classification": "Distinction (Loại Giỏi)",
+      "credits": 125,
+      "trainingScore": "90 / 100 (Xuất sắc / Excellent)"
+    }
+  }
 }
