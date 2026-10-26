@@ -3,13 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#091d19">
+  <meta name="theme-color" content="#061426">
   <meta name="description" content="Pham Hong Hieu (Haven - 范鴻孝) — Supply Chain, Logistics and Data Analytics Portfolio. Experience, data projects and professional certifications.">
   <title>Pham Hong Hieu (Haven - 范鴻孝) | Supply Chain × Data Analytics</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="content.js" defer></script>
   <script src="main.js" defer></script>
+  <script src="motion.js" defer></script>
 </head>
 <body class="theme-dark">
   <div id="top"></div>
@@ -20,16 +24,17 @@
       <a class="brand" href="#top" aria-label="Pham Hong Hieu (Haven - 范鴻孝) — home">HP<span class="brand-dot">.</span></a>
       <nav class="primary-nav" id="nav" aria-label="Main navigation">
         <a data-i18n="navAbout" href="#about"></a>
+        <a data-i18n="navEducation" href="#education"></a>
         <a data-i18n="navExperience" href="#experience"></a>
+        <a data-i18n="navCerts" href="#certifications"></a>
         <a data-i18n="navProjects" href="#projects"></a>
         <a data-i18n="navStack" href="#stack"></a>
         <a data-i18n="navCommunity" href="#community"></a>
-        <a data-i18n="navCerts" href="#certifications"></a>
         <a data-i18n="navContact" href="#contact"></a>
       </nav>
       <div class="nav-actions">
         <div class="locale-wrap">
-          <label class="sr-only" for="language-switcher">Website language</label>
+          <label class="sr-only" for="language-switcher" data-i18n="websiteLanguage">Website language</label>
           <select id="language-switcher" class="locale-select" aria-label="Website language">
             <option value="en">EN</option><option value="vi">VI</option><option value="zh-Hant">繁體</option><option value="zh-Hans">简体</option>
           </select>
@@ -41,52 +46,108 @@
   </header>
 
   <main>
+    <!-- HERO SECTION -->
     <section class="hero section wrap" id="hero" aria-labelledby="hero-title">
       <div class="hero-text reveal">
         <div class="availability"><span class="pulse"></span><span data-i18n="heroBadge"></span></div>
         <div class="eyebrow"><span class="eyebrow-rule"></span><span data-i18n="heroEyebrow"></span></div>
-        <h1 id="hero-title"><span data-i18n="heroGreeting"></span><br><span class="gradient-text" data-i18n="heroName">Pham Hong Hieu (Haven - 范鴻孝)</span><span class="gold-dot">.</span></h1>
+        <h1 id="hero-title"><span class="hero-greeting" data-i18n="heroGreeting"></span><br><span class="gradient-text" data-i18n="heroName">Pham Hong Hieu (Haven - 范鴻孝)</span><span class="brand-dot">.</span></h1>
+        <div class="hero-positioning"><span data-i18n="heroPositioning">Data Analytics | Supply Chain | SQL | ERP</span></div>
         <p class="hero-lead" data-i18n="heroSummary"></p>
-        <div class="hero-pills"><span>SUPPLY CHAIN</span><span>SQL</span><span>POWER BI</span><span>LOGISTICS</span></div>
+        <div class="hero-pills"><span data-i18n="heroPillSupply">SUPPLY CHAIN</span><span>SQL</span><span>POWER BI</span><span data-i18n="heroPillLogistics">LOGISTICS</span><span>ORACLE ERP</span></div>
         <div class="hero-buttons">
-          <a class="btn btn-primary" href="#projects"><span data-i18n="exploreWork"></span><span aria-hidden="true">↗</span></a>
-          <a class="btn btn-outline" href="assets/Pham_Hong_Hieu_CV_DRAFT.pdf" target="_blank" rel="noopener"><span data-i18n="viewResume"></span><span aria-hidden="true">↗</span></a>
-          <button class="btn btn-outline" id="copy-email" type="button"><span aria-hidden="true">▣</span><span data-i18n="copyEmail"></span></button>
+          <a class="btn btn-primary" href="#projects"><span data-i18n="exploreWork">VIEW MY PROJECTS</span><span aria-hidden="true">↗</span></a>
+          <a class="btn btn-outline" href="assets/Pham_Hong_Hieu_CV_DRAFT.pdf" target="_blank" rel="noopener"><span data-i18n="viewResume">DOWNLOAD CV</span><span aria-hidden="true">↗</span></a>
+          <button class="btn btn-outline" id="copy-email" type="button"><span aria-hidden="true">▣</span><span data-i18n="copyEmail">Copy Email</span></button>
         </div>
         <div class="hero-socials">
           <a href="https://www.linkedin.com/in/havenpham" target="_blank" rel="noopener noreferrer" class="social-link"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#icon-linkedin"></use></svg>LinkedIn <span>↗</span></a>
           <a class="social-link" id="github-hero" href="#contact"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#icon-github"></use></svg><span>GitHub</span><span id="github-status">···</span></a>
         </div>
-        <div class="hero-location"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#icon-location"></use></svg><span data-i18n="heroLocation"></span></div>
+        <div class="hero-location"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#icon-location"></use></svg><span data-i18n="heroLocation">Based in Taoyuan, Taiwan</span></div>
       </div>
-      <div class="hero-visual reveal" aria-label="Pham Hong Hieu (Haven - 范鴻孝)'s supply chain and analytics focus">
+      <div class="hero-visual reveal" aria-label="Pham Hong Hieu's supply chain and analytics profile">
         <div class="visual-halo halo-1"></div><div class="visual-halo halo-2"></div>
         <div class="profile-illustration">
-          <div class="illustration-top"><span class="code-mark">&lt;portfolio /&gt;</span><span class="live-pip"></span></div>
-          <div class="avatar-orbit"><div class="orbit orbit-outer"></div><div class="orbit orbit-inner"></div><div class="avatar-card"><img src="assets/profile.jpg" alt="Pham Hong Hieu"></div><span class="orbit-chip chip-left">SQL</span><span class="orbit-chip chip-right">BI</span><span class="orbit-chip chip-bottom">ERP</span></div>
-          <div class="visual-name">PHAM HONG HIEU</div><div class="visual-role" data-i18n="visualRole"></div>
-          <div class="visual-pipeline"><span data-i18n="visualInput"></span><span class="pipe-arrow">→</span><span>SQL</span><span class="pipe-arrow">→</span><span>POWER BI</span><span class="pipe-arrow">→</span><span data-i18n="visualOutput"></span></div>
+          <div class="illustration-top"><span class="code-mark">&lt;profile /&gt;</span><span class="live-pip" title="Active"></span></div>
+          <div class="avatar-frame">
+            <div class="avatar-card"><img src="assets/profile.jpg" alt="Pham Hong Hieu"></div>
+            <span class="orbit-chip chip-left">SQL</span>
+            <span class="orbit-chip chip-right">POWER BI</span>
+            <span class="orbit-chip chip-bottom">ERP</span>
+          </div>
+          <div class="visual-name">PHAM HONG HIEU</div>
+          <div class="visual-role" data-i18n="visualRole">SUPPLY CHAIN × DATA ANALYTICS</div>
+          <div class="visual-pipeline"><span data-i18n="visualInput">OPERATIONS</span><span class="pipe-arrow">→</span><span>SQL</span><span class="pipe-arrow">→</span><span>POWER BI</span><span class="pipe-arrow">→</span><span data-i18n="visualOutput">INSIGHT</span></div>
         </div>
-        <div class="floating-card floating-one"><span class="floating-mini">01 / EXPERIENCE</span><strong data-i18n="floatRole"></strong><small>2023 – 2025</small></div>
-        <div class="floating-card floating-two"><span class="floating-mini">02 / CREDENTIALS</span><strong>SQL ADVANCED</strong><small>HackerRank · 2026</small></div>
+        <div class="floating-card floating-one"><span class="floating-mini" data-i18n="floatExpBadge">01 / EXPERIENCE</span><strong data-i18n="floatRole">Supply Chain &amp; Logistics</strong><small data-i18n="floatExpYears">2023 – 2025</small></div>
+        <div class="floating-card floating-two"><span class="floating-mini" data-i18n="floatCredBadge">02 / CREDENTIALS</span><strong data-i18n="floatCredTitle">SQL ADVANCED</strong><small data-i18n="floatCredIssuer">HackerRank · 2026</small></div>
       </div>
     </section>
 
-    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>SUPPLY CHAIN</span> ✳ <span>DATA ANALYTICS</span> ✳ <span>BUSINESS INTELLIGENCE</span> ✳ <span>SQL</span> ✳ <span>POWER BI</span> ✳ <span>ERP</span> ✳ <span>SUPPLY CHAIN</span> ✳ <span>DATA ANALYTICS</span> ✳</div></div>
+    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>SUPPLY CHAIN</span> ✦ <span>DATA ANALYTICS</span> ✦ <span>BUSINESS INTELLIGENCE</span> ✦ <span>SQL</span> ✦ <span>POWER BI</span> ✦ <span>ORACLE ERP</span> ✦ <span>LOGISTICS</span> ✦ <span>SUPPLY CHAIN</span> ✦ <span>DATA ANALYTICS</span> ✦</div></div>
 
+    <!-- PROFILE OVERVIEW -->
     <section class="section wrap about-section" id="about">
-      <div class="section-title reveal"><p class="section-overline">01 / <span data-i18n="navAbout"></span></p><h2 data-i18n="aboutHeading"></h2><div class="section-rule"></div></div>
+      <div class="section-title reveal"><p class="section-overline" data-i18n="aboutOverline">PROFILE OVERVIEW</p><h2 data-i18n="aboutHeading"></h2><div class="section-rule"></div></div>
       <div class="about-grid">
         <div class="about-primary reveal"><div class="quote-mark">“</div><h3 data-i18n="aboutStatement"></h3><p data-i18n="aboutParagraph"></p><a href="#contact" class="text-arrow" data-i18n="talkAboutWork"></a></div>
         <div class="about-info reveal">
           <div class="mini-stat-grid"><div class="stat"><strong>03</strong><span data-i18n="statRoles"></span></div><div class="stat"><strong>02</strong><span data-i18n="statDegrees"></span></div><div class="stat"><strong>02</strong><span data-i18n="statHackerrank"></span></div></div>
-          <div class="education-label"><span class="section-mini-dot"></span><span data-i18n="educationTitle"></span></div>
-          <div class="education-item"><div class="education-icon"><img src="assets/yuan-ze-university.png" alt="Yuan Ze University" class="edu-logo-img"></div><div><strong data-i18n="mbaDegree"></strong><span data-i18n="mbaSchool"></span><small data-i18n="mbaYears"></small></div></div>
-          <div class="education-item"><div class="education-icon"><img src="assets/hcm-ute.png" alt="HCM-UTE" class="edu-logo-img"></div><div><strong data-i18n="bachelorDegree"></strong><span data-i18n="bachelorSchool"></span><small data-i18n="bachelorYears"></small></div></div>
+          <div class="candidate-highlights">
+            <div class="highlight-item"><span class="highlight-icon">✦</span><div><strong data-i18n="highlightMbaTitle">Global MBA Candidate</strong><span data-i18n="highlightMbaSchool">Yuan Ze University · College of Management</span></div></div>
+            <div class="highlight-item"><span class="highlight-icon">✦</span><div><strong data-i18n="highlightBachelorTitle">Logistics &amp; Supply Chain Graduate</strong><span data-i18n="highlightBachelorSchool">HCM-UTE · Distinction (Loại Giỏi)</span></div></div>
+            <div class="highlight-item"><span class="highlight-icon">✦</span><div><strong data-i18n="highlightLangTitle">Multilingual Communication</strong><span data-i18n="highlightLangDesc">English (TOEIC 840) · Mandarin (TOCFL A2) · Vietnamese</span></div></div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- 01 / EDUCATION SECTION -->
+    <section class="section wrap" id="education">
+      <div class="section-title reveal">
+        <p class="section-overline">01 / <span data-i18n="navEducation">EDUCATION</span></p>
+        <h2 data-i18n="educationHeading">Academic Background &amp; Degrees</h2>
+        <div class="section-rule"></div>
+        <p class="section-caption" data-i18n="educationCaption"></p>
+      </div>
+      <div class="education-grid">
+        <article class="education-card reveal">
+          <div class="edu-card-header">
+            <div class="edu-logo-box"><img src="assets/yuan-ze-university.png" alt="Yuan Ze University" class="edu-logo-img"></div>
+            <div class="edu-header-text">
+              <span class="edu-period" data-i18n="mbaYears">2025 – Present</span>
+              <h3 data-i18n="mbaDegree">Global Master of Business Administration (Global MBA)</h3>
+              <p class="edu-institution" data-i18n="mbaSchool">Yuan Ze University · Taoyuan, Taiwan</p>
+            </div>
+          </div>
+          <div class="edu-meta-badges">
+            <div class="edu-meta-chip"><span class="edu-chip-label" data-i18n="eduGpaLabel">GPA:</span><strong class="edu-chip-val">4.00 / 4.00</strong></div>
+            <div class="edu-meta-chip"><span class="edu-chip-label" data-i18n="eduOverallLabel">Overall:</span><strong class="edu-chip-val">96.19 / 100</strong></div>
+            <div class="edu-meta-chip"><span class="edu-chip-label" data-i18n="eduRankLabel">Rank:</span><span class="edu-chip-val" data-i18n="mbaRank">Rank 1/28 (Semester 2)</span></div>
+            <div class="edu-meta-chip edu-award-chip"><span class="edu-award-star">★</span><span data-i18n="mbaAward">Outstanding Dedication Award</span></div>
+          </div>
+        </article>
+        <article class="education-card reveal">
+          <div class="edu-card-header">
+            <div class="edu-logo-box"><img src="assets/hcm-ute.png" alt="HCM-UTE" class="edu-logo-img"></div>
+            <div class="edu-header-text">
+              <span class="edu-period" data-i18n="bachelorYears">2020 – 2024</span>
+              <h3 data-i18n="bachelorDegree">Bachelor's degree in Logistics and Supply Chain Management</h3>
+              <p class="edu-institution" data-i18n="bachelorSchool">Ho Chi Minh City University of Technology and Engineering (HCM-UTE)</p>
+            </div>
+          </div>
+          <div class="edu-meta-badges">
+            <div class="edu-meta-chip"><span class="edu-chip-label" data-i18n="eduGpaLabel">GPA:</span><strong class="edu-chip-val">8.46 / 10</strong></div>
+            <div class="edu-meta-chip"><span class="edu-chip-label" data-i18n="eduClassificationLabel">Classification:</span><strong class="edu-chip-val" data-i18n="bachelorClass">Distinction</strong></div>
+            <div class="edu-meta-chip"><span class="edu-chip-label" data-i18n="eduTrainingScoreLabel">Training score:</span><strong class="edu-chip-val">90 / 100</strong></div>
+            <div class="edu-meta-chip"><span class="edu-chip-label" data-i18n="eduCreditsLabel">Credits:</span><span class="edu-chip-val" data-i18n="eduCreditsVal">125 Credits Completed</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 02 / EXPERIENCE SECTION -->
     <section class="section wrap" id="experience">
       <div class="section-title reveal"><p class="section-overline">02 / <span data-i18n="navExperience"></span></p><h2 data-i18n="experienceHeading"></h2><div class="section-rule"></div><p class="section-caption" data-i18n="experienceCaption"></p></div>
       <div class="tabs reveal" id="experience-tabs" role="tablist" aria-label="Experience categories"></div>
@@ -94,30 +155,50 @@
       <p class="content-note" data-i18n="dateNote"></p>
     </section>
 
+    <!-- 03 / CERTIFICATIONS SECTION -->
+    <section class="section wrap" id="certifications">
+      <div class="section-title reveal"><p class="section-overline">03 / <span data-i18n="navCerts"></span></p><div class="certs-heading"><h2 data-i18n="certsHeading"></h2><span class="counter-badge" data-i18n="certCount">12 VERIFIED</span></div><div class="section-rule"></div><p class="section-caption" data-i18n="certsCaption"></p></div>
+      <div class="tabs cert-tabs reveal" id="cert-tabs" role="tablist" aria-label="Certificate providers"></div>
+      <div class="cert-grid" id="cert-grid"></div><p class="content-note" data-i18n="certPrivacy"></p>
+    </section>
+
+    <!-- 04 / PROJECTS SECTION -->
     <section class="section wrap" id="projects">
-      <div class="section-title reveal"><p class="section-overline">03 / <span data-i18n="navProjects"></span></p><h2 data-i18n="projectsHeading"></h2><div class="section-rule"></div><p class="section-caption" data-i18n="projectsCaption"></p></div>
+      <div class="section-title reveal"><p class="section-overline">04 / <span data-i18n="navProjects"></span></p><h2 data-i18n="projectsHeading"></h2><div class="section-rule"></div><p class="section-caption" data-i18n="projectsCaption"></p></div>
       <div class="tabs reveal" id="project-tabs" role="tablist" aria-label="Project categories"></div>
       <div class="project-grid" id="project-grid" aria-live="polite"></div>
       <div class="project-disclaimer"><span>ⓘ</span><span data-i18n="projectDisclaimer"></span></div>
     </section>
 
+    <!-- 05 / WORKFLOW & STACK SECTION -->
     <section class="section wrap" id="stack">
-      <div class="section-title reveal"><p class="section-overline">04 / <span data-i18n="navStack"></span></p><h2 data-i18n="stackHeading"></h2><div class="section-rule"></div><p class="section-caption" data-i18n="stackCaption"></p></div>
+      <div class="section-title reveal"><p class="section-overline">05 / <span data-i18n="navStack"></span></p><h2 data-i18n="stackHeading"></h2><div class="section-rule"></div><p class="section-caption" data-i18n="stackCaption"></p></div>
       <div class="stack-controls"><button type="button" class="view-toggle active" data-stack-view="workflow" data-i18n="stackWorkflow"></button><button type="button" class="view-toggle" data-stack-view="skills" data-i18n="stackSkills"></button></div>
       <div id="stack-workflow" class="stack-panel"><div id="stage-grid" class="stage-grid"></div><div id="stage-description" class="stage-description" aria-live="polite"></div></div>
       <div id="stack-skills" class="stack-panel" hidden></div>
     </section>
 
-    <section class="section wrap" id="community"><div class="section-title reveal"><p class="section-overline">05 / <span data-i18n="navCommunity"></span></p><h2 data-i18n="communityHeading"></h2><div class="section-rule"></div><p class="section-caption" data-i18n="communityCaption"></p></div><div class="community-grid" id="community-grid"></div></section>
+    <!-- 06 / COMMUNITY SECTION -->
+    <section class="section wrap" id="community"><div class="section-title reveal"><p class="section-overline">06 / <span data-i18n="navCommunity"></span></p><h2 data-i18n="communityHeading"></h2><div class="section-rule"></div><p class="section-caption" data-i18n="communityCaption"></p></div><div class="community-grid" id="community-grid"></div></section>
 
-    <section class="section wrap" id="certifications">
-      <div class="section-title reveal"><p class="section-overline">06 / <span data-i18n="navCerts"></span></p><div class="certs-heading"><h2 data-i18n="certsHeading"></h2><span class="counter-badge" data-i18n="certCount"></span></div><div class="section-rule"></div><p class="section-caption" data-i18n="certsCaption"></p></div>
-      <div class="tabs cert-tabs reveal" id="cert-tabs" role="tablist" aria-label="Certificate providers"></div>
-      <div class="cert-grid" id="cert-grid"></div><p class="content-note" data-i18n="certPrivacy"></p>
+    <!-- 07 / CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="wrap">
+        <div class="section-title centered reveal">
+          <p class="section-overline">07 / <span data-i18n="navContact"></span></p>
+          <h2 data-i18n="contactHeading"></h2>
+          <div class="section-rule"></div>
+          <p class="section-caption" data-i18n="contactCaption"></p>
+        </div>
+        <div class="contact-grid" id="contact-grid"></div>
+        <div class="contact-email reveal">
+          <span data-i18n="preferredContact">PREFERRED DIRECT CONTACT</span>
+          <a href="mailto:havenpham63729@gmail.com">havenpham63729@gmail.com ↗</a>
+        </div>
+      </div>
     </section>
-
-    <section class="section contact-section" id="contact"><div class="wrap"><div class="section-title centered reveal"><p class="section-overline">07 / <span data-i18n="navContact"></span></p><h2 data-i18n="contactHeading"></h2><div class="section-rule"></div><p class="section-caption" data-i18n="contactCaption"></p></div><div class="contact-grid" id="contact-grid"></div><div class="contact-email reveal"><span data-i18n="preferredContact"></span><a href="mailto:havenpham63729@gmail.com">havenpham63729@gmail.com ↗</a></div></div></section>
   </main>
+
   <footer class="footer wrap"><span>© <span id="year">2026</span> Pham Hong Hieu (Haven - 范鴻孝)</span><span data-i18n="footerNote"></span><a href="#top" data-i18n="backToTop"></a></footer>
   <a class="back-to-top" href="#top" aria-label="Back to top" title="Back to top">↑</a>
   <dialog id="project-dialog" class="project-dialog"><button type="button" class="dialog-close" id="dialog-close" aria-label="Close">×</button><div id="project-dialog-content"></div></dialog>
@@ -127,4 +208,5 @@
     <symbol id="icon-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .9A11.1 11.1 0 0 0 .9 12c0 4.9 3.17 9.06 7.56 10.53.56.11.76-.24.76-.53v-1.9c-3.07.67-3.73-1.3-3.73-1.3-.5-1.28-1.22-1.62-1.22-1.62-1-.7.07-.69.07-.69 1.1.08 1.67 1.13 1.67 1.13.98 1.68 2.57 1.2 3.2.91.1-.71.38-1.2.69-1.48-2.45-.28-5.03-1.23-5.03-5.47 0-1.2.43-2.18 1.14-2.95-.11-.28-.49-1.4.11-2.92 0 0 .93-.3 3.05 1.13a10.7 10.7 0 0 1 5.55 0c2.12-1.43 3.05-1.13 3.05-1.13.61 1.52.23 2.64.11 2.92.71.77 1.14 1.75 1.14 2.95 0 4.25-2.59 5.19-5.05 5.46.39.34.74 1 .74 2.02v2.99c0 .29.2.64.77.53A11.1 11.1 0 0 0 23.1 12 11.1 11.1 0 0 0 12 .9Z"/></symbol>
     <symbol id="icon-location" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle fill="none" stroke="currentColor" stroke-width="1.7" cx="12" cy="10" r="2.8"/></symbol>
   </defs></svg>
-</body></html>
+</body>
+</html>
