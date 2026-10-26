@@ -1,18 +1,98 @@
 [
   {
-    "id": "retail",
+    "id": "fnb-supply-chain",
+    "category": "supply",
+    "icon": "◈",
+    "chips": [
+      "Python",
+      "Power BI",
+      "37 DAX measures",
+      "Star schema"
+    ],
+    "status": "completed",
+    "documentFile": null,
+    "githubUrl": "https://github.com/Haven-Pham/fnb-supply-chain-analytics",
+    "demoUrl": null,
+    "number": "01"
+  },
+  {
+    "id": "transport-otif",
+    "category": "supply",
+    "icon": "⇄",
+    "chips": [
+      "Python",
+      "SciPy",
+      "Power BI",
+      "OTIF"
+    ],
+    "status": "completed",
+    "documentFile": null,
+    "githubUrl": "https://github.com/Haven-Pham/transport-logistics-otif-analytics",
+    "demoUrl": null,
+    "number": "02"
+  },
+  {
+    "id": "protosetfit",
+    "category": "ai",
+    "icon": "✦",
+    "chips": [
+      "PyTorch",
+      "SetFit",
+      "Few-shot NLP",
+      "Statistics"
+    ],
+    "status": "research",
+    "documentFile": null,
+    "githubUrl": "https://github.com/Haven-Pham/ProtoSetFit",
+    "demoUrl": null,
+    "number": "03"
+  },
+  {
+    "id": "fastfit",
+    "category": "ai",
+    "icon": "✧",
+    "chips": [
+      "FastFit",
+      "BANKING77",
+      "Hugging Face"
+    ],
+    "status": "development",
+    "documentFile": null,
+    "githubUrl": null,
+    "demoUrl": null,
+    "number": "04"
+  },
+  {
+    "id": "ecommerce-cohort",
+    "category": "analytics",
+    "icon": "⌁",
+    "chips": [
+      "Python",
+      "Cohort Analysis",
+      "Retention"
+    ],
+    "status": "completed",
+    "number": "05",
+    "documentFile": "projects/ecommerce_customer_cohort_retention_profitability/ecommerce_customer_cohort_retention_profitability_analysis.ipynb",
+    "githubUrl": "https://github.com/Haven-Pham/customer-analytics-playbook",
+    "demoUrl": null
+  },
+  {
+    "id": "analytics-playbook",
     "category": "analytics",
     "icon": "▥",
     "chips": [
-      "Power BI",
-      "DAX",
-      "KPIs"
+      "Python",
+      "RFM",
+      "ABC",
+      "Market Basket",
+      "Funnel"
     ],
-    "status": "development",
-    "number": "01",
-    "documentFile": "projects/retail_sales_dashboard.pbix",
-    "githubUrl": null,
-    "demoUrl": null
+    "status": "coursework",
+    "documentFile": null,
+    "githubUrl": "https://github.com/Haven-Pham/customer-analytics-playbook",
+    "demoUrl": null,
+    "number": "06"
   },
   {
     "id": "sql",
@@ -24,67 +104,9 @@
       "Window Functions"
     ],
     "status": "starter",
-    "number": "02",
+    "number": "07",
     "documentFile": "projects/sql_supply_chain_starter.zip",
-    "githubUrl": "https://github.com/Haven-Pham",
-    "demoUrl": null
-  },
-  {
-    "id": "inventory",
-    "category": "supply",
-    "icon": "◈",
-    "chips": [
-      "Inventory",
-      "Python · Learning",
-      "Excel"
-    ],
-    "status": "concept",
-    "number": "03",
-    "documentFile": null,
-    "githubUrl": null,
-    "demoUrl": null
-  },
-  {
-    "id": "netflix",
-    "category": "analytics",
-    "icon": "⌁",
-    "chips": [
-      "Python",
-      "pandas",
-      "EDA"
-    ],
-    "status": "coursework",
-    "number": "04",
-    "documentFile": "projects/netflix_eda.ipynb",
-    "githubUrl": null,
-    "demoUrl": null
-  },
-  {
-    "id": "rfm",
-    "category": "analytics",
-    "icon": "▥",
-    "chips": [
-      "ANALYTICS"
-    ],
-    "status": "coursework",
-    "number": "05",
-    "documentFile": "projects/rfm_segmentation_analysis.xlsx",
-    "githubUrl": null,
-    "demoUrl": null
-  },
-  {
-    "id": "ecommerce-cohort",
-    "category": "analytics",
-    "icon": "⌁",
-    "chips": [
-      "Python",
-      "Cohort Analysis",
-      "Retention"
-    ],
-    "status": "coursework",
-    "number": "06",
-    "documentFile": "projects/ecommerce_customer_cohort_retention_profitability/ecommerce_customer_cohort_retention_profitability_analysis.ipynb",
-    "githubUrl": null,
+    "githubUrl": "https://github.com/Haven-Pham/Portfolio/tree/main/projects/sql_supply_chain_starter",
     "demoUrl": null
   }
 ]

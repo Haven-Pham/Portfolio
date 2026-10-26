@@ -1,1 +1,55 @@
-[]
+[
+  {
+    "id": "thesis-convergence",
+    "type": "thesis",
+    "year": "2026",
+    "url": null,
+    "metrics": [
+      {
+        "value": "8.53M",
+        "label": "patents"
+      },
+      {
+        "value": "188,661",
+        "label": "pairs"
+      },
+      {
+        "value": "1976–2025",
+        "label": "window"
+      }
+    ],
+    "tags": [
+      "Patent analytics",
+      "Python",
+      "DuckDB",
+      "Growth models",
+      "Holdout validation"
+    ]
+  },
+  {
+    "id": "csmot-2026",
+    "type": "conference",
+    "year": "2026",
+    "url": null,
+    "metrics": [
+      {
+        "value": "134.6M",
+        "label": "citations"
+      },
+      {
+        "value": "0.26%",
+        "label": "mape"
+      },
+      {
+        "value": "0.999",
+        "label": "r2"
+      }
+    ],
+    "tags": [
+      "Technology convergence",
+      "USPTO",
+      "IPC",
+      "Gompertz"
+    ]
+  }
+]

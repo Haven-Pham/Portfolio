@@ -3,7 +3,8 @@
   let PACKS = window.PORTFOLIO_I18N || {};
   let DATA = window.PORTFOLIO_RECORDS || { experience: [], projects: [], certificates: [] };
   let CONFIG = window.PORTFOLIO_CONFIG || {};
-  let RESEARCH = [];
+  let RESEARCH = DATA.research || [];
+  let GITHUB_REPOS = null; // null = loading, [] = unavailable
   const $ = (s, root = document) => root.querySelector(s);
   const $$ = (s, root = document) => [...root.querySelectorAll(s)];
   const getSaved = (key, fallback) => { try { return localStorage.getItem(key) || fallback; } catch { return fallback; } };
@@ -51,7 +52,7 @@
     $('#language-switcher').value = state.lang;
     $('#theme-switcher span:last-child').textContent = state.theme === 'dark' ? dict.themeLight : dict.themeDark;
     $('#year').textContent = new Date().getFullYear();
-    renderExperience();renderProjects();renderStack();renderCommunity();renderCerts();renderContacts();
+    renderExperience();renderProjects();renderGithubFeed();renderResearch();renderStack();renderCommunity();renderCerts();renderContacts();
     setupObservers();
   }
   function renderExperience() {
@@ -92,25 +93,25 @@
     $$('[data-exp]').forEach(btn => btn.addEventListener('click', () => { state.expFilter = btn.dataset.exp; renderExperience(); }));
   }
   const experiencePeriods = {
-    vi:{'hoa-sen':'10/2024 – 04/2025','kodai':'2023 – 08/2024','vietlog':'01 – 07/2023'},
-    'zh-Hant':{'hoa-sen':'2024/10 – 2025/04','kodai':'2023 – 2024/08','vietlog':'2023/01 – 2023/07'},
-    'zh-Hans':{'hoa-sen':'2024/10 – 2025/04','kodai':'2023 – 2024/08','vietlog':'2023/01 – 2023/07'}
+    vi:{'hoa-sen':'10/2024 – 04/2025','kodai':'07/2023 – 08/2024','vietlog':'01 – 07/2023'},
+    'zh-Hant':{'hoa-sen':'2024/10 – 2025/04','kodai':'2023/07 – 2024/08','vietlog':'2023/01 – 2023/07'},
+    'zh-Hans':{'hoa-sen':'2024/10 – 2025/04','kodai':'2023/07 – 2024/08','vietlog':'2023/01 – 2023/07'}
   };
   const formatCertDate = text => {
     const locale = state.lang === 'zh-Hant' ? 'zh-TW' : state.lang === 'zh-Hans' ? 'zh-CN' : state.lang;
     return new Intl.DateTimeFormat(locale, {year:'numeric', month:'short', day:'numeric'}).format(new Date(text));
   };
-  const statusKey = {development:'projDevelopment',starter:'projStarter',concept:'projConcept',coursework:'projCoursework'};
-  const projectCategoryKey = {analytics:'projAnalytics',sql:'projSql',supply:'projSupply'};
+  const statusKey = {completed:'projCompleted',research:'projResearch',development:'projDevelopment',starter:'projStarter',concept:'projConcept',coursework:'projCoursework'};
+  const projectCategoryKey = {supply:'projSupply',ai:'projAi',analytics:'projAnalytics',sql:'projSql'};
   function renderProjects() {
     const d = t();
-    $('#project-tabs').innerHTML = tab(d.projAll,'project','all',state.projectFilter) + tab(d.projAnalytics,'project','analytics',state.projectFilter) + tab(d.projSql,'project','sql',state.projectFilter) + tab(d.projSupply,'project','supply',state.projectFilter);
+    $('#project-tabs').innerHTML = tab(d.projAll,'project','all',state.projectFilter) + Object.entries(projectCategoryKey).map(([value,key]) => tab(d[key],'project',value,state.projectFilter)).join('');
     $('#project-grid').innerHTML = DATA.projects.filter(item => state.projectFilter === 'all' || state.projectFilter === item.category).map(item => {
       const p = d.projectData?.[item.id];
       if (!p) return '';
       const catLabel = d[projectCategoryKey[item.category]] || item.category;
       const statusLabel = d[statusKey[item.status]] || item.status;
-      const githubMarkup = item.githubUrl ? `<a class="project-github-btn" href="${h(item.githubUrl)}" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><svg class="project-btn-icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#icon-github"></use></svg><span>GitHub</span><span class="action-icon" aria-hidden="true">↗</span></a>` : '';
+      const githubMarkup = item.githubUrl ? `<a class="project-github-btn" href="${h(item.githubUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${h(p.title)} on GitHub"><svg class="project-btn-icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#icon-github"></use></svg><span>GitHub</span><span class="action-icon" aria-hidden="true">↗</span></a>` : '';
       return `<article class="project-card reveal" aria-label="${h(p.title)}" data-category="${h(item.category)}">
         <div class="project-card-header">
           <div class="project-badge-group">
@@ -160,7 +161,7 @@
     const catLabel = d[projectCategoryKey[item.category]] || item.category;
     const isIpynb = Boolean(item.documentFile && item.documentFile.toLowerCase().endsWith('.ipynb'));
     const downloadBtn = item.documentFile ? `<a class="btn btn-primary dialog-download" href="${h(item.documentFile)}" download>${h(getAssetLabel(item.documentFile, d))} ↓</a>` : '';
-    const viewBtn = (isIpynb && item.githubUrl) ? `<a class="btn btn-outline dialog-download" href="${h(item.githubUrl)}" target="_blank" rel="noopener noreferrer">${h(d.viewNotebook || 'VIEW NOTEBOOK')} ↗</a>` : '';
+    const viewBtn = item.githubUrl ? `<a class="btn btn-outline dialog-download" href="${h(item.githubUrl)}" target="_blank" rel="noopener noreferrer">${h(isIpynb ? (d.viewNotebook || 'VIEW NOTEBOOK') : 'GITHUB')} ↗</a>` : '';
     const actionButtons = (downloadBtn || viewBtn) ? `<div style="display:flex;gap:11px;flex-wrap:wrap;align-items:center">${downloadBtn}${viewBtn}</div>` : '';
 
     $('#project-dialog-content').innerHTML = `<div class="dialog-inner">
@@ -175,6 +176,57 @@
       ${actionButtons}
       </div>`;
     $('#project-dialog').showModal();
+  }
+  async function loadGithubRepos() {
+    const user = CONFIG.githubUser || (CONFIG.github || '').split('/').filter(Boolean).pop();
+    if (!user) { GITHUB_REPOS = []; renderGithubFeed(); return; }
+    try {
+      const res = await fetch(`https://api.github.com/users/${encodeURIComponent(user)}/repos?sort=pushed&per_page=30`, { headers: { Accept: 'application/vnd.github+json' } });
+      if (!res.ok) throw Error(String(res.status));
+      const repos = await res.json();
+      GITHUB_REPOS = repos
+        .filter(r => !r.fork && !r.archived && r.name.toLowerCase() !== user.toLowerCase())
+        .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
+        .slice(0, 6);
+    } catch {
+      GITHUB_REPOS = [];
+    }
+    renderGithubFeed();
+  }
+  function renderGithubFeed() {
+    const box = $('#github-feed');
+    if (!box) return;
+    const d = t();
+    const head = `<div class="gh-feed-head"><span class="gh-feed-live"><span class="pulse"></span>${h(d.githubFeedTitle)}</span><p>${h(d.githubFeedCaption)}</p></div>`;
+    const all = CONFIG.github ? `<a class="text-arrow gh-feed-all" href="${h(CONFIG.github)}?tab=repositories" target="_blank" rel="noopener noreferrer">${h(d.githubFeedAll)} ↗</a>` : '';
+    if (GITHUB_REPOS === null) { box.innerHTML = head + `<div class="gh-feed-grid">${'<div class="gh-repo skeleton"></div>'.repeat(3)}</div>`; return; }
+    if (!GITHUB_REPOS.length) { box.innerHTML = head + `<p class="content-note">${h(d.githubFeedError)}</p>` + all; return; }
+    box.innerHTML = head + `<div class="gh-feed-grid">${GITHUB_REPOS.map(r => `<a class="gh-repo" href="${h(r.html_url)}" target="_blank" rel="noopener noreferrer">
+        <span class="gh-repo-name"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#icon-github"></use></svg>${h(r.name)}</span>
+        <span class="gh-repo-desc">${h(r.description || '')}</span>
+        <span class="gh-repo-meta">${r.language ? `<span><span class="gh-lang-dot"></span>${h(r.language)}</span>` : ''}<span>★ ${h(r.stargazers_count)}</span><span>${h(d.githubFeedUpdated)} ${h(formatCertDate(r.pushed_at))}</span></span>
+      </a>`).join('')}</div>` + all;
+  }
+  function renderResearch() {
+    const grid = $('#research-grid');
+    if (!grid) return;
+    const d = t();
+    const typeLabel = { thesis: d.researchTypeThesis, conference: d.researchTypeConference };
+    grid.innerHTML = RESEARCH.map((item, index) => {
+      const r = d.researchData?.[item.id];
+      if (!r) return '';
+      const metrics = (item.metrics || []).map(m => `<div class="research-metric"><strong>${h(m.value)}</strong><span>${h(d.researchLabels?.[m.label] || m.label)}</span></div>`).join('');
+      return `<article class="research-card reveal" style="--entry-delay:${index * 70}ms">
+        <div class="research-card-top"><span class="research-type ${h(item.type)}">${h(typeLabel[item.type] || item.type)}</span><span class="research-year">${h(item.year)}</span></div>
+        <h3 class="research-title">${h(r.title)}</h3>
+        <p class="research-venue">${h(r.venue)}</p>
+        <div class="research-metrics">${metrics}</div>
+        <p class="research-summary">${h(r.summary)}</p>
+        <ul class="research-highlights">${r.highlights.map(x => `<li>${h(x)}</li>`).join('')}</ul>
+        <div class="project-tech-stack">${(item.tags || []).map(tag => `<span class="tech-tag">${h(tag)}</span>`).join('')}</div>
+        ${item.url ? `<a class="text-arrow" href="${h(item.url)}" target="_blank" rel="noopener noreferrer">${h(d.certView)}</a>` : ''}
+      </article>`;
+    }).join('');
   }
   function renderStack() {
     const d = t();
@@ -369,6 +421,7 @@
       tab(d.certAll, 'cert', 'all', state.certFilter) +
       tab(d.certHacker, 'cert', 'hacker', state.certFilter) +
       tab(d.certDatacamp, 'cert', 'datacamp', state.certFilter) +
+      tab(d.certCoursera, 'cert', 'coursera', state.certFilter) +
       tab(d.certLang, 'cert', 'language', state.certFilter);
 
     $('#cert-grid').innerHTML = DATA.certificates
@@ -496,7 +549,7 @@
     const height = document.documentElement.scrollHeight - window.innerHeight;
     $('#progress').style.width = (height > 0 ? (window.scrollY / height) * 100 : 0) + '%';
   }
-  const sectionIds = ['about', 'education', 'experience', 'certifications', 'projects', 'stack', 'community', 'contact'];
+  const sectionIds = ['about', 'education', 'experience', 'certifications', 'projects', 'research', 'stack', 'community', 'contact'];
   function updateActiveNav() {
     const scrollY = window.scrollY;
     const headerOffset = 130;
@@ -536,6 +589,7 @@
   updateProgress();
   updateActiveNav();
   loadDataFromJSON();
+  loadGithubRepos();
   const scrollTarget = new URLSearchParams(window.location.search).get('scroll');
   if (scrollTarget) {
     const doScroll = () => {

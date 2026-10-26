@@ -32,5 +32,15 @@
       "credits": 125,
       "trainingScore": "90 / 100 (Xuất sắc / Excellent)"
     }
-  }
+  },
+  "website": "https://haven-portfolio02.vercel.app",
+  "repos": {
+    "profile": "https://github.com/Haven-Pham/Haven-Pham",
+    "portfolio": "https://github.com/Haven-Pham/Portfolio",
+    "protosetfit": "https://github.com/Haven-Pham/ProtoSetFit",
+    "fnb": "https://github.com/Haven-Pham/fnb-supply-chain-analytics",
+    "transport": "https://github.com/Haven-Pham/transport-logistics-otif-analytics",
+    "playbook": "https://github.com/Haven-Pham/customer-analytics-playbook"
+  },
+  "githubUser": "Haven-Pham"
 }

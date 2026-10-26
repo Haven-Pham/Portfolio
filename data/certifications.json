@@ -89,8 +89,9 @@
     "type": "datacamp",
     "when": "Jun 27, 2026",
     "mark": "DC",
-    "asset": null,
-    "kind": "course"
+    "asset": "assets/certificates/datacamp-data-manipulation-sql.pdf",
+    "kind": "course",
+    "certId": "#48,454,775"
   },
   {
     "id": "dc-dax",
@@ -98,8 +99,9 @@
     "type": "datacamp",
     "when": "Jun 29, 2026",
     "mark": "DC",
-    "asset": null,
-    "kind": "course"
+    "asset": "assets/certificates/datacamp-intro-dax.pdf",
+    "kind": "course",
+    "certId": "#48,178,782"
   },
   {
     "id": "dc-python-inter",
@@ -107,7 +109,108 @@
     "type": "datacamp",
     "when": "Sep 28, 2026",
     "mark": "DC",
-    "asset": null,
-    "kind": "course"
+    "asset": "assets/certificates/datacamp-intermediate-python.pdf",
+    "kind": "course",
+    "certId": "#49,954,197"
+  },
+  {
+    "id": "dc-stats-python",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Oct 16, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-statistics-python.pdf",
+    "kind": "course",
+    "certId": "#50,357,742"
+  },
+  {
+    "id": "dc-pandas-join",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Oct 10, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-joining-pandas.pdf",
+    "kind": "course",
+    "certId": "#50,262,345"
+  },
+  {
+    "id": "dc-pandas-manip",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Oct 06, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-data-manipulation-pandas.pdf",
+    "kind": "course",
+    "certId": "#50,142,825"
+  },
+  {
+    "id": "dc-python-intro",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Sep 17, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-intro-python.pdf",
+    "kind": "course",
+    "certId": "#49,316,446"
+  },
+  {
+    "id": "dc-sql-join",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Jun 20, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-joining-sql.pdf",
+    "kind": "course",
+    "certId": "#48,307,281"
+  },
+  {
+    "id": "cs-ibm-excel",
+    "provider": "IBM · Coursera",
+    "type": "coursera",
+    "when": "Jun 13, 2025",
+    "mark": "C",
+    "asset": "https://coursera.org/verify/SFHLSS34RCZ7",
+    "kind": "course",
+    "certId": "SFHLSS34RCZ7"
+  },
+  {
+    "id": "cs-unilever-analytics",
+    "provider": "Unilever · Coursera",
+    "type": "coursera",
+    "when": "May 07, 2025",
+    "mark": "C",
+    "asset": "https://coursera.org/verify/58ZIPG2QWL3U",
+    "kind": "course",
+    "certId": "58ZIPG2QWL3U"
+  },
+  {
+    "id": "cs-uci-planning",
+    "provider": "UC Irvine · Coursera",
+    "type": "coursera",
+    "when": "Apr 22, 2025",
+    "mark": "C",
+    "asset": "https://coursera.org/verify/S0IX1CPG5SLA",
+    "kind": "course",
+    "certId": "S0IX1CPG5SLA"
+  },
+  {
+    "id": "cs-unilever-scm",
+    "provider": "Unilever · Coursera",
+    "type": "coursera",
+    "when": "Apr 21, 2025",
+    "mark": "C",
+    "asset": "https://coursera.org/verify/804YQRVH73R4",
+    "kind": "course",
+    "certId": "804YQRVH73R4"
+  },
+  {
+    "id": "cs-rutgers-analytics",
+    "provider": "Rutgers University · Coursera",
+    "type": "coursera",
+    "when": "Apr 12, 2025",
+    "mark": "C",
+    "asset": "https://coursera.org/verify/U789UKLTGEZX",
+    "kind": "course",
+    "certId": "U789UKLTGEZX"
   }
 ]
