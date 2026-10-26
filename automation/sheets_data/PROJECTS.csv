@@ -3,6 +3,6 @@ fnb-supply-chain,fnb-supply-chain,supply,completed,TRUE,1,https://github.com/Hav
 transport-otif,transport-otif,supply,completed,TRUE,2,https://github.com/Haven-Pham/transport-logistics-otif-analytics,,,
 protosetfit,protosetfit,ai,research,TRUE,3,https://github.com/Haven-Pham/ProtoSetFit,,,
 fastfit,fastfit,ai,development,TRUE,4,,,,
-ecommerce-cohort,ecommerce-cohort,analytics,completed,TRUE,5,https://github.com/Haven-Pham/customer-analytics-playbook,,,projects/ecommerce_customer_cohort_retention_profitability/ecommerce_customer_cohort_retention_profitability_analysis.ipynb
+ecommerce-cohort,ecommerce-cohort,analytics,completed,TRUE,5,https://github.com/Haven-Pham/customer-analytics-playbook/tree/main/05-cohort-retention,,,projects/ecommerce_customer_cohort_retention_profitability/ecommerce_customer_cohort_retention_profitability_analysis.ipynb
 analytics-playbook,analytics-playbook,analytics,coursework,TRUE,6,https://github.com/Haven-Pham/customer-analytics-playbook,,,
 sql,sql,sql,starter,TRUE,7,https://github.com/Haven-Pham/Portfolio/tree/main/projects/sql_supply_chain_starter,,,projects/sql_supply_chain_starter.zip

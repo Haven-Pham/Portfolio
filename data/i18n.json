@@ -115,10 +115,10 @@
       },
       "protosetfit": {
         "title": "ProtoSetFit: Hard-Negative Mining & Prototype Regularisation for Few-Shot Text Classification",
-        "description": "A controlled 2×2 ablation of SetFit on 8-shot emotion classification, run across 5 seeds on Colab T4 GPUs.",
+        "description": "Team research project (3 members, graduate AI course): a controlled 2×2 ablation of SetFit on 8-shot emotion classification, run across 5 seeds on Colab T4 GPUs.",
         "goal": "Test whether hard-negative pair mining and a leave-one-out prototype loss improve SetFit when only 8 labelled examples per class exist.",
         "methods": "Reproduced official SetFit; built custom PyTorch training with sentence-transformers; 25-run benchmark plus a 20-run λ sweep; exact sign-permutation tests with Holm correction; embedding-geometry and gradient telemetry; locked validation-only protocol with a frozen test set.",
-        "evidence": "Hard-negative mining (M1) gave the best 5-seed mean accuracy (51.96% ± 4.45%). The prototype loss tripled training-set class separation but did not transfer to held-out data, an over-compression effect documented with checksummed evidence."
+        "evidence": "Hard-negative mining (M1) was selected on validation and scored 51.94% ± 3.82% on the frozen test set vs 51.08% for official SetFit (+0.86 pp, not significant at N=5). The prototype loss tripled training-set class separation without improving held-out data, an over-compression effect documented with checksummed evidence."
       },
       "fastfit": {
         "title": "Improving FastFit for Few-Shot Customer Intent Classification",
@@ -533,10 +533,10 @@
       },
       "protosetfit": {
         "title": "ProtoSetFit: Khai thác hard-negative & điều chuẩn prototype cho phân loại văn bản few-shot",
-        "description": "Thực nghiệm ablation 2×2 có kiểm soát trên SetFit cho bài toán phân loại cảm xúc 8-shot, chạy 5 seed trên GPU Colab T4.",
+        "description": "Dự án nghiên cứu nhóm (3 thành viên, môn AI cao học): ablation 2×2 có kiểm soát trên SetFit cho bài toán phân loại cảm xúc 8-shot, chạy 5 seed trên GPU Colab T4.",
         "goal": "Kiểm định liệu khai thác cặp hard-negative và hàm mất mát prototype leave-one-out có cải thiện SetFit khi mỗi lớp chỉ có 8 mẫu gán nhãn.",
         "methods": "Tái lập SetFit gốc; tự xây vòng huấn luyện PyTorch với sentence-transformers; benchmark 25 lần chạy và quét λ 20 lần chạy; kiểm định hoán vị dấu chính xác với hiệu chỉnh Holm; đo hình học embedding và gradient; quy trình chỉ dùng tập validation, khóa tập test.",
-        "evidence": "Hard-negative mining (M1) đạt accuracy trung bình 5 seed cao nhất (51,96% ± 4,45%). Prototype loss tăng gấp 3 độ tách lớp trên tập huấn luyện nhưng không chuyển sang dữ liệu mới: hiện tượng nén quá mức, có bằng chứng kèm checksum."
+        "evidence": "Hard-negative mining (M1) được chọn trên tập validation và đạt 51,94% ± 3,82% trên tập test đóng băng, so với 51,08% của SetFit gốc (+0,86 điểm %, chưa có ý nghĩa thống kê với N=5). Prototype loss tăng gấp 3 độ tách lớp trên tập huấn luyện nhưng không cải thiện dữ liệu mới: hiện tượng nén quá mức, có bằng chứng kèm checksum."
       },
       "fastfit": {
         "title": "Cải tiến FastFit cho phân loại ý định khách hàng few-shot",
@@ -951,10 +951,10 @@
       },
       "protosetfit": {
         "title": "ProtoSetFit：少樣本文本分類的困難負樣本挖掘與原型正則化",
-        "description": "在 8-shot 情緒分類上對 SetFit 進行 2×2 控制消融實驗，於 Colab T4 GPU 執行 5 個隨機種子。",
+        "description": "小組研究專案（3 人，研究所 AI 課程）：在 8-shot 情緒分類上對 SetFit 進行 2×2 控制消融實驗，於 Colab T4 GPU 執行 5 個隨機種子。",
         "goal": "檢驗在每類僅有 8 筆標註資料時，困難負樣本配對挖掘與留一原型損失能否提升 SetFit。",
         "methods": "重現官方 SetFit；以 PyTorch 與 sentence-transformers 自建訓練流程；25 次基準實驗與 20 次 λ 掃描；精確符號置換檢定並以 Holm 校正；嵌入幾何與梯度監測；僅使用驗證集決策並凍結測試集。",
-        "evidence": "困難負樣本挖掘（M1）取得最高的 5 種子平均準確率（51.96% ± 4.45%）。原型損失使訓練集類別分離度提升約 3 倍，卻未能遷移到保留資料，此過度壓縮現象均有附校驗碼的證據。"
+        "evidence": "困難負樣本挖掘（M1）依驗證集選出，在凍結測試集上達到 51.94% ± 3.82%，官方 SetFit 為 51.08%（+0.86 個百分點，N=5 下未達統計顯著）。原型損失使訓練集類別分離度提升約 3 倍，卻未改善保留資料，此過度壓縮現象均有附校驗碼的證據。"
       },
       "fastfit": {
         "title": "改進 FastFit 於少樣本客戶意圖分類",
@@ -1369,10 +1369,10 @@
       },
       "protosetfit": {
         "title": "ProtoSetFit：少样本文本分类的困难负样本挖掘与原型正则化",
-        "description": "在 8-shot 情绪分类上对 SetFit 进行 2×2 受控消融实验，在 Colab T4 GPU 上运行 5 个随机种子。",
+        "description": "小组研究项目（3 人，研究生 AI 课程）：在 8-shot 情绪分类上对 SetFit 进行 2×2 受控消融实验，在 Colab T4 GPU 上运行 5 个随机种子。",
         "goal": "检验在每类仅有 8 条标注数据时，困难负样本配对挖掘与留一原型损失能否提升 SetFit。",
         "methods": "复现官方 SetFit；基于 PyTorch 与 sentence-transformers 自建训练流程；25 次基准实验与 20 次 λ 扫描；精确符号置换检验并做 Holm 校正；嵌入几何与梯度监测；仅用验证集决策并冻结测试集。",
-        "evidence": "困难负样本挖掘（M1）取得最高的 5 种子平均准确率（51.96% ± 4.45%）。原型损失使训练集类别分离度提升约 3 倍，却未能迁移到保留数据，这一过度压缩现象均有附校验码的证据。"
+        "evidence": "困难负样本挖掘（M1）依验证集选出，在冻结测试集上达到 51.94% ± 3.82%，官方 SetFit 为 51.08%（+0.86 个百分点，N=5 下未达统计显著）。原型损失使训练集类别分离度提升约 3 倍，却未改善保留数据，这一过度压缩现象均有附校验码的证据。"
       },
       "fastfit": {
         "title": "改进 FastFit 用于少样本客户意图分类",
