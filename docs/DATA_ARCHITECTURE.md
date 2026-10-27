@@ -69,10 +69,21 @@ Stores top-level profile links and public identifiers.
   "email": "havenpham63729@gmail.com",
   "linkedin": "https://www.linkedin.com/in/havenpham",
   "github": "https://github.com/Haven-Pham",
-  "resume": "assets/Pham_Hong_Hieu_CV_DRAFT.pdf",
-  "profileImage": "assets/profile.jpg"
+  "resume": "assets/resume/Pham_Hong_Hieu_Resume_EN.pdf",
+  "resumes": {
+    "en": "assets/resume/Pham_Hong_Hieu_Resume_EN.pdf",
+    "vi": "assets/resume/Pham_Hong_Hieu_Resume_VI.pdf",
+    "zh-Hant": "assets/resume/Pham_Hong_Hieu_Resume_ZH-TW.pdf",
+    "zh-Hans": "assets/resume/Pham_Hong_Hieu_Resume_ZH-CN.pdf"
+  },
+  "profileImage": "assets/profile.webp"
 }
 ```
+
+The resume PDFs are generated, not edited by hand: change `resume/content.json`, then run
+`python resume/build_resume.py` (needs python-docx and Microsoft Word). It builds all four
+languages on the Jake's Resume Word template, exports them to PDF and copies them to
+`assets/resume/`. Project links in the resume come from `data/projects.json`.
 
 | Field | Type | Description |
 |---|---|---|

@@ -85,7 +85,10 @@
         <div class="hero-pills"><span data-i18n="heroPillSupply">SUPPLY CHAIN</span><span>SQL</span><span>POWER BI</span><span>PYTHON</span><span data-i18n="heroPillLogistics">LOGISTICS</span><span>ORACLE ERP</span></div>
         <div class="hero-buttons">
           <a class="btn btn-primary" href="#projects"><span data-i18n="exploreWork">VIEW MY PROJECTS</span><span aria-hidden="true">↗</span></a>
-          <a class="btn btn-outline" href="assets/Pham_Hong_Hieu_CV_DRAFT.pdf" target="_blank" rel="noopener"><span data-i18n="viewResume">DOWNLOAD CV</span><span aria-hidden="true">↗</span></a>
+          <div class="cv-menu" id="cv-menu">
+            <button class="btn btn-outline" id="cv-toggle" type="button" aria-expanded="false" aria-controls="cv-options"><span data-i18n="viewResume">DOWNLOAD CV</span><span class="cv-caret" aria-hidden="true">▾</span></button>
+            <div class="cv-options" id="cv-options" role="group" hidden></div>
+          </div>
           <button class="btn btn-outline" id="copy-email" type="button"><span aria-hidden="true">▣</span><span data-i18n="copyEmail">Copy Email</span></button>
         </div>
         <div class="hero-socials">

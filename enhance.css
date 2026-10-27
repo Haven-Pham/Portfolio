@@ -676,6 +676,64 @@ body.theme-light .bento-card {
 #contact .contact-card:hover { border-color: rgba(var(--sa-rgb), 0.6); }
 
 /* --------------------------------------------------------------------------
+   RESUME DOWNLOADS (one PDF per language)
+   -------------------------------------------------------------------------- */
+.hero-buttons { position: relative; z-index: 6; } /* keeps the open menu above the social links */
+.cv-menu { position: relative; display: inline-flex; }
+.cv-menu .btn { width: 100%; }
+.cv-caret { transition: transform 0.2s ease; }
+.cv-menu .btn[aria-expanded="true"] .cv-caret { transform: rotate(180deg); }
+.cv-options {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 40;
+  min-width: 240px;
+  padding: 6px;
+  display: grid;
+  gap: 2px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 18px 40px var(--shadow);
+}
+.cv-options[hidden] { display: none; }
+.cv-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+}
+.cv-option:hover, .cv-option:focus-visible { background: rgba(56, 189, 248, 0.12); }
+.cv-option small { color: var(--soft); font-size: 11px; font-weight: 800; letter-spacing: 0.06em; }
+.cv-option.current small { color: var(--accent); }
+.contact-card.resume-card { cursor: default; }
+.resume-langs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; width: 100%; margin-top: auto; }
+.resume-langs a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+.resume-langs a:hover, .resume-langs a:focus-visible { border-color: rgba(var(--sa-rgb), 0.7); background: rgba(var(--sa-rgb), 0.1); }
+.resume-langs a.current { border-color: rgba(var(--sa-rgb), 0.55); color: var(--sa); }
+
+/* --------------------------------------------------------------------------
    RESPONSIVE
    -------------------------------------------------------------------------- */
 @media (max-width: 900px) {
@@ -687,6 +745,10 @@ body.theme-light .bento-card {
   .pager-dot { display: none; }
   .pager-status { display: inline; }
   .exp-facts div { grid-template-columns: 84px minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  .hero-buttons .cv-menu { flex: 1; min-width: calc(50% - 8px); }
+  .cv-options { min-width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

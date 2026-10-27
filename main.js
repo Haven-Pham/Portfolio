@@ -417,15 +417,30 @@
       })
     );
   }
+  // One PDF per site language; the current language is listed first.
+  const RESUME_LANGS = [['en','English'],['vi','Tiếng Việt'],['zh-Hant','繁體中文'],['zh-Hans','简体中文']];
+  function resumeLinks() {
+    const files = CONFIG.resumes || {};
+    const all = RESUME_LANGS.filter(([code]) => files[code]).map(([code, name]) => ({ code, name, url: files[code] }));
+    return [...all.filter(r => r.code === state.lang), ...all.filter(r => r.code !== state.lang)];
+  }
+  function resumeFileName(url) { return url.split('/').pop(); }
+  function renderResumes() {
+    const d = t();
+    $('#cv-options').setAttribute('aria-label', d.resumeMenuLabel || d.viewResume);
+    $('#cv-options').innerHTML = resumeLinks().map(r => `<a class="cv-option${r.code === state.lang ? ' current' : ''}" href="${h(r.url)}" download="${h(resumeFileName(r.url))}" hreflang="${h(r.code)}"><span>${h(r.name)}</span><small>PDF</small></a>`).join('');
+  }
   function renderContacts() {
     const d=t();
     const cards = [
       {kind:'email',icon:'✉',name:d.contactEmail,sub:d.contactEmailSub,url:'mailto:'+CONFIG.email},
       {kind:'linkedin',icon:'in',name:d.contactLinkedIn,sub:d.contactLinkedInSub,url:CONFIG.linkedin},
-      {kind:'github',icon:'⌘',name:d.contactGithub,sub:d.contactGithubSub,url:CONFIG.github},
-      {kind:'resume',icon:'↧',name:d.contactResume,sub:d.contactResumeSub,url:CONFIG.resume}
+      {kind:'github',icon:'⌘',name:d.contactGithub,sub:d.contactGithubSub,url:CONFIG.github}
     ];
-    $('#contact-grid').innerHTML = cards.map(card => card.url ? `<a class="contact-card reveal" href="${h(card.url)}" ${card.kind==='email'?'':'target="_blank" rel="noopener noreferrer"'}><span class="contact-icon ${card.kind}">${h(card.icon)}</span><h3>${h(card.name)}</h3><p>${h(card.sub)}</p><span class="contact-arrow">↗</span></a>` : `<div class="contact-card reveal disabled" aria-disabled="true"><span class="contact-icon ${card.kind}">${h(card.icon)}</span><h3>${h(card.name)}</h3><p>${h(card.sub)}</p><span class="coming-soon">${h(d.comingSoon)}</span></div>`).join('');
+    const resumes = resumeLinks();
+    const resumeCard = resumes.length ? `<div class="contact-card resume-card reveal"><span class="contact-icon resume" aria-hidden="true">↧</span><h3>${h(d.contactResume)}</h3><p>${h(d.contactResumeSub)}</p><div class="resume-langs" role="group" aria-label="${h(d.resumeMenuLabel || d.contactResume)}">${resumes.map(r => `<a class="${r.code === state.lang ? 'current' : ''}" href="${h(r.url)}" download="${h(resumeFileName(r.url))}" hreflang="${h(r.code)}">${h(r.name)}</a>`).join('')}</div></div>` : '';
+    $('#contact-grid').innerHTML = cards.map(card => card.url ? `<a class="contact-card reveal" href="${h(card.url)}" ${card.kind==='email'?'':'target="_blank" rel="noopener noreferrer"'}><span class="contact-icon ${card.kind}">${h(card.icon)}</span><h3>${h(card.name)}</h3><p>${h(card.sub)}</p><span class="contact-arrow">↗</span></a>` : `<div class="contact-card reveal disabled" aria-disabled="true"><span class="contact-icon ${card.kind}">${h(card.icon)}</span><h3>${h(card.name)}</h3><p>${h(card.sub)}</p><span class="coming-soon">${h(d.comingSoon)}</span></div>`).join('') + resumeCard;
+    renderResumes();
     const link = $('#github-hero'); if(CONFIG.github) {link.href=CONFIG.github;link.target='_blank';link.rel='noopener noreferrer';$('#github-status').textContent='↗';}else { link.href='#contact';$('#github-status').textContent='SOON'; }
   }
   function setTheme(theme) {
@@ -443,6 +458,16 @@
         toast(t().emailCopied);
       } catch {toast(t().copyFallback+CONFIG.email);}
     });
+    const cvToggle = $('#cv-toggle'), cvOptions = $('#cv-options');
+    const setCvMenu = open => { cvOptions.hidden = !open; cvToggle.setAttribute('aria-expanded', String(open)); };
+    cvToggle.addEventListener('click', () => {
+      const open = cvOptions.hidden;
+      setCvMenu(open);
+      if (open) cvOptions.querySelector('a')?.focus();
+    });
+    cvOptions.addEventListener('click', e => { if (e.target.closest('a')) setCvMenu(false); });
+    document.addEventListener('click', e => { if (!cvOptions.hidden && !e.target.closest('#cv-menu')) setCvMenu(false); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !cvOptions.hidden) { setCvMenu(false); cvToggle.focus(); } });
     $('#menu-switcher').addEventListener('click',()=> {const opened=$('#nav').classList.toggle('opened');$('#menu-switcher').setAttribute('aria-expanded',String(opened));document.body.classList.toggle('mobile-nav-open',opened);});
     $$('.primary-nav a').forEach(anchor => anchor.addEventListener('click',()=> {$('#nav').classList.remove('opened');$('#menu-switcher').setAttribute('aria-expanded','false');document.body.classList.remove('mobile-nav-open');}));
     $$('.view-toggle').forEach(btn=>btn.addEventListener('click',()=>{state.stackView=btn.dataset.stackView;renderStack();}));
