@@ -11,9 +11,10 @@
     ],
     "status": "completed",
     "documentFile": null,
-    "githubUrl": "https://github.com/Haven-Pham/fnb-supply-chain-analytics",
+    "githubUrl": null,
     "demoUrl": null,
-    "number": "01"
+    "number": "01",
+    "pendingRepo": "https://github.com/Haven-Pham/fnb-supply-chain-analytics"
   },
   {
     "id": "transport-otif",
@@ -27,9 +28,10 @@
     ],
     "status": "completed",
     "documentFile": null,
-    "githubUrl": "https://github.com/Haven-Pham/transport-logistics-otif-analytics",
+    "githubUrl": null,
     "demoUrl": null,
-    "number": "02"
+    "number": "02",
+    "pendingRepo": "https://github.com/Haven-Pham/transport-logistics-otif-analytics"
   },
   {
     "id": "protosetfit",
@@ -43,9 +45,10 @@
     ],
     "status": "research",
     "documentFile": null,
-    "githubUrl": "https://github.com/Haven-Pham/ProtoSetFit",
+    "githubUrl": null,
     "demoUrl": null,
-    "number": "03"
+    "number": "03",
+    "pendingRepo": "https://github.com/Haven-Pham/ProtoSetFit"
   },
   {
     "id": "fastfit",
@@ -68,13 +71,14 @@
     "icon": "⌁",
     "chips": [
       "Python",
-      "Cohort Analysis",
-      "Retention"
+      "pandas",
+      "Cohort analysis",
+      "pytest · CI"
     ],
     "status": "completed",
     "number": "05",
     "documentFile": "projects/ecommerce_customer_cohort_retention_profitability/ecommerce_customer_cohort_retention_profitability_analysis.ipynb",
-    "githubUrl": "https://github.com/Haven-Pham/customer-analytics-playbook/tree/main/05-cohort-retention",
+    "githubUrl": "https://github.com/Haven-Pham/ecommerce-cohort-retention-analysis",
     "demoUrl": null
   },
   {
@@ -90,9 +94,10 @@
     ],
     "status": "coursework",
     "documentFile": null,
-    "githubUrl": "https://github.com/Haven-Pham/customer-analytics-playbook",
+    "githubUrl": null,
     "demoUrl": null,
-    "number": "06"
+    "number": "06",
+    "pendingRepo": "https://github.com/Haven-Pham/customer-analytics-playbook"
   },
   {
     "id": "sql",

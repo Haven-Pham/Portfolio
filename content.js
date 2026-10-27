@@ -90,9 +90,10 @@ window.PORTFOLIO_RECORDS = {
       ],
       "status": "completed",
       "documentFile": null,
-      "githubUrl": "https://github.com/Haven-Pham/fnb-supply-chain-analytics",
+      "githubUrl": null,
       "demoUrl": null,
-      "number": "01"
+      "number": "01",
+      "pendingRepo": "https://github.com/Haven-Pham/fnb-supply-chain-analytics"
     },
     {
       "id": "transport-otif",
@@ -106,9 +107,10 @@ window.PORTFOLIO_RECORDS = {
       ],
       "status": "completed",
       "documentFile": null,
-      "githubUrl": "https://github.com/Haven-Pham/transport-logistics-otif-analytics",
+      "githubUrl": null,
       "demoUrl": null,
-      "number": "02"
+      "number": "02",
+      "pendingRepo": "https://github.com/Haven-Pham/transport-logistics-otif-analytics"
     },
     {
       "id": "protosetfit",
@@ -122,9 +124,10 @@ window.PORTFOLIO_RECORDS = {
       ],
       "status": "research",
       "documentFile": null,
-      "githubUrl": "https://github.com/Haven-Pham/ProtoSetFit",
+      "githubUrl": null,
       "demoUrl": null,
-      "number": "03"
+      "number": "03",
+      "pendingRepo": "https://github.com/Haven-Pham/ProtoSetFit"
     },
     {
       "id": "fastfit",
@@ -147,13 +150,14 @@ window.PORTFOLIO_RECORDS = {
       "icon": "⌁",
       "chips": [
         "Python",
-        "Cohort Analysis",
-        "Retention"
+        "pandas",
+        "Cohort analysis",
+        "pytest · CI"
       ],
       "status": "completed",
       "number": "05",
       "documentFile": "projects/ecommerce_customer_cohort_retention_profitability/ecommerce_customer_cohort_retention_profitability_analysis.ipynb",
-      "githubUrl": "https://github.com/Haven-Pham/customer-analytics-playbook/tree/main/05-cohort-retention",
+      "githubUrl": "https://github.com/Haven-Pham/ecommerce-cohort-retention-analysis",
       "demoUrl": null
     },
     {
@@ -169,9 +173,10 @@ window.PORTFOLIO_RECORDS = {
       ],
       "status": "coursework",
       "documentFile": null,
-      "githubUrl": "https://github.com/Haven-Pham/customer-analytics-playbook",
+      "githubUrl": null,
       "demoUrl": null,
-      "number": "06"
+      "number": "06",
+      "pendingRepo": "https://github.com/Haven-Pham/customer-analytics-playbook"
     },
     {
       "id": "sql",
@@ -701,10 +706,10 @@ window.PORTFOLIO_I18N = {
       },
       "ecommerce-cohort": {
         "title": "E-Commerce Customer Cohort, Retention & Profitability Analysis",
-        "description": "Cohort, retention and profitability analysis on synthetic e-commerce transactions.",
-        "goal": "Compare retention across acquisition cohorts and find how customer segments and income groups differ in retention and profit.",
-        "methods": "Python cohort construction, monthly and quarterly retention matrices, segment comparison and profitability analysis with pandas, NumPy, Matplotlib and Seaborn.",
-        "evidence": "Completed notebook with charts; the dataset is synthetic educational data."
+        "description": "Cohort, retention and profitability analysis of 51,290 order lines from 17,415 customers (2020–2023).",
+        "goal": "Test whether sales growth is backed by returning customers and whether it is profitable.",
+        "methods": "Validated Python package for cohorts and retention, size-weighted retention curves, margin diagnosis by discount band and category, unit tests, and a CI workflow that re-runs the notebook on every push; Excel report and executive deck.",
+        "evidence": "2023 sales +24% but profit −12% as margin fell from 18.0% to 12.8% across every category. Repeat buyers are 31% of customers but 56% of profit; discounts above 20% lost .6K."
       },
       "analytics-playbook": {
         "title": "Customer Analytics Playbook",
@@ -1244,10 +1249,10 @@ window.PORTFOLIO_I18N = {
       },
       "ecommerce-cohort": {
         "title": "Phân tích cohort, giữ chân khách hàng & lợi nhuận thương mại điện tử",
-        "description": "Phân tích cohort, tỷ lệ giữ chân và lợi nhuận trên dữ liệu giao dịch thương mại điện tử giả lập.",
-        "goal": "So sánh tỷ lệ giữ chân giữa các cohort và tìm khác biệt về giữ chân, lợi nhuận giữa các phân khúc và nhóm thu nhập.",
-        "methods": "Xây dựng cohort bằng Python, ma trận giữ chân theo tháng và quý, so sánh phân khúc và phân tích lợi nhuận với pandas, NumPy, Matplotlib và Seaborn.",
-        "evidence": "Notebook hoàn chỉnh kèm biểu đồ; dữ liệu là dữ liệu giả lập phục vụ học tập."
+        "description": "Phân tích cohort, giữ chân khách hàng và lợi nhuận trên 51.290 dòng đơn hàng của 17.415 khách (2020–2023).",
+        "goal": "Kiểm chứng tăng trưởng doanh thu có dựa trên khách quay lại và có tạo ra lợi nhuận hay không.",
+        "methods": "Package Python có kiểm tra dữ liệu cho cohort và retention, đường retention có trọng số theo quy mô, chẩn đoán biên lợi nhuận theo mức giảm giá và ngành hàng, unit test và CI tự chạy lại notebook mỗi lần push; kèm báo cáo Excel và slide.",
+        "evidence": "Năm 2023 doanh thu +24% nhưng lợi nhuận −12% do biên giảm từ 18,0% xuống 12,8% ở mọi ngành hàng. Khách mua lặp lại chiếm 31% nhưng tạo 56% lợi nhuận; giảm giá trên 20% làm lỗ 288,6 nghìn USD."
       },
       "analytics-playbook": {
         "title": "Bộ công cụ phân tích khách hàng",
@@ -1787,10 +1792,10 @@ window.PORTFOLIO_I18N = {
       },
       "ecommerce-cohort": {
         "title": "電商顧客世代、留存與獲利分析",
-        "description": "以虛構電商交易資料進行世代、留存與獲利分析。",
-        "goal": "比較不同取得世代的留存模式，並找出顧客區隔與所得族群在留存與獲利上的差異。",
-        "methods": "以 Python 建立世代分析、月與季留存矩陣、區隔比較與獲利分析（pandas、NumPy、Matplotlib、Seaborn）。",
-        "evidence": "附圖表的完整筆記本；資料為教學用虛構資料。"
+        "description": "針對 17,415 位顧客、51,290 筆訂單明細（2020–2023）進行世代、留存與獲利分析。",
+        "goal": "檢驗營收成長是否來自回購顧客，以及是否帶來獲利。",
+        "methods": "具資料驗證的 Python 套件（世代與留存）、依規模加權的留存曲線、依折扣區間與品類診斷毛利、單元測試，以及每次推送自動重跑筆記本的 CI；附 Excel 報告與簡報。",
+        "evidence": "2023 年營收 +24%，獲利卻 −12%，各品類毛利率由 18.0% 降至 12.8%。回購顧客佔 31%，卻貢獻 56% 獲利；折扣超過 20% 的訂單虧損 28.86 萬美元。"
       },
       "analytics-playbook": {
         "title": "顧客分析工具集",
@@ -2330,10 +2335,10 @@ window.PORTFOLIO_I18N = {
       },
       "ecommerce-cohort": {
         "title": "电商客户同期群、留存与盈利分析",
-        "description": "基于虚构电商交易数据的同期群、留存与盈利分析。",
-        "goal": "比较不同获客同期群的留存模式，并找出客户细分与收入群体在留存和盈利上的差异。",
-        "methods": "用 Python 构建同期群、月度与季度留存矩阵、细分比较与盈利分析（pandas、NumPy、Matplotlib、Seaborn）。",
-        "evidence": "附图表的完整笔记本；数据为教学用虚构数据。"
+        "description": "针对 17,415 位客户、51,290 条订单明细（2020–2023）进行同期群、留存与盈利分析。",
+        "goal": "检验收入增长是否来自回购客户，以及是否带来利润。",
+        "methods": "带数据校验的 Python 包（同期群与留存）、按规模加权的留存曲线、按折扣区间与品类诊断毛利、单元测试，以及每次推送自动重跑笔记本的 CI；附 Excel 报告与汇报幻灯片。",
+        "evidence": "2023 年收入 +24%，利润却 −12%，各品类毛利率由 18.0% 降至 12.8%。回购客户占 31%，却贡献 56% 利润；折扣超过 20% 的订单亏损 28.86 万美元。"
       },
       "analytics-playbook": {
         "title": "客户分析工具集",
