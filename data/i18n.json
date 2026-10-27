@@ -539,7 +539,8 @@
         ]
       }
     },
-    "researchAccepted": "ACCEPTED"
+    "researchAccepted": "ACCEPTED",
+    "skipLink": "Skip to content"
   },
   "vi": {
     "locale": "Tiếng Việt",
@@ -1081,7 +1082,8 @@
         ]
       }
     },
-    "researchAccepted": "ĐÃ ĐƯỢC CHẤP NHẬN"
+    "researchAccepted": "ĐÃ ĐƯỢC CHẤP NHẬN",
+    "skipLink": "Bỏ qua, tới nội dung"
   },
   "zh-Hant": {
     "locale": "繁體中文",
@@ -1623,7 +1625,8 @@
         ]
       }
     },
-    "researchAccepted": "已獲接受"
+    "researchAccepted": "已獲接受",
+    "skipLink": "跳至主要內容"
   },
   "zh-Hans": {
     "locale": "简体中文",
@@ -2165,6 +2168,7 @@
         ]
       }
     },
-    "researchAccepted": "已获录用"
+    "researchAccepted": "已获录用",
+    "skipLink": "跳至主要内容"
   }
 }

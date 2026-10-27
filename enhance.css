@@ -77,6 +77,9 @@ body.theme-light #certifications .tabs .tab.active,
 body.theme-light #projects .tabs .tab.active,
 body.theme-light #stack .view-toggle.active { color: #FFFFFF; }
 
+/* Inactive project tabs used a fixed light colour that vanished on the light theme */
+#project-tabs .tab:not(.active) { color: var(--muted); }
+
 /* A single research entry spans the full width */
 .research-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); }
 
@@ -136,47 +139,178 @@ body.theme-light .aurora span { opacity: 0.1; }
 }
 
 /* --------------------------------------------------------------------------
-   HERO NETWORK CANVAS (drawn by hero-network.js)
+   HEADER & NAVIGATION
+   Floating glass bar, pill navigation with a sliding indicator that takes
+   the accent colour of the section in view (set by main.js).
+   -------------------------------------------------------------------------- */
+.site-header {
+  --nav-accent: var(--c-cyan);
+  --nav-accent-2: var(--c-blue);
+  --nav-accent-rgb: 34, 211, 238;
+  background: transparent;
+  border-bottom-color: transparent;
+  transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.site-header::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--c-cyan), var(--c-violet), var(--c-emerald), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.site-header.scrolled {
+  background: rgba(3, 10, 22, 0.72);
+  box-shadow: 0 10px 30px rgba(1, 6, 16, 0.35);
+}
+body.theme-light .site-header.scrolled { background: rgba(244, 248, 253, 0.82); box-shadow: 0 10px 30px rgba(22, 80, 160, 0.08); }
+.site-header.scrolled::after { opacity: 0.7; }
+.nav-shell { transition: height 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
+.site-header.scrolled .nav-shell { height: 68px; }
+
+.brand {
+  background: linear-gradient(120deg, var(--c-cyan), var(--c-violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.brand .brand-dot {
+  -webkit-text-fill-color: var(--c-emerald);
+  display: inline-block;
+  animation: brandDot 2.4s ease-in-out infinite;
+}
+@keyframes brandDot { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+
+@media (min-width: 1101px) {
+  .primary-nav {
+    position: relative;
+    gap: 0;
+    padding: 5px;
+    border-radius: 999px;
+    background: rgba(10, 28, 51, 0.55);
+    border: 1px solid rgba(56, 148, 240, 0.18);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+  body.theme-light .primary-nav { background: rgba(255, 255, 255, 0.7); border-color: rgba(29, 106, 229, 0.15); }
+  .primary-nav a {
+    position: relative;
+    z-index: 1;
+    padding: 8px 11px;
+    border-radius: 999px;
+    color: var(--muted);
+    transition: color 0.25s ease;
+  }
+  .primary-nav a::after { display: none; }
+  .primary-nav a:hover { color: var(--text); }
+  .site-header .primary-nav a.selected { color: #04111F; }
+  body.theme-light .site-header .primary-nav a.selected { color: #FFFFFF; }
+  .nav-indicator {
+    position: absolute;
+    z-index: 0;
+    top: 5px;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--nav-accent), var(--nav-accent-2));
+    box-shadow: 0 4px 18px rgba(var(--nav-accent-rgb), 0.45);
+    opacity: 0;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), width 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.3s ease, background 0.45s ease, box-shadow 0.45s ease;
+  }
+  .nav-indicator.on { opacity: 1; }
+}
+@media (min-width: 1101px) and (max-width: 1280px) {
+  .primary-nav a { padding: 7px 8px; }
+}
+@media (max-width: 1100px) {
+  .nav-indicator { display: none; }
+}
+
+.locale-select, .icon-text-button {
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+.locale-select:hover, .icon-text-button:hover { transform: translateY(-1px); border-color: var(--nav-accent); }
+
+.progress {
+  height: 3px;
+  background: linear-gradient(90deg, var(--c-cyan), var(--c-blue), var(--c-violet), var(--c-rose), var(--c-amber));
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.55);
+}
+
+/* Skip link (WCAG 2.4.1) and a consistent keyboard focus ring (WCAG 2.4.7) */
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 200;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 800;
+  color: #04111F;
+  background: var(--c-cyan);
+  transform: translateY(-160%);
+  transition: transform 0.2s ease;
+}
+.skip-link:focus { transform: none; }
+:where(a, button, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--c-cyan);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+body.theme-light :where(a, button, select, [tabindex]):focus-visible { outline-color: var(--c-blue); }
+
+/* --------------------------------------------------------------------------
+   PAGE NETWORK CANVAS (drawn by page-network.js)
+   Fixed behind every section; the script dims it outside the hero.
    -------------------------------------------------------------------------- */
 .hero { position: relative; }
 .hero > .hero-text, .hero > .hero-visual { position: relative; z-index: 1; }
-.hero-canvas {
-  position: absolute;
-  top: -90px;
-  bottom: 0;
-  left: 50%;
+.page-canvas {
+  position: fixed;
+  inset: 0;
   width: 100vw;
-  height: calc(100% + 90px);
-  transform: translateX(-50%);
-  z-index: 0;
+  height: 100vh;
+  z-index: -1;
   pointer-events: none;
-  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
-  mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
   opacity: 0;
-  animation: heroCanvasIn 1.6s ease 0.4s forwards;
+  animation: pageCanvasIn 1.6s ease 0.4s forwards;
 }
-@keyframes heroCanvasIn { to { opacity: 1; } }
+@keyframes pageCanvasIn { to { opacity: 1; } }
+/* The static dot grid is redundant once the live network is drawn */
+.dot-grid { display: none; }
 
-/* A slow light sweep across the hero */
+/* Blur behind small floating elements forces a re-blur of the animated
+   canvas on every frame; solid translucent fills look the same and are cheap. */
+.experience-card, .floating-card, .project-disclaimer, .community-badge, .community-evidence-pill {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* A slow light sweep across the hero. The band itself moves with transform
+   (GPU-composited) instead of animating background-position, which would
+   repaint the whole hero on every frame. */
 .hero::after {
   content: '';
   position: absolute;
   top: -90px;
   bottom: 0;
-  left: 50%;
-  width: 100vw;
-  transform: translateX(-50%);
+  left: 0;
+  width: 60vw;
   z-index: 0;
   pointer-events: none;
-  background: linear-gradient(115deg, transparent 35%, rgba(56, 189, 248, 0.06) 45%, rgba(167, 139, 250, 0.07) 50%, transparent 60%);
-  background-size: 250% 100%;
+  background: linear-gradient(115deg, transparent 20%, rgba(56, 189, 248, 0.06) 45%, rgba(167, 139, 250, 0.07) 55%, transparent 80%);
+  will-change: transform;
   animation: heroSweep 14s ease-in-out infinite;
 }
 body.theme-light .hero::after {
-  background: linear-gradient(115deg, transparent 35%, rgba(37, 99, 235, 0.05) 45%, rgba(124, 58, 237, 0.05) 50%, transparent 60%);
-  background-size: 250% 100%;
+  background: linear-gradient(115deg, transparent 20%, rgba(37, 99, 235, 0.05) 45%, rgba(124, 58, 237, 0.05) 55%, transparent 80%);
 }
-@keyframes heroSweep { 0%, 100% { background-position: 100% 0; } 50% { background-position: 0% 0; } }
+@keyframes heroSweep { 0%, 100% { transform: translateX(-60vw); } 50% { transform: translateX(100vw); } }
+
+/* Small notes: raise contrast to WCAG AA (≥ 4.5:1) */
+.content-note { color: var(--soft); }
 
 /* Research: accepted badge */
 .research-badges { display: inline-flex; flex-wrap: wrap; gap: 8px; align-items: center; }
@@ -557,7 +691,9 @@ body.theme-light .bento-card {
 
 @media (prefers-reduced-motion: reduce) {
   .aurora span, .gradient-text, .bento-card .pulse-line path, .hero::after { animation: none !important; }
-  .hero-canvas { animation: none; opacity: 1; }
+  .page-canvas { animation: none; opacity: 1; }
+  .brand .brand-dot { animation: none; }
+  .nav-indicator { transition: none; }
   .pulse-line path { stroke-dashoffset: 0; }
   .page-enter > * { animation: none; }
   [data-accent] .section-rule { transform: none; transition: none; }

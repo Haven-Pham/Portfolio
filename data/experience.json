@@ -5,7 +5,7 @@
     "initials": "HS",
     "period": "Oct 2024 – Apr 2025",
     "className": "hoa",
-    "logo": "assets/hoa-sen.png"
+    "logo": "assets/hoa-sen.webp"
   },
   {
     "id": "kodai",
@@ -13,7 +13,7 @@
     "initials": "KS",
     "period": "Jul 2023 – Aug 2024",
     "className": "kodai",
-    "logo": "assets/kodai.png"
+    "logo": "assets/kodai.webp"
   },
   {
     "id": "vietlog",
@@ -21,6 +21,6 @@
     "initials": "VL",
     "period": "Jan – Jul 2023",
     "className": "vietlog",
-    "logo": "assets/vietlog.png"
+    "logo": "assets/vietlog.webp"
   }
 ]

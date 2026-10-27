@@ -76,6 +76,7 @@
     $('#theme-switcher span:last-child').textContent = state.theme === 'dark' ? dict.themeLight : dict.themeDark;
     $('#year').textContent = new Date().getFullYear();
     renderExperience();renderProjects();renderGithubFeed();renderResearch();renderStack();renderCommunity();renderCerts();renderContacts();
+    if (typeof moveNavIndicator === 'function') requestAnimationFrame(moveNavIndicator);
     setupObservers();
   }
   function renderExperience() {
@@ -85,7 +86,7 @@
     $('#experience-list').innerHTML = found.map((item,index) => {
       const x = d.experienceData?.[item.id];
       if (!x) return '';
-      const logoMarkup = item.logo ? `<img src="${h(item.logo)}" alt="${h(x.org)}" class="company-logo-img">` : h(item.initials);
+      const logoMarkup = item.logo ? `<img src="${h(item.logo)}" alt="${h(x.org)}" class="company-logo-img" width="58" height="58" loading="lazy" decoding="async">` : h(item.initials);
       const periodText = experiencePeriods[state.lang]?.[item.id] || item.period;
       return `<article class="experience-card reveal" style="--entry-delay:${index * 55}ms" data-exp-id="${h(item.id)}">
         <div class="exp-card-header">
@@ -456,6 +457,7 @@
     });
     window.addEventListener('scroll', updateProgress, { passive: true });
     window.addEventListener('scroll', updateActiveNav, { passive: true });
+    window.addEventListener('resize', moveNavIndicator, { passive: true });
   }
   function updateProgress() {
     const height = document.documentElement.scrollHeight - window.innerHeight;
@@ -479,6 +481,34 @@
       if (isMatch) a.setAttribute('aria-current', 'true');
       else a.removeAttribute('aria-current');
     });
+    $('#site-header')?.classList.toggle('scrolled', scrollY > 12);
+    if (currentId !== lastNavId) { lastNavId = currentId; syncNavAccent(currentId); }
+    moveNavIndicator();
+  }
+  let lastNavId = null;
+  function navIndicator() {
+    let el = $('.nav-indicator');
+    if (!el) { el = document.createElement('span'); el.className = 'nav-indicator'; el.setAttribute('aria-hidden', 'true'); $('#nav').prepend(el); }
+    return el;
+  }
+  function moveNavIndicator() {
+    const el = navIndicator();
+    const active = $('.primary-nav a.selected');
+    if (!active) { el.classList.remove('on'); return; }
+    el.style.width = `${active.offsetWidth}px`;
+    el.style.transform = `translateX(${active.offsetLeft}px)`;
+    el.classList.add('on');
+  }
+  function syncNavAccent(id) {
+    const header = $('#site-header');
+    const section = id && document.getElementById(id);
+    if (!header || !section) return;
+    const css = getComputedStyle(section);
+    const a = css.getPropertyValue('--sa').trim();
+    if (!a) return;
+    header.style.setProperty('--nav-accent', a);
+    header.style.setProperty('--nav-accent-2', css.getPropertyValue('--sa-2').trim());
+    header.style.setProperty('--nav-accent-rgb', css.getPropertyValue('--sa-rgb').trim());
   }
   function setupObservers() {
     if (!('IntersectionObserver' in window)) {
@@ -500,7 +530,10 @@
   setupObservers();
   updateProgress();
   updateActiveNav();
-  loadDataFromJSON();
+  // content.js is regenerated from data/*.json on every change (scripts/build-content.js
+  // + CI), so the JSON files are only fetched when the bundle is missing. This avoids
+  // downloading the same data twice and rendering every section a second time.
+  if (!window.PORTFOLIO_I18N || !window.PORTFOLIO_RECORDS) loadDataFromJSON();
   loadGithubRepos();
   const scrollTarget = new URLSearchParams(window.location.search).get('scroll');
   if (scrollTarget) {

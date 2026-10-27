@@ -4,7 +4,7 @@ window.PORTFOLIO_CONFIG = Object.freeze({
   "linkedin": "https://www.linkedin.com/in/havenpham",
   "github": "https://github.com/Haven-Pham",
   "resume": "assets/Pham_Hong_Hieu_CV_DRAFT.pdf",
-  "profileImage": "assets/profile.jpg",
+  "profileImage": "assets/profile.webp",
   "location": "Taoyuan, Taiwan",
   "academicStatus": "Global MBA Candidate at Yuan Ze University",
   "education": {
@@ -58,7 +58,7 @@ window.PORTFOLIO_RECORDS = {
       "initials": "HS",
       "period": "Oct 2024 – Apr 2025",
       "className": "hoa",
-      "logo": "assets/hoa-sen.png"
+      "logo": "assets/hoa-sen.webp"
     },
     {
       "id": "kodai",
@@ -66,7 +66,7 @@ window.PORTFOLIO_RECORDS = {
       "initials": "KS",
       "period": "Jul 2023 – Aug 2024",
       "className": "kodai",
-      "logo": "assets/kodai.png"
+      "logo": "assets/kodai.webp"
     },
     {
       "id": "vietlog",
@@ -74,7 +74,7 @@ window.PORTFOLIO_RECORDS = {
       "initials": "VL",
       "period": "Jan – Jul 2023",
       "className": "vietlog",
-      "logo": "assets/vietlog.png"
+      "logo": "assets/vietlog.webp"
     }
   ],
   "projects": [
@@ -1048,7 +1048,8 @@ window.PORTFOLIO_I18N = {
         ]
       }
     },
-    "researchAccepted": "ACCEPTED"
+    "researchAccepted": "ACCEPTED",
+    "skipLink": "Skip to content"
   },
   "vi": {
     "locale": "Tiếng Việt",
@@ -1590,7 +1591,8 @@ window.PORTFOLIO_I18N = {
         ]
       }
     },
-    "researchAccepted": "ĐÃ ĐƯỢC CHẤP NHẬN"
+    "researchAccepted": "ĐÃ ĐƯỢC CHẤP NHẬN",
+    "skipLink": "Bỏ qua, tới nội dung"
   },
   "zh-Hant": {
     "locale": "繁體中文",
@@ -2132,7 +2134,8 @@ window.PORTFOLIO_I18N = {
         ]
       }
     },
-    "researchAccepted": "已獲接受"
+    "researchAccepted": "已獲接受",
+    "skipLink": "跳至主要內容"
   },
   "zh-Hans": {
     "locale": "简体中文",
@@ -2674,6 +2677,7 @@ window.PORTFOLIO_I18N = {
         ]
       }
     },
-    "researchAccepted": "已获录用"
+    "researchAccepted": "已获录用",
+    "skipLink": "跳至主要内容"
   }
 };

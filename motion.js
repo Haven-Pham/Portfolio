@@ -347,7 +347,8 @@
         if (e.isIntersecting) {
           const t0 = performance.now();
           const step = now => {
-            const p = Math.min((now - t0) / 900, 1);
+            // rAF timestamps can precede t0; clamp so the count never dips below zero
+            const p = Math.max(0, Math.min((now - t0) / 900, 1));
             badge.textContent = Math.round((1 - Math.pow(1-p, 3)) * target) + suffix;
             if (p < 1) requestAnimationFrame(step);
           };
@@ -405,7 +406,7 @@
     const pad = !grouped && !decimals && /^0\d/.test(numText) ? numText.length : 0;
     const t0 = performance.now();
     const step = now => {
-      const p = Math.min((now - t0) / 1100, 1);
+      const p = Math.max(0, Math.min((now - t0) / 1100, 1));
       const eased = 1 - Math.pow(1 - p, 3);
       let text = format(target * eased);
       if (pad) text = text.padStart(pad, '0');

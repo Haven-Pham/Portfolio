@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#061426">
+  <meta name="theme-color" content="#030A16" media="(prefers-color-scheme: dark)">
   <meta name="description" content="Pham Hong Hieu (Haven - 范鴻孝) — Supply Chain Analytics, Data Analytics and Applied AI Research Portfolio. Case studies, research, experience and certifications.">
   <title>Pham Hong Hieu (Haven - 范鴻孝) | Supply Chain × Data Analytics × AI Research</title>
   <link rel="canonical" href="https://haven-portfolio02.vercel.app/">
@@ -39,7 +39,7 @@
   <script src="content.js" defer></script>
   <script src="main.js" defer></script>
   <script src="motion.js" defer></script>
-  <script src="hero-network.js" defer></script>
+  <script src="page-network.js" defer></script>
 </head>
 <body class="theme-dark">
   <div id="top"></div>
@@ -48,7 +48,7 @@
   <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <header class="site-header" id="site-header">
     <div class="nav-shell wrap">
-      <a class="brand" href="#top" aria-label="Pham Hong Hieu (Haven - 范鴻孝) — home">HP<span class="brand-dot">.</span></a>
+      <a class="brand" href="#top" aria-label="HP, Pham Hong Hieu (Haven), home">HP<span class="brand-dot">.</span></a>
       <nav class="primary-nav" id="nav" aria-label="Main navigation">
         <a data-i18n="navAbout" href="#about"></a>
         <a data-i18n="navEducation" href="#education"></a>
@@ -73,7 +73,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <!-- HERO SECTION -->
     <section class="hero section wrap" id="hero" aria-labelledby="hero-title">
       <div class="hero-text reveal">
@@ -99,7 +99,7 @@
         <div class="profile-illustration">
           <div class="illustration-top"><span class="code-mark">&lt;profile /&gt;</span><span class="live-pip" title="Active"></span></div>
           <div class="avatar-frame">
-            <div class="avatar-card"><img src="assets/profile.jpg" alt="Pham Hong Hieu"></div>
+            <div class="avatar-card"><img src="assets/profile.webp" alt="Pham Hong Hieu" width="640" height="631" fetchpriority="high" decoding="async"></div>
             <span class="orbit-chip chip-left">SQL</span>
             <span class="orbit-chip chip-right">POWER BI</span>
             <span class="orbit-chip chip-bottom">ERP</span>
@@ -142,7 +142,7 @@
       <div class="education-grid">
         <article class="education-card reveal">
           <div class="edu-card-header">
-            <div class="edu-logo-box"><img src="assets/yuan-ze-university.png" alt="Yuan Ze University" class="edu-logo-img"></div>
+            <div class="edu-logo-box"><img src="assets/yuan-ze-university.webp" alt="Yuan Ze University" class="edu-logo-img" width="192" height="192" loading="lazy" decoding="async"></div>
             <div class="edu-header-text">
               <span class="edu-period" data-i18n="mbaYears">2025 – Present</span>
               <h3 data-i18n="mbaDegree">Global Master of Business Administration (Global MBA)</h3>
@@ -158,7 +158,7 @@
         </article>
         <article class="education-card reveal">
           <div class="edu-card-header">
-            <div class="edu-logo-box"><img src="assets/hcm-ute.png" alt="HCM-UTE" class="edu-logo-img"></div>
+            <div class="edu-logo-box"><img src="assets/hcm-ute.webp" alt="HCM-UTE" class="edu-logo-img" width="150" height="192" loading="lazy" decoding="async"></div>
             <div class="edu-header-text">
               <span class="edu-period" data-i18n="bachelorYears">2020 – 2024</span>
               <h3 data-i18n="bachelorDegree">Bachelor's degree in Logistics and Supply Chain Management</h3>
@@ -210,7 +210,7 @@
     <section class="section wrap" id="stack" data-accent="cyan">
       <div class="section-title reveal"><p class="section-overline">06 / <span data-i18n="navStack"></span></p><h2 data-i18n="stackHeading"></h2><div class="section-rule"></div><p class="section-caption" data-i18n="stackCaption"></p></div>
       <div class="stack-controls"><button type="button" class="view-toggle active" data-stack-view="workflow" data-i18n="stackWorkflow"></button><button type="button" class="view-toggle" data-stack-view="skills" data-i18n="stackSkills"></button></div>
-      <div id="stack-workflow" class="stack-panel"><div id="stage-grid" class="stage-grid"></div><div id="stage-description" class="stage-description" aria-live="polite"></div></div>
+      <div id="stack-workflow" class="stack-panel"><div id="stage-grid" class="stage-grid" role="tablist" aria-label="Workflow stages"></div><div id="stage-description" class="stage-description" aria-live="polite"></div></div>
       <div id="stack-skills" class="stack-panel" hidden></div>
     </section>
 
