@@ -139,10 +139,11 @@ def build(lang, c, profile, projects):
     site = f"{profile['website']}/?lang={lang}"
 
     # Header: name, headline, contact line
-    p = para(doc, "1. Applicant Name", c["name"], size=22)
-    p.paragraph_format.alignment = 0
-    para(doc, "2. Job Title / Headline", c["headline"], size=12, after=4)
+    center = WD_ALIGN_PARAGRAPH.CENTER
+    para(doc, "1. Applicant Name", c["name"], size=22).paragraph_format.alignment = center
+    para(doc, "2. Job Title / Headline", c["headline"], size=12, after=4).paragraph_format.alignment = center
     contact = para(doc, "5. Summary Text", after=2)
+    contact.paragraph_format.alignment = center
     shading = OxmlElement("w:shd")
     shading.set(qn("w:val"), "clear"); shading.set(qn("w:color"), "auto"); shading.set(qn("w:fill"), "F1F1F5")
     contact._p.get_or_add_pPr().append(shading)
@@ -198,6 +199,11 @@ def build(lang, c, profile, projects):
         heading("7. Degree Name/Job Title", e["role"], e["dates"])
         heading("9. Employer Name", e["org"], e["place"], after=1).paragraph_format.space_before = Pt(0)
         bullets(e["bullets"])
+        if e.get("reference"):
+            p = para(doc, "9. Employer Name", after=0)
+            p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+            lab = p.add_run(labels["reference"] + colon); lab.bold = True; lab.italic = True
+            p.add_run(e["reference"]).italic = True
 
     erp = c["erp"]
     section(labels["erp"])
@@ -207,7 +213,9 @@ def build(lang, c, profile, projects):
     section(labels["projects"])
     by_id = {p["id"]: p for p in projects}
     for pr in c["projects"]:
-        repo = by_id.get(pr["id"], {}).get("githubUrl")
+        # Repos still waiting to be created on GitHub are linked by their planned URL.
+        record = by_id.get(pr["id"], {})
+        repo = record.get("githubUrl") or record.get("pendingRepo")
         link = (labels["github"], repo) if repo else (labels["portfolio"], f"{site}#projects")
         p = heading("7a. Project", None, link, after=1)
         tab = p.runs[0]._r  # the tab run; insert the title before it
@@ -219,10 +227,12 @@ def build(lang, c, profile, projects):
     section(labels["research"])
     for r in c["research"]:
         heading("7. Degree Name/Job Title", r["title"], None)
-        p = para(doc, "9. Employer Name", after=1)
+        p = para(doc, "9. Employer Name", after=1, right=(labels["portfolio"], f"{site}#research"))
         p.paragraph_format.keep_with_next = True
+        tab = p.runs[0]._r  # the tab run; status and venue go before it
         status = p.add_run(f"{r['status']}  ·  "); status.bold = True
-        p.add_run(r["venue"])
+        venue = p.add_run(r["venue"])
+        tab.addprevious(status._r); tab.addprevious(venue._r)
         bullets(r["bullets"])
 
     section(labels["certifications"])

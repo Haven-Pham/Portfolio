@@ -14,7 +14,8 @@
       "github": "GitHub",
       "portfolio": "Portfolio",
       "website": "Portfolio",
-      "certsLink": "Verify all 22 certificates on the portfolio"
+      "certsLink": "Verify all 22 certificates on the portfolio",
+      "reference": "Reference"
     },
     "name": "PHAM HONG HIEU (HAVEN)",
     "headline": "Supply Chain & Data Analyst  |  SQL · Python · Power BI · ERP",
@@ -82,7 +83,7 @@
         "role": "Supply Chain Planner",
         "dates": "Oct 2024 – Apr 2025",
         "org": "Hoa Sen Group (steel and building materials)",
-        "place": "Vietnam",
+        "place": "Ho Chi Minh City, Vietnam",
         "bullets": [
           "Placed purchase orders and followed up suppliers of domestic and imported goods to keep deliveries on schedule.",
           "Managed inventory and transactions in Oracle ERP; coordinated stock transfers between factories and warehouses.",
@@ -90,32 +91,35 @@
           "Developed import and export plans for goods in line with stock levels and demand.",
           "Built operational reports that gave clear, transparent visibility of orders and stock.",
           "Resolved complaints and other issues raised by customers and suppliers."
-        ]
+        ],
+        "reference": "Mr Dat, Head of Supply Chain Department"
       },
       {
         "role": "Sales Logistics Staff",
         "dates": "Jul 2023 – Aug 2024",
         "org": "Kodai Sangyo (Vietnam) Co., Ltd. · freight forwarder, refrigerated cargo",
-        "place": "Vietnam",
+        "place": "Ho Chi Minh City, Vietnam",
         "bullets": [
           "Prospected new accounts through e-mail campaigns, cold calls and client meetings to meet monthly sales targets.",
           "Updated air and ocean freight rates from carriers and overseas agents; issued weekly and monthly quotations.",
           "Planned refrigerated shipments around vessel schedules and customer requests: domestic trucking, customs declaration, C/O, phytosanitary certificates and cut-off times.",
-          "Worked with the documentation, operations, customer service and coordination teams to run shipments end to end and resolve problems as they arose.",
+          "Worked with documentation, operations, customer service and coordination teams to run shipments end to end.",
           "Drafted service contracts, negotiated terms and payment, and collected receivables in line with the agreed credit terms."
-        ]
+        ],
+        "reference": "Mr Benny (Kuo Che Wei), Director"
       },
       {
         "role": "Export & Import Trainee",
         "dates": "Jan 2023 – Jul 2023",
         "org": "Viet Logistics Co. · freight forwarder, dry cargo",
-        "place": "Vietnam",
+        "place": "Ho Chi Minh City, Vietnam",
         "bullets": [
-          "Prepared import and export document sets for customs clearance (sales contract, invoice, packing list, C/O, SI, VGM) and classified goods by HS code.",
+          "Prepared customs document sets (contract, invoice, packing list, C/O, SI, VGM) and classified goods by HS code.",
           "Checked rates with carriers and agents, booked space, priced quotations and scheduled stuffing per booking.",
           "Applied Incoterms 2010/2020, calculated local charges and surcharges, and handled L/C, T/T, D/P, D/A payments.",
           "Coordinated documentation and operations teams to monitor shipments; introduced services to new customers."
-        ]
+        ],
+        "reference": "Ms Ngoc Xuan, Manager"
       }
     ],
     "erp": {
@@ -241,7 +245,8 @@
       "github": "GitHub",
       "portfolio": "Portfolio",
       "website": "Portfolio",
-      "certsLink": "Xác thực đủ 22 chứng chỉ trên portfolio"
+      "certsLink": "Xác thực đủ 22 chứng chỉ trên portfolio",
+      "reference": "Người tham chiếu"
     },
     "name": "PHẠM HỒNG HIẾU (HAVEN)",
     "headline": "Chuyên viên Phân tích Chuỗi cung ứng & Dữ liệu  |  SQL · Python · Power BI · ERP",
@@ -309,7 +314,7 @@
         "role": "Nhân viên Hoạch định Chuỗi cung ứng",
         "dates": "10/2024 – 04/2025",
         "org": "Tập đoàn Hoa Sen (thép và vật liệu xây dựng)",
-        "place": "Việt Nam",
+        "place": "TP. Hồ Chí Minh, Việt Nam",
         "bullets": [
           "Đặt hàng và theo dõi nhà cung cấp hàng nội địa, nhập khẩu để bảo đảm giao hàng đúng tiến độ.",
           "Quản lý tồn kho và giao dịch trên Oracle ERP; điều phối điều chuyển hàng giữa nhà máy và kho.",
@@ -317,32 +322,35 @@
           "Lập kế hoạch nhập khẩu và xuất hàng phù hợp với tồn kho và nhu cầu.",
           "Xây dựng báo cáo vận hành giúp theo dõi đơn hàng và tồn kho rõ ràng, minh bạch.",
           "Xử lý khiếu nại và các vấn đề phát sinh với khách hàng, nhà cung cấp."
-        ]
+        ],
+        "reference": "Anh Đạt, Trưởng phòng Chuỗi cung ứng"
       },
       {
         "role": "Nhân viên Kinh doanh Logistics",
         "dates": "07/2023 – 08/2024",
         "org": "Công ty TNHH Kodai Sangyo (Việt Nam) · giao nhận hàng lạnh",
-        "place": "Việt Nam",
+        "place": "TP. Hồ Chí Minh, Việt Nam",
         "bullets": [
           "Tìm kiếm khách hàng mới qua email marketing, gọi điện và gặp mặt để đạt chỉ tiêu doanh số tháng.",
           "Cập nhật cước hàng không, đường biển từ hãng tàu, đại lý nước ngoài; gửi báo giá hằng tuần và hằng tháng.",
           "Lên kế hoạch lô hàng lạnh theo lịch tàu và yêu cầu khách hàng: vận tải nội địa, khai báo hải quan, C/O, kiểm dịch thực vật và giờ cắt máng.",
           "Phối hợp bộ phận chứng từ, vận hành, chăm sóc khách hàng và điều phối để xử lý lô hàng trọn gói và các sự cố phát sinh.",
           "Soạn hợp đồng dịch vụ, đàm phán điều khoản, thanh toán và thu hồi công nợ theo thỏa thuận."
-        ]
+        ],
+        "reference": "Mr Benny (Kuo Che Wei), Giám đốc"
       },
       {
         "role": "Thực tập sinh Xuất nhập khẩu",
         "dates": "01/2023 – 07/2023",
         "org": "Công ty Viet Logistics · giao nhận hàng khô",
-        "place": "Việt Nam",
+        "place": "TP. Hồ Chí Minh, Việt Nam",
         "bullets": [
           "Lập bộ chứng từ thông quan (hợp đồng, hóa đơn, phiếu đóng gói, C/O, SI, VGM) và áp mã HS cho hàng hóa.",
           "Kiểm tra giá với hãng tàu, đại lý; đặt chỗ, lập báo giá và lên lịch đóng hàng theo booking.",
           "Áp dụng Incoterms 2010/2020, tính phí địa phương, phụ phí và xử lý thanh toán L/C, T/T, D/P, D/A.",
           "Phối hợp bộ phận chứng từ, vận hành theo dõi lô hàng; giới thiệu dịch vụ cho khách hàng mới."
-        ]
+        ],
+        "reference": "Chị Ngọc Xuân, Quản lý"
       }
     ],
     "erp": {
@@ -468,7 +476,8 @@
       "github": "GitHub",
       "portfolio": "作品集",
       "website": "作品集",
-      "certsLink": "於作品集驗證全部 22 張證書"
+      "certsLink": "於作品集驗證全部 22 張證書",
+      "reference": "推薦人"
     },
     "name": "范鴻孝 PHAM HONG HIEU (HAVEN)",
     "headline": "供應鏈與數據分析  |  SQL · Python · Power BI · ERP",
@@ -536,7 +545,7 @@
         "role": "供應鏈規劃專員",
         "dates": "2024/10 – 2025/04",
         "org": "Hoa Sen Group（鋼鐵與建材）",
-        "place": "越南",
+        "place": "越南胡志明市",
         "bullets": [
           "向國內與進口供應商下單並追蹤進度，確保準時交貨。",
           "於 Oracle ERP 管理庫存與交易資料，協調工廠與倉庫間的調撥。",
@@ -544,32 +553,35 @@
           "依庫存水準與需求制定進出口計畫。",
           "製作營運報表，清楚透明地追蹤訂單與庫存。",
           "處理客戶與供應商的客訴及各項問題。"
-        ]
+        ],
+        "reference": "Dat 先生，供應鏈部門主管"
       },
       {
         "role": "物流業務專員",
         "dates": "2023/07 – 2024/08",
         "org": "Kodai Sangyo (Vietnam) Co., Ltd.（冷鏈貨運承攬）",
-        "place": "越南",
+        "place": "越南胡志明市",
         "bullets": [
           "透過電子郵件行銷、電話開發與拜訪開拓新客戶，達成每月業績目標。",
           "向船公司與海外代理更新空運、海運運價，每週及每月提供報價。",
           "依船期與客戶需求規劃冷鏈貨運：內陸拖車、報關、產地證明、植物檢疫證明與截關時間。",
           "與文件、操作、客服及協調部門合作，完整執行貨運並即時處理問題。",
           "擬定服務合約，洽談條款與付款條件，並依約定信用期限收回帳款。"
-        ]
+        ],
+        "reference": "Benny（Kuo Che Wei）先生，總監"
       },
       {
         "role": "進出口實習生",
         "dates": "2023/01 – 2023/07",
         "org": "Viet Logistics（乾貨貨運承攬）",
-        "place": "越南",
+        "place": "越南胡志明市",
         "bullets": [
           "準備報關文件（銷售合約、發票、裝箱單、產地證明、SI、VGM），並進行 HS 稅則歸類。",
           "向船公司與代理查價、訂艙、報價，並依訂艙資訊安排裝櫃。",
           "運用 Incoterms 2010/2020，計算兩端當地費用與附加費，處理 L/C、T/T、D/P、D/A 付款。",
           "協同文件與操作部門追蹤貨況，並向潛在客戶介紹服務。"
-        ]
+        ],
+        "reference": "Ngoc Xuan 女士，經理"
       }
     ],
     "erp": {
@@ -695,7 +707,8 @@
       "github": "GitHub",
       "portfolio": "作品集",
       "website": "作品集",
-      "certsLink": "在作品集验证全部 22 张证书"
+      "certsLink": "在作品集验证全部 22 张证书",
+      "reference": "推荐人"
     },
     "name": "范鸿孝 PHAM HONG HIEU (HAVEN)",
     "headline": "供应链与数据分析  |  SQL · Python · Power BI · ERP",
@@ -763,7 +776,7 @@
         "role": "供应链规划专员",
         "dates": "2024.10 – 2025.04",
         "org": "Hoa Sen Group（钢铁与建材）",
-        "place": "越南",
+        "place": "越南胡志明市",
         "bullets": [
           "向国内与进口供应商下单并跟进进度，确保按时交货。",
           "在 Oracle ERP 中管理库存与交易数据，协调工厂与仓库之间的调拨。",
@@ -771,32 +784,35 @@
           "根据库存水平与需求制定进出口计划。",
           "编制运营报表，清晰透明地跟踪订单与库存。",
           "处理客户与供应商的投诉及各类问题。"
-        ]
+        ],
+        "reference": "Dat 先生，供应链部门主管"
       },
       {
         "role": "物流销售专员",
         "dates": "2023.07 – 2024.08",
         "org": "Kodai Sangyo (Vietnam) Co., Ltd.（冷链货运代理）",
-        "place": "越南",
+        "place": "越南胡志明市",
         "bullets": [
           "通过邮件营销、电话开发与拜访开拓新客户，完成月度销售目标。",
           "向船公司与海外代理更新空运、海运运价，每周及每月提供报价。",
           "根据船期与客户需求规划冷链货运：内陆拖车、报关、原产地证、植物检疫证书与截关时间。",
           "与单证、操作、客服及协调部门合作，完整执行货运并及时处理问题。",
           "起草服务合同，洽谈条款与付款条件，并按约定账期回收应收账款。"
-        ]
+        ],
+        "reference": "Benny（Kuo Che Wei）先生，总监"
       },
       {
         "role": "进出口实习生",
         "dates": "2023.01 – 2023.07",
         "org": "Viet Logistics（干货货运代理）",
-        "place": "越南",
+        "place": "越南胡志明市",
         "bullets": [
           "准备报关单证（销售合同、发票、装箱单、原产地证、SI、VGM），并进行 HS 编码归类。",
           "向船公司与代理询价、订舱、报价，并按订舱信息安排装箱。",
           "运用 Incoterms 2010/2020，计算两端本地费用与附加费，处理 L/C、T/T、D/P、D/A 付款。",
           "协同单证与操作部门跟踪货况，并向潜在客户介绍服务。"
-        ]
+        ],
+        "reference": "Ngoc Xuan 女士，经理"
       }
     ],
     "erp": {
