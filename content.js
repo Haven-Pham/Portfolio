@@ -428,32 +428,6 @@ window.PORTFOLIO_RECORDS = {
         "Growth models",
         "Holdout validation"
       ]
-    },
-    {
-      "id": "csmot-2026",
-      "type": "conference",
-      "year": "2026",
-      "url": null,
-      "metrics": [
-        {
-          "value": "134.6M",
-          "label": "citations"
-        },
-        {
-          "value": "0.26%",
-          "label": "mape"
-        },
-        {
-          "value": "0.999",
-          "label": "r2"
-        }
-      ],
-      "tags": [
-        "Technology convergence",
-        "USPTO",
-        "IPC",
-        "Gompertz"
-      ]
     }
   ]
 };
@@ -833,7 +807,7 @@ window.PORTFOLIO_I18N = {
     "statPatents": "USPTO PATENTS ANALYZED",
     "navResearch": "RESEARCH",
     "researchHeading": "Research & Publications",
-    "researchCaption": "Thesis and conference research on technology convergence, built on a reproducible Python + DuckDB pipeline over 50 years of USPTO data.",
+    "researchCaption": "Master's thesis on technology convergence, built on a reproducible Python + DuckDB pipeline over 50 years of USPTO data.",
     "researchTypeThesis": "MASTER'S THESIS",
     "researchTypeConference": "CONFERENCE PAPER",
     "researchLabels": {
@@ -844,7 +818,7 @@ window.PORTFOLIO_I18N = {
       "mape": "FTC holdout MAPE",
       "r2": "Training R²"
     },
-    "researchNote": "Summaries only. Manuscripts, code and data are shared on request while the work is under review.",
+    "researchNote": "Summary only. The full thesis, code and data are shared on request.",
     "researchData": {
       "thesis-convergence": {
         "title": "Tracing Technology Convergence Through Patent Analysis: Longitudinal Evidence from USPTO Patents, 1976–2025",
@@ -854,16 +828,6 @@ window.PORTFOLIO_I18N = {
           "188,661 technology pairs observed; 137,799 reactivated at least once",
           "Gompertz model gave the lowest holdout RMSE for both FTC and STC",
           "New-pair emergence peaked in 1998; STC volume peaked in 2019"
-        ]
-      },
-      "csmot-2026": {
-        "title": "Lifecycle Trajectories of First-Time and Subsequent Technology Convergence: Evidence from USPTO Utility Patents, 1976–2025",
-        "venue": "Co-authored with Prof. Chih-Hung Hsieh · 2026 CSMOT Annual Conference",
-        "summary": "Models FTC and STC as pair-level longitudinal trajectories across 134.6M distinct backward-citation links, and shows that recent FTC activity is dispersed while STC concentrates around established technology relationships.",
-        "highlights": [
-          "Holdout MAPE 0.259% (FTC) and 0.833% (STC)",
-          "73.04% of observed IPC4 pairs reactivated by 2025",
-          "Explicitly avoids treating recurrence as commercial importance"
         ]
       }
     },
@@ -1251,7 +1215,7 @@ window.PORTFOLIO_I18N = {
     "statPatents": "BẰNG SÁNG CHẾ USPTO ĐÃ PHÂN TÍCH",
     "navResearch": "NGHIÊN CỨU",
     "researchHeading": "Nghiên cứu & Công bố",
-    "researchCaption": "Luận văn và bài hội nghị về hội tụ công nghệ, xây dựng trên pipeline Python + DuckDB có thể tái lập với 50 năm dữ liệu USPTO.",
+    "researchCaption": "Luận văn thạc sĩ về hội tụ công nghệ, xây dựng trên pipeline Python + DuckDB có thể tái lập với 50 năm dữ liệu USPTO.",
     "researchTypeThesis": "LUẬN VĂN THẠC SĨ",
     "researchTypeConference": "BÀI HỘI NGHỊ",
     "researchLabels": {
@@ -1262,7 +1226,7 @@ window.PORTFOLIO_I18N = {
       "mape": "MAPE holdout (FTC)",
       "r2": "R² huấn luyện"
     },
-    "researchNote": "Chỉ hiển thị tóm tắt. Bản thảo, mã nguồn và dữ liệu được chia sẻ khi có yêu cầu trong thời gian bình duyệt.",
+    "researchNote": "Chỉ hiển thị tóm tắt. Toàn văn luận văn, mã nguồn và dữ liệu được chia sẻ khi có yêu cầu.",
     "researchData": {
       "thesis-convergence": {
         "title": "Truy vết hội tụ công nghệ qua phân tích sáng chế: Bằng chứng dọc từ bằng sáng chế USPTO, 1976–2025",
@@ -1272,16 +1236,6 @@ window.PORTFOLIO_I18N = {
           "Quan sát 188.661 cặp công nghệ; 137.799 cặp được tái kích hoạt ít nhất một lần",
           "Mô hình Gompertz có RMSE holdout thấp nhất cho cả FTC và STC",
           "Số cặp mới đạt đỉnh năm 1998; khối lượng STC đạt đỉnh năm 2019"
-        ]
-      },
-      "csmot-2026": {
-        "title": "Quỹ đạo vòng đời của hội tụ công nghệ lần đầu và tiếp theo: Bằng chứng từ bằng sáng chế USPTO, 1976–2025",
-        "venue": "Đồng tác giả với GS. Chih-Hung Hsieh (謝志宏) · Hội nghị thường niên CSMOT 2026",
-        "summary": "Mô hình hóa FTC và STC thành quỹ đạo dọc ở cấp độ cặp trên 134,6 triệu liên kết trích dẫn ngược, cho thấy FTC gần đây phân tán còn STC tập trung quanh các quan hệ công nghệ đã hình thành.",
-        "highlights": [
-          "MAPE holdout 0,259% (FTC) và 0,833% (STC)",
-          "73,04% cặp IPC4 đã được tái kích hoạt tính đến 2025",
-          "Không đồng nhất việc lặp lại với giá trị thương mại"
         ]
       }
     },
@@ -1669,7 +1623,7 @@ window.PORTFOLIO_I18N = {
     "statPatents": "已分析 USPTO 專利",
     "navResearch": "研究",
     "researchHeading": "研究與發表",
-    "researchCaption": "以可重現的 Python + DuckDB 流程分析 50 年 USPTO 資料，探討技術融合的碩士論文與研討會論文。",
+    "researchCaption": "以可重現的 Python + DuckDB 流程分析 50 年 USPTO 資料，探討技術融合的碩士論文。",
     "researchTypeThesis": "碩士論文",
     "researchTypeConference": "研討會論文",
     "researchLabels": {
@@ -1680,7 +1634,7 @@ window.PORTFOLIO_I18N = {
       "mape": "FTC 保留樣本 MAPE",
       "r2": "訓練 R²"
     },
-    "researchNote": "僅提供摘要。審查期間，全文、程式碼與資料可應要求提供。",
+    "researchNote": "僅提供摘要。論文全文、程式碼與資料可應要求提供。",
     "researchData": {
       "thesis-convergence": {
         "title": "透過專利分析追蹤技術融合：來自美國專利商標局專利的縱貫實證（1976–2025年）",
@@ -1690,16 +1644,6 @@ window.PORTFOLIO_I18N = {
           "共觀察到 188,661 組技術配對，其中 137,799 組曾再次活化",
           "Gompertz 模型在 FTC 與 STC 皆有最低的保留樣本 RMSE",
           "新增配對數於 1998 年達到高峰，STC 事件數於 2019 年達到高峰"
-        ]
-      },
-      "csmot-2026": {
-        "title": "首次與後續技術融合之生命週期軌跡：1976–2025年USPTO發明專利之證據",
-        "venue": "與謝志宏教授合著 · 2026 中華民國科技管理學會年會",
-        "summary": "將 FTC 與 STC 視為配對層級的縱向軌跡，分析 1.346 億筆相異向後引證連結；結果顯示近期 FTC 活動較分散，STC 則集中於既有技術關係。",
-        "highlights": [
-          "保留樣本 MAPE：FTC 0.259%、STC 0.833%",
-          "截至 2025 年，73.04% 的 IPC4 配對曾再次活化",
-          "不將重複出現等同於技術重要性或商業成功"
         ]
       }
     },
@@ -2087,7 +2031,7 @@ window.PORTFOLIO_I18N = {
     "statPatents": "已分析 USPTO 专利",
     "navResearch": "研究",
     "researchHeading": "研究与发表",
-    "researchCaption": "基于可复现的 Python + DuckDB 流程分析 50 年 USPTO 数据，研究技术融合的硕士论文与会议论文。",
+    "researchCaption": "基于可复现的 Python + DuckDB 流程分析 50 年 USPTO 数据，研究技术融合的硕士论文。",
     "researchTypeThesis": "硕士论文",
     "researchTypeConference": "会议论文",
     "researchLabels": {
@@ -2098,7 +2042,7 @@ window.PORTFOLIO_I18N = {
       "mape": "FTC 保留样本 MAPE",
       "r2": "训练 R²"
     },
-    "researchNote": "仅提供摘要。审稿期间，全文、代码与数据可应要求提供。",
+    "researchNote": "仅提供摘要。论文全文、代码与数据可应要求提供。",
     "researchData": {
       "thesis-convergence": {
         "title": "通过专利分析追踪技术融合：来自美国专利商标局专利的纵向实证（1976–2025年）",
@@ -2108,16 +2052,6 @@ window.PORTFOLIO_I18N = {
           "共观察到 188,661 组技术配对，其中 137,799 组曾再次激活",
           "Gompertz 模型在 FTC 与 STC 上均取得最低的保留样本 RMSE",
           "新增配对数在 1998 年达到峰值，STC 事件数在 2019 年达到峰值"
-        ]
-      },
-      "csmot-2026": {
-        "title": "首次与后续技术融合的生命周期轨迹：1976–2025年 USPTO 发明专利的证据",
-        "venue": "与谢志宏教授合著 · 2026 中华民国科技管理学会年会",
-        "summary": "将 FTC 与 STC 视为配对层面的纵向轨迹，分析 1.346 亿条相异的后向引证链接；结果显示近期 FTC 活动较分散，而 STC 集中于既有技术关系。",
-        "highlights": [
-          "保留样本 MAPE：FTC 0.259%，STC 0.833%",
-          "截至 2025 年，73.04% 的 IPC4 配对曾再次激活",
-          "不将重复出现等同于技术重要性或商业成功"
         ]
       }
     },
