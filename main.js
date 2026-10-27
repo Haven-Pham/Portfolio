@@ -254,7 +254,7 @@
       if (!r) return '';
       const metrics = (item.metrics || []).map(m => `<div class="research-metric"><strong>${h(m.value)}</strong><span>${h(d.researchLabels?.[m.label] || m.label)}</span></div>`).join('');
       return `<article class="research-card reveal" style="--entry-delay:${index * 70}ms">
-        <div class="research-card-top"><span class="research-type ${h(item.type)}">${h(typeLabel[item.type] || item.type)}</span><span class="research-year">${h(item.year)}</span></div>
+        <div class="research-card-top"><span class="research-badges"><span class="research-type ${h(item.type)}">${h(typeLabel[item.type] || item.type)}</span>${item.status === 'accepted' ? `<span class="research-status">✓ ${h(d.researchAccepted)}</span>` : ''}</span><span class="research-year">${h(item.year)}</span></div>
         <h3 class="research-title">${h(r.title)}</h3>
         <p class="research-venue">${h(r.venue)}</p>
         <div class="research-metrics">${metrics}</div>

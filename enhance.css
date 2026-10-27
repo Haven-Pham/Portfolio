@@ -136,6 +136,62 @@ body.theme-light .aurora span { opacity: 0.1; }
 }
 
 /* --------------------------------------------------------------------------
+   HERO NETWORK CANVAS (drawn by hero-network.js)
+   -------------------------------------------------------------------------- */
+.hero { position: relative; }
+.hero > .hero-text, .hero > .hero-visual { position: relative; z-index: 1; }
+.hero-canvas {
+  position: absolute;
+  top: -90px;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  height: calc(100% + 90px);
+  transform: translateX(-50%);
+  z-index: 0;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
+  opacity: 0;
+  animation: heroCanvasIn 1.6s ease 0.4s forwards;
+}
+@keyframes heroCanvasIn { to { opacity: 1; } }
+
+/* A slow light sweep across the hero */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -90px;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 35%, rgba(56, 189, 248, 0.06) 45%, rgba(167, 139, 250, 0.07) 50%, transparent 60%);
+  background-size: 250% 100%;
+  animation: heroSweep 14s ease-in-out infinite;
+}
+body.theme-light .hero::after {
+  background: linear-gradient(115deg, transparent 35%, rgba(37, 99, 235, 0.05) 45%, rgba(124, 58, 237, 0.05) 50%, transparent 60%);
+  background-size: 250% 100%;
+}
+@keyframes heroSweep { 0%, 100% { background-position: 100% 0; } 50% { background-position: 0% 0; } }
+
+/* Research: accepted badge */
+.research-badges { display: inline-flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.research-status {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 4px 9px;
+  border-radius: 6px;
+  color: var(--c-emerald);
+  background: rgba(52, 211, 153, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+}
+
+/* --------------------------------------------------------------------------
    CURSOR SPOTLIGHT + TILT (enabled by motion.js on fine pointers)
    -------------------------------------------------------------------------- */
 .spot { --mx: 50%; --my: 50%; }
@@ -500,7 +556,8 @@ body.theme-light .bento-card {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .aurora span, .gradient-text, .bento-card .pulse-line path { animation: none !important; }
+  .aurora span, .gradient-text, .bento-card .pulse-line path, .hero::after { animation: none !important; }
+  .hero-canvas { animation: none; opacity: 1; }
   .pulse-line path { stroke-dashoffset: 0; }
   .page-enter > * { animation: none; }
   [data-accent] .section-rule { transform: none; transition: none; }
