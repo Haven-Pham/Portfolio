@@ -152,10 +152,10 @@
     }
 
     const kw = {
-      'en':      ['DATA ANALYTICS', 'SUPPLY CHAIN', 'SQL', 'POWER BI', 'ORACLE ERP', 'LOGISTICS'],
-      'vi':      ['PHÂN TÍCH DỮ LIỆU', 'CHUỖI CUNG ỨNG', 'SQL', 'POWER BI', 'ORACLE ERP', 'LOGISTICS'],
-      'zh-Hant': ['數據分析', '供應鏈', 'SQL', 'POWER BI', 'ORACLE ERP', '物流'],
-      'zh-Hans': ['数据分析', '供应链', 'SQL', 'POWER BI', 'ORACLE ERP', '物流'],
+      'en':      ['SUPPLY CHAIN ANALYTICS', 'SQL', 'PYTHON', 'POWER BI', 'ORACLE ERP', 'PATENT ANALYTICS', 'LOGISTICS'],
+      'vi':      ['PHÂN TÍCH CHUỖI CUNG ỨNG', 'SQL', 'PYTHON', 'POWER BI', 'ORACLE ERP', 'PHÂN TÍCH SÁNG CHẾ', 'LOGISTICS'],
+      'zh-Hant': ['供應鏈分析', 'SQL', 'PYTHON', 'POWER BI', 'ORACLE ERP', '專利分析', '物流'],
+      'zh-Hans': ['供应链分析', 'SQL', 'PYTHON', 'POWER BI', 'ORACLE ERP', '专利分析', '物流'],
     };
 
     const ticker = document.createElement('span');
@@ -242,7 +242,7 @@
   }
 
   function watchDynamicContainers() {
-    const containers = ['#experience-list','#project-grid','#cert-grid','#community-grid','#contact-grid']
+    const containers = ['#experience-list','#project-grid','#cert-grid','#community-grid','#contact-grid','#research-grid']
       .map(s => $(s)).filter(Boolean);
     if (!containers.length) return;
     const mo = new MutationObserver(muts => {
@@ -250,6 +250,7 @@
         if (m.addedNodes.length) {
           applyCardStagger(m.target, 40);
           $$('.reveal:not(.is-visible)', m.target).forEach(c => scrollRevealCard(c, true));
+          initCountUps();
         }
       });
     });
@@ -380,6 +381,101 @@
   }
 
   /* =========================================================================
+     10b. COUNT-UP NUMBERS
+     Animates any numeric figure in stats, research metrics and the community
+     bento once it scrolls into view; keeps prefixes, suffixes and separators.
+     ========================================================================= */
+  const COUNT_SELECTOR = '.mini-stat-grid .stat strong, .research-metric strong, .bento-stat strong';
+  let _countObserver = null;
+
+  function animateCount(el) {
+    const original = el.dataset.countOriginal || el.textContent.trim();
+    el.dataset.countOriginal = original;
+    if (/\d\s*[–-]\s*\d/.test(original)) return; // ranges such as 1976–2025 stay static
+    const match = original.match(/^(\D*)([\d,.]+)(.*)$/);
+    if (!match) return;
+    const [, prefix, numText, suffix] = match;
+    const decimals = (numText.split('.')[1] || '').length;
+    const grouped = numText.includes(',');
+    const target = parseFloat(numText.replace(/,/g, ''));
+    const format = v => {
+      const fixed = v.toFixed(decimals);
+      return grouped ? Number(fixed).toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals }) : fixed;
+    };
+    const pad = !grouped && !decimals && /^0\d/.test(numText) ? numText.length : 0;
+    const t0 = performance.now();
+    const step = now => {
+      const p = Math.min((now - t0) / 1100, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      let text = format(target * eased);
+      if (pad) text = text.padStart(pad, '0');
+      el.textContent = prefix + text + suffix;
+      if (p < 1) requestAnimationFrame(step); else el.textContent = original;
+    };
+    requestAnimationFrame(step);
+  }
+
+  function initCountUps() {
+    if (prefersReducedMotion() || !('IntersectionObserver' in window)) return;
+    if (!_countObserver) {
+      _countObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          animateCount(e.target);
+          obs.unobserve(e.target);
+        });
+      }, { threshold: 0.6 });
+    }
+    $$(COUNT_SELECTOR).forEach(el => {
+      if (el.dataset.countBound) return;
+      el.dataset.countBound = '1';
+      _countObserver.observe(el);
+    });
+  }
+
+  /* =========================================================================
+     10c. CURSOR SPOTLIGHT, CARD TILT, MAGNETIC BUTTONS
+     Only on precise pointers; touch devices keep the static layout.
+     ========================================================================= */
+  const SPOT_SELECTOR = '.experience-card, .project-card, .cert-card, .research-card, .bento-card, .education-card, .contact-card';
+  const TILT_SELECTOR = '.project-card, .cert-card, .research-card, .bento-card';
+
+  function initPointerEffects() {
+    if (prefersReducedMotion() || !window.matchMedia('(pointer: fine)').matches) return;
+
+    document.addEventListener('pointermove', e => {
+      const card = e.target.closest(SPOT_SELECTOR);
+      if (!card) return;
+      if (!card.classList.contains('spot')) card.classList.add('spot');
+      const r = card.getBoundingClientRect();
+      const x = e.clientX - r.left;
+      const y = e.clientY - r.top;
+      card.style.setProperty('--mx', `${x}px`);
+      card.style.setProperty('--my', `${y}px`);
+      if (card.matches(TILT_SELECTOR)) {
+        const rx = ((y / r.height) - 0.5) * -5;
+        const ry = ((x / r.width) - 0.5) * 6;
+        card.style.transform = `perspective(900px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg) translateY(-4px)`;
+      }
+    }, { passive: true });
+
+    document.addEventListener('pointerout', e => {
+      const card = e.target.closest(TILT_SELECTOR);
+      if (card && !card.contains(e.relatedTarget)) card.style.transform = '';
+    });
+
+    $$('.hero-buttons .btn').forEach(btn => {
+      btn.addEventListener('pointermove', e => {
+        const r = btn.getBoundingClientRect();
+        const dx = (e.clientX - r.left - r.width / 2) / r.width;
+        const dy = (e.clientY - r.top - r.height / 2) / r.height;
+        btn.style.transform = `translate(${(dx * 8).toFixed(1)}px, ${(dy * 6).toFixed(1)}px)`;
+      });
+      btn.addEventListener('pointerleave', () => { btn.style.transform = ''; });
+    });
+  }
+
+  /* =========================================================================
      11. LANGUAGE CHANGE HOOK
      ========================================================================= */
   function hookLanguageChange() {
@@ -413,6 +509,8 @@
     initCertCounter();
     initSchematicAnimation();
     initAmbientBackground();
+    initCountUps();
+    initPointerEffects();
     setTimeout(() => { initWorkflowAnimation(); initWorkflowStageTransition(); }, 250);
     hookLanguageChange();
   }

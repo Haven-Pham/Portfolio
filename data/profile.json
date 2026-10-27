@@ -42,5 +42,9 @@
     "transport": "https://github.com/Haven-Pham/transport-logistics-otif-analytics",
     "playbook": "https://github.com/Haven-Pham/customer-analytics-playbook"
   },
-  "githubUser": "Haven-Pham"
+  "githubUser": "Haven-Pham",
+  "githubFeedExclude": [
+    "ecommerce-analytics-demo",
+    "MY-RESUME"
+  ]
 }

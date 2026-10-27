@@ -1,21 +1,39 @@
 [
   {
+    "id": "toeic",
+    "provider": "ETS · IIG Vietnam",
+    "type": "language",
+    "when": "Oct 02, 2024",
+    "mark": "ETS",
+    "asset": "assets/certificates/toeic-public.jpg",
+    "kind": "assessment",
+    "score": "840 / 990 (L: 460, R: 380)",
+    "thumb": "assets/certificates/thumbs/toeic.webp",
+    "featured": true
+  },
+  {
+    "id": "tocfl",
+    "provider": "Ministry of Education, Taiwan",
+    "type": "language",
+    "when": "Jul 25, 2026",
+    "mark": "TOCFL",
+    "asset": "assets/certificates/tocfl-public.jpg",
+    "kind": "assessment",
+    "score": "Score 940 · Level 2 (CEFR A2 / TBCL 3)",
+    "certId": "TLR11544488",
+    "thumb": "assets/certificates/thumbs/tocfl.webp",
+    "featured": true
+  },
+  {
     "id": "hr-advanced",
     "provider": "HackerRank",
     "type": "hacker",
     "when": "Jun 26, 2026",
     "mark": "H",
     "asset": "assets/certificates/hackerrank-sql-advanced.jpg",
-    "kind": "assessment"
-  },
-  {
-    "id": "hr-intermediate",
-    "provider": "HackerRank",
-    "type": "hacker",
-    "when": "Jun 26, 2026",
-    "mark": "H",
-    "asset": "assets/certificates/hackerrank-sql-intermediate.jpg",
-    "kind": "assessment"
+    "kind": "assessment",
+    "thumb": "assets/certificates/thumbs/hr-advanced.webp",
+    "featured": true
   },
   {
     "id": "dc-powerbi",
@@ -24,184 +42,9 @@
     "when": "Jul 04, 2026",
     "mark": "DC",
     "asset": "assets/certificates/datacamp-power-bi.pdf",
-    "kind": "course"
-  },
-  {
-    "id": "dc-intermediate",
-    "provider": "DataCamp",
-    "type": "datacamp",
-    "when": "Jun 11, 2026",
-    "mark": "DC",
-    "asset": "assets/certificates/datacamp-intermediate-sql.pdf",
-    "kind": "course"
-  },
-  {
-    "id": "dc-ai",
-    "provider": "DataCamp",
-    "type": "datacamp",
-    "when": "May 31, 2026",
-    "mark": "DC",
-    "asset": "assets/certificates/datacamp-cleaning-ai.pdf",
-    "kind": "course"
-  },
-  {
-    "id": "dc-intro",
-    "provider": "DataCamp",
-    "type": "datacamp",
-    "when": "May 29, 2026",
-    "mark": "DC",
-    "asset": "assets/certificates/datacamp-intro-sql.pdf",
-    "kind": "course"
-  },
-  {
-    "id": "mandarin",
-    "provider": "Yuan Ze University",
-    "type": "language",
-    "when": "Dec 26, 2025",
-    "mark": "YZ",
-    "asset": null,
-    "kind": "course"
-  },
-  {
-    "id": "toeic",
-    "provider": "ETS · IIG Vietnam",
-    "type": "language",
-    "when": "Oct 02, 2024",
-    "mark": "ETS",
-    "asset": null,
-    "kind": "assessment",
-    "score": "840 / 990 (L: 460, R: 380)"
-  },
-  {
-    "id": "tocfl",
-    "provider": "Ministry of Education, Taiwan",
-    "type": "language",
-    "when": "Jul 25, 2026",
-    "mark": "TOCFL",
-    "asset": null,
-    "kind": "assessment",
-    "score": "Score 940 · Level 2 (CEFR A2 / TBCL 3)",
-    "certId": "TLR11544488"
-  },
-  {
-    "id": "dc-sql-manip",
-    "provider": "DataCamp",
-    "type": "datacamp",
-    "when": "Jun 27, 2026",
-    "mark": "DC",
-    "asset": "assets/certificates/datacamp-data-manipulation-sql.pdf",
     "kind": "course",
-    "certId": "#48,454,775"
-  },
-  {
-    "id": "dc-dax",
-    "provider": "DataCamp",
-    "type": "datacamp",
-    "when": "Jun 29, 2026",
-    "mark": "DC",
-    "asset": "assets/certificates/datacamp-intro-dax.pdf",
-    "kind": "course",
-    "certId": "#48,178,782"
-  },
-  {
-    "id": "dc-python-inter",
-    "provider": "DataCamp",
-    "type": "datacamp",
-    "when": "Sep 28, 2026",
-    "mark": "DC",
-    "asset": "assets/certificates/datacamp-intermediate-python.pdf",
-    "kind": "course",
-    "certId": "#49,954,197"
-  },
-  {
-    "id": "dc-stats-python",
-    "provider": "DataCamp",
-    "type": "datacamp",
-    "when": "Oct 16, 2026",
-    "mark": "DC",
-    "asset": "assets/certificates/datacamp-statistics-python.pdf",
-    "kind": "course",
-    "certId": "#50,357,742"
-  },
-  {
-    "id": "dc-pandas-join",
-    "provider": "DataCamp",
-    "type": "datacamp",
-    "when": "Oct 10, 2026",
-    "mark": "DC",
-    "asset": "assets/certificates/datacamp-joining-pandas.pdf",
-    "kind": "course",
-    "certId": "#50,262,345"
-  },
-  {
-    "id": "dc-pandas-manip",
-    "provider": "DataCamp",
-    "type": "datacamp",
-    "when": "Oct 06, 2026",
-    "mark": "DC",
-    "asset": "assets/certificates/datacamp-data-manipulation-pandas.pdf",
-    "kind": "course",
-    "certId": "#50,142,825"
-  },
-  {
-    "id": "dc-python-intro",
-    "provider": "DataCamp",
-    "type": "datacamp",
-    "when": "Sep 17, 2026",
-    "mark": "DC",
-    "asset": "assets/certificates/datacamp-intro-python.pdf",
-    "kind": "course",
-    "certId": "#49,316,446"
-  },
-  {
-    "id": "dc-sql-join",
-    "provider": "DataCamp",
-    "type": "datacamp",
-    "when": "Jun 20, 2026",
-    "mark": "DC",
-    "asset": "assets/certificates/datacamp-joining-sql.pdf",
-    "kind": "course",
-    "certId": "#48,307,281"
-  },
-  {
-    "id": "cs-ibm-excel",
-    "provider": "IBM · Coursera",
-    "type": "coursera",
-    "when": "Jun 13, 2025",
-    "mark": "C",
-    "asset": "https://coursera.org/verify/SFHLSS34RCZ7",
-    "kind": "course",
-    "certId": "SFHLSS34RCZ7"
-  },
-  {
-    "id": "cs-unilever-analytics",
-    "provider": "Unilever · Coursera",
-    "type": "coursera",
-    "when": "May 07, 2025",
-    "mark": "C",
-    "asset": "https://coursera.org/verify/58ZIPG2QWL3U",
-    "kind": "course",
-    "certId": "58ZIPG2QWL3U"
-  },
-  {
-    "id": "cs-uci-planning",
-    "provider": "UC Irvine · Coursera",
-    "type": "coursera",
-    "when": "Apr 22, 2025",
-    "mark": "C",
-    "asset": "https://coursera.org/verify/S0IX1CPG5SLA",
-    "kind": "course",
-    "certId": "S0IX1CPG5SLA"
-  },
-  {
-    "id": "cs-unilever-scm",
-    "provider": "Unilever · Coursera",
-    "type": "coursera",
-    "when": "Apr 21, 2025",
-    "mark": "C",
-    "asset": "https://coursera.org/verify/804YQRVH73R4",
-    "kind": "course",
-    "certId": "804YQRVH73R4"
+    "thumb": "assets/certificates/thumbs/dc-powerbi.webp",
+    "featured": true
   },
   {
     "id": "cs-rutgers-analytics",
@@ -211,6 +54,207 @@
     "mark": "C",
     "asset": "https://coursera.org/verify/U789UKLTGEZX",
     "kind": "course",
-    "certId": "U789UKLTGEZX"
+    "certId": "U789UKLTGEZX",
+    "thumb": "assets/certificates/thumbs/cs-rutgers-analytics.webp",
+    "featured": true
+  },
+  {
+    "id": "cs-uci-planning",
+    "provider": "UC Irvine · Coursera",
+    "type": "coursera",
+    "when": "Apr 22, 2025",
+    "mark": "C",
+    "asset": "https://coursera.org/verify/S0IX1CPG5SLA",
+    "kind": "course",
+    "certId": "S0IX1CPG5SLA",
+    "thumb": "assets/certificates/thumbs/cs-uci-planning.webp",
+    "featured": true
+  },
+  {
+    "id": "hr-intermediate",
+    "provider": "HackerRank",
+    "type": "hacker",
+    "when": "Jun 26, 2026",
+    "mark": "H",
+    "asset": "assets/certificates/hackerrank-sql-intermediate.jpg",
+    "kind": "assessment",
+    "thumb": "assets/certificates/thumbs/hr-intermediate.webp",
+    "featured": false
+  },
+  {
+    "id": "cs-unilever-scm",
+    "provider": "Unilever · Coursera",
+    "type": "coursera",
+    "when": "Apr 21, 2025",
+    "mark": "C",
+    "asset": "https://coursera.org/verify/804YQRVH73R4",
+    "kind": "course",
+    "certId": "804YQRVH73R4",
+    "thumb": "assets/certificates/thumbs/cs-unilever-scm.webp",
+    "featured": false
+  },
+  {
+    "id": "cs-unilever-analytics",
+    "provider": "Unilever · Coursera",
+    "type": "coursera",
+    "when": "May 07, 2025",
+    "mark": "C",
+    "asset": "https://coursera.org/verify/58ZIPG2QWL3U",
+    "kind": "course",
+    "certId": "58ZIPG2QWL3U",
+    "thumb": "assets/certificates/thumbs/cs-unilever-analytics.webp",
+    "featured": false
+  },
+  {
+    "id": "dc-dax",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Jun 29, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-intro-dax.pdf",
+    "kind": "course",
+    "certId": "#48,178,782",
+    "thumb": "assets/certificates/thumbs/dc-dax.webp",
+    "featured": false
+  },
+  {
+    "id": "dc-intermediate",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Jun 11, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-intermediate-sql.pdf",
+    "kind": "course",
+    "thumb": "assets/certificates/thumbs/dc-intermediate.webp",
+    "featured": false
+  },
+  {
+    "id": "dc-sql-join",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Jun 20, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-joining-sql.pdf",
+    "kind": "course",
+    "certId": "#48,307,281",
+    "thumb": "assets/certificates/thumbs/dc-sql-join.webp",
+    "featured": false
+  },
+  {
+    "id": "dc-sql-manip",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Jun 27, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-data-manipulation-sql.pdf",
+    "kind": "course",
+    "certId": "#48,454,775",
+    "thumb": "assets/certificates/thumbs/dc-sql-manip.webp",
+    "featured": false
+  },
+  {
+    "id": "dc-stats-python",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Oct 16, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-statistics-python.pdf",
+    "kind": "course",
+    "certId": "#50,357,742",
+    "thumb": "assets/certificates/thumbs/dc-stats-python.webp",
+    "featured": false
+  },
+  {
+    "id": "dc-pandas-manip",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Oct 06, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-data-manipulation-pandas.pdf",
+    "kind": "course",
+    "certId": "#50,142,825",
+    "thumb": "assets/certificates/thumbs/dc-pandas-manip.webp",
+    "featured": false
+  },
+  {
+    "id": "dc-pandas-join",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Oct 10, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-joining-pandas.pdf",
+    "kind": "course",
+    "certId": "#50,262,345",
+    "thumb": "assets/certificates/thumbs/dc-pandas-join.webp",
+    "featured": false
+  },
+  {
+    "id": "dc-python-inter",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Sep 28, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-intermediate-python.pdf",
+    "kind": "course",
+    "certId": "#49,954,197",
+    "thumb": "assets/certificates/thumbs/dc-python-inter.webp",
+    "featured": false
+  },
+  {
+    "id": "dc-python-intro",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "Sep 17, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-intro-python.pdf",
+    "kind": "course",
+    "certId": "#49,316,446",
+    "thumb": "assets/certificates/thumbs/dc-python-intro.webp",
+    "featured": false
+  },
+  {
+    "id": "dc-intro",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "May 29, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-intro-sql.pdf",
+    "kind": "course",
+    "thumb": "assets/certificates/thumbs/dc-intro.webp",
+    "featured": false
+  },
+  {
+    "id": "dc-ai",
+    "provider": "DataCamp",
+    "type": "datacamp",
+    "when": "May 31, 2026",
+    "mark": "DC",
+    "asset": "assets/certificates/datacamp-cleaning-ai.pdf",
+    "kind": "course",
+    "thumb": "assets/certificates/thumbs/dc-ai.webp",
+    "featured": false
+  },
+  {
+    "id": "cs-ibm-excel",
+    "provider": "IBM · Coursera",
+    "type": "coursera",
+    "when": "Jun 13, 2025",
+    "mark": "C",
+    "asset": "https://coursera.org/verify/SFHLSS34RCZ7",
+    "kind": "course",
+    "certId": "SFHLSS34RCZ7",
+    "thumb": "assets/certificates/thumbs/cs-ibm-excel.webp",
+    "featured": false
+  },
+  {
+    "id": "mandarin",
+    "provider": "Yuan Ze University",
+    "type": "language",
+    "when": "Dec 26, 2025",
+    "mark": "YZ",
+    "asset": "assets/certificates/mandarin-public.jpg",
+    "kind": "course",
+    "thumb": "assets/certificates/thumbs/mandarin.webp",
+    "featured": false
   }
 ]

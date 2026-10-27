@@ -11,8 +11,31 @@
   const save = (key, value) => { try { localStorage.setItem(key, value); } catch {} };
   const h = (s) => String(s ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
   const urlLang = new URLSearchParams(window.location.search).get('lang');
+  const urlTheme = new URLSearchParams(window.location.search).get('theme');
   const language = urlLang || getSaved('haven-language', 'en');
-  const state = { lang: PACKS[language] ? language : 'en', theme: getSaved('haven-theme','dark'), expFilter:'all', projectFilter:'all', certFilter:'all', selectedStage:0, stackView:'workflow' };
+  const state = { lang: PACKS[language] ? language : 'en', theme: ['light','dark'].includes(urlTheme) ? urlTheme : getSaved('haven-theme','dark'), expFilter:'all', projectFilter:'all', certFilter:'all', projectPage:1, certPage:1, selectedStage:0, stackView:'workflow' };
+  const PAGE_SIZE = { project: 4, cert: 6 };
+  const pageSlice = (items, page, size) => items.slice((page - 1) * size, page * size);
+  function pager(group, page, total, d) {
+    if (total <= 1) return '';
+    const dots = Array.from({ length: total }, (_, i) =>
+      `<button type="button" class="pager-dot ${i + 1 === page ? 'active' : ''}" data-page-group="${group}" data-page="${i + 1}" aria-label="${h(d.pageLabel)} ${i + 1}" ${i + 1 === page ? 'aria-current="page"' : ''}>${i + 1}</button>`).join('');
+    return `<nav class="pager" aria-label="${h(d.pageLabel)}">
+      <button type="button" class="pager-arrow" data-page-group="${group}" data-page="${page - 1}" ${page === 1 ? 'disabled' : ''} aria-label="${h(d.pagePrev)}">←</button>
+      ${dots}
+      <span class="pager-status">${page} / ${total}</span>
+      <button type="button" class="pager-arrow" data-page-group="${group}" data-page="${page + 1}" ${page === total ? 'disabled' : ''} aria-label="${h(d.pageNext)}">→</button>
+    </nav>`;
+  }
+  function bindPager(container, group, onChange) {
+    $$(`[data-page-group="${group}"]`, container).forEach(btn => btn.addEventListener('click', () => {
+      onChange(Number(btn.dataset.page));
+      const grid = $(group === 'project' ? '#project-grid' : '#cert-grid');
+      grid?.classList.remove('page-enter'); void grid?.offsetWidth; grid?.classList.add('page-enter');
+      const top = container.closest('section')?.querySelector('.tabs');
+      if (top && top.getBoundingClientRect().top < 0) top.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }));
+  }
   const t = () => PACKS[state.lang] || PACKS.en || {};
   async function loadDataFromJSON() {
     try {
@@ -81,11 +104,19 @@
             </div>
           </div>
         </div>
-        <div class="exp-card-body">
-          <p class="exp-summary">${h(x.summary)}</p>
-          <ul class="exp-bullets">
-            ${x.bullets.map(line => `<li>${h(line)}</li>`).join('')}
-          </ul>
+        <div class="exp-layout">
+          <div class="exp-card-body">
+            <p class="exp-summary">${h(x.summary)}</p>
+            <ul class="exp-bullets">
+              ${x.bullets.map(line => `<li>${h(line)}</li>`).join('')}
+            </ul>
+          </div>
+          ${x.facts ? `<aside class="exp-side">
+            <p class="exp-side-title">${h(d.expGlance)}</p>
+            <dl class="exp-facts">${x.facts.map(f => `<div><dt>${h(f.label)}</dt><dd>${h(f.value)}</dd></div>`).join('')}</dl>
+            <p class="exp-side-title">${h(d.expTools)}</p>
+            <div class="exp-tools">${(x.tools || []).map(tool => `<span>${h(tool)}</span>`).join('')}</div>
+          </aside>` : ''}
         </div>
         <span class="card-index" aria-hidden="true">${String(index+1).padStart(2,'0')}</span>
       </article>`;
@@ -106,7 +137,10 @@
   function renderProjects() {
     const d = t();
     $('#project-tabs').innerHTML = tab(d.projAll,'project','all',state.projectFilter) + Object.entries(projectCategoryKey).map(([value,key]) => tab(d[key],'project',value,state.projectFilter)).join('');
-    $('#project-grid').innerHTML = DATA.projects.filter(item => state.projectFilter === 'all' || state.projectFilter === item.category).map(item => {
+    const projects = DATA.projects.filter(item => state.projectFilter === 'all' || state.projectFilter === item.category);
+    const projectPages = Math.max(1, Math.ceil(projects.length / PAGE_SIZE.project));
+    state.projectPage = Math.min(state.projectPage, projectPages);
+    $('#project-grid').innerHTML = pageSlice(projects, state.projectPage, PAGE_SIZE.project).map(item => {
       const p = d.projectData?.[item.id];
       if (!p) return '';
       const catLabel = d[projectCategoryKey[item.category]] || item.category;
@@ -141,7 +175,9 @@
         </div>
       </article>`;
     }).join('');
-    $$('[data-project]').forEach(btn => btn.addEventListener('click', () => { state.projectFilter = btn.dataset.project; renderProjects(); }));
+    $('#project-pager').innerHTML = pager('project', state.projectPage, projectPages, d);
+    bindPager($('#project-pager'), 'project', page => { state.projectPage = page; renderProjects(); });
+    $$('[data-project]').forEach(btn => btn.addEventListener('click', () => { state.projectFilter = btn.dataset.project; state.projectPage = 1; renderProjects(); }));
     $$('[data-project-open]').forEach(btn => btn.addEventListener('click', () => openProject(btn.dataset.projectOpen)));
   }
   function getAssetLabel(docPath, d) {
@@ -184,8 +220,9 @@
       const res = await fetch(`https://api.github.com/users/${encodeURIComponent(user)}/repos?sort=pushed&per_page=30`, { headers: { Accept: 'application/vnd.github+json' } });
       if (!res.ok) throw Error(String(res.status));
       const repos = await res.json();
+      const excluded = new Set((CONFIG.githubFeedExclude || []).map(name => name.toLowerCase()));
       GITHUB_REPOS = repos
-        .filter(r => !r.fork && !r.archived && r.name.toLowerCase() !== user.toLowerCase())
+        .filter(r => !r.fork && !r.archived && r.name.toLowerCase() !== user.toLowerCase() && !excluded.has(r.name.toLowerCase()))
         .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
         .slice(0, 6);
     } catch {
@@ -293,130 +330,43 @@
     $('#stack-workflow').hidden = state.stackView !== 'workflow'; $('#stack-skills').hidden = state.stackView !== 'skills';
     $$('[data-stage]').forEach(btn => btn.addEventListener('click',()=> { state.selectedStage = Number(btn.dataset.stage); renderStack(); }));
   }
+  const COMMUNITY_ICONS = {
+    blood: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.6 4.5c2 0 3.6 1.1 4.4 2.6.8-1.5 2.4-2.6 4.4-2.6 3.6 0 5.7 3.8 4.2 7.2C19.5 16.4 12 21 12 21Z"/></svg>',
+    industry: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v14M7 8h10M5 13a7 7 0 0 0 14 0M5 13l-2 2M19 13l2 2"/><circle cx="12" cy="3.5" r="1.5" fill="currentColor"/></svg>',
+    awards: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 4h8v5a4 4 0 0 1-8 0V4ZM8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8.5 20h7M10 17h4"/></svg>',
+    languages: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h9M8.5 3v2M6 5c.5 3 2.5 5.5 5 7M11 5c-.6 3.4-3 6.4-6 8M13 21l4-9 4 9M14.5 18h5"/></svg>'
+  };
   function renderCommunity() {
-    const d = t();
-    const lang = state.lang || 'en';
-
-    const evidenceMeta = {
-      en: [
-        { evidence: 'VERIFIED RECORD', tags: ['Thu Duc Red Cross', 'Official Certificate'] },
-        { evidence: 'FIELD OBSERVATION', tags: ['Lazada Vietnam', 'Cai Mep–Thi Vai Port'] },
-        { evidence: 'COURSE COMPLETION', tags: ['Yuan Ze University', 'Dec 2025 · Level 2'] }
-      ],
-      vi: [
-        { evidence: 'HỒ SƠ XÁC NHẬN', tags: ['Hội Chữ thập đỏ Thủ Đức', 'Giấy chứng nhận'] },
-        { evidence: 'THỰC ĐỊA DOANH NGHIỆP', tags: ['Lazada Việt Nam', 'Cảng Cái Mép – Thị Vải'] },
-        { evidence: 'CHỨNG NHẬN HOÀN THÀNH', tags: ['Đại học Nguyên Trí', '12/2025 · Level 2'] }
-      ],
-      'zh-Hant': [
-        { evidence: '認證紀錄', tags: ['守德市紅十字會', '官方證明文件'] },
-        { evidence: '實地參訪', tags: ['越南 Lazada', '蓋梅—氏威港'] },
-        { evidence: '結業證明', tags: ['元智大學', '2025 年 12 月 · Level 2'] }
-      ],
-      'zh-Hans': [
-        { evidence: '认证记录', tags: ['守德市红十字会', '官方证明文件'] },
-        { evidence: '实地参访', tags: ['越南 Lazada', '盖梅—氏威港'] },
-        { evidence: '结业证明', tags: ['元智大学', '2025 年 12 月 · Level 2'] }
-      ]
-    };
-
-    const visuals = [
-      {
-        type: 'image',
-        src: 'assets/blood-donation-evidence.jpg',
-        alt: 'Blood Donation Certificate Evidence'
-      },
-      {
-        type: 'schematic',
-        flowLabel: lang === 'vi' ? 'Luồng thực địa' : (lang.startsWith('zh') ? '物流實務流程' : 'Logistics Field Flow'),
-        node1: lang === 'vi' ? 'Cảng Cái Mép' : (lang === 'zh-Hant' ? '蓋梅—氏威港' : (lang === 'zh-Hans' ? '盖梅—氏威港' : 'Cai Mep Port')),
-        node1Sub: lang === 'vi' ? 'Cảng nước sâu' : (lang.startsWith('zh') ? '國際深水港碼頭' : 'Deep-water Port'),
-        node2: lang === 'vi' ? 'Lazada Việt Nam' : (lang.startsWith('zh') ? '越南 Lazada' : 'Lazada Vietnam'),
-        node2Sub: lang === 'vi' ? 'Trung tâm điều phối' : (lang.startsWith('zh') ? '電商物流營運中心' : 'E-Commerce Hub')
-      },
-      {
-        type: 'image',
-        src: 'assets/mandarin-completion-evidence.jpg',
-        alt: 'Yuan Ze University Mandarin Certificate Evidence'
-      }
-    ];
-
-    const currentMeta = evidenceMeta[lang] || evidenceMeta.en;
-
-    $('#community-grid').innerHTML = d.communities.map((item, index) => {
-      const meta = currentMeta[index] || currentMeta[0];
-      const visual = visuals[index] || visuals[0];
-
-      let visualHtml = '';
-      if (visual.type === 'image') {
-        visualHtml = `
-          <div class="community-visual">
-            <img class="community-img" src="${visual.src}" alt="${visual.alt}" />
-            <div class="community-visual-overlay">
-              <span class="community-badge">${h(item.meta)}</span>
-              <span class="community-evidence-pill"><span class="evidence-dot"></span>${h(meta.evidence)}</span>
-            </div>
-          </div>
-        `;
-      } else {
-        visualHtml = `
-          <div class="community-visual community-visual-schematic">
-            <div class="schematic-backdrop">
-              <div class="schematic-grid"></div>
-              <div class="schematic-flow">
-                <div class="schematic-node">
-                  <span class="node-icon">⚓</span>
-                  <span class="node-label">${h(visual.node1)}</span>
-                  <span class="node-sub">${h(visual.node1Sub)}</span>
-                </div>
-                <div class="schematic-connector">
-                  <span class="connector-line"></span>
-                  <span class="connector-badge">${h(visual.flowLabel)}</span>
-                </div>
-                <div class="schematic-node">
-                  <span class="node-icon">⬡</span>
-                  <span class="node-label">${h(visual.node2)}</span>
-                  <span class="node-sub">${h(visual.node2Sub)}</span>
-                </div>
-              </div>
-            </div>
-            <div class="community-visual-overlay">
-              <span class="community-badge">${h(item.meta)}</span>
-              <span class="community-evidence-pill"><span class="evidence-dot"></span>${h(meta.evidence)}</span>
-            </div>
-          </div>
-        `;
-      }
-
-      return `
-        <article class="community-card reveal">
-          ${visualHtml}
-          <div class="community-body">
-            <div class="community-title-row">
-              <span class="community-icon-box" aria-hidden="true">${h(item.icon)}</span>
-              <h3 class="community-title">${h(item.title)}</h3>
-            </div>
-            <p class="community-desc">${h(item.detail)}</p>
-            <div class="community-supporting">
-              ${meta.tags.map(t => `<span class="supporting-chip"><span class="chip-pip"></span>${h(t)}</span>`).join('')}
-            </div>
-          </div>
-        </article>
-      `;
-    }).join('');
+    const cards = t().communityCards || {};
+    const timeline = (id, card) => `
+      <article class="bento-card bento-${id} reveal" data-accent="${id}">
+        <div class="bento-head">
+          <span class="bento-icon">${COMMUNITY_ICONS[id]}</span>
+          <div><p class="bento-tag">${h(card.tag)}</p><h3>${h(card.title)}</h3></div>
+        </div>
+        <ol class="bento-timeline">
+          ${card.items.map(item => `<li><time>${h(item.date)}</time><span>${h(item.text)}</span></li>`).join('')}
+        </ol>
+      </article>`;
+    const blood = cards.blood;
+    $('#community-grid').innerHTML = `
+      ${blood ? `<article class="bento-card bento-blood reveal" data-accent="blood">
+        <div class="bento-head">
+          <span class="bento-icon">${COMMUNITY_ICONS.blood}</span>
+          <div><p class="bento-tag">${h(blood.tag)}</p><h3>${h(blood.title)}</h3></div>
+        </div>
+        <div class="bento-stat"><strong data-count-to="7">${h(blood.stat)}</strong><span>${h(blood.statLabel)}</span></div>
+        <svg class="pulse-line" viewBox="0 0 300 60" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 30 H90 L104 30 L114 8 L126 52 L138 18 L148 30 H300"/>
+        </svg>
+        <p class="bento-detail">${h(blood.detail)}</p>
+        <div class="bento-meta"><span>${h(blood.org)}</span><span>${h(blood.period)}</span></div>
+      </article>` : ''}
+      ${['industry', 'awards', 'languages'].filter(id => cards[id]).map(id => timeline(id, cards[id])).join('')}`;
   }
+  const certMarks = { hacker: 'H', datacamp: 'DC', coursera: 'C', language: '文' };
   function renderCerts() {
     const d = t();
-
-    const authenticCertIds = {
-      'hr-advanced': '8BD0268A1AD0',
-      'hr-intermediate': 'F96F359F6A36',
-      'dc-powerbi': '#46,589,243',
-      'dc-intermediate': '#48,286,431',
-      'dc-ai': '#48,019,383',
-      'dc-intro': '#47,991,469'
-    };
-
     $('#cert-tabs').innerHTML =
       tab(d.certAll, 'cert', 'all', state.certFilter) +
       tab(d.certHacker, 'cert', 'hacker', state.certFilter) +
@@ -424,82 +374,44 @@
       tab(d.certCoursera, 'cert', 'coursera', state.certFilter) +
       tab(d.certLang, 'cert', 'language', state.certFilter);
 
-    $('#cert-grid').innerHTML = DATA.certificates
-      .filter(c => state.certFilter === 'all' || c.type === state.certFilter)
-      .map(c => {
-        const title = d.certNames[c.id] || c.id;
-        const kindLabel = c.kind === 'assessment' ? d.certKindAssessment : d.certKindCourse;
-        const certId = c.certId || authenticCertIds[c.id];
+    const certs = DATA.certificates.filter(c => state.certFilter === 'all' || c.type === state.certFilter);
+    const pages = Math.max(1, Math.ceil(certs.length / PAGE_SIZE.cert));
+    state.certPage = Math.min(state.certPage, pages);
 
-        let logoContent = '';
-        if (c.id === 'mandarin') {
-          logoContent = `<img src="assets/yuan-ze-university.png" alt="Yuan Ze University" class="cert-logo-img">`;
-        } else {
-          logoContent = `<span class="cert-mark-text">${h(c.mark)}</span>`;
-        }
-
-        return `
-          <article class="cert-card reveal" data-type="${h(c.type)}">
-            <div class="cert-card-header">
-              <div class="cert-mark ${h(c.type)}">${logoContent}</div>
-              <span class="cert-kind-pill ${h(c.kind)}">
-                <span class="kind-pip"></span>${h(kindLabel)}
-              </span>
+    $('#cert-grid').innerHTML = pageSlice(certs, state.certPage, PAGE_SIZE.cert).map(c => {
+      const title = d.certNames[c.id] || c.id;
+      const kindLabel = c.kind === 'assessment' ? d.certKindAssessment : d.certKindCourse;
+      const external = /^https?:/.test(c.asset || '');
+      const certId = c.certId || '';
+      return `
+        <article class="cert-card reveal ${c.featured ? 'is-featured' : ''}" data-type="${h(c.type)}">
+          <a class="cert-visual" href="${h(c.asset)}" target="_blank" rel="noopener noreferrer" aria-label="${h(title)}">
+            <img src="${h(c.thumb)}" alt="" loading="lazy" decoding="async">
+            ${c.featured ? `<span class="cert-key">★ ${h(d.certKey)}</span>` : ''}
+            <span class="cert-mark ${h(c.type)}"><span class="cert-mark-text">${h(certMarks[c.type] || c.mark)}</span></span>
+          </a>
+          <div class="cert-card-body">
+            <span class="cert-kind-pill ${h(c.kind)}"><span class="kind-pip"></span>${h(kindLabel)}</span>
+            <h3 class="cert-card-title">${h(title)}</h3>
+            <p class="cert-provider-name">${h(c.provider)}</p>
+            <div class="cert-meta-row">
+              <span class="cert-date-chip">${h(formatCertDate(c.when))}</span>
+              ${c.score ? `<span class="cert-score-chip"><span class="score-dot"></span>${h(c.score)}</span>` : ''}
             </div>
+          </div>
+          <div class="cert-card-footer">
+            ${certId ? `<span class="cert-id-tag"><span class="cert-id-label">ID</span><span class="cert-id-code">${h(certId)}</span></span>` : '<span></span>'}
+            <a href="${h(c.asset)}" target="_blank" rel="noopener noreferrer" class="cert-doc-btn">${h(external ? d.certVerify : d.certView)}</a>
+          </div>
+        </article>`;
+    }).join('');
 
-            <div class="cert-card-body">
-              <h3 class="cert-card-title">${h(title)}</h3>
-              <div class="cert-provider-row">
-                <svg class="cert-provider-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                  <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h11A1.5 1.5 0 0 1 15 2.5v11a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 13.5v-11zM2.5 2a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5v-11a.5.5 0 0 0-.5-.5h-11z"/>
-                  <path d="M4 4h2v2H4V4zm3 0h2v2H7V4zm3 0h2v2h-2V4zM4 7h2v2H4V7zm3 0h2v2H7V7zm3 0h2v2h-2V7zM4 10h2v2H4v-2zm3 0h2v2H7v-2zm3 0h2v2h-2v-2z"/>
-                </svg>
-                <span class="cert-provider-name">${h(c.provider)}</span>
-              </div>
-
-              <div class="cert-meta-row">
-                <span class="cert-date-chip">
-                  <span class="cert-calendar-icon" aria-hidden="true">▦</span>
-                  ${h(formatCertDate(c.when))}
-                </span>
-                ${c.score ? `<span class="cert-score-chip"><span class="score-dot"></span>${h(c.score)}</span>` : ''}
-              </div>
-
-              ${certId ? `
-                <div class="cert-id-container">
-                  <span class="cert-id-tag">
-                    <span class="cert-id-label">ID</span>
-                    <span class="cert-id-code">${h(certId)}</span>
-                  </span>
-                </div>
-              ` : ''}
-            </div>
-
-            <div class="cert-card-footer">
-              ${c.asset ? `
-                <a href="${h(c.asset)}" target="_blank" rel="noopener noreferrer" class="cert-doc-btn">
-                  <svg class="cert-doc-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                    <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
-                  </svg>
-                  <span>${h(d.certView)}</span>
-                </a>
-              ` : `
-                <span class="cert-private-tag">
-                  <svg class="cert-lock-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                    <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
-                  </svg>
-                  <span>${h(d.certPrivate)}</span>
-                </span>
-              `}
-            </div>
-          </article>
-        `;
-      })
-      .join('');
-
+    $('#cert-pager').innerHTML = pager('cert', state.certPage, pages, d);
+    bindPager($('#cert-pager'), 'cert', page => { state.certPage = page; renderCerts(); });
     $$('[data-cert]').forEach(btn =>
       btn.addEventListener('click', () => {
         state.certFilter = btn.dataset.cert;
+        state.certPage = 1;
         renderCerts();
       })
     );

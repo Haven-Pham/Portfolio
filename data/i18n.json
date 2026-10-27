@@ -51,9 +51,30 @@
         "org": "Hoa Sen Group · Vietnam",
         "summary": "Purchase-order coordination, inventory management and reporting using Oracle ERP.",
         "bullets": [
-          "Monitored suppliers and purchasing orders for domestic and imported goods.",
-          "Tracked inventory in Oracle ERP and coordinated with warehouse and production teams.",
-          "Prepared operational reports to improve stock and distribution visibility."
+          "Monitored suppliers and purchase orders for domestic and imported goods.",
+          "Tracked inventory in Oracle ERP and coordinated stock movements with warehouses and factories.",
+          "Set inventory standards for warehouses and distribution points nationwide.",
+          "Prepared operational reports and handled customer and supplier issues."
+        ],
+        "facts": [
+          {
+            "label": "Industry",
+            "value": "Steel & building materials"
+          },
+          {
+            "label": "Scope",
+            "value": "Imported & domestic purchase orders"
+          },
+          {
+            "label": "Coverage",
+            "value": "Nationwide warehouse network"
+          }
+        ],
+        "tools": [
+          "Oracle ERP",
+          "Excel",
+          "Purchase orders",
+          "Inventory control"
         ]
       },
       "kodai": {
@@ -61,9 +82,30 @@
         "org": "Kodai Sangyo (Vietnam) Co., Ltd.",
         "summary": "Coordinated international shipments and customer-facing freight operations.",
         "bullets": [
-          "Prepared freight quotations and coordinated with carriers and overseas agents.",
-          "Supported refrigerated cargo schedules, shipping documentation and customs workflows.",
-          "Worked with documentation and operations teams to resolve shipment issues."
+          "Prepared air and ocean freight quotations with shipping lines and overseas agents.",
+          "Planned refrigerated shipments around sailing schedules, customs, C/O, phytosanitary and cut-off times.",
+          "Generated new customers through e-mail campaigns, calls and meetings to meet monthly sales targets.",
+          "Negotiated service contracts and payment terms, and followed up receivables."
+        ],
+        "facts": [
+          {
+            "label": "Industry",
+            "value": "Freight forwarding"
+          },
+          {
+            "label": "Cargo",
+            "value": "Refrigerated (reefer) cargo"
+          },
+          {
+            "label": "Modes",
+            "value": "Sea & air freight"
+          }
+        ],
+        "tools": [
+          "Freight quotation",
+          "Customs · C/O · Phyto",
+          "E-mail & telesales",
+          "Contract negotiation"
         ]
       },
       "vietlog": {
@@ -72,8 +114,29 @@
         "summary": "Supported bookings, shipment documents and customs-related processes.",
         "bullets": [
           "Prepared invoices, packing lists, certificates of origin and shipping instructions.",
-          "Supported carrier selection, shipment booking and HS-code related tasks.",
-          "Coordinated with operational teams across freight-forwarding activities."
+          "Checked rates and booked carriers, then scheduled packing against booking details.",
+          "Applied Incoterms 2010/2020 and payment methods (L/C, T/T, D/P, D/A), including local charges.",
+          "Classified goods with HS codes and coordinated documents with operations teams."
+        ],
+        "facts": [
+          {
+            "label": "Industry",
+            "value": "Freight forwarding"
+          },
+          {
+            "label": "Cargo",
+            "value": "Dry (general) cargo"
+          },
+          {
+            "label": "Trade terms",
+            "value": "Incoterms · L/C · T/T · D/P · D/A"
+          }
+        ],
+        "tools": [
+          "Invoice · P/L · C/O",
+          "SI · VGM",
+          "HS codes",
+          "Carrier booking"
         ]
       }
     },
@@ -268,38 +331,18 @@
         ]
       }
     ],
-    "communityHeading": "Learning & Community",
-    "communityCaption": "Education, professional exposure and volunteer activity beyond my day-to-day roles.",
-    "communities": [
-      {
-        "icon": "♡",
-        "title": "Blood Donation Volunteer",
-        "detail": "Volunteer blood donation activity through Thu Duc City Red Cross Society, as described in earlier CVs.",
-        "meta": "COMMUNITY"
-      },
-      {
-        "icon": "⌘",
-        "title": "Industry Visits & Workshops",
-        "detail": "Attended logistics-related field visits and events, including Lazada Vietnam and Cai Mep–Thi Vai Port.",
-        "meta": "INDUSTRY LEARNING"
-      },
-      {
-        "icon": "◉",
-        "title": "Mandarin Intensive Learning",
-        "detail": "Completed Mandarin Intensive Program – Mandarin Level 2 at Yuan Ze University in December 2025.",
-        "meta": "LANGUAGES"
-      }
-    ],
+    "communityHeading": "Community, Awards & Learning",
+    "communityCaption": "Volunteering, field learning, recognition and language growth outside the day job.",
     "certsHeading": "Professional Certifications",
     "certCount": "22 DOCUMENTED",
-    "certsCaption": "Selected skill assessments and course completion documents supplied with my portfolio.",
+    "certsCaption": "Key credentials first. Every certificate opens as a document; personal identifiers are redacted on the language certificates.",
     "certAll": "All",
     "certHacker": "HackerRank",
     "certDatacamp": "DataCamp",
     "certLang": "Language",
     "certView": "VIEW DOCUMENT ↗",
     "certPrivate": "PRIVATE RECORD",
-    "certPrivacy": "For privacy, the Mandarin completion scan containing a residence number is not publicly downloadable. Certificates are not professional licences unless explicitly stated.",
+    "certPrivacy": "Identification numbers and dates of birth are redacted on the TOEIC, TOCFL and Mandarin certificates. Coursera certificates link to their official verification pages.",
     "certKindAssessment": "SKILL TEST",
     "certKindCourse": "COURSE COMPLETION",
     "certNames": {
@@ -405,7 +448,87 @@
     "githubFeedCaption": "Latest public repositories, fetched automatically from my GitHub profile.",
     "githubFeedError": "GitHub could not be reached right now. Open the profile directly.",
     "githubFeedUpdated": "Updated",
-    "githubFeedAll": "VIEW ALL REPOSITORIES"
+    "githubFeedAll": "VIEW ALL REPOSITORIES",
+    "pagePrev": "Previous",
+    "pageNext": "Next",
+    "pageLabel": "Page",
+    "certKey": "KEY CREDENTIAL",
+    "certVerify": "VERIFY ↗",
+    "expGlance": "AT A GLANCE",
+    "expTools": "TOOLS & SKILLS",
+    "communityCards": {
+      "blood": {
+        "tag": "VOLUNTEERING",
+        "title": "Volunteer blood donor",
+        "stat": "7×",
+        "statLabel": "donations of 350 mL",
+        "period": "2022 – present",
+        "org": "Thu Duc City Red Cross Society",
+        "detail": "Regular donor who also helps doctors and nurses run blood-collection drives."
+      },
+      "industry": {
+        "tag": "INDUSTRY LEARNING",
+        "title": "Field visits & workshops",
+        "items": [
+          {
+            "date": "05/2023",
+            "text": "Reverse logistics workshop: ash and slag treatment at thermal power plants · ULSC"
+          },
+          {
+            "date": "10/2022",
+            "text": "Lazada Express Vietnam: Binh Thanh hub and sorting centre visit"
+          },
+          {
+            "date": "10/2022",
+            "text": "Clean agricultural supply and fumigation of traded goods workshop · ULSC"
+          },
+          {
+            "date": "05/2022",
+            "text": "Cai Mep – Thi Vai deep-water port visit · HCMUTE"
+          }
+        ]
+      },
+      "awards": {
+        "tag": "RECOGNITION",
+        "title": "Awards & scholarships",
+        "items": [
+          {
+            "date": "06/2026",
+            "text": "Outstanding Dedication Award · YZU Global Affairs Office"
+          },
+          {
+            "date": "02/2025",
+            "text": "Master’s scholarship · Global MBA, Yuan Ze University"
+          },
+          {
+            "date": "04/2023",
+            "text": "Academic Encouragement Scholarship · HCMUTE"
+          },
+          {
+            "date": "03/2023",
+            "text": "Logistics Hub competition · ranked 14th of 63 teams"
+          }
+        ]
+      },
+      "languages": {
+        "tag": "LANGUAGES",
+        "title": "Language journey",
+        "items": [
+          {
+            "date": "07/2026",
+            "text": "TOCFL Level 2 (A2) · Ministry of Education, Taiwan"
+          },
+          {
+            "date": "12/2025",
+            "text": "Mandarin Intensive Program, Level 2 · Yuan Ze University"
+          },
+          {
+            "date": "10/2024",
+            "text": "TOEIC Listening & Reading · 840 / 990"
+          }
+        ]
+      }
+    }
   },
   "vi": {
     "locale": "Tiếng Việt",
@@ -460,8 +583,29 @@
         "summary": "Điều phối đơn mua hàng, quản lý tồn kho và lập báo cáo trên Oracle ERP.",
         "bullets": [
           "Theo dõi nhà cung cấp và đơn mua hàng trong nước, nhập khẩu.",
-          "Quản lý dữ liệu tồn kho trên Oracle ERP, phối hợp với kho và nhà máy.",
-          "Lập báo cáo vận hành nhằm hỗ trợ việc theo dõi hàng tồn và phân phối."
+          "Quản lý tồn kho trên Oracle ERP, phối hợp điều chuyển hàng với kho và nhà máy.",
+          "Xây dựng định mức tồn kho cho hệ thống kho và điểm phân phối toàn quốc.",
+          "Lập báo cáo vận hành và xử lý vấn đề phát sinh với khách hàng, nhà cung cấp."
+        ],
+        "facts": [
+          {
+            "label": "Ngành",
+            "value": "Thép & vật liệu xây dựng"
+          },
+          {
+            "label": "Phạm vi",
+            "value": "Đơn mua nhập khẩu & nội địa"
+          },
+          {
+            "label": "Mạng lưới",
+            "value": "Hệ thống kho toàn quốc"
+          }
+        ],
+        "tools": [
+          "Oracle ERP",
+          "Excel",
+          "Đơn mua hàng",
+          "Kiểm soát tồn kho"
         ]
       },
       "kodai": {
@@ -469,9 +613,30 @@
         "org": "Kodai Sangyo (Việt Nam)",
         "summary": "Điều phối hàng hóa quốc tế và các nghiệp vụ giao nhận với khách hàng.",
         "bullets": [
-          "Lập báo giá vận chuyển, liên hệ hãng tàu và đại lý quốc tế.",
-          "Hỗ trợ lịch trình hàng đông lạnh, chứng từ vận tải và thủ tục hải quan.",
-          "Phối hợp với các bộ phận chứng từ và vận hành để xử lý sự cố."
+          "Lập báo giá cước hàng không và đường biển với hãng tàu, đại lý nước ngoài.",
+          "Lên kế hoạch lô hàng lạnh theo lịch tàu, thủ tục hải quan, C/O, kiểm dịch và giờ cắt máng.",
+          "Tìm kiếm khách hàng mới qua email, gọi điện và gặp mặt để đạt chỉ tiêu doanh số tháng.",
+          "Đàm phán hợp đồng dịch vụ, điều khoản thanh toán và theo dõi công nợ."
+        ],
+        "facts": [
+          {
+            "label": "Ngành",
+            "value": "Giao nhận vận tải"
+          },
+          {
+            "label": "Loại hàng",
+            "value": "Hàng lạnh (reefer)"
+          },
+          {
+            "label": "Phương thức",
+            "value": "Đường biển & hàng không"
+          }
+        ],
+        "tools": [
+          "Báo giá cước",
+          "Hải quan · C/O · Kiểm dịch",
+          "Email & telesales",
+          "Đàm phán hợp đồng"
         ]
       },
       "vietlog": {
@@ -479,9 +644,30 @@
         "org": "Viet Logistics · Việt Nam",
         "summary": "Hỗ trợ đặt chỗ, chứng từ và các quy trình liên quan đến hải quan.",
         "bullets": [
-          "Chuẩn bị hóa đơn, phiếu đóng gói, C/O và hướng dẫn gửi hàng.",
-          "Hỗ trợ lựa chọn hãng vận chuyển, booking và các công việc liên quan mã HS.",
-          "Phối hợp với bộ phận vận hành trong nghiệp vụ giao nhận hàng hóa."
+          "Lập hóa đơn, phiếu đóng gói, giấy chứng nhận xuất xứ và hướng dẫn gửi hàng.",
+          "Kiểm tra giá, đặt chỗ với hãng tàu và lên lịch đóng hàng theo booking.",
+          "Áp dụng Incoterms 2010/2020 và phương thức thanh toán (L/C, T/T, D/P, D/A), tính phí địa phương.",
+          "Áp mã HS và phối hợp chứng từ với bộ phận vận hành."
+        ],
+        "facts": [
+          {
+            "label": "Ngành",
+            "value": "Giao nhận vận tải"
+          },
+          {
+            "label": "Loại hàng",
+            "value": "Hàng khô (bách hóa)"
+          },
+          {
+            "label": "Điều kiện",
+            "value": "Incoterms · L/C · T/T · D/P · D/A"
+          }
+        ],
+        "tools": [
+          "Invoice · P/L · C/O",
+          "SI · VGM",
+          "Mã HS",
+          "Booking hãng tàu"
         ]
       }
     },
@@ -676,38 +862,18 @@
         ]
       }
     ],
-    "communityHeading": "Học hỏi & cộng đồng",
-    "communityCaption": "Hoạt động tình nguyện và trải nghiệm chuyên môn ngoài công việc hằng ngày.",
-    "communities": [
-      {
-        "icon": "♡",
-        "title": "Tình nguyện hiến máu",
-        "detail": "Tham gia hoạt động hiến máu tình nguyện thông qua Hội Chữ thập đỏ TP. Thủ Đức theo hồ sơ CV trước đây.",
-        "meta": "CỘNG ĐỒNG"
-      },
-      {
-        "icon": "⌘",
-        "title": "Tham quan doanh nghiệp & hội thảo",
-        "detail": "Tham gia tham quan và sự kiện ngành logistics, gồm Lazada Việt Nam và cảng Cái Mép – Thị Vải.",
-        "meta": "HỌC HỎI NGÀNH"
-      },
-      {
-        "icon": "◉",
-        "title": "Khóa tiếng Trung tăng cường",
-        "detail": "Hoàn thành Mandarin Intensive Program – Mandarin Level 2 tại Đại học Nguyên Trí vào 12/2025.",
-        "meta": "NGOẠI NGỮ"
-      }
-    ],
+    "communityHeading": "Cộng đồng, Giải thưởng & Học tập",
+    "communityCaption": "Hoạt động tình nguyện, trải nghiệm thực tế, ghi nhận và hành trình ngoại ngữ ngoài công việc.",
     "certsHeading": "Chứng chỉ chuyên môn",
     "certCount": "22 HỒ SƠ",
-    "certsCaption": "Các bài kiểm tra kỹ năng và chứng nhận hoàn thành khóa học đã được cung cấp.",
+    "certsCaption": "Chứng chỉ quan trọng được xếp trước. Mọi chứng chỉ đều mở được; thông tin định danh trên chứng chỉ ngoại ngữ đã được che.",
     "certAll": "Tất cả",
     "certHacker": "HackerRank",
     "certDatacamp": "DataCamp",
     "certLang": "Ngoại ngữ",
     "certView": "XEM CHỨNG CHỈ ↗",
     "certPrivate": "HỒ SƠ RIÊNG TƯ",
-    "certPrivacy": "Bản scan hoàn thành tiếng Trung có số cư trú nên không cho tải công khai. Không gọi chứng nhận hoàn thành khóa học là giấy phép hành nghề.",
+    "certPrivacy": "Số định danh và ngày sinh trên chứng chỉ TOEIC, TOCFL và tiếng Trung đã được che. Chứng chỉ Coursera liên kết tới trang xác thực chính thức.",
     "certKindAssessment": "BÀI THI KỸ NĂNG",
     "certKindCourse": "HOÀN THÀNH KHÓA HỌC",
     "certNames": {
@@ -813,7 +979,87 @@
     "githubFeedCaption": "Các repository công khai mới nhất, tự động lấy từ hồ sơ GitHub của tôi.",
     "githubFeedError": "Hiện không kết nối được GitHub. Hãy mở trực tiếp trang hồ sơ.",
     "githubFeedUpdated": "Cập nhật",
-    "githubFeedAll": "XEM TẤT CẢ REPOSITORY"
+    "githubFeedAll": "XEM TẤT CẢ REPOSITORY",
+    "pagePrev": "Trước",
+    "pageNext": "Sau",
+    "pageLabel": "Trang",
+    "certKey": "CHỨNG CHỈ NỔI BẬT",
+    "certVerify": "XÁC THỰC ↗",
+    "expGlance": "TỔNG QUAN",
+    "expTools": "CÔNG CỤ & KỸ NĂNG",
+    "communityCards": {
+      "blood": {
+        "tag": "TÌNH NGUYỆN",
+        "title": "Hiến máu tình nguyện",
+        "stat": "7×",
+        "statLabel": "lần hiến, mỗi lần 350 mL",
+        "period": "2022 – nay",
+        "org": "Hội Chữ thập đỏ TP. Thủ Đức",
+        "detail": "Hiến máu định kỳ và hỗ trợ bác sĩ, điều dưỡng tại các đợt tiếp nhận máu."
+      },
+      "industry": {
+        "tag": "HỌC HỎI NGÀNH",
+        "title": "Tham quan & hội thảo",
+        "items": [
+          {
+            "date": "05/2023",
+            "text": "Hội thảo logistics ngược: xử lý tro xỉ tại nhà máy nhiệt điện · ULSC"
+          },
+          {
+            "date": "10/2022",
+            "text": "Lazada Express Việt Nam: tham quan hub và trung tâm phân loại Bình Thạnh"
+          },
+          {
+            "date": "10/2022",
+            "text": "Hội thảo cung ứng nông sản sạch và khử trùng hàng xuất nhập khẩu · ULSC"
+          },
+          {
+            "date": "05/2022",
+            "text": "Tham quan cảng nước sâu Cái Mép – Thị Vải · HCMUTE"
+          }
+        ]
+      },
+      "awards": {
+        "tag": "GHI NHẬN",
+        "title": "Giải thưởng & học bổng",
+        "items": [
+          {
+            "date": "06/2026",
+            "text": "Giải thưởng Cống hiến Xuất sắc · Phòng Hợp tác Quốc tế YZU"
+          },
+          {
+            "date": "02/2025",
+            "text": "Học bổng thạc sĩ · Global MBA, Đại học Nguyên Trí"
+          },
+          {
+            "date": "04/2023",
+            "text": "Học bổng khuyến khích học tập · HCMUTE"
+          },
+          {
+            "date": "03/2023",
+            "text": "Cuộc thi Logistics Hub · hạng 14/63 đội"
+          }
+        ]
+      },
+      "languages": {
+        "tag": "NGOẠI NGỮ",
+        "title": "Hành trình ngoại ngữ",
+        "items": [
+          {
+            "date": "07/2026",
+            "text": "TOCFL Cấp 2 (A2) · Bộ Giáo dục Đài Loan"
+          },
+          {
+            "date": "12/2025",
+            "text": "Khóa tiếng Trung tăng cường Level 2 · Đại học Nguyên Trí"
+          },
+          {
+            "date": "10/2024",
+            "text": "TOEIC Nghe & Đọc · 840 / 990"
+          }
+        ]
+      }
+    }
   },
   "zh-Hant": {
     "locale": "繁體中文",
@@ -867,9 +1113,30 @@
         "org": "Hoa Sen Group · 越南",
         "summary": "透過 Oracle ERP 協調採購訂單、管理庫存並製作營運報表。",
         "bullets": [
-          "追蹤國內及進口商品的供應商與採購訂單。",
-          "使用 Oracle ERP 管理庫存資料，並與倉庫及工廠合作。",
-          "製作營運報表，提升庫存及配送資訊的可視性。"
+          "追蹤國內與進口採購訂單及供應商進度。",
+          "於 Oracle ERP 管理庫存，並與倉庫及工廠協調調撥。",
+          "建立全國倉庫與配送據點的庫存標準。",
+          "製作營運報表並處理客戶與供應商問題。"
+        ],
+        "facts": [
+          {
+            "label": "產業",
+            "value": "鋼鐵與建材"
+          },
+          {
+            "label": "範圍",
+            "value": "進口與國內採購訂單"
+          },
+          {
+            "label": "涵蓋",
+            "value": "全國倉儲網絡"
+          }
+        ],
+        "tools": [
+          "Oracle ERP",
+          "Excel",
+          "採購訂單",
+          "庫存控管"
         ]
       },
       "kodai": {
@@ -877,9 +1144,30 @@
         "org": "Kodai Sangyo（越南）",
         "summary": "協調國際貨運與客戶相關的貨運業務。",
         "bullets": [
-          "製作運費報價，與船公司及海外代理聯繫。",
-          "協助冷鏈貨運排程、運輸文件及報關流程。",
-          "與文件及營運部門合作處理運輸問題。"
+          "向船公司與海外代理詢價，製作海運及空運報價。",
+          "依船期、報關、產地證明、檢疫及截關時間規劃冷鏈貨運。",
+          "透過電子郵件、電話與拜訪開發新客戶，達成每月業績目標。",
+          "洽談服務合約與付款條件，並追蹤應收帳款。"
+        ],
+        "facts": [
+          {
+            "label": "產業",
+            "value": "貨運承攬"
+          },
+          {
+            "label": "貨物",
+            "value": "冷藏（冷凍）貨物"
+          },
+          {
+            "label": "運輸方式",
+            "value": "海運與空運"
+          }
+        ],
+        "tools": [
+          "運費報價",
+          "報關 · 產地證明 · 檢疫",
+          "電子郵件與電話行銷",
+          "合約洽談"
         ]
       },
       "vietlog": {
@@ -887,9 +1175,30 @@
         "org": "Viet Logistics · 越南",
         "summary": "協助訂艙、運輸文件及報關相關作業。",
         "bullets": [
-          "準備發票、裝箱單、原產地證明與運輸指示。",
-          "協助選擇承運商、安排訂艙及 HS Code 相關工作。",
-          "與營運團隊合作支援貨運承攬業務。"
+          "製作商業發票、裝箱單、產地證明與裝船指示。",
+          "查價並向船公司訂艙，依訂艙資訊安排裝櫃。",
+          "運用 Incoterms 2010/2020 與付款方式（L/C、T/T、D/P、D/A），計算當地費用。",
+          "進行 HS 稅則歸類，並與作業部門協調文件。"
+        ],
+        "facts": [
+          {
+            "label": "產業",
+            "value": "貨運承攬"
+          },
+          {
+            "label": "貨物",
+            "value": "乾貨（一般貨物）"
+          },
+          {
+            "label": "貿易條件",
+            "value": "Incoterms · L/C · T/T · D/P · D/A"
+          }
+        ],
+        "tools": [
+          "發票 · 裝箱單 · 產地證明",
+          "SI · VGM",
+          "HS 稅則",
+          "船公司訂艙"
         ]
       }
     },
@@ -1084,38 +1393,18 @@
         ]
       }
     ],
-    "communityHeading": "學習與社群活動",
-    "communityCaption": "除了日常工作，也參與志工服務及產業相關學習。",
-    "communities": [
-      {
-        "icon": "♡",
-        "title": "捐血志工",
-        "detail": "依據既有履歷，曾參加越南守德市紅十字會相關的志願捐血活動。",
-        "meta": "社群服務"
-      },
-      {
-        "icon": "⌘",
-        "title": "企業參訪與講座",
-        "detail": "參加物流產業活動與參訪，包括越南 Lazada 以及蓋梅—氏威港。",
-        "meta": "產業學習"
-      },
-      {
-        "icon": "◉",
-        "title": "華語密集學習",
-        "detail": "2025 年 12 月完成元智大學華語密集班 Mandarin Level 2 課程。",
-        "meta": "語言學習"
-      }
-    ],
+    "communityHeading": "社群、獎項與學習",
+    "communityCaption": "工作之外的志工服務、實地學習、獲得肯定與語言成長。",
     "certsHeading": "專業技能證明",
     "certCount": "22 份文件",
-    "certsCaption": "展示已提供證明文件的技能測驗與課程結業紀錄。",
+    "certsCaption": "重點證照優先呈現。所有證書皆可開啟檢視；語言證書上的個人識別資料已遮蔽。",
     "certAll": "全部",
     "certHacker": "HackerRank",
     "certDatacamp": "DataCamp",
     "certLang": "語言",
     "certView": "查看證明 ↗",
     "certPrivate": "私人紀錄",
-    "certPrivacy": "為保護個人隱私，含居留證號碼的華語課程證明掃描檔不提供公開下載。課程結業證明不等同專業執照。",
+    "certPrivacy": "TOEIC、TOCFL 與華語結業證書上的證件號碼及出生日期已遮蔽；Coursera 證書連結至官方查驗頁面。",
     "certKindAssessment": "技能測驗",
     "certKindCourse": "課程結業",
     "certNames": {
@@ -1221,7 +1510,87 @@
     "githubFeedCaption": "自動從我的 GitHub 個人頁面取得的最新公開專案。",
     "githubFeedError": "目前無法連線至 GitHub，請直接開啟個人頁面。",
     "githubFeedUpdated": "更新於",
-    "githubFeedAll": "查看所有專案"
+    "githubFeedAll": "查看所有專案",
+    "pagePrev": "上一頁",
+    "pageNext": "下一頁",
+    "pageLabel": "頁",
+    "certKey": "重點證照",
+    "certVerify": "查驗 ↗",
+    "expGlance": "概覽",
+    "expTools": "工具與技能",
+    "communityCards": {
+      "blood": {
+        "tag": "志工服務",
+        "title": "捐血志工",
+        "stat": "7×",
+        "statLabel": "次捐血，每次 350 mL",
+        "period": "2022 – 至今",
+        "org": "守德市紅十字會",
+        "detail": "定期捐血，並協助醫護人員進行捐血活動。"
+      },
+      "industry": {
+        "tag": "產業學習",
+        "title": "企業參訪與研討會",
+        "items": [
+          {
+            "date": "05/2023",
+            "text": "逆向物流研討會：火力發電廠灰渣處理 · ULSC"
+          },
+          {
+            "date": "10/2022",
+            "text": "越南 Lazada Express：平盛轉運中心與分揀中心參訪"
+          },
+          {
+            "date": "10/2022",
+            "text": "潔淨農產品供應與進出口貨物燻蒸研討會 · ULSC"
+          },
+          {
+            "date": "05/2022",
+            "text": "蓋梅—氏威深水港參訪 · HCMUTE"
+          }
+        ]
+      },
+      "awards": {
+        "tag": "肯定",
+        "title": "獎項與獎學金",
+        "items": [
+          {
+            "date": "06/2026",
+            "text": "傑出貢獻獎 · 元智大學國際事務處"
+          },
+          {
+            "date": "02/2025",
+            "text": "碩士獎學金 · 元智大學 Global MBA"
+          },
+          {
+            "date": "04/2023",
+            "text": "學業勵學獎學金 · HCMUTE"
+          },
+          {
+            "date": "03/2023",
+            "text": "Logistics Hub 競賽 · 63 隊中第 14 名"
+          }
+        ]
+      },
+      "languages": {
+        "tag": "語言",
+        "title": "語言學習歷程",
+        "items": [
+          {
+            "date": "07/2026",
+            "text": "TOCFL 第二級（A2）· 中華民國教育部"
+          },
+          {
+            "date": "12/2025",
+            "text": "華語密集班 Level 2 · 元智大學"
+          },
+          {
+            "date": "10/2024",
+            "text": "TOEIC 聽力與閱讀 · 840 / 990"
+          }
+        ]
+      }
+    }
   },
   "zh-Hans": {
     "locale": "简体中文",
@@ -1275,9 +1644,30 @@
         "org": "Hoa Sen Group · 越南",
         "summary": "通过 Oracle ERP 协调采购订单、管理库存并制作运营报表。",
         "bullets": [
-          "跟踪国内及进口商品的供应商与采购订单。",
-          "使用 Oracle ERP 管理库存数据，并与仓库及工厂合作。",
-          "制作运营报表，提升库存及配送信息的可视化。"
+          "跟踪国内与进口采购订单及供应商进度。",
+          "在 Oracle ERP 中管理库存，并与仓库和工厂协调调拨。",
+          "建立全国仓库与配送网点的库存标准。",
+          "编制运营报表，处理客户与供应商问题。"
+        ],
+        "facts": [
+          {
+            "label": "行业",
+            "value": "钢铁与建材"
+          },
+          {
+            "label": "范围",
+            "value": "进口与国内采购订单"
+          },
+          {
+            "label": "覆盖",
+            "value": "全国仓储网络"
+          }
+        ],
+        "tools": [
+          "Oracle ERP",
+          "Excel",
+          "采购订单",
+          "库存管控"
         ]
       },
       "kodai": {
@@ -1285,9 +1675,30 @@
         "org": "Kodai Sangyo（越南）",
         "summary": "协调国际货运与客户相关的货运业务。",
         "bullets": [
-          "制作运费报价，与船公司及海外代理联络。",
-          "协助冷链货运排期、运输文件和报关流程。",
-          "与单证及运营团队合作处理运输问题。"
+          "向船公司和海外代理询价，制作海运及空运报价。",
+          "根据船期、报关、原产地证、检疫及截关时间规划冷链货运。",
+          "通过邮件、电话和拜访开发新客户，完成月度销售目标。",
+          "洽谈服务合同与付款条件，并跟进应收账款。"
+        ],
+        "facts": [
+          {
+            "label": "行业",
+            "value": "国际货运代理"
+          },
+          {
+            "label": "货物",
+            "value": "冷藏（冷冻）货物"
+          },
+          {
+            "label": "运输方式",
+            "value": "海运与空运"
+          }
+        ],
+        "tools": [
+          "运费报价",
+          "报关 · 原产地证 · 检疫",
+          "邮件与电话营销",
+          "合同谈判"
         ]
       },
       "vietlog": {
@@ -1295,9 +1706,30 @@
         "org": "Viet Logistics · 越南",
         "summary": "协助订舱、运输单证及报关相关工作。",
         "bullets": [
-          "准备发票、装箱单、原产地证明与运输指示。",
-          "协助选择承运商、安排订舱及 HS Code 相关工作。",
-          "与运营团队协作支持国际货运代理业务。"
+          "制作商业发票、装箱单、原产地证和托运指示。",
+          "询价并向船公司订舱，按订舱信息安排装箱。",
+          "运用 Incoterms 2010/2020 与付款方式（L/C、T/T、D/P、D/A），计算本地费用。",
+          "进行 HS 编码归类，并与操作部门协调单证。"
+        ],
+        "facts": [
+          {
+            "label": "行业",
+            "value": "国际货运代理"
+          },
+          {
+            "label": "货物",
+            "value": "干货（普通货物）"
+          },
+          {
+            "label": "贸易条件",
+            "value": "Incoterms · L/C · T/T · D/P · D/A"
+          }
+        ],
+        "tools": [
+          "发票 · 装箱单 · 原产地证",
+          "SI · VGM",
+          "HS 编码",
+          "船公司订舱"
         ]
       }
     },
@@ -1492,38 +1924,18 @@
         ]
       }
     ],
-    "communityHeading": "学习与社区活动",
-    "communityCaption": "除日常工作外，还参与志愿服务和行业相关学习。",
-    "communities": [
-      {
-        "icon": "♡",
-        "title": "无偿献血志愿者",
-        "detail": "据以往简历，曾参加越南守德市红十字会相关的无偿献血活动。",
-        "meta": "社区服务"
-      },
-      {
-        "icon": "⌘",
-        "title": "企业参访与讲座",
-        "detail": "参加物流行业活动与参访，包括越南 Lazada 及盖梅—氏威港。",
-        "meta": "行业学习"
-      },
-      {
-        "icon": "◉",
-        "title": "中文强化学习",
-        "detail": "于 2025 年 12 月完成元智大学 Mandarin Level 2 中文强化课程。",
-        "meta": "语言学习"
-      }
-    ],
+    "communityHeading": "社区、奖项与学习",
+    "communityCaption": "工作之外的志愿服务、实地学习、所获认可与语言成长。",
     "certsHeading": "专业技能证明",
     "certCount": "22 份材料",
-    "certsCaption": "展示已经提供证明材料的技能测试和课程结业记录。",
+    "certsCaption": "重点证书优先展示。所有证书均可打开查看；语言证书上的个人身份信息已遮盖。",
     "certAll": "全部",
     "certHacker": "HackerRank",
     "certDatacamp": "DataCamp",
     "certLang": "语言",
     "certView": "查看证明 ↗",
     "certPrivate": "私人记录",
-    "certPrivacy": "为保护隐私，含有居留证号码的中文课程扫描件不提供公开下载。课程结业证书不等同于专业执照。",
+    "certPrivacy": "TOEIC、TOCFL 与华语结业证书上的证件号码及出生日期已遮盖；Coursera 证书链接至官方验证页面。",
     "certKindAssessment": "技能测试",
     "certKindCourse": "课程结业",
     "certNames": {
@@ -1629,6 +2041,86 @@
     "githubFeedCaption": "自动从我的 GitHub 主页获取的最新公开项目。",
     "githubFeedError": "暂时无法连接 GitHub，请直接打开个人主页。",
     "githubFeedUpdated": "更新于",
-    "githubFeedAll": "查看全部项目"
+    "githubFeedAll": "查看全部项目",
+    "pagePrev": "上一页",
+    "pageNext": "下一页",
+    "pageLabel": "页",
+    "certKey": "重点证书",
+    "certVerify": "查验 ↗",
+    "expGlance": "概览",
+    "expTools": "工具与技能",
+    "communityCards": {
+      "blood": {
+        "tag": "志愿服务",
+        "title": "无偿献血志愿者",
+        "stat": "7×",
+        "statLabel": "次献血，每次 350 mL",
+        "period": "2022 – 至今",
+        "org": "守德市红十字会",
+        "detail": "定期献血，并协助医护人员开展献血活动。"
+      },
+      "industry": {
+        "tag": "行业学习",
+        "title": "企业参访与研讨会",
+        "items": [
+          {
+            "date": "05/2023",
+            "text": "逆向物流研讨会：火电厂灰渣处理 · ULSC"
+          },
+          {
+            "date": "10/2022",
+            "text": "越南 Lazada Express：平盛转运中心与分拣中心参访"
+          },
+          {
+            "date": "10/2022",
+            "text": "洁净农产品供应与进出口货物熏蒸研讨会 · ULSC"
+          },
+          {
+            "date": "05/2022",
+            "text": "盖梅—氏威深水港参访 · HCMUTE"
+          }
+        ]
+      },
+      "awards": {
+        "tag": "认可",
+        "title": "奖项与奖学金",
+        "items": [
+          {
+            "date": "06/2026",
+            "text": "杰出贡献奖 · 元智大学国际事务处"
+          },
+          {
+            "date": "02/2025",
+            "text": "硕士奖学金 · 元智大学 Global MBA"
+          },
+          {
+            "date": "04/2023",
+            "text": "学业鼓励奖学金 · HCMUTE"
+          },
+          {
+            "date": "03/2023",
+            "text": "Logistics Hub 竞赛 · 63 队中第 14 名"
+          }
+        ]
+      },
+      "languages": {
+        "tag": "语言",
+        "title": "语言学习历程",
+        "items": [
+          {
+            "date": "07/2026",
+            "text": "TOCFL 第二级（A2）· 中华民国教育部"
+          },
+          {
+            "date": "12/2025",
+            "text": "华语密集班 Level 2 · 元智大学"
+          },
+          {
+            "date": "10/2024",
+            "text": "TOEIC 听力与阅读 · 840 / 990"
+          }
+        ]
+      }
+    }
   }
 }

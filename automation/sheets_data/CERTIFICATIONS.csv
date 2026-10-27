@@ -1,23 +1,23 @@
 id,name,provider,date,category,file,verification_url,featured,sort_order
-hr-advanced,SQL (Advanced),HackerRank,2026-06-26,hacker,assets/certificates/hackerrank-sql-advanced.jpg,,TRUE,1
-hr-intermediate,SQL (Intermediate),HackerRank,2026-06-26,hacker,assets/certificates/hackerrank-sql-intermediate.jpg,,TRUE,2
-dc-powerbi,Data Visualization in Power BI,DataCamp,2026-07-04,datacamp,assets/certificates/datacamp-power-bi.pdf,,TRUE,3
-dc-intermediate,Intermediate SQL,DataCamp,2026-06-11,datacamp,assets/certificates/datacamp-intermediate-sql.pdf,,TRUE,4
-dc-ai,Cleaning Data with Generative AI,DataCamp,2026-05-31,datacamp,assets/certificates/datacamp-cleaning-ai.pdf,,TRUE,5
-dc-intro,Introduction to SQL,DataCamp,2026-05-29,datacamp,assets/certificates/datacamp-intro-sql.pdf,,TRUE,6
-mandarin,Mandarin Intensive Program – Level 2,Yuan Ze University,2025-12-26,language,[PRIVATE RECORD],,TRUE,7
-toeic,TOEIC Listening & Reading (840/990),ETS · IIG Vietnam,2024-10-02,language,[PRIVATE RECORD],,TRUE,8
-tocfl,TOCFL Chinese Proficiency – Level 2 (CEFR A2),"Ministry of Education, Taiwan",2026-07-25,language,[PRIVATE RECORD],,TRUE,9
-dc-sql-manip,Data Manipulation in SQL,DataCamp,2026-06-27,datacamp,assets/certificates/datacamp-data-manipulation-sql.pdf,,TRUE,10
-dc-dax,Introduction to DAX in Power BI,DataCamp,2026-06-29,datacamp,assets/certificates/datacamp-intro-dax.pdf,,TRUE,11
-dc-python-inter,Intermediate Python,DataCamp,2026-09-28,datacamp,assets/certificates/datacamp-intermediate-python.pdf,,TRUE,12
-dc-stats-python,Introduction to Statistics in Python,DataCamp,2026-10-16,datacamp,assets/certificates/datacamp-statistics-python.pdf,,TRUE,13
-dc-pandas-join,Joining Data with pandas,DataCamp,2026-10-10,datacamp,assets/certificates/datacamp-joining-pandas.pdf,,TRUE,14
+toeic,TOEIC Listening & Reading (840/990),ETS · IIG Vietnam,2024-10-02,language,assets/certificates/toeic-public.jpg,,TRUE,1
+tocfl,TOCFL Chinese Proficiency – Level 2 (CEFR A2),"Ministry of Education, Taiwan",2026-07-25,language,assets/certificates/tocfl-public.jpg,,TRUE,2
+hr-advanced,SQL (Advanced),HackerRank,2026-06-26,hacker,assets/certificates/hackerrank-sql-advanced.jpg,,TRUE,3
+dc-powerbi,Data Visualization in Power BI,DataCamp,2026-07-04,datacamp,assets/certificates/datacamp-power-bi.pdf,,TRUE,4
+cs-rutgers-analytics,Supply Chain Analytics Essentials,Rutgers University · Coursera,2025-04-12,coursera,https://coursera.org/verify/U789UKLTGEZX,https://coursera.org/verify/U789UKLTGEZX,TRUE,5
+cs-uci-planning,Supply Chain Planning,UC Irvine · Coursera,2025-04-22,coursera,https://coursera.org/verify/S0IX1CPG5SLA,https://coursera.org/verify/S0IX1CPG5SLA,TRUE,6
+hr-intermediate,SQL (Intermediate),HackerRank,2026-06-26,hacker,assets/certificates/hackerrank-sql-intermediate.jpg,,TRUE,7
+cs-unilever-scm,Supply Chain Management and Analytics,Unilever · Coursera,2025-04-21,coursera,https://coursera.org/verify/804YQRVH73R4,https://coursera.org/verify/804YQRVH73R4,TRUE,8
+cs-unilever-analytics,Using Data Analytics in Supply Chain,Unilever · Coursera,2025-05-07,coursera,https://coursera.org/verify/58ZIPG2QWL3U,https://coursera.org/verify/58ZIPG2QWL3U,TRUE,9
+dc-dax,Introduction to DAX in Power BI,DataCamp,2026-06-29,datacamp,assets/certificates/datacamp-intro-dax.pdf,,TRUE,10
+dc-intermediate,Intermediate SQL,DataCamp,2026-06-11,datacamp,assets/certificates/datacamp-intermediate-sql.pdf,,TRUE,11
+dc-sql-join,Joining Data in SQL,DataCamp,2026-06-20,datacamp,assets/certificates/datacamp-joining-sql.pdf,,TRUE,12
+dc-sql-manip,Data Manipulation in SQL,DataCamp,2026-06-27,datacamp,assets/certificates/datacamp-data-manipulation-sql.pdf,,TRUE,13
+dc-stats-python,Introduction to Statistics in Python,DataCamp,2026-10-16,datacamp,assets/certificates/datacamp-statistics-python.pdf,,TRUE,14
 dc-pandas-manip,Data Manipulation with pandas,DataCamp,2026-10-06,datacamp,assets/certificates/datacamp-data-manipulation-pandas.pdf,,TRUE,15
-dc-python-intro,Introduction to Python,DataCamp,2026-09-17,datacamp,assets/certificates/datacamp-intro-python.pdf,,TRUE,16
-dc-sql-join,Joining Data in SQL,DataCamp,2026-06-20,datacamp,assets/certificates/datacamp-joining-sql.pdf,,TRUE,17
-cs-ibm-excel,Excel Basics for Data Analysis,IBM · Coursera,2025-06-13,coursera,https://coursera.org/verify/SFHLSS34RCZ7,https://coursera.org/verify/SFHLSS34RCZ7,TRUE,18
-cs-unilever-analytics,Using Data Analytics in Supply Chain,Unilever · Coursera,2025-05-07,coursera,https://coursera.org/verify/58ZIPG2QWL3U,https://coursera.org/verify/58ZIPG2QWL3U,TRUE,19
-cs-uci-planning,Supply Chain Planning,UC Irvine · Coursera,2025-04-22,coursera,https://coursera.org/verify/S0IX1CPG5SLA,https://coursera.org/verify/S0IX1CPG5SLA,TRUE,20
-cs-unilever-scm,Supply Chain Management and Analytics,Unilever · Coursera,2025-04-21,coursera,https://coursera.org/verify/804YQRVH73R4,https://coursera.org/verify/804YQRVH73R4,TRUE,21
-cs-rutgers-analytics,Supply Chain Analytics Essentials,Rutgers University · Coursera,2025-04-12,coursera,https://coursera.org/verify/U789UKLTGEZX,https://coursera.org/verify/U789UKLTGEZX,TRUE,22
+dc-pandas-join,Joining Data with pandas,DataCamp,2026-10-10,datacamp,assets/certificates/datacamp-joining-pandas.pdf,,TRUE,16
+dc-python-inter,Intermediate Python,DataCamp,2026-09-28,datacamp,assets/certificates/datacamp-intermediate-python.pdf,,TRUE,17
+dc-python-intro,Introduction to Python,DataCamp,2026-09-17,datacamp,assets/certificates/datacamp-intro-python.pdf,,TRUE,18
+dc-intro,Introduction to SQL,DataCamp,2026-05-29,datacamp,assets/certificates/datacamp-intro-sql.pdf,,TRUE,19
+dc-ai,Cleaning Data with Generative AI,DataCamp,2026-05-31,datacamp,assets/certificates/datacamp-cleaning-ai.pdf,,TRUE,20
+cs-ibm-excel,Excel Basics for Data Analysis,IBM · Coursera,2025-06-13,coursera,https://coursera.org/verify/SFHLSS34RCZ7,https://coursera.org/verify/SFHLSS34RCZ7,TRUE,21
+mandarin,Mandarin Intensive Program – Level 2,Yuan Ze University,2025-12-26,language,assets/certificates/mandarin-public.jpg,,TRUE,22

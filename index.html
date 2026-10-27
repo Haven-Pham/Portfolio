@@ -35,6 +35,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="enhance.css">
   <script src="content.js" defer></script>
   <script src="main.js" defer></script>
   <script src="motion.js" defer></script>
@@ -43,6 +44,7 @@
   <div id="top"></div>
   <div class="progress" id="progress"></div>
   <div class="dot-grid" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <header class="site-header" id="site-header">
     <div class="nav-shell wrap">
       <a class="brand" href="#top" aria-label="Pham Hong Hieu (Haven - 范鴻孝) — home">HP<span class="brand-dot">.</span></a>
@@ -129,7 +131,7 @@
     </section>
 
     <!-- 01 / EDUCATION SECTION -->
-    <section class="section wrap" id="education">
+    <section class="section wrap" id="education" data-accent="violet">
       <div class="section-title reveal">
         <p class="section-overline">01 / <span data-i18n="navEducation">EDUCATION</span></p>
         <h2 data-i18n="educationHeading">Academic Background &amp; Degrees</h2>
@@ -173,37 +175,38 @@
     </section>
 
     <!-- 02 / EXPERIENCE SECTION -->
-    <section class="section wrap" id="experience">
+    <section class="section wrap" id="experience" data-accent="teal">
       <div class="section-title reveal"><p class="section-overline">02 / <span data-i18n="navExperience"></span></p><h2 data-i18n="experienceHeading"></h2><div class="section-rule"></div><p class="section-caption" data-i18n="experienceCaption"></p></div>
       <div class="tabs reveal" id="experience-tabs" role="tablist" aria-label="Experience categories"></div>
       <div id="experience-list" class="experience-list" aria-live="polite"></div>
     </section>
 
     <!-- 03 / CERTIFICATIONS SECTION -->
-    <section class="section wrap" id="certifications">
+    <section class="section wrap" id="certifications" data-accent="amber">
       <div class="section-title reveal"><p class="section-overline">03 / <span data-i18n="navCerts"></span></p><div class="certs-heading"><h2 data-i18n="certsHeading"></h2><span class="counter-badge" data-i18n="certCount">12 VERIFIED</span></div><div class="section-rule"></div><p class="section-caption" data-i18n="certsCaption"></p></div>
       <div class="tabs cert-tabs reveal" id="cert-tabs" role="tablist" aria-label="Certificate providers"></div>
-      <div class="cert-grid" id="cert-grid"></div><p class="content-note" data-i18n="certPrivacy"></p>
+      <div class="cert-grid" id="cert-grid"></div><div id="cert-pager"></div><p class="content-note" data-i18n="certPrivacy"></p>
     </section>
 
     <!-- 04 / PROJECTS SECTION -->
-    <section class="section wrap" id="projects">
+    <section class="section wrap" id="projects" data-accent="blue">
       <div class="section-title reveal"><p class="section-overline">04 / <span data-i18n="navProjects"></span></p><h2 data-i18n="projectsHeading"></h2><div class="section-rule"></div><p class="section-caption" data-i18n="projectsCaption"></p></div>
       <div class="tabs reveal" id="project-tabs" role="tablist" aria-label="Project categories"></div>
       <div class="project-grid" id="project-grid" aria-live="polite"></div>
+      <div id="project-pager"></div>
       <div class="project-disclaimer"><span>ⓘ</span><span data-i18n="projectDisclaimer"></span></div>
       <div class="gh-feed reveal" id="github-feed" aria-live="polite"></div>
     </section>
 
     <!-- 05 / RESEARCH SECTION -->
-    <section class="section wrap" id="research">
+    <section class="section wrap" id="research" data-accent="violet">
       <div class="section-title reveal"><p class="section-overline">05 / <span data-i18n="navResearch"></span></p><h2 data-i18n="researchHeading"></h2><div class="section-rule"></div><p class="section-caption" data-i18n="researchCaption"></p></div>
       <div class="research-grid" id="research-grid"></div>
       <p class="content-note" data-i18n="researchNote"></p>
     </section>
 
     <!-- 06 / WORKFLOW & STACK SECTION -->
-    <section class="section wrap" id="stack">
+    <section class="section wrap" id="stack" data-accent="cyan">
       <div class="section-title reveal"><p class="section-overline">06 / <span data-i18n="navStack"></span></p><h2 data-i18n="stackHeading"></h2><div class="section-rule"></div><p class="section-caption" data-i18n="stackCaption"></p></div>
       <div class="stack-controls"><button type="button" class="view-toggle active" data-stack-view="workflow" data-i18n="stackWorkflow"></button><button type="button" class="view-toggle" data-stack-view="skills" data-i18n="stackSkills"></button></div>
       <div id="stack-workflow" class="stack-panel"><div id="stage-grid" class="stage-grid"></div><div id="stage-description" class="stage-description" aria-live="polite"></div></div>
@@ -211,10 +214,10 @@
     </section>
 
     <!-- 07 / COMMUNITY SECTION -->
-    <section class="section wrap" id="community"><div class="section-title reveal"><p class="section-overline">07 /<span data-i18n="navCommunity"></span></p><h2 data-i18n="communityHeading"></h2><div class="section-rule"></div><p class="section-caption" data-i18n="communityCaption"></p></div><div class="community-grid" id="community-grid"></div></section>
+    <section class="section wrap" id="community" data-accent="rose"><div class="section-title reveal"><p class="section-overline">07 /<span data-i18n="navCommunity"></span></p><h2 data-i18n="communityHeading"></h2><div class="section-rule"></div><p class="section-caption" data-i18n="communityCaption"></p></div><div class="bento-grid" id="community-grid"></div></section>
 
     <!-- 08 / CONTACT SECTION -->
-    <section class="section contact-section" id="contact">
+    <section class="section contact-section" id="contact" data-accent="emerald">
       <div class="wrap">
         <div class="section-title centered reveal">
           <p class="section-overline">08 /<span data-i18n="navContact"></span></p>
