@@ -34,8 +34,8 @@ SITE_OUT = ROOT / "assets" / "resume"
 
 LINK_COLOR = RGBColor(0x1F, 0x4E, 0x79)
 RIGHT_TAB = Twips(10466)  # A4 text width with the template's 0.5" margins
-BODY_PT = 10  # one A4 page; the template's 11 pt runs to a second page
-GAP = 4  # points above each degree, role and project
+BODY_PT = 10
+GAP = 5  # points above each degree, role and project
 EAST_ASIA = {"zh-Hant": ("Microsoft JhengHei", "zh-TW"), "zh-Hans": ("Microsoft YaHei", "zh-CN")}
 
 
@@ -78,9 +78,9 @@ def clear_body(doc):
 
 
 def tighten(doc, lang):
-    """Fit one A4 page: smaller body text, exact line heights (CJK fonts carry
+    """Two A4 pages: 10.5 pt body text, exact line heights (CJK fonts carry
     tall default leading) and slimmer page margins."""
-    body_line = 12.5 if lang in EAST_ASIA else 12
+    body_line = 13.5 if lang in EAST_ASIA else 12.5
     styles = doc.styles
     styles["Normal"].font.size = Pt(BODY_PT)
     for name in ("Normal", "6. Bullet Points"):
@@ -158,63 +158,82 @@ def build(lang, c, profile, projects):
             contact.add_run("  |  ")
         hyperlink(contact, text, url)
 
+    colon = "：" if lang in EAST_ASIA else ": "
+
     def section(title):
-        para(doc, "4. Section Headers", title, before=5, after=2)
+        para(doc, "4. Section Headers", title, before=6, after=2)
+
+    def heading(style, left, right, *, after=0):
+        """Entry heading: bold left text, right-aligned date/place/link, kept with its body."""
+        p = para(doc, style, left, right=right, before=GAP, after=after)
+        p.paragraph_format.keep_with_next = True
+        return p
+
+    def labelled(label, text, after=1):
+        p = para(doc, "6b. Training", after=after)
+        p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        lab = p.add_run(label + colon); lab.bold = True
+        p.add_run(text)
+        return p
+
+    def bullets(items):
+        for b in items:
+            para(doc, "6. Bullet Points", b)
 
     section(labels["summary"])
     para(doc, "5. Summary Text", c["summary"], after=0)
 
     section(labels["education"])
     for e in c["education"]:
-        para(doc, "7. Degree Name/Job Title", e["degree"], right=e["dates"], before=GAP)
-        para(doc, "8. Institution", e["school"], right=e["place"], after=1)
-        for b in e["bullets"]:
-            para(doc, "6. Bullet Points", b)
+        heading("7. Degree Name/Job Title", e["degree"], e["dates"])
+        heading("8. Institution", e["school"], e["place"], after=1).paragraph_format.space_before = Pt(0)
+        bullets(e["bullets"])
+
+    section(labels["skills"])
+    for s in c["skills"]:
+        labelled(s["label"], s["items"])
 
     section(labels["experience"])
     for e in c["experience"]:
-        # Role and employer share one line to keep the resume to a single page.
-        p = para(doc, "7. Degree Name/Job Title", right=e["dates"], before=GAP, after=1)
-        tab = p.runs[0]._r
-        org = p.add_run(f"  |  {e['org']}, {e['place']}"); org.bold = False
-        role = p.add_run(e["role"])
-        tab.addprevious(role._r); tab.addprevious(org._r)
-        for b in e["bullets"]:
-            para(doc, "6. Bullet Points", b)
+        heading("7. Degree Name/Job Title", e["role"], e["dates"])
+        heading("9. Employer Name", e["org"], e["place"], after=1).paragraph_format.space_before = Pt(0)
+        bullets(e["bullets"])
+
+    erp = c["erp"]
+    section(labels["erp"])
+    heading("7. Degree Name/Job Title", erp["title"], erp["note"], after=1)
+    bullets(erp["bullets"])
 
     section(labels["projects"])
     by_id = {p["id"]: p for p in projects}
     for pr in c["projects"]:
         repo = by_id.get(pr["id"], {}).get("githubUrl")
         link = (labels["github"], repo) if repo else (labels["portfolio"], f"{site}#projects")
-        p = para(doc, "7a. Project", after=1, before=GAP, right=link)
-        title = p.runs[0]._r  # the tab run; insert the title before it
+        p = heading("7a. Project", None, link, after=1)
+        tab = p.runs[0]._r  # the tab run; insert the title before it
         t = p.add_run(pr["title"]); t.bold = True
         sep = p.add_run(f"  |  {pr['tools']}"); sep.bold = False; sep.italic = True
-        title.addprevious(t._r); title.addprevious(sep._r)
-        for b in pr["bullets"]:
-            para(doc, "6. Bullet Points", b)
+        tab.addprevious(t._r); tab.addprevious(sep._r)
+        bullets(pr["bullets"])
 
     section(labels["research"])
     for r in c["research"]:
-        para(doc, "7. Degree Name/Job Title", r["title"], after=0)
-        p = para(doc, "9. Employer Name", after=0)
+        heading("7. Degree Name/Job Title", r["title"], None)
+        p = para(doc, "9. Employer Name", after=1)
+        p.paragraph_format.keep_with_next = True
         status = p.add_run(f"{r['status']}  ·  "); status.bold = True
         p.add_run(r["venue"])
+        bullets(r["bullets"])
 
-    section(labels["skills"])
-    colon = "：" if lang in EAST_ASIA else ": "
-    for s in c["skills"]:
-        p = para(doc, "6b. Training", after=1)
-        p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.LEFT
-        lab = p.add_run(s["label"] + colon); lab.bold = True
-        p.add_run(s["items"])
-
-    p = para(doc, "6b. Training", after=0)
-    p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.LEFT
-    lab = p.add_run(labels["certifications"] + colon); lab.bold = True
-    p.add_run(c["certifications"] + "  |  ")
+    section(labels["certifications"])
+    for cert in c["certifications"]:
+        labelled(cert["label"], cert["items"])
+    p = para(doc, "5. Summary Text", after=0)
     hyperlink(p, labels["certsLink"], f"{site}#certifications")
+
+    section(labels["activities"])
+    for a in c["activities"]:
+        labelled(a["lead"], a["text"])
 
     docx_path = OUT / f"{c['file']}.docx"
     doc.core_properties.author = "Pham Hong Hieu (Haven)"

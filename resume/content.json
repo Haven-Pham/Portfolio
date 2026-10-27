@@ -4,20 +4,22 @@
     "labels": {
       "summary": "PROFESSIONAL SUMMARY",
       "education": "EDUCATION",
+      "skills": "TECHNICAL SKILLS",
       "experience": "WORK EXPERIENCE",
+      "erp": "ERP SYSTEMS",
       "projects": "PROJECTS",
       "research": "RESEARCH",
-      "skills": "SKILLS & CERTIFICATIONS",
-      "certifications": "Certifications",
+      "certifications": "CERTIFICATIONS",
+      "activities": "ACTIVITIES",
       "github": "GitHub",
       "portfolio": "Portfolio",
       "website": "Portfolio",
-      "certsLink": "verify all 22 certificates"
+      "certsLink": "Verify all 22 certificates on the portfolio"
     },
     "name": "PHAM HONG HIEU (HAVEN)",
-    "headline": "Supply Chain & Data Analyst  |  SQL · Python · Power BI",
+    "headline": "Supply Chain & Data Analyst  |  SQL · Python · Power BI · ERP",
     "location": "Taoyuan, Taiwan",
-    "summary": "Supply chain analyst with experience in purchasing, Oracle ERP inventory control and international freight forwarding; Global MBA candidate in Taiwan (GPA 4.00/4.00, ranked 1st of 28). Builds SQL, Python and Power BI analyses that quantify where operations lose service level and margin; co-author of a paper accepted at the 2026 CSMOT Annual Conference.",
+    "summary": "Supply chain analyst with over two years of hands-on experience in supply planning, Oracle ERP inventory control, international freight forwarding and import/export documentation in Vietnam. Now completing a Global MBA at Yuan Ze University in Taiwan (GPA 4.00/4.00, ranked 1st of 28), where I combine this operations background with SQL, Python and Power BI to build end-to-end analyses of OTIF, supplier performance, customer retention and margin. Co-author of a paper on technology-convergence lifecycles accepted at the 2026 CSMOT Annual Conference.",
     "education": [
       {
         "degree": "Global Master of Business Administration (Global MBA)",
@@ -25,18 +27,54 @@
         "school": "Yuan Ze University, College of Management",
         "place": "Taoyuan, Taiwan",
         "bullets": [
-          "GPA 4.00/4.00 · Ranked 1st of 28 (Semester 2) · Outstanding Dedication Award (2026) · Master’s scholarship",
-          "Thesis: technology convergence across 8.5M USPTO patents (1976–2025) using Python, DuckDB and growth-curve models"
+          "GPA 4.00/4.00 (average 96.19, 32 credits) · Ranked 1st of 28 in Semester 2 (8th of 32 in Semester 1)",
+          "Outstanding Dedication Award, Global Affairs Office (Jun 2026) · Master’s scholarship (Feb 2025)",
+          "Mandarin Intensive Program, Level 2 (Dec 2025)"
         ]
       },
       {
         "degree": "Bachelor of Logistics and Supply Chain Management",
-        "dates": "2020 – 2024",
+        "dates": "Oct 2020 – Jul 2024",
         "school": "Ho Chi Minh City University of Technology and Engineering (HCM-UTE)",
-        "place": "Vietnam",
+        "place": "Ho Chi Minh City, Vietnam",
         "bullets": [
-          "GPA 8.46/10 (Distinction) · Academic Encouragement Scholarship · Logistics Hub competition: 14th of 63 teams"
+          "GPA 8.46/10, graduated with Distinction (125 credits) · Training score 90/100 (Excellent)",
+          "Academic Encouragement Scholarship (Apr 2023) · Logistics Hub competition: ranked 14th of 63 teams (Mar 2023)"
         ]
+      }
+    ],
+    "skills": [
+      {
+        "label": "Data Analysis",
+        "items": "SQL (CTEs, window functions; HackerRank Advanced), Python (pandas, NumPy, SciPy, Plotly), DuckDB"
+      },
+      {
+        "label": "BI & Reporting",
+        "items": "Power BI (data modelling, DAX, drill-through), Excel, Excel and PowerPoint reports automated in Python"
+      },
+      {
+        "label": "Statistics",
+        "items": "χ² and permutation tests, growth-curve models, cohort, RFM, ABC/Pareto, market basket, holdout validation"
+      },
+      {
+        "label": "ML & NLP",
+        "items": "PyTorch, Hugging Face, sentence-transformers, few-shot text classification (SetFit, FastFit)"
+      },
+      {
+        "label": "Supply Chain & ERP",
+        "items": "Oracle ERP, SAP Business One, Odoo, supply planning, inventory standards, OTIF and supplier KPIs"
+      },
+      {
+        "label": "Logistics & Trade",
+        "items": "Sea/air forwarding, reefer cargo, C/O, SI, VGM, phyto, HS codes, Incoterms 2010/2020, L/C, T/T, D/P/D/A"
+      },
+      {
+        "label": "Tools",
+        "items": "Git, GitHub Actions, pytest, Jupyter, Google Colab, VS Code, Microsoft Office"
+      },
+      {
+        "label": "Languages",
+        "items": "Vietnamese (native), English (TOEIC 840/990, professional working), Mandarin (TOCFL Level 2, A2)"
       }
     ],
     "experience": [
@@ -46,41 +84,59 @@
         "org": "Hoa Sen Group (steel and building materials)",
         "place": "Vietnam",
         "bullets": [
-          "Monitored suppliers and purchase orders for domestic and imported goods, resolving customer and supplier issues.",
-          "Tracked inventory in Oracle ERP, coordinated stock transfers and prepared operational reports.",
-          "Set inventory standards for warehouses and distribution points nationwide."
+          "Placed purchase orders and followed up suppliers of domestic and imported goods to keep deliveries on schedule.",
+          "Managed inventory and transactions in Oracle ERP; coordinated stock transfers between factories and warehouses.",
+          "Set inventory standards for warehouses and distribution points across the nationwide network.",
+          "Developed import and export plans for goods in line with stock levels and demand.",
+          "Built operational reports that gave clear, transparent visibility of orders and stock.",
+          "Resolved complaints and other issues raised by customers and suppliers."
         ]
       },
       {
         "role": "Sales Logistics Staff",
         "dates": "Jul 2023 – Aug 2024",
-        "org": "Kodai Sangyo (Vietnam) Co., Ltd. (freight forwarding)",
+        "org": "Kodai Sangyo (Vietnam) Co., Ltd. · freight forwarder, refrigerated cargo",
         "place": "Vietnam",
         "bullets": [
-          "Prepared sea and air freight quotations with shipping lines and overseas agents.",
-          "Planned refrigerated shipments around sailing schedules, customs clearance, C/O, phytosanitary and cut-off times.",
-          "Won new customers via e-mail, calls and meetings; negotiated contracts and payment terms and tracked receivables."
+          "Prospected new accounts through e-mail campaigns, cold calls and client meetings to meet monthly sales targets.",
+          "Updated air and ocean freight rates from carriers and overseas agents; issued weekly and monthly quotations.",
+          "Planned refrigerated shipments around vessel schedules and customer requests: domestic trucking, customs declaration, C/O, phytosanitary certificates and cut-off times.",
+          "Worked with the documentation, operations, customer service and coordination teams to run shipments end to end and resolve problems as they arose.",
+          "Drafted service contracts, negotiated terms and payment, and collected receivables in line with the agreed credit terms."
         ]
       },
       {
         "role": "Export & Import Trainee",
         "dates": "Jan 2023 – Jul 2023",
-        "org": "Viet Logistics",
+        "org": "Viet Logistics Co. · freight forwarder, dry cargo",
         "place": "Vietnam",
         "bullets": [
-          "Prepared invoices, packing lists, certificates of origin and shipping instructions; classified goods with HS codes.",
-          "Checked rates and booked carriers, applying Incoterms 2010/2020 and payment methods (L/C, T/T, D/P, D/A)."
+          "Prepared import and export document sets for customs clearance (sales contract, invoice, packing list, C/O, SI, VGM) and classified goods by HS code.",
+          "Checked rates with carriers and agents, booked space, priced quotations and scheduled stuffing per booking.",
+          "Applied Incoterms 2010/2020, calculated local charges and surcharges, and handled L/C, T/T, D/P, D/A payments.",
+          "Coordinated documentation and operations teams to monitor shipments; introduced services to new customers."
         ]
       }
     ],
+    "erp": {
+      "title": "SAP Business One & Odoo",
+      "note": "Hands-on practice",
+      "bullets": [
+        "Production: managed Standard, Special and Disassembly production orders with backflush and manual issue methods.",
+        "MRP: planned material requirements from sales orders, forecasts and stock levels.",
+        "Inventory: lot/serial-tracked stock, goods receipts and issues, expiry dates, preferred vendors and units of measure.",
+        "Warehouse: multi-location set-up and transfers; purchase orders and transfer requests from demand and stock."
+      ]
+    },
     "projects": [
       {
         "id": "fnb-supply-chain",
         "title": "F&B Supply Chain Analytics (NordFresh Distribution)",
         "tools": "Python, Power BI, DAX",
         "bullets": [
-          "Built a star schema (2,200 order lines, 5,040 stock snapshots) and a Power BI dashboard with 37 DAX measures.",
-          "Strict OTIF 89.4% vs 95% target; two suppliers with 26% of orders caused 55% of late orders and $64.0K of late/short sales."
+          "Cleaned 2,200 order lines and 5,040 stock snapshots (8 suppliers, 5 DCs) into a star schema (2 facts, 6 dims).",
+          "Built supplier and DC scorecards, a 3-page Power BI dashboard (37 DAX measures) and a 17-slide executive deck.",
+          "Measured strict OTIF at 89.4% against a 95% target: two suppliers handled 26% of orders but caused 55% of late orders, and $64.0K (10.6%) of revenue arrived late or short; supplier corrective plans target about +4 pp OTIF."
         ]
       },
       {
@@ -88,8 +144,9 @@
         "title": "Transport OTIF Root-Cause Analysis (BharatLink Freight)",
         "tools": "Python, statistics, Power BI",
         "bullets": [
-          "Analysed 3,582 GPS-tracked FTL bookings (OTIF 38.6%); the flat 100-hour ETA made every trip over 1,200 km infeasible.",
-          "Built a 4-rule early-warning score (72% precision, 82% recall out-of-time); with carrier re-tendering, targets +11.8 pp OTIF."
+          "Cleaned 3,582 GPS-tracked FTL bookings (mixed dates, 350+ messy locations, PII) to explain a 38.6% OTIF.",
+          "Showed through SLA feasibility tests and lane benchmarks that the flat 100-hour ETA made 0% of trips over 1,200 km feasible; tested drivers with χ² and Cramér’s V and flagged GPS anomalies.",
+          "Designed a 4-rule early-warning score (72% precision, 82% recall out-of-time) and a Power BI report with 27 DAX measures; with carrier re-tendering, the plan targets about +11.8 pp OTIF."
         ]
       },
       {
@@ -97,8 +154,9 @@
         "title": "E-Commerce Cohort, Retention & Profitability Analysis",
         "tools": "Python, pandas, pytest, GitHub Actions",
         "bullets": [
-          "Analysed 51,290 order lines from 17,415 customers: 2023 sales +24% but profit −12% as margin fell from 18.0% to 12.8%.",
-          "Repeat buyers (31% of customers) earn 56% of profit; discounts above 20% lost $288.6K. Packaged with tests and CI."
+          "Built a tested Python package for cohort and retention analysis of 51,290 order lines from 17,415 customers.",
+          "Found that 2023 sales rose 24% while profit fell 12% as margin dropped from 18.0% to 12.8% in every category, pointing to a company-wide cost or pricing change rather than discounts or mix.",
+          "Showed that repeat buyers (31% of customers) generate 56% of profit and that discounts above 20% lost $288.6K; delivered an Excel report and an executive deck."
         ]
       },
       {
@@ -106,7 +164,16 @@
         "title": "ProtoSetFit: Few-Shot Text Classification (team of 3)",
         "tools": "PyTorch, Hugging Face",
         "bullets": [
-          "2×2 SetFit ablation (8-shot, 5 seeds, permutation tests, Holm): hard-negative mining 51.94% vs 51.08% baseline."
+          "Ran a controlled 2×2 SetFit ablation on 8-shot emotion classification (5 seeds, 25 runs, 20-run λ sweep).",
+          "Hard-negative mining: 51.94% vs 51.08% for SetFit on a frozen test set; not significant at N=5 (Holm-corrected)."
+        ]
+      },
+      {
+        "id": "fastfit",
+        "title": "Improving FastFit for Few-Shot Intent Classification (in progress)",
+        "tools": "PyTorch, statistics",
+        "bullets": [
+          "Reproducing FastFit (NAACL 2024) on 77-class BANKING77, 5-shot, with controlled optimizer and projection tests."
         ]
       }
     ],
@@ -114,48 +181,72 @@
       {
         "title": "Lifecycle Trajectories of First-Time and Subsequent Technology Convergence: Evidence from USPTO Utility Patents, 1976–2025",
         "status": "Accepted, 2026",
-        "venue": "CSMOT Annual Conference, National Cheng Kung University · with Prof. Chih-Hung Hsieh"
+        "venue": "2026 CSMOT Annual Conference, National Cheng Kung University · with Prof. Chih-Hung Hsieh",
+        "bullets": [
+          "Modelled first-time and subsequent convergence as pair-level trajectories across 134.6M backward-citation links.",
+          "Holdout MAPE of 0.259% (first-time) and 0.833% (subsequent); 73.04% of observed IPC4 pairs reactivated by 2025."
+        ]
+      },
+      {
+        "title": "Tracing Technology Convergence Through Patent Analysis: Longitudinal Evidence from USPTO Patents, 1976–2025",
+        "status": "Thesis, 2026",
+        "venue": "Global MBA thesis, Yuan Ze University",
+        "bullets": [
+          "Built 21.9M patent–technology pair events from 8.5M patents, citations and IPC subclasses with Python and DuckDB.",
+          "Fitted Gompertz, logistic and exponential models on 1976–2019; Gompertz won on the 2020–2025 holdout."
+        ]
       }
     ],
-    "skills": [
-      {
-        "label": "Analytics & BI",
-        "items": "SQL (HackerRank Advanced), Python (pandas, SciPy), Power BI (DAX), Excel, statistics, data storytelling"
-      },
-      {
-        "label": "AI & Research",
-        "items": "PyTorch, Hugging Face, sentence-transformers, DuckDB, patent analytics, reproducible experiment design"
-      },
-      {
-        "label": "Supply Chain & ERP",
-        "items": "Oracle ERP, SAP Business One, Odoo, supply planning, inventory control, import/export"
-      },
+    "certifications": [
       {
         "label": "Languages",
-        "items": "Vietnamese (native), English (TOEIC 840/990), Mandarin (TOCFL Level 2, A2)"
+        "items": "TOEIC Listening & Reading 840/990 (Oct 2024) · TOCFL Level 2, CEFR A2 (Jul 2026)"
+      },
+      {
+        "label": "HackerRank",
+        "items": "SQL (Advanced) · SQL (Intermediate) (Jun 2026)"
+      },
+      {
+        "label": "DataCamp (12 courses, 2026)",
+        "items": "Power BI · DAX · SQL (4) · Python and pandas (4) · Statistics in Python · Cleaning Data with GenAI"
+      },
+      {
+        "label": "Coursera (2025)",
+        "items": "Supply Chain Analytics Essentials (Rutgers) · Supply Chain Planning (UC Irvine) · Supply Chain Management and Analytics, Using Data Analytics in Supply Chain (Unilever) · Excel Basics for Data Analysis (IBM)"
       }
     ],
-    "certifications": "HackerRank SQL (Advanced), DataCamp Power BI, Coursera Supply Chain Analytics (Rutgers) and Planning (UC Irvine)"
+    "activities": [
+      {
+        "lead": "Volunteer blood donor",
+        "text": "Thu Duc City Red Cross Society, 2022 – present (7 donations); help staff run collection drives."
+      },
+      {
+        "lead": "Industry learning",
+        "text": "Lazada hub and Cai Mep port visits (2022); ULSC workshops on fumigation and reverse logistics."
+      }
+    ]
   },
   "vi": {
     "file": "Pham_Hong_Hieu_Resume_VI",
     "labels": {
       "summary": "GIỚI THIỆU",
       "education": "HỌC VẤN",
+      "skills": "KỸ NĂNG CHUYÊN MÔN",
       "experience": "KINH NGHIỆM LÀM VIỆC",
+      "erp": "HỆ THỐNG ERP",
       "projects": "DỰ ÁN",
       "research": "NGHIÊN CỨU",
-      "skills": "KỸ NĂNG & CHỨNG CHỈ",
-      "certifications": "Chứng chỉ",
+      "certifications": "CHỨNG CHỈ",
+      "activities": "HOẠT ĐỘNG",
       "github": "GitHub",
       "portfolio": "Portfolio",
       "website": "Portfolio",
-      "certsLink": "xác thực đủ 22 chứng chỉ"
+      "certsLink": "Xác thực đủ 22 chứng chỉ trên portfolio"
     },
     "name": "PHẠM HỒNG HIẾU (HAVEN)",
-    "headline": "Chuyên viên Phân tích Chuỗi cung ứng & Dữ liệu  |  SQL · Python · Power BI",
+    "headline": "Chuyên viên Phân tích Chuỗi cung ứng & Dữ liệu  |  SQL · Python · Power BI · ERP",
     "location": "Đào Viên, Đài Loan",
-    "summary": "Có kinh nghiệm về mua hàng, quản lý tồn kho trên Oracle ERP và giao nhận vận tải quốc tế; học viên Global MBA tại Đài Loan (GPA 4.00/4.00, hạng 1/28). Phân tích dữ liệu bằng SQL, Python và Power BI để định lượng những điểm làm giảm mức độ phục vụ và biên lợi nhuận; đồng tác giả bài báo được chấp nhận tại Hội nghị CSMOT 2026.",
+    "summary": "Hơn hai năm kinh nghiệm thực tế về hoạch định cung ứng, quản lý tồn kho trên Oracle ERP, giao nhận vận tải quốc tế và chứng từ xuất nhập khẩu tại Việt Nam. Hiện học Global MBA tại Đại học Nguyên Trí (Đài Loan) với GPA 4.00/4.00, hạng 1/28; kết hợp nền tảng vận hành với SQL, Python và Power BI để phân tích trọn quy trình về OTIF, hiệu quả nhà cung cấp, giữ chân khách hàng và biên lợi nhuận. Đồng tác giả bài báo về vòng đời hội tụ công nghệ được chấp nhận tại Hội nghị thường niên CSMOT 2026.",
     "education": [
       {
         "degree": "Thạc sĩ Quản trị Kinh doanh Toàn cầu (Global MBA)",
@@ -163,18 +254,54 @@
         "school": "Đại học Nguyên Trí (Yuan Ze University), Học viện Quản lý",
         "place": "Đào Viên, Đài Loan",
         "bullets": [
-          "GPA 4.00/4.00 · Hạng 1/28 (học kỳ 2) · Giải thưởng Cống hiến Xuất sắc (2026) · Học bổng thạc sĩ",
-          "Luận văn: hội tụ công nghệ trên 8,5 triệu sáng chế USPTO (1976–2025) bằng Python, DuckDB và mô hình tăng trưởng"
+          "GPA 4.00/4.00 (điểm trung bình 96,19, 32 tín chỉ) · Hạng 1/28 học kỳ 2 (hạng 8/32 học kỳ 1)",
+          "Giải thưởng Cống hiến Xuất sắc, Phòng Hợp tác Quốc tế (06/2026) · Học bổng thạc sĩ (02/2025)",
+          "Chương trình tiếng Trung chuyên sâu, cấp 2 (12/2025)"
         ]
       },
       {
         "degree": "Cử nhân Logistics và Quản lý Chuỗi cung ứng",
-        "dates": "2020 – 2024",
+        "dates": "10/2020 – 07/2024",
         "school": "Đại học Sư phạm Kỹ thuật TP.HCM (HCM-UTE)",
-        "place": "Việt Nam",
+        "place": "TP. Hồ Chí Minh, Việt Nam",
         "bullets": [
-          "GPA 8,46/10 (Loại Giỏi) · Học bổng khuyến khích học tập · Cuộc thi Logistics Hub: hạng 14/63 đội"
+          "GPA 8,46/10, tốt nghiệp loại Giỏi (125 tín chỉ) · Điểm rèn luyện 90/100 (Xuất sắc)",
+          "Học bổng khuyến khích học tập (04/2023) · Cuộc thi Logistics Hub: hạng 14/63 đội (03/2023)"
         ]
+      }
+    ],
+    "skills": [
+      {
+        "label": "Phân tích dữ liệu",
+        "items": "SQL (CTE, window function; HackerRank Advanced), Python (pandas, NumPy, SciPy, Plotly), DuckDB"
+      },
+      {
+        "label": "BI & Báo cáo",
+        "items": "Power BI (mô hình dữ liệu, DAX, drill-through), Excel, báo cáo Excel/PowerPoint tự động bằng Python"
+      },
+      {
+        "label": "Thống kê",
+        "items": "Kiểm định χ², kiểm định hoán vị, mô hình tăng trưởng, cohort, RFM, ABC/Pareto, market basket"
+      },
+      {
+        "label": "ML & NLP",
+        "items": "PyTorch, Hugging Face, sentence-transformers, phân loại văn bản few-shot (SetFit, FastFit)"
+      },
+      {
+        "label": "Chuỗi cung ứng & ERP",
+        "items": "Oracle ERP, SAP Business One, Odoo, hoạch định cung ứng, định mức tồn kho, KPI OTIF"
+      },
+      {
+        "label": "Logistics & XNK",
+        "items": "Giao nhận biển/hàng không, hàng lạnh, C/O, SI, VGM, kiểm dịch, mã HS, Incoterms, L/C, T/T, D/P/D/A"
+      },
+      {
+        "label": "Công cụ",
+        "items": "Git, GitHub Actions, pytest, Jupyter, Google Colab, VS Code, Microsoft Office"
+      },
+      {
+        "label": "Ngôn ngữ",
+        "items": "Tiếng Việt (bản ngữ), tiếng Anh (TOEIC 840/990, thành thạo công việc), tiếng Trung (TOCFL cấp 2, A2)"
       }
     ],
     "experience": [
@@ -184,41 +311,59 @@
         "org": "Tập đoàn Hoa Sen (thép và vật liệu xây dựng)",
         "place": "Việt Nam",
         "bullets": [
-          "Theo dõi nhà cung cấp và đơn mua hàng trong nước, nhập khẩu; xử lý vấn đề với khách hàng, nhà cung cấp.",
-          "Quản lý tồn kho trên Oracle ERP, điều phối điều chuyển hàng và lập báo cáo vận hành.",
-          "Xây dựng định mức tồn kho cho hệ thống kho và điểm phân phối toàn quốc."
+          "Đặt hàng và theo dõi nhà cung cấp hàng nội địa, nhập khẩu để bảo đảm giao hàng đúng tiến độ.",
+          "Quản lý tồn kho và giao dịch trên Oracle ERP; điều phối điều chuyển hàng giữa nhà máy và kho.",
+          "Xây dựng định mức tồn kho cho các kho và điểm phân phối trên toàn quốc.",
+          "Lập kế hoạch nhập khẩu và xuất hàng phù hợp với tồn kho và nhu cầu.",
+          "Xây dựng báo cáo vận hành giúp theo dõi đơn hàng và tồn kho rõ ràng, minh bạch.",
+          "Xử lý khiếu nại và các vấn đề phát sinh với khách hàng, nhà cung cấp."
         ]
       },
       {
         "role": "Nhân viên Kinh doanh Logistics",
         "dates": "07/2023 – 08/2024",
-        "org": "Kodai Sangyo (giao nhận vận tải)",
+        "org": "Công ty TNHH Kodai Sangyo (Việt Nam) · giao nhận hàng lạnh",
         "place": "Việt Nam",
         "bullets": [
-          "Lập báo giá cước đường biển và hàng không với hãng tàu, đại lý nước ngoài.",
-          "Lên kế hoạch lô hàng lạnh theo lịch tàu, thủ tục hải quan, C/O, kiểm dịch và giờ cắt máng.",
-          "Tìm khách hàng mới qua email, điện thoại, gặp mặt; đàm phán hợp đồng, điều khoản thanh toán, theo dõi công nợ."
+          "Tìm kiếm khách hàng mới qua email marketing, gọi điện và gặp mặt để đạt chỉ tiêu doanh số tháng.",
+          "Cập nhật cước hàng không, đường biển từ hãng tàu, đại lý nước ngoài; gửi báo giá hằng tuần và hằng tháng.",
+          "Lên kế hoạch lô hàng lạnh theo lịch tàu và yêu cầu khách hàng: vận tải nội địa, khai báo hải quan, C/O, kiểm dịch thực vật và giờ cắt máng.",
+          "Phối hợp bộ phận chứng từ, vận hành, chăm sóc khách hàng và điều phối để xử lý lô hàng trọn gói và các sự cố phát sinh.",
+          "Soạn hợp đồng dịch vụ, đàm phán điều khoản, thanh toán và thu hồi công nợ theo thỏa thuận."
         ]
       },
       {
         "role": "Thực tập sinh Xuất nhập khẩu",
         "dates": "01/2023 – 07/2023",
-        "org": "Viet Logistics",
+        "org": "Công ty Viet Logistics · giao nhận hàng khô",
         "place": "Việt Nam",
         "bullets": [
-          "Lập hóa đơn, phiếu đóng gói, giấy chứng nhận xuất xứ và hướng dẫn gửi hàng; áp mã HS cho hàng hóa.",
-          "Kiểm tra giá, đặt chỗ với hãng tàu; áp dụng Incoterms 2010/2020 và phương thức thanh toán (L/C, T/T, D/P, D/A)."
+          "Lập bộ chứng từ thông quan (hợp đồng, hóa đơn, phiếu đóng gói, C/O, SI, VGM) và áp mã HS cho hàng hóa.",
+          "Kiểm tra giá với hãng tàu, đại lý; đặt chỗ, lập báo giá và lên lịch đóng hàng theo booking.",
+          "Áp dụng Incoterms 2010/2020, tính phí địa phương, phụ phí và xử lý thanh toán L/C, T/T, D/P, D/A.",
+          "Phối hợp bộ phận chứng từ, vận hành theo dõi lô hàng; giới thiệu dịch vụ cho khách hàng mới."
         ]
       }
     ],
+    "erp": {
+      "title": "SAP Business One & Odoo",
+      "note": "Thực hành",
+      "bullets": [
+        "Sản xuất: quản lý lệnh sản xuất Standard, Special, Disassembly với phương pháp xuất kho Backflush và Manual.",
+        "MRP: hoạch định nhu cầu nguyên vật liệu từ đơn bán hàng, dự báo và mức tồn kho.",
+        "Tồn kho: quản lý theo lô/serial, nhập xuất kho, hạn sử dụng, nhà cung cấp ưu tiên và đơn vị tính.",
+        "Kho: thiết lập nhiều vị trí kho, điều chuyển; tạo đơn mua hàng và yêu cầu chuyển kho theo nhu cầu."
+      ]
+    },
     "projects": [
       {
         "id": "fnb-supply-chain",
         "title": "Phân tích chuỗi cung ứng F&B (NordFresh Distribution)",
         "tools": "Python, Power BI, DAX",
         "bullets": [
-          "Mô hình hóa 2.200 dòng đơn hàng và 5.040 bản ghi tồn kho thành star schema; dashboard Power BI với 37 DAX measure.",
-          "OTIF thực 89,4% (mục tiêu 95%); hai nhà cung cấp có 26% đơn gây 55% đơn trễ và 64.000 USD giao trễ/thiếu."
+          "Làm sạch 2.200 dòng đơn hàng và 5.040 bản ghi tồn kho (8 NCC, 5 kho) thành star schema (2 fact, 6 dim).",
+          "Xây dựng scorecard nhà cung cấp và kho, dashboard Power BI 3 trang (37 DAX measure) và bộ slide 17 trang.",
+          "OTIF thực 89,4% so với mục tiêu 95%: hai nhà cung cấp chiếm 26% đơn nhưng gây 55% đơn trễ; 64.000 USD (10,6%) doanh thu giao trễ hoặc thiếu; kế hoạch khắc phục hướng tới +4 điểm % OTIF."
         ]
       },
       {
@@ -226,17 +371,19 @@
         "title": "Phân tích nguyên nhân OTIF vận tải (BharatLink Freight)",
         "tools": "Python, thống kê, Power BI",
         "bullets": [
-          "Phân tích 3.582 chuyến FTL có GPS (OTIF 38,6%); ETA cố định 100 giờ khiến mọi chuyến trên 1.200 km đều không khả thi.",
-          "Điểm cảnh báo sớm 4 quy tắc (precision 72%, recall 82%); cùng tái đấu thầu nhà xe, mục tiêu +11,8 điểm % OTIF."
+          "Làm sạch 3.582 chuyến FTL có GPS (ngày lẫn định dạng, 350+ địa điểm sai lệch, PII) để giải thích OTIF 38,6%.",
+          "Kiểm tra khả thi SLA và benchmark tuyến cho thấy ETA cố định 100 giờ khiến 0% chuyến trên 1.200 km khả thi; kiểm định χ², Cramér’s V và phát hiện GPS bất thường.",
+          "Thiết kế điểm cảnh báo sớm 4 quy tắc (precision 72%, recall 82%) và báo cáo Power BI 27 DAX measure; kết hợp tái đấu thầu nhà xe hướng tới +11,8 điểm % OTIF."
         ]
       },
       {
         "id": "ecommerce-cohort",
-        "title": "Phân tích cohort, giữ chân khách hàng & lợi nhuận thương mại điện tử",
+        "title": "Phân tích cohort, giữ chân khách hàng & lợi nhuận TMĐT",
         "tools": "Python, pandas, pytest, GitHub Actions",
         "bullets": [
-          "Phân tích 51.290 dòng đơn của 17.415 khách: 2023 doanh thu +24%, lợi nhuận −12%, biên giảm từ 18,0% xuống 12,8%.",
-          "Khách mua lặp lại (31%) tạo 56% lợi nhuận; giảm giá trên 20% làm lỗ 288,6 nghìn USD. Thư viện Python có kiểm thử và CI."
+          "Xây dựng thư viện Python có kiểm thử để phân tích cohort trên 51.290 dòng đơn của 17.415 khách hàng.",
+          "Năm 2023 doanh thu +24% nhưng lợi nhuận −12% do biên giảm từ 18,0% xuống 12,8% ở mọi ngành hàng, cho thấy thay đổi chi phí hoặc giá trên toàn công ty.",
+          "Khách mua lặp lại (31%) tạo 56% lợi nhuận; giảm giá trên 20% làm lỗ 288,6 nghìn USD; bàn giao báo cáo Excel và slide."
         ]
       },
       {
@@ -244,7 +391,16 @@
         "title": "ProtoSetFit: Phân loại văn bản few-shot (nhóm 3 người)",
         "tools": "PyTorch, Hugging Face",
         "bullets": [
-          "Ablation 2×2 trên SetFit (8-shot, 5 seed, kiểm định hoán vị, Holm): hard-negative mining đạt 51,94% so với 51,08%."
+          "Thực hiện ablation 2×2 có kiểm soát trên SetFit cho phân loại cảm xúc 8-shot (5 seed, 25 lượt, quét λ 20 lượt).",
+          "Hard-negative mining đạt 51,94% so với 51,08% của SetFit trên tập test đóng băng; chưa có ý nghĩa với N=5."
+        ]
+      },
+      {
+        "id": "fastfit",
+        "title": "Cải tiến FastFit cho phân loại ý định few-shot (đang thực hiện)",
+        "tools": "PyTorch, thống kê",
+        "bullets": [
+          "Tái lập FastFit (NAACL 2024) trên BANKING77 (77 lớp), 5-shot, với thí nghiệm có kiểm soát về optimizer và projection."
         ]
       }
     ],
@@ -252,48 +408,72 @@
       {
         "title": "Lifecycle Trajectories of First-Time and Subsequent Technology Convergence: Evidence from USPTO Utility Patents, 1976–2025",
         "status": "Được chấp nhận, 2026",
-        "venue": "Hội nghị thường niên CSMOT, Đại học Quốc lập Thành Công · cùng GS. Chih-Hung Hsieh"
+        "venue": "Hội nghị thường niên CSMOT 2026, Đại học Quốc lập Thành Công · cùng GS. Chih-Hung Hsieh",
+        "bullets": [
+          "Mô hình hóa hội tụ lần đầu và lặp lại theo quỹ đạo từng cặp trên 134,6 triệu liên kết trích dẫn.",
+          "MAPE kiểm tra 0,259% (lần đầu) và 0,833% (lặp lại); 73,04% cặp IPC4 đã tái kích hoạt đến năm 2025."
+        ]
+      },
+      {
+        "title": "Tracing Technology Convergence Through Patent Analysis: Longitudinal Evidence from USPTO Patents, 1976–2025",
+        "status": "Luận văn, 2026",
+        "venue": "Luận văn Global MBA, Đại học Nguyên Trí",
+        "bullets": [
+          "Xây dựng 21,9 triệu sự kiện cặp sáng chế–công nghệ từ 8,5 triệu bằng sáng chế bằng Python và DuckDB.",
+          "So sánh mô hình Gompertz, logistic và hàm mũ trên 1976–2019; Gompertz tốt nhất trên tập kiểm tra 2020–2025."
+        ]
       }
     ],
-    "skills": [
+    "certifications": [
       {
-        "label": "Phân tích & BI",
-        "items": "SQL (HackerRank Advanced), Python (pandas, SciPy), Power BI (DAX), Excel, thống kê"
+        "label": "Ngoại ngữ",
+        "items": "TOEIC Listening & Reading 840/990 (10/2024) · TOCFL cấp 2, CEFR A2 (07/2026)"
       },
       {
-        "label": "AI & Nghiên cứu",
-        "items": "PyTorch, Hugging Face, sentence-transformers, DuckDB, phân tích sáng chế, thực nghiệm tái lập được"
+        "label": "HackerRank",
+        "items": "SQL (Advanced) · SQL (Intermediate) (06/2026)"
       },
       {
-        "label": "Chuỗi cung ứng & ERP",
-        "items": "Oracle ERP, SAP Business One, Odoo, hoạch định cung ứng, quản lý tồn kho, xuất nhập khẩu"
+        "label": "DataCamp (12 khóa, 2026)",
+        "items": "Power BI · DAX · SQL (4) · Python và pandas (4) · Thống kê Python · Làm sạch dữ liệu GenAI"
       },
       {
-        "label": "Ngôn ngữ",
-        "items": "Tiếng Việt (bản ngữ), tiếng Anh (TOEIC 840/990), tiếng Trung (TOCFL cấp 2, A2)"
+        "label": "Coursera (2025)",
+        "items": "Supply Chain Analytics Essentials (Rutgers) · Supply Chain Planning (UC Irvine) · Supply Chain Management and Analytics, Using Data Analytics in Supply Chain (Unilever) · Excel Basics for Data Analysis (IBM)"
       }
     ],
-    "certifications": "HackerRank SQL (Advanced), DataCamp Power BI, Coursera Supply Chain Analytics (Rutgers) và Planning (UC Irvine)"
+    "activities": [
+      {
+        "lead": "Hiến máu tình nguyện",
+        "text": "Hội Chữ thập đỏ TP. Thủ Đức, 2022 – nay (7 lần); hỗ trợ y bác sĩ tổ chức ngày hội hiến máu."
+      },
+      {
+        "lead": "Học hỏi thực tế",
+        "text": "Tham quan hub Lazada và cảng Cái Mép (2022); workshop ULSC về hun trùng và logistics ngược."
+      }
+    ]
   },
   "zh-Hant": {
     "file": "Pham_Hong_Hieu_Resume_ZH-TW",
     "labels": {
       "summary": "個人簡介",
       "education": "學歷",
+      "skills": "專業技能",
       "experience": "工作經歷",
+      "erp": "ERP 系統",
       "projects": "專案經歷",
       "research": "研究發表",
-      "skills": "專業技能與證照",
       "certifications": "證照",
+      "activities": "課外活動",
       "github": "GitHub",
       "portfolio": "作品集",
       "website": "作品集",
-      "certsLink": "驗證 22 張證書"
+      "certsLink": "於作品集驗證全部 22 張證書"
     },
     "name": "范鴻孝 PHAM HONG HIEU (HAVEN)",
-    "headline": "供應鏈與數據分析  |  SQL · Python · Power BI",
+    "headline": "供應鏈與數據分析  |  SQL · Python · Power BI · ERP",
     "location": "臺灣桃園",
-    "summary": "具備採購、Oracle ERP 庫存管理與國際貨運承攬實務經驗，現就讀元智大學 Global MBA（GPA 4.00/4.00，排名 1/28）。擅長以 SQL、Python 與 Power BI 量化營運中影響服務水準與毛利的因素；與指導教授合著之論文獲 2026 中華民國科技管理學會年會接受。",
+    "summary": "具備兩年以上越南供應規劃、Oracle ERP 庫存管理、國際貨運承攬與進出口文件實務經驗。現就讀元智大學 Global MBA（GPA 4.00/4.00，第 2 學期排名 1/28），結合營運背景與 SQL、Python、Power BI，針對 OTIF、供應商績效、顧客留存與毛利進行端到端分析。與指導教授合著之技術融合生命週期論文獲 2026 中華民國科技管理學會年會接受。",
     "education": [
       {
         "degree": "全球企業管理碩士（Global MBA）",
@@ -301,18 +481,54 @@
         "school": "元智大學 管理學院",
         "place": "臺灣桃園",
         "bullets": [
-          "GPA 4.00/4.00 · 第 2 學期排名 1/28 · 優秀奉獻獎（2026）· 碩士獎學金",
-          "碩士論文：以 Python、DuckDB 與成長曲線模型分析 850 萬件 USPTO 專利（1976–2025）之技術融合"
+          "GPA 4.00/4.00（平均 96.19 分，32 學分）· 第 2 學期排名 1/28（第 1 學期 8/32）",
+          "國際事務處優秀奉獻獎（2026/06）· 碩士獎學金（2025/02）",
+          "華語密集課程第 2 級（2025/12）"
         ]
       },
       {
         "degree": "物流與供應鏈管理學士",
-        "dates": "2020 – 2024",
+        "dates": "2020/10 – 2024/07",
         "school": "胡志明市科技工程大學（HCM-UTE）",
-        "place": "越南",
+        "place": "越南胡志明市",
         "bullets": [
-          "GPA 8.46/10（優等）· 學業勵學獎學金 · Logistics Hub 競賽 63 隊中第 14 名"
+          "GPA 8.46/10，優等畢業（125 學分）· 操行成績 90/100（優秀）",
+          "學業勵學獎學金（2023/04）· Logistics Hub 競賽 63 隊中第 14 名（2023/03）"
         ]
+      }
+    ],
+    "skills": [
+      {
+        "label": "數據分析",
+        "items": "SQL（CTE、視窗函數；HackerRank 進階）、Python（pandas、NumPy、SciPy、Plotly）、DuckDB"
+      },
+      {
+        "label": "BI 與報表",
+        "items": "Power BI（資料模型、DAX、鑽取）、Excel、以 Python 自動產出 Excel 與 PowerPoint 報告"
+      },
+      {
+        "label": "統計方法",
+        "items": "χ² 檢定、置換檢定、成長曲線模型、世代分析、RFM、ABC/Pareto、購物籃分析"
+      },
+      {
+        "label": "機器學習與 NLP",
+        "items": "PyTorch、Hugging Face、sentence-transformers、少樣本文本分類（SetFit、FastFit）"
+      },
+      {
+        "label": "供應鏈與 ERP",
+        "items": "Oracle ERP、SAP Business One、Odoo、供應規劃、庫存標準、OTIF 與供應商 KPI"
+      },
+      {
+        "label": "物流與貿易",
+        "items": "海空運承攬、冷鏈貨物、產地證明、SI、VGM、檢疫、HS 稅則、Incoterms、L/C、T/T、D/P/D/A"
+      },
+      {
+        "label": "工具",
+        "items": "Git、GitHub Actions、pytest、Jupyter、Google Colab、VS Code、Microsoft Office"
+      },
+      {
+        "label": "語言能力",
+        "items": "越南語（母語）、英語（TOEIC 840/990，專業工作能力）、華語（TOCFL 2 級，A2）"
       }
     ],
     "experience": [
@@ -322,41 +538,59 @@
         "org": "Hoa Sen Group（鋼鐵與建材）",
         "place": "越南",
         "bullets": [
-          "追蹤國內與進口採購訂單及供應商進度，並處理客戶與供應商問題。",
-          "於 Oracle ERP 管理庫存，與倉庫及工廠協調調撥，並製作營運報表。",
-          "建立全國倉庫與配送據點的庫存標準。"
+          "向國內與進口供應商下單並追蹤進度，確保準時交貨。",
+          "於 Oracle ERP 管理庫存與交易資料，協調工廠與倉庫間的調撥。",
+          "建立全國倉庫與配送據點的庫存標準。",
+          "依庫存水準與需求制定進出口計畫。",
+          "製作營運報表，清楚透明地追蹤訂單與庫存。",
+          "處理客戶與供應商的客訴及各項問題。"
         ]
       },
       {
         "role": "物流業務專員",
         "dates": "2023/07 – 2024/08",
-        "org": "Kodai Sangyo (Vietnam) Co., Ltd.（貨運承攬）",
+        "org": "Kodai Sangyo (Vietnam) Co., Ltd.（冷鏈貨運承攬）",
         "place": "越南",
         "bullets": [
-          "向船公司與海外代理詢價，製作海運及空運報價。",
-          "依船期、報關、產地證明、檢疫及截關時間規劃冷鏈貨運。",
-          "透過電子郵件、電話與拜訪開發新客戶；洽談合約與付款條件，並追蹤應收帳款。"
+          "透過電子郵件行銷、電話開發與拜訪開拓新客戶，達成每月業績目標。",
+          "向船公司與海外代理更新空運、海運運價，每週及每月提供報價。",
+          "依船期與客戶需求規劃冷鏈貨運：內陸拖車、報關、產地證明、植物檢疫證明與截關時間。",
+          "與文件、操作、客服及協調部門合作，完整執行貨運並即時處理問題。",
+          "擬定服務合約，洽談條款與付款條件，並依約定信用期限收回帳款。"
         ]
       },
       {
         "role": "進出口實習生",
         "dates": "2023/01 – 2023/07",
-        "org": "Viet Logistics",
+        "org": "Viet Logistics（乾貨貨運承攬）",
         "place": "越南",
         "bullets": [
-          "製作商業發票、裝箱單、產地證明與裝船指示，並進行 HS 稅則歸類。",
-          "查價並向船公司訂艙；運用 Incoterms 2010/2020 與付款方式（L/C、T/T、D/P、D/A）。"
+          "準備報關文件（銷售合約、發票、裝箱單、產地證明、SI、VGM），並進行 HS 稅則歸類。",
+          "向船公司與代理查價、訂艙、報價，並依訂艙資訊安排裝櫃。",
+          "運用 Incoterms 2010/2020，計算兩端當地費用與附加費，處理 L/C、T/T、D/P、D/A 付款。",
+          "協同文件與操作部門追蹤貨況，並向潛在客戶介紹服務。"
         ]
       }
     ],
+    "erp": {
+      "title": "SAP Business One 與 Odoo",
+      "note": "實作練習",
+      "bullets": [
+        "生產：管理 Standard、Special、Disassembly 生產訂單，使用倒沖（Backflush）與手動發料。",
+        "MRP：依銷售訂單、預測與庫存水準規劃物料需求。",
+        "庫存：批號／序號管理、收發貨、效期追蹤、首選供應商與計量單位。",
+        "倉儲：設定多倉位與調撥；依需求與庫存建立採購單及調撥申請。"
+      ]
+    },
     "projects": [
       {
         "id": "fnb-supply-chain",
         "title": "食品飲料供應鏈分析（NordFresh Distribution）",
         "tools": "Python、Power BI、DAX",
         "bullets": [
-          "將 2,200 筆訂單明細與 5,040 筆庫存快照建為星型結構，並建立含 37 個 DAX 量值的 Power BI 儀表板。",
-          "嚴格 OTIF 89.4%（目標 95%）；兩家供應商佔 26% 訂單卻造成 55% 延遲，64.0K 美元營收延遲或短交。"
+          "將 2,200 筆訂單明細與 5,040 筆庫存快照（8 家供應商、5 個配送中心）清理為星型結構（2 事實表、6 維度表）。",
+          "建立供應商與配送中心計分卡、3 頁 Power BI 儀表板（37 個 DAX 量值）及 17 頁簡報。",
+          "嚴格 OTIF 為 89.4%（目標 95%）：兩家供應商處理 26% 訂單卻造成 55% 延遲；64.0K 美元（10.6%）營收延遲或短交；供應商改善計畫目標提升約 4 個百分點。"
         ]
       },
       {
@@ -364,8 +598,9 @@
         "title": "運輸 OTIF 根因分析（BharatLink Freight）",
         "tools": "Python、統計、Power BI",
         "bullets": [
-          "分析 3,582 筆 GPS 追蹤整車訂單（OTIF 38.6%）；固定 100 小時 ETA 使超過 1,200 公里的行程可行率為 0%。",
-          "設計 4 項規則的預警評分（precision 72%、recall 82%），搭配承運商重新招標，目標提升約 11.8 個百分點 OTIF。"
+          "清理 3,582 筆 GPS 追蹤整車訂單（日期格式混雜、350+ 筆地點不一致、移除個資），解釋 38.6% 的 OTIF。",
+          "以 SLA 可行性測試與路線基準證明固定 100 小時 ETA 使超過 1,200 公里的行程可行率為 0%；並以 χ²、Cramér’s V 檢定與 GPS 異常偵測。",
+          "設計 4 項規則的預警評分（precision 72%、recall 82%）與 27 個 DAX 量值的 Power BI 報表；搭配重新招標，目標提升約 11.8 個百分點。"
         ]
       },
       {
@@ -373,8 +608,9 @@
         "title": "電商顧客世代、留存與獲利分析",
         "tools": "Python、pandas、pytest、GitHub Actions",
         "bullets": [
-          "分析 17,415 位顧客的 51,290 筆訂單明細：2023 年營收 +24%，獲利 −12%，毛利率由 18.0% 降至 12.8%。",
-          "回購顧客（31%）貢獻 56% 獲利；折扣超過 20% 虧損 28.86 萬美元。以含單元測試與 CI 的 Python 套件交付。"
+          "開發含單元測試的 Python 套件，分析 17,415 位顧客的 51,290 筆訂單明細。",
+          "2023 年營收 +24%、獲利 −12%，各品類毛利率由 18.0% 降至 12.8%，顯示為全公司成本或定價變化。",
+          "回購顧客（31%）貢獻 56% 獲利；折扣超過 20% 虧損 28.86 萬美元；交付 Excel 報告與簡報。"
         ]
       },
       {
@@ -382,7 +618,16 @@
         "title": "ProtoSetFit：少樣本文本分類（3 人團隊）",
         "tools": "PyTorch、Hugging Face",
         "bullets": [
-          "SetFit 2×2 消融實驗（8-shot、5 個種子、置換檢定與 Holm 校正）：困難負樣本挖掘 51.94%，基準 51.08%。"
+          "於 8-shot 情緒分類上進行 SetFit 2×2 控制消融實驗（5 個種子、25 次實驗、20 次 λ 掃描）。",
+          "困難負樣本挖掘於凍結測試集達 51.94%，SetFit 為 51.08%；N=5 下未達顯著（Holm 校正）。"
+        ]
+      },
+      {
+        "id": "fastfit",
+        "title": "改良 FastFit 少樣本意圖分類（進行中）",
+        "tools": "PyTorch、統計",
+        "bullets": [
+          "於 77 類 BANKING77 資料集以固定 5-shot 協定重現 FastFit（NAACL 2024），並進行優化器與投影維度控制實驗。"
         ]
       }
     ],
@@ -390,48 +635,72 @@
       {
         "title": "首次與後續技術融合之生命週期軌跡：1976–2025年USPTO發明專利之證據",
         "status": "已接受，2026",
-        "venue": "中華民國科技管理學會年會（國立成功大學）· 與謝志宏教授合著"
+        "venue": "2026 中華民國科技管理學會年會（國立成功大學）· 與謝志宏教授合著",
+        "bullets": [
+          "以 1.346 億筆後向引用連結，將首次與後續技術融合建模為技術配對軌跡。",
+          "保留期 MAPE 為 0.259%（首次）與 0.833%（後續）；73.04% 的 IPC4 配對於 2025 年前再度活化。"
+        ]
+      },
+      {
+        "title": "透過專利分析追蹤技術融合：來自美國專利商標局專利的縱貫實證（1976–2025年）",
+        "status": "碩士論文，2026",
+        "venue": "元智大學 Global MBA 碩士論文",
+        "bullets": [
+          "以 Python 與 DuckDB 從 850 萬件專利建立 2,190 萬筆專利–技術配對事件。",
+          "於 1976–2019 年配適 Gompertz、Logistic 與指數模型；Gompertz 在 2020–2025 年保留期誤差最低。"
+        ]
       }
     ],
-    "skills": [
+    "certifications": [
       {
-        "label": "數據分析與 BI",
-        "items": "SQL（HackerRank 進階）、Python（pandas、SciPy）、Power BI（DAX）、Excel、統計分析"
+        "label": "語言",
+        "items": "TOEIC 聽力與閱讀 840/990（2024/10）· TOCFL 2 級，CEFR A2（2026/07）"
       },
       {
-        "label": "AI 與研究",
-        "items": "PyTorch、Hugging Face、sentence-transformers、DuckDB、專利分析、可重現實驗設計"
+        "label": "HackerRank",
+        "items": "SQL（進階）· SQL（中級）（2026/06）"
       },
       {
-        "label": "供應鏈與 ERP",
-        "items": "Oracle ERP、SAP Business One、Odoo、供應規劃、庫存管理、進出口、貨運承攬"
+        "label": "DataCamp（12 門，2026）",
+        "items": "Power BI · DAX · SQL（4 門）· Python 與 pandas（4 門）· Python 統計 · AI 資料清理"
       },
       {
-        "label": "語言能力",
-        "items": "越南語（母語）、英語（TOEIC 840/990）、華語（TOCFL 2 級，A2）"
+        "label": "Coursera（2025）",
+        "items": "Supply Chain Analytics Essentials（Rutgers）· Supply Chain Planning（UC Irvine）· Supply Chain Management and Analytics、Using Data Analytics in Supply Chain（Unilever）· Excel Basics for Data Analysis（IBM）"
       }
     ],
-    "certifications": "HackerRank SQL（進階）、DataCamp Power BI、Coursera 供應鏈分析與規劃（Rutgers、UC Irvine）"
+    "activities": [
+      {
+        "lead": "捐血志工",
+        "text": "守德市紅十字會，2022 年至今（7 次）；協助醫護人員舉辦捐血活動。"
+      },
+      {
+        "lead": "產業參訪",
+        "text": "Lazada 物流中心與蓋梅港參訪（2022）；ULSC 燻蒸與逆物流工作坊。"
+      }
+    ]
   },
   "zh-Hans": {
     "file": "Pham_Hong_Hieu_Resume_ZH-CN",
     "labels": {
       "summary": "个人简介",
       "education": "教育背景",
+      "skills": "专业技能",
       "experience": "工作经历",
+      "erp": "ERP 系统",
       "projects": "项目经历",
       "research": "研究成果",
-      "skills": "专业技能与证书",
       "certifications": "证书",
+      "activities": "课外活动",
       "github": "GitHub",
       "portfolio": "作品集",
       "website": "作品集",
-      "certsLink": "验证 22 张证书"
+      "certsLink": "在作品集验证全部 22 张证书"
     },
     "name": "范鸿孝 PHAM HONG HIEU (HAVEN)",
-    "headline": "供应链与数据分析  |  SQL · Python · Power BI",
+    "headline": "供应链与数据分析  |  SQL · Python · Power BI · ERP",
     "location": "台湾桃园",
-    "summary": "具备采购、Oracle ERP 库存管理与国际货运代理实务经验，现就读元智大学 Global MBA（GPA 4.00/4.00，排名 1/28）。擅长以 SQL、Python 与 Power BI 量化运营中影响服务水平与毛利的因素；与导师合著的论文被 2026 中华民国科技管理学会年会录用。",
+    "summary": "拥有两年以上越南供应计划、Oracle ERP 库存管理、国际货运代理与进出口单证实务经验。现就读元智大学 Global MBA（GPA 4.00/4.00，第 2 学期排名 1/28），将运营背景与 SQL、Python、Power BI 相结合，围绕 OTIF、供应商绩效、客户留存与毛利开展端到端分析。与导师合著的技术融合生命周期论文被 2026 中华民国科技管理学会年会录用。",
     "education": [
       {
         "degree": "全球工商管理硕士（Global MBA）",
@@ -439,18 +708,54 @@
         "school": "元智大学 管理学院",
         "place": "台湾桃园",
         "bullets": [
-          "GPA 4.00/4.00 · 第 2 学期排名 1/28 · 优秀奉献奖（2026）· 硕士奖学金",
-          "硕士论文：运用 Python、DuckDB 与增长曲线模型分析 850 万件 USPTO 专利（1976–2025）的技术融合"
+          "GPA 4.00/4.00（平均 96.19 分，32 学分）· 第 2 学期排名 1/28（第 1 学期 8/32）",
+          "国际事务处优秀奉献奖（2026.06）· 硕士奖学金（2025.02）",
+          "华语密集课程第 2 级（2025.12）"
         ]
       },
       {
         "degree": "物流与供应链管理学士",
-        "dates": "2020 – 2024",
+        "dates": "2020.10 – 2024.07",
         "school": "胡志明市科技工程大学（HCM-UTE）",
-        "place": "越南",
+        "place": "越南胡志明市",
         "bullets": [
-          "GPA 8.46/10（优等）· 学业鼓励奖学金 · Logistics Hub 竞赛 63 队中第 14 名"
+          "GPA 8.46/10，优等毕业（125 学分）· 综合测评 90/100（优秀）",
+          "学业鼓励奖学金（2023.04）· Logistics Hub 竞赛 63 队中第 14 名（2023.03）"
         ]
+      }
+    ],
+    "skills": [
+      {
+        "label": "数据分析",
+        "items": "SQL（CTE、窗口函数；HackerRank 高级）、Python（pandas、NumPy、SciPy、Plotly）、DuckDB"
+      },
+      {
+        "label": "BI 与报表",
+        "items": "Power BI（数据建模、DAX、钻取）、Excel、用 Python 自动生成 Excel 与 PowerPoint 报告"
+      },
+      {
+        "label": "统计方法",
+        "items": "χ² 检验、置换检验、增长曲线模型、同期群分析、RFM、ABC/Pareto、购物篮分析"
+      },
+      {
+        "label": "机器学习与 NLP",
+        "items": "PyTorch、Hugging Face、sentence-transformers、少样本文本分类（SetFit、FastFit）"
+      },
+      {
+        "label": "供应链与 ERP",
+        "items": "Oracle ERP、SAP Business One、Odoo、供应计划、库存标准、OTIF 与供应商 KPI"
+      },
+      {
+        "label": "物流与贸易",
+        "items": "海空运代理、冷链货物、原产地证、SI、VGM、检疫、HS 编码、Incoterms、L/C、T/T、D/P/D/A"
+      },
+      {
+        "label": "工具",
+        "items": "Git、GitHub Actions、pytest、Jupyter、Google Colab、VS Code、Microsoft Office"
+      },
+      {
+        "label": "语言能力",
+        "items": "越南语（母语）、英语（TOEIC 840/990，专业工作能力）、中文（TOCFL 2 级，A2）"
       }
     ],
     "experience": [
@@ -460,41 +765,59 @@
         "org": "Hoa Sen Group（钢铁与建材）",
         "place": "越南",
         "bullets": [
-          "跟踪国内与进口采购订单及供应商进度，并处理客户与供应商问题。",
-          "在 Oracle ERP 中管理库存，与仓库和工厂协调调拨，并编制运营报表。",
-          "建立全国仓库与配送网点的库存标准。"
+          "向国内与进口供应商下单并跟进进度，确保按时交货。",
+          "在 Oracle ERP 中管理库存与交易数据，协调工厂与仓库之间的调拨。",
+          "建立全国仓库与配送网点的库存标准。",
+          "根据库存水平与需求制定进出口计划。",
+          "编制运营报表，清晰透明地跟踪订单与库存。",
+          "处理客户与供应商的投诉及各类问题。"
         ]
       },
       {
         "role": "物流销售专员",
         "dates": "2023.07 – 2024.08",
-        "org": "Kodai Sangyo (Vietnam) Co., Ltd.（国际货运代理）",
+        "org": "Kodai Sangyo (Vietnam) Co., Ltd.（冷链货运代理）",
         "place": "越南",
         "bullets": [
-          "向船公司和海外代理询价，制作海运及空运报价。",
-          "根据船期、报关、原产地证、检疫及截关时间规划冷链货运。",
-          "通过邮件、电话和拜访开发新客户；洽谈合同与付款条件，并跟进应收账款。"
+          "通过邮件营销、电话开发与拜访开拓新客户，完成月度销售目标。",
+          "向船公司与海外代理更新空运、海运运价，每周及每月提供报价。",
+          "根据船期与客户需求规划冷链货运：内陆拖车、报关、原产地证、植物检疫证书与截关时间。",
+          "与单证、操作、客服及协调部门合作，完整执行货运并及时处理问题。",
+          "起草服务合同，洽谈条款与付款条件，并按约定账期回收应收账款。"
         ]
       },
       {
         "role": "进出口实习生",
         "dates": "2023.01 – 2023.07",
-        "org": "Viet Logistics",
+        "org": "Viet Logistics（干货货运代理）",
         "place": "越南",
         "bullets": [
-          "制作商业发票、装箱单、原产地证和托运指示，并进行 HS 编码归类。",
-          "询价并向船公司订舱；运用 Incoterms 2010/2020 与付款方式（L/C、T/T、D/P、D/A）。"
+          "准备报关单证（销售合同、发票、装箱单、原产地证、SI、VGM），并进行 HS 编码归类。",
+          "向船公司与代理询价、订舱、报价，并按订舱信息安排装箱。",
+          "运用 Incoterms 2010/2020，计算两端本地费用与附加费，处理 L/C、T/T、D/P、D/A 付款。",
+          "协同单证与操作部门跟踪货况，并向潜在客户介绍服务。"
         ]
       }
     ],
+    "erp": {
+      "title": "SAP Business One 与 Odoo",
+      "note": "实操练习",
+      "bullets": [
+        "生产：管理 Standard、Special、Disassembly 生产订单，采用倒冲（Backflush）与手工发料。",
+        "MRP：根据销售订单、预测与库存水平规划物料需求。",
+        "库存：批次／序列号管理、收发货、效期跟踪、首选供应商与计量单位。",
+        "仓储：设置多库位与调拨；根据需求与库存创建采购订单及调拨申请。"
+      ]
+    },
     "projects": [
       {
         "id": "fnb-supply-chain",
         "title": "食品饮料供应链分析（NordFresh Distribution）",
         "tools": "Python、Power BI、DAX",
         "bullets": [
-          "将 2,200 条订单明细与 5,040 条库存快照建为星型模型，并搭建含 37 个 DAX 度量值的 Power BI 看板。",
-          "严格 OTIF 89.4%（目标 95%）；两家供应商占 26% 订单却造成 55% 延迟，64.0K 美元收入延迟或短交。"
+          "将 2,200 条订单明细与 5,040 条库存快照（8 家供应商、5 个配送中心）清洗为星型模型（2 张事实表、6 张维度表）。",
+          "搭建供应商与配送中心计分卡、3 页 Power BI 看板（37 个 DAX 度量值）及 17 页汇报材料。",
+          "严格 OTIF 为 89.4%（目标 95%）：两家供应商承担 26% 订单却造成 55% 延迟；64.0K 美元（10.6%）收入延迟或短交；供应商整改计划目标提升约 4 个百分点。"
         ]
       },
       {
@@ -502,8 +825,9 @@
         "title": "运输 OTIF 根因分析（BharatLink Freight）",
         "tools": "Python、统计、Power BI",
         "bullets": [
-          "分析 3,582 条 GPS 跟踪整车订单（OTIF 38.6%）；固定 100 小时 ETA 使超过 1,200 公里的行程可行率为 0%。",
-          "设计 4 条规则的预警评分（precision 72%、recall 82%），结合承运商重新招标，目标提升约 11.8 个百分点 OTIF。"
+          "清洗 3,582 条 GPS 跟踪整车订单（日期格式混杂、350+ 条地点不一致、去除个人信息），解释 38.6% 的 OTIF。",
+          "通过 SLA 可行性测试与线路基准证明固定 100 小时 ETA 使超过 1,200 公里的行程可行率为 0%；并用 χ²、Cramér’s V 检验与 GPS 异常检测。",
+          "设计 4 条规则的预警评分（precision 72%、recall 82%）与 27 个 DAX 度量值的 Power BI 报表；结合重新招标，目标提升约 11.8 个百分点。"
         ]
       },
       {
@@ -511,8 +835,9 @@
         "title": "电商客户同期群、留存与盈利分析",
         "tools": "Python、pandas、pytest、GitHub Actions",
         "bullets": [
-          "分析 17,415 位客户的 51,290 条订单明细：2023 年收入 +24%，利润 −12%，毛利率由 18.0% 降至 12.8%。",
-          "回购客户（31%）贡献 56% 利润；折扣超过 20% 亏损 28.86 万美元。以含单元测试与 CI 的 Python 包交付。"
+          "开发含单元测试的 Python 包，分析 17,415 位客户的 51,290 条订单明细。",
+          "2023 年收入 +24%、利润 −12%，各品类毛利率由 18.0% 降至 12.8%，表明是全公司成本或定价变化。",
+          "回购客户（31%）贡献 56% 利润；折扣超过 20% 亏损 28.86 万美元；交付 Excel 报告与汇报材料。"
         ]
       },
       {
@@ -520,7 +845,16 @@
         "title": "ProtoSetFit：少样本文本分类（3 人团队）",
         "tools": "PyTorch、Hugging Face",
         "bullets": [
-          "SetFit 2×2 消融实验（8-shot、5 个种子、置换检验与 Holm 校正）：困难负样本挖掘 51.94%，基线 51.08%。"
+          "在 8-shot 情绪分类上开展 SetFit 2×2 控制消融实验（5 个种子、25 次实验、20 次 λ 扫描）。",
+          "困难负样本挖掘在冻结测试集上达到 51.94%，SetFit 为 51.08%；N=5 下未达显著（Holm 校正）。"
+        ]
+      },
+      {
+        "id": "fastfit",
+        "title": "改进 FastFit 少样本意图分类（进行中）",
+        "tools": "PyTorch、统计",
+        "bullets": [
+          "在 77 类 BANKING77 数据集上以固定 5-shot 协议复现 FastFit（NAACL 2024），并开展优化器与投影维度控制实验。"
         ]
       }
     ],
@@ -528,27 +862,49 @@
       {
         "title": "首次与后续技术融合的生命周期轨迹：1976–2025年 USPTO 发明专利的证据",
         "status": "已录用，2026",
-        "venue": "中华民国科技管理学会年会（国立成功大学）· 与谢志宏教授合著"
+        "venue": "2026 中华民国科技管理学会年会（国立成功大学）· 与谢志宏教授合著",
+        "bullets": [
+          "基于 1.346 亿条后向引用链接，将首次与后续技术融合建模为技术配对轨迹。",
+          "保留期 MAPE 为 0.259%（首次）与 0.833%（后续）；73.04% 的 IPC4 配对在 2025 年前再次激活。"
+        ]
+      },
+      {
+        "title": "通过专利分析追踪技术融合：来自美国专利商标局专利的纵向实证（1976–2025年）",
+        "status": "硕士论文，2026",
+        "venue": "元智大学 Global MBA 硕士论文",
+        "bullets": [
+          "用 Python 与 DuckDB 从 850 万件专利构建 2,190 万条专利–技术配对事件。",
+          "在 1976–2019 年拟合 Gompertz、Logistic 与指数模型；Gompertz 在 2020–2025 年保留期误差最低。"
+        ]
       }
     ],
-    "skills": [
+    "certifications": [
       {
-        "label": "数据分析与 BI",
-        "items": "SQL（HackerRank 高级）、Python（pandas、SciPy）、Power BI（DAX）、Excel、统计分析"
+        "label": "语言",
+        "items": "TOEIC 听力与阅读 840/990（2024.10）· TOCFL 2 级，CEFR A2（2026.07）"
       },
       {
-        "label": "AI 与研究",
-        "items": "PyTorch、Hugging Face、sentence-transformers、DuckDB、专利分析、可复现实验设计"
+        "label": "HackerRank",
+        "items": "SQL（高级）· SQL（中级）（2026.06）"
       },
       {
-        "label": "供应链与 ERP",
-        "items": "Oracle ERP、SAP Business One、Odoo、供应规划、库存管理、进出口、国际货运代理"
+        "label": "DataCamp（12 门，2026）",
+        "items": "Power BI · DAX · SQL（4 门）· Python 与 pandas（4 门）· Python 统计 · AI 数据清洗"
       },
       {
-        "label": "语言能力",
-        "items": "越南语（母语）、英语（TOEIC 840/990）、中文（TOCFL 2 级，A2）"
+        "label": "Coursera（2025）",
+        "items": "Supply Chain Analytics Essentials（Rutgers）· Supply Chain Planning（UC Irvine）· Supply Chain Management and Analytics、Using Data Analytics in Supply Chain（Unilever）· Excel Basics for Data Analysis（IBM）"
       }
     ],
-    "certifications": "HackerRank SQL（高级）、DataCamp Power BI、Coursera 供应链分析与规划（Rutgers、UC Irvine）"
+    "activities": [
+      {
+        "lead": "献血志愿者",
+        "text": "守德市红十字会，2022 年至今（7 次）；协助医护人员组织献血活动。"
+      },
+      {
+        "lead": "行业实践",
+        "text": "参访 Lazada 物流中心与盖梅港（2022）；ULSC 熏蒸与逆向物流工作坊。"
+      }
+    ]
   }
 }
