@@ -67,7 +67,7 @@
       },
       {
         "label": "Logistics & Trade",
-        "items": "Sea/air forwarding, reefer cargo, C/O, SI, VGM, phyto, HS codes, Incoterms 2010/2020, L/C, T/T, D/P/D/A"
+        "items": "Sea/air forwarding, reefer cargo, C/O, SI, VGM, phyto, HS codes, Incoterms, L/C, T/T, D/P, D/A"
       },
       {
         "label": "Tools",
@@ -102,7 +102,7 @@
         "bullets": [
           "Prospected new accounts through e-mail campaigns, cold calls and client meetings to meet monthly sales targets.",
           "Updated air and ocean freight rates from carriers and overseas agents; issued weekly and monthly quotations.",
-          "Planned refrigerated shipments around vessel schedules and customer requests: domestic trucking, customs declaration, C/O, phytosanitary certificates and cut-off times.",
+          "Planned reefer shipments around vessel schedules: trucking, customs, C/O, phytosanitary certificates, cut-off times.",
           "Worked with documentation, operations, customer service and coordination teams to run shipments end to end.",
           "Drafted service contracts, negotiated terms and payment, and collected receivables in line with the agreed credit terms."
         ],
@@ -251,7 +251,7 @@
     "name": "PHẠM HỒNG HIẾU (HAVEN)",
     "headline": "Chuyên viên Phân tích Chuỗi cung ứng & Dữ liệu  |  SQL · Python · Power BI · ERP",
     "location": "Đào Viên, Đài Loan",
-    "summary": "Hơn hai năm kinh nghiệm thực tế về hoạch định cung ứng, quản lý tồn kho trên Oracle ERP, giao nhận vận tải quốc tế và chứng từ xuất nhập khẩu tại Việt Nam. Hiện học Global MBA tại Đại học Nguyên Trí (Đài Loan) với GPA 4.00/4.00, hạng 1/28; kết hợp nền tảng vận hành với SQL, Python và Power BI để phân tích trọn quy trình về OTIF, hiệu quả nhà cung cấp, giữ chân khách hàng và biên lợi nhuận. Đồng tác giả bài báo về vòng đời hội tụ công nghệ được chấp nhận tại Hội nghị thường niên CSMOT 2026.",
+    "summary": "Hơn hai năm kinh nghiệm thực tế về hoạch định cung ứng, quản lý tồn kho trên Oracle ERP, giao nhận vận tải quốc tế và chứng từ xuất nhập khẩu tại Việt Nam. Hiện học Global MBA tại Đại học Nguyên Trí (Đài Loan) với GPA 4.00/4.00, hạng 1/28; kết hợp nền tảng vận hành với SQL, Python và Power BI để phân tích trọn quy trình về OTIF, hiệu quả nhà cung cấp, giữ chân khách hàng và biên lợi nhuận. Đồng tác giả bài báo được chấp nhận tại Hội nghị CSMOT 2026.",
     "education": [
       {
         "degree": "Thạc sĩ Quản trị Kinh doanh Toàn cầu (Global MBA)",
@@ -333,7 +333,7 @@
         "bullets": [
           "Tìm kiếm khách hàng mới qua email marketing, gọi điện và gặp mặt để đạt chỉ tiêu doanh số tháng.",
           "Cập nhật cước hàng không, đường biển từ hãng tàu, đại lý nước ngoài; gửi báo giá hằng tuần và hằng tháng.",
-          "Lên kế hoạch lô hàng lạnh theo lịch tàu và yêu cầu khách hàng: vận tải nội địa, khai báo hải quan, C/O, kiểm dịch thực vật và giờ cắt máng.",
+          "Lên kế hoạch lô hàng lạnh theo lịch tàu: vận tải nội địa, hải quan, C/O, kiểm dịch thực vật, giờ cắt máng.",
           "Phối hợp bộ phận chứng từ, vận hành, chăm sóc khách hàng và điều phối để xử lý lô hàng trọn gói và các sự cố phát sinh.",
           "Soạn hợp đồng dịch vụ, đàm phán điều khoản, thanh toán và thu hồi công nợ theo thỏa thuận."
         ],
@@ -346,9 +346,8 @@
         "place": "TP. Hồ Chí Minh, Việt Nam",
         "bullets": [
           "Lập bộ chứng từ thông quan (hợp đồng, hóa đơn, phiếu đóng gói, C/O, SI, VGM) và áp mã HS cho hàng hóa.",
-          "Kiểm tra giá với hãng tàu, đại lý; đặt chỗ, lập báo giá và lên lịch đóng hàng theo booking.",
-          "Áp dụng Incoterms 2010/2020, tính phí địa phương, phụ phí và xử lý thanh toán L/C, T/T, D/P, D/A.",
-          "Phối hợp bộ phận chứng từ, vận hành theo dõi lô hàng; giới thiệu dịch vụ cho khách hàng mới."
+          "Kiểm tra giá, đặt chỗ với hãng tàu, lập báo giá, lên lịch đóng hàng và cùng bộ phận vận hành theo dõi lô hàng.",
+          "Áp dụng Incoterms 2010/2020, tính phí địa phương, phụ phí và xử lý thanh toán L/C, T/T, D/P, D/A."
         ],
         "reference": "Chị Ngọc Xuân, Quản lý"
       }
@@ -416,7 +415,7 @@
       {
         "title": "Lifecycle Trajectories of First-Time and Subsequent Technology Convergence: Evidence from USPTO Utility Patents, 1976–2025",
         "status": "Được chấp nhận, 2026",
-        "venue": "Hội nghị thường niên CSMOT 2026, Đại học Quốc lập Thành Công · cùng GS. Chih-Hung Hsieh",
+        "venue": "Hội nghị CSMOT 2026, ĐH Quốc lập Thành Công · cùng GS. Chih-Hung Hsieh",
         "bullets": [
           "Mô hình hóa hội tụ lần đầu và lặp lại theo quỹ đạo từng cặp trên 134,6 triệu liên kết trích dẫn.",
           "MAPE kiểm tra 0,259% (lần đầu) và 0,833% (lặp lại); 73,04% cặp IPC4 đã tái kích hoạt đến năm 2025."
@@ -491,8 +490,7 @@
         "place": "臺灣桃園",
         "bullets": [
           "GPA 4.00/4.00（平均 96.19 分，32 學分）· 第 2 學期排名 1/28（第 1 學期 8/32）",
-          "國際事務處優秀奉獻獎（2026/06）· 碩士獎學金（2025/02）",
-          "華語密集課程第 2 級（2025/12）"
+          "國際事務處優秀奉獻獎（2026/06）· 碩士獎學金（2025/02） · 華語密集課程第 2 級（2025/12）"
         ]
       },
       {
@@ -577,9 +575,8 @@
         "place": "越南胡志明市",
         "bullets": [
           "準備報關文件（銷售合約、發票、裝箱單、產地證明、SI、VGM），並進行 HS 稅則歸類。",
-          "向船公司與代理查價、訂艙、報價，並依訂艙資訊安排裝櫃。",
-          "運用 Incoterms 2010/2020，計算兩端當地費用與附加費，處理 L/C、T/T、D/P、D/A 付款。",
-          "協同文件與操作部門追蹤貨況，並向潛在客戶介紹服務。"
+          "向船公司與代理查價、訂艙、報價，依訂艙安排裝櫃，並與操作部門追蹤貨況。",
+          "運用 Incoterms 2010/2020，計算兩端當地費用與附加費，處理 L/C、T/T、D/P、D/A 付款。"
         ],
         "reference": "Ngoc Xuan 女士，經理"
       }
@@ -722,8 +719,7 @@
         "place": "台湾桃园",
         "bullets": [
           "GPA 4.00/4.00（平均 96.19 分，32 学分）· 第 2 学期排名 1/28（第 1 学期 8/32）",
-          "国际事务处优秀奉献奖（2026.06）· 硕士奖学金（2025.02）",
-          "华语密集课程第 2 级（2025.12）"
+          "国际事务处优秀奉献奖（2026.06）· 硕士奖学金（2025.02） · 华语密集课程第 2 级（2025.12）"
         ]
       },
       {
@@ -808,9 +804,8 @@
         "place": "越南胡志明市",
         "bullets": [
           "准备报关单证（销售合同、发票、装箱单、原产地证、SI、VGM），并进行 HS 编码归类。",
-          "向船公司与代理询价、订舱、报价，并按订舱信息安排装箱。",
-          "运用 Incoterms 2010/2020，计算两端本地费用与附加费，处理 L/C、T/T、D/P、D/A 付款。",
-          "协同单证与操作部门跟踪货况，并向潜在客户介绍服务。"
+          "向船公司与代理询价、订舱、报价，按订舱安排装箱，并与操作部门跟踪货况。",
+          "运用 Incoterms 2010/2020，计算两端本地费用与附加费，处理 L/C、T/T、D/P、D/A 付款。"
         ],
         "reference": "Ngoc Xuan 女士，经理"
       }

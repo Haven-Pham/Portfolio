@@ -162,7 +162,7 @@ def build(lang, c, profile, projects):
     colon = "：" if lang in EAST_ASIA else ": "
 
     def section(title):
-        para(doc, "4. Section Headers", title, before=6, after=2)
+        para(doc, "4. Section Headers", title, before=6, after=2).paragraph_format.keep_with_next = True
 
     def heading(style, left, right, *, after=0):
         """Entry heading: bold left text, right-aligned date/place/link, kept with its body."""
@@ -200,6 +200,9 @@ def build(lang, c, profile, projects):
         heading("9. Employer Name", e["org"], e["place"], after=1).paragraph_format.space_before = Pt(0)
         bullets(e["bullets"])
         if e.get("reference"):
+            # Keep the whole role on one page so the reference never lands alone at the top of the next.
+            for b in doc.paragraphs[-len(e["bullets"]):]:
+                b.paragraph_format.keep_with_next = True
             p = para(doc, "9. Employer Name", after=0)
             p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.RIGHT
             lab = p.add_run(labels["reference"] + colon); lab.bold = True; lab.italic = True
