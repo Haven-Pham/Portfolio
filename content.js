@@ -96,10 +96,9 @@ window.PORTFOLIO_RECORDS = {
       ],
       "status": "completed",
       "documentFile": null,
-      "githubUrl": null,
+      "githubUrl": "https://github.com/Haven-Pham/fnb-supply-chain-analytics",
       "demoUrl": null,
-      "number": "01",
-      "pendingRepo": "https://github.com/Haven-Pham/fnb-supply-chain-analytics"
+      "number": "01"
     },
     {
       "id": "transport-otif",
@@ -113,10 +112,9 @@ window.PORTFOLIO_RECORDS = {
       ],
       "status": "completed",
       "documentFile": null,
-      "githubUrl": null,
+      "githubUrl": "https://github.com/Haven-Pham/transport-logistics-otif-analytics",
       "demoUrl": null,
-      "number": "02",
-      "pendingRepo": "https://github.com/Haven-Pham/transport-logistics-otif-analytics"
+      "number": "02"
     },
     {
       "id": "protosetfit",
@@ -130,10 +128,9 @@ window.PORTFOLIO_RECORDS = {
       ],
       "status": "research",
       "documentFile": null,
-      "githubUrl": null,
+      "githubUrl": "https://github.com/Haven-Pham/ProtoSetFit",
       "demoUrl": null,
-      "number": "03",
-      "pendingRepo": "https://github.com/Haven-Pham/ProtoSetFit"
+      "number": "03"
     },
     {
       "id": "fastfit",
@@ -179,10 +176,9 @@ window.PORTFOLIO_RECORDS = {
       ],
       "status": "coursework",
       "documentFile": null,
-      "githubUrl": null,
+      "githubUrl": "https://github.com/Haven-Pham/customer-analytics-playbook",
       "demoUrl": null,
-      "number": "06",
-      "pendingRepo": "https://github.com/Haven-Pham/customer-analytics-playbook"
+      "number": "06"
     },
     {
       "id": "sql",
