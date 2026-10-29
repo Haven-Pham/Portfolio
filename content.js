@@ -167,7 +167,7 @@ window.PORTFOLIO_RECORDS = {
       ],
       "status": "completed",
       "number": "05",
-      "documentFile": "projects/ecommerce_customer_cohort_retention_profitability/ecommerce_customer_cohort_retention_profitability_analysis.ipynb",
+      "documentFile": null,
       "githubUrl": "https://github.com/Haven-Pham/ecommerce-cohort-retention-analysis",
       "demoUrl": null
     },

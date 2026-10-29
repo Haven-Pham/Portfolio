@@ -30,6 +30,22 @@ HTML5, CSS3 and vanilla JavaScript. `data/*.json` is the source of truth; `main.
 - The "Live from GitHub" panel calls the public GitHub API in the browser, so new repositories appear on the site without editing it.
 - Research is summary-only while manuscripts are under review.
 
+## Security, privacy and web standards
+
+| Area | What is in place |
+|---|---|
+| Transport | HTTPS only, with HSTS preload |
+| Security headers (`vercel.json`) | Content-Security-Policy (scripts only from this site; fonts from Google Fonts; API calls only to GitHub), `X-Frame-Options: DENY` and `frame-ancestors 'none'` against clickjacking, `nosniff`, `Referrer-Policy`, `Permissions-Policy` (camera, microphone, location and payment disabled), `Cross-Origin-Opener-Policy` |
+| What gets published (`.vercelignore`) | Only the page, its scripts and styles, `data/`, `assets/` and `projects/`. CMS scripts, docs, resume sources and build scripts stay in the repository but are not served |
+| Privacy | No cookies, analytics or third-party trackers; language and theme preferences stay in the visitor's browser. Certificates are published with ID numbers and dates of birth redacted |
+| Secrets | The CMS GitHub token lives in Google Apps Script properties, never in this repository |
+| Accessibility | WCAG 2.2 AA: skip link, visible focus, contrast, keyboard-operable menus, reduced-motion support |
+| Discoverability | Canonical URL, `hreflang` for the four languages, `sitemap.xml`, `robots.txt`, Open Graph and JSON-LD |
+| Housekeeping | Custom `404.html`; `/.well-known/security.txt` (RFC 9116) with a contact address |
+
+When adding a new external service (for example an analytics tool or embedded video), add its domain to the
+Content-Security-Policy in `vercel.json`, or the browser will block it.
+
 ## Updating content
 
 | Task | How |
