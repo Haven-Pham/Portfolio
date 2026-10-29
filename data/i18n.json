@@ -197,19 +197,68 @@
         "methods": "Validated Python package for cohorts and retention, size-weighted retention curves, margin diagnosis by discount band and category, unit tests, and a CI workflow that re-runs the notebook on every push; Excel report and executive deck.",
         "evidence": "2023 sales +24% but profit −12% as margin fell from 18.0% to 12.8% across every category. Repeat buyers are 31% of customers but 56% of profit; discounts above 20% lost $288.6K."
       },
-      "analytics-playbook": {
-        "title": "Customer Analytics Playbook",
-        "description": "Eight notebooks covering the core customer-analytics toolkit: EDA, Pareto, ABC, RFM, cohort, market basket, funnel and Sankey flows.",
-        "goal": "Build a reusable set of analyses that answer common commercial questions: who the best customers are, what sells together and where conversion drops.",
-        "methods": "Python (pandas, Plotly, mlxtend), quantile scoring, association rules, funnel step conversion and Sankey journey mapping.",
-        "evidence": "Coursework from a data-analytics programme, published as documented notebooks."
-      },
       "sql": {
         "title": "SQL for Supply Chain Analytics",
         "description": "A small, reproducible SQL starter on a synthetic order and shipment dataset.",
         "goal": "Calculate fulfilment lead time, late deliveries and order-level operational indicators.",
         "methods": "SQL joins, CASE logic, grouping and window functions, with sample CSV and SQL files.",
         "evidence": "Starter project with synthetic data; not an employer performance analysis."
+      },
+      "funnel-conversion": {
+        "title": "Product Performance & Conversion Funnel Analysis",
+        "description": "Revenue, refunds and six-step purchase funnels for four products across 472,871 sessions and 1.19M page views.",
+        "goal": "Find which products earn their place, where each funnel leaks, and which traffic is most likely to buy when it lands.",
+        "methods": "Refund-adjusted product revenue; funnels compared only while all four products were on sale; a random forest restricted to landing-time signals to avoid leakage; Excel results workbook.",
+        "evidence": "Mr. Fuzzy earns 62% of net revenue but refunds reached 10.6% in Q3 2014. 59% of catalogue visitors open Mr. Fuzzy vs about 11% for the Love Bear, which converts better once opened (56% vs 43% to cart). Desktop converts at 8–10%, mobile at about 3%."
+      },
+      "journey-sankey": {
+        "title": "Customer Journey Sankey: From Click to Checkout",
+        "description": "Traffic source → landing page → outcome for 472,871 sessions, drawn as a multi-stage Sankey diagram.",
+        "goal": "Show how traffic flows to orders and identify the landing page that really converts best on a fair comparison.",
+        "methods": "Session-level journeys with organic and direct traffic separated; landing-page timelines and device mix; same-period, same-device comparison with a 95% confidence interval.",
+        "evidence": "/lander-5 beats /lander-2 by +1.57 pp (95% CI +1.03 to +2.12) for desktop non-brand traffic. Site-wide conversion doubled from 4.1% to 8.4%, which flatters later pages; /lander-3 is low because it serves only mobile."
+      },
+      "channel-pareto": {
+        "title": "Marketing Channel Pareto: Can TeddyWorld Cut Its Ad Budget in Half?",
+        "description": "Pareto analysis of $1.94M revenue from 32,313 orders across traffic sources, with conversion, order value and margin.",
+        "goal": "Find the sources that carry revenue and decide what evidence a 50% advertising cut would still need.",
+        "methods": "Validated many-to-one join of orders to sessions; Pareto with cumulative share; untagged traffic split into organic search and direct; conversion, revenue per session and gross margin by source.",
+        "evidence": "Two of four sources produce 85% of revenue; the gsearch non-brand campaign alone produces 58%. socialbook converts at 3.2%, half the other sources, so it is the first candidate for a staged cut."
+      },
+      "abc-customers": {
+        "title": "ABC Customer Profit Analysis",
+        "description": "ABC classification of 17,415 e-commerce customers by lifetime profit, with profiling and a loss-making group.",
+        "goal": "Show which customers deserve account-management capacity and where profit is being lost.",
+        "methods": "Key validation and repair before joining; ABC thresholds at 80% and 95% of cumulative profit; income and occupation profiling; discount analysis of loss-making customers; customer-level list in Excel.",
+        "evidence": "29% of profitable customers earn 80% of profit, and demographics do not separate the groups. 3,695 loss-making customers destroy $267K (20% of A–C profit); 78% of their lines carry discounts above 20%."
+      },
+      "rfm-segmentation": {
+        "title": "RFM Customer Segmentation",
+        "description": "Recency, frequency and monetary scoring of 17,415 customers mapped to eleven CRM segments.",
+        "goal": "Tell the CRM team whom to reward, whom to develop and whom to win back.",
+        "methods": "Net revenue after discount; fixed snapshot date; quintile R and M scores and tie-safe F bins; standard RFM segment grid; treemaps; customer-level scores exported for campaign audiences.",
+        "evidence": "Promising and Cannot Lose Them hold 80.5% of revenue. 88.7% of customers ordered once or twice, so the second order is the main growth lever; Champions and Loyal are 0.6% of customers but spend about 3× more per head."
+      },
+      "market-basket": {
+        "title": "Market Basket Analysis: What Sells Together?",
+        "description": "Self-join co-occurrence and Apriori association rules on 25,728 orders across 17 subcategories.",
+        "goal": "Find bundles and recommendations that are backed by evidence, not by chance.",
+        "methods": "Self-join pair counts with support, confidence and lift; mlxtend Apriori at two support thresholds; lift heatmap; support-versus-lift robustness check.",
+        "evidence": "Rules with lift near 4.2 rest on about 26 orders. With at least 0.5% support the strongest lift is 1.38, and 52% of orders hold a single subcategory, so basket size is the bigger opportunity than any bundle."
+      },
+      "netflix-eda": {
+        "title": "Netflix Catalogue Exploratory Data Analysis",
+        "description": "Cleaning, feature engineering and nine charts profiling 8,807 Netflix titles as of 2021.",
+        "goal": "Give a content-strategy team a factual picture of the catalogue: mix, audiences, growth and sources.",
+        "methods": "Repair of misplaced running times, missing-value strategy, split-and-explode of multi-value fields, time-series, heatmap and text-frequency analysis.",
+        "evidence": "Films are 70% of titles, but the TV share of additions rose from 25% (2018) to 34% (2021). 67% of series have one season; adult-only ratings cover 46%; nearly half of titles are International."
+      },
+      "otd-issue-tree": {
+        "title": "Why Did On-Time Delivery Fall? MECE Metric & Issue Tree",
+        "description": "A structured root-cause framework for a 12-point drop in on-time delivery at an electronics plant.",
+        "goal": "Decompose the OTD drop exactly, turn bottlenecks into testable hypotheses and set the order of investigation.",
+        "methods": "Metric tree by first-delayed stage, issue tree with nine hypotheses and the evidence each needs, MECE validation, decision rules; a Python script checks the arithmetic in CI.",
+        "evidence": "Illustrative case: OTD fell from 96% to 84% as late orders rose from 40 to 160. Production (65) and procurement (55) are where 75% of late orders first slipped; downtime (H3) and late supply (H1) are tested first."
       }
     },
     "stackHeading": "From Data to Decisions",
@@ -741,19 +790,68 @@
         "methods": "Package Python có kiểm tra dữ liệu cho cohort và retention, đường retention có trọng số theo quy mô, chẩn đoán biên lợi nhuận theo mức giảm giá và ngành hàng, unit test và CI tự chạy lại notebook mỗi lần push; kèm báo cáo Excel và slide.",
         "evidence": "Năm 2023 doanh thu +24% nhưng lợi nhuận −12% do biên giảm từ 18,0% xuống 12,8% ở mọi ngành hàng. Khách mua lặp lại chiếm 31% nhưng tạo 56% lợi nhuận; giảm giá trên 20% làm lỗ 288,6 nghìn USD."
       },
-      "analytics-playbook": {
-        "title": "Bộ công cụ phân tích khách hàng",
-        "description": "Tám notebook bao quát bộ công cụ phân tích khách hàng cốt lõi: EDA, Pareto, ABC, RFM, cohort, giỏ hàng, phễu chuyển đổi và luồng Sankey.",
-        "goal": "Xây dựng bộ phân tích tái sử dụng được cho các câu hỏi kinh doanh phổ biến: khách hàng giá trị nhất là ai, sản phẩm nào bán kèm nhau, chuyển đổi rơi ở đâu.",
-        "methods": "Python (pandas, Plotly, mlxtend), chấm điểm theo phân vị, luật kết hợp, tỷ lệ chuyển đổi theo bước phễu và bản đồ hành trình Sankey.",
-        "evidence": "Bài tập từ chương trình phân tích dữ liệu, công bố dưới dạng notebook có tài liệu."
-      },
       "sql": {
         "title": "SQL cho phân tích chuỗi cung ứng",
         "description": "Dự án SQL nhỏ, tái lập được trên bộ dữ liệu đơn hàng và vận chuyển giả lập.",
         "goal": "Tính thời gian đáp ứng đơn hàng, số đơn giao trễ và các chỉ số vận hành theo đơn.",
         "methods": "SQL JOIN, CASE, GROUP BY và hàm cửa sổ, kèm file CSV và SQL mẫu.",
         "evidence": "Dự án khởi đầu dùng dữ liệu giả lập; không phải phân tích hiệu suất của doanh nghiệp."
+      },
+      "funnel-conversion": {
+        "title": "Phân tích hiệu quả sản phẩm & phễu chuyển đổi",
+        "description": "Doanh thu, hoàn tiền và phễu mua hàng 6 bước của 4 sản phẩm trên 472.871 phiên và 1,19 triệu lượt xem trang.",
+        "goal": "Xác định sản phẩm nào đáng giữ, phễu của từng sản phẩm rò rỉ ở đâu và nguồn truy cập nào dễ mua hàng nhất ngay khi vào web.",
+        "methods": "Doanh thu sau hoàn tiền; so sánh phễu chỉ trong giai đoạn cả 4 sản phẩm cùng bán; random forest chỉ dùng tín hiệu lúc vào trang để tránh rò rỉ dữ liệu; báo cáo Excel.",
+        "evidence": "Mr. Fuzzy tạo 62% doanh thu thuần nhưng tỷ lệ hoàn tiền lên tới 10,6% quý 3/2014. 59% khách ở trang danh mục mở Mr. Fuzzy so với khoảng 11% cho Love Bear, dù Love Bear chuyển vào giỏ tốt hơn (56% so với 43%). Desktop chuyển đổi 8–10%, mobile khoảng 3%."
+      },
+      "journey-sankey": {
+        "title": "Hành trình khách hàng bằng Sankey: từ click đến thanh toán",
+        "description": "Nguồn truy cập → trang đích → kết quả của 472.871 phiên, thể hiện bằng biểu đồ Sankey nhiều tầng.",
+        "goal": "Cho thấy luồng truy cập dẫn đến đơn hàng và tìm trang đích thực sự chuyển đổi tốt nhất khi so sánh công bằng.",
+        "methods": "Hành trình theo phiên, tách organic và direct; dòng thời gian và cơ cấu thiết bị của từng trang đích; so sánh cùng giai đoạn, cùng thiết bị với khoảng tin cậy 95%.",
+        "evidence": "/lander-5 hơn /lander-2 +1,57 điểm % (KTC 95% từ +1,03 đến +2,12) với traffic desktop non-brand. Tỷ lệ chuyển đổi toàn site tăng gấp đôi từ 4,1% lên 8,4%, làm các trang ra sau trông tốt hơn; /lander-3 thấp vì chỉ phục vụ mobile."
+      },
+      "channel-pareto": {
+        "title": "Pareto kênh marketing: TeddyWorld có thể cắt nửa ngân sách quảng cáo?",
+        "description": "Phân tích Pareto 1,94 triệu USD doanh thu từ 32.313 đơn theo nguồn truy cập, kèm chuyển đổi, giá trị đơn và biên lợi nhuận.",
+        "goal": "Tìm các nguồn gánh doanh thu và xác định cần thêm bằng chứng gì trước khi cắt 50% ngân sách quảng cáo.",
+        "methods": "Join đơn hàng với phiên có kiểm tra many-to-one; Pareto và tỷ trọng lũy kế; tách traffic không gắn tag thành organic search và direct; chuyển đổi, doanh thu mỗi phiên và biên lợi nhuận theo nguồn.",
+        "evidence": "2/4 nguồn tạo 85% doanh thu; riêng chiến dịch gsearch non-brand tạo 58%. socialbook chuyển đổi 3,2%, bằng một nửa các nguồn khác, nên là ứng viên đầu tiên khi cắt giảm theo từng bước."
+      },
+      "abc-customers": {
+        "title": "Phân tích ABC khách hàng theo lợi nhuận",
+        "description": "Phân loại ABC 17.415 khách hàng thương mại điện tử theo lợi nhuận tích lũy, kèm hồ sơ khách hàng và nhóm gây lỗ.",
+        "goal": "Chỉ ra khách hàng nào xứng đáng được chăm sóc riêng và lợi nhuận đang bị mất ở đâu.",
+        "methods": "Kiểm tra và sửa khóa trước khi join; ngưỡng ABC 80% và 95% lợi nhuận lũy kế; hồ sơ theo thu nhập và nghề nghiệp; phân tích giảm giá của nhóm gây lỗ; danh sách khách hàng trong Excel.",
+        "evidence": "29% khách có lãi tạo 80% lợi nhuận và nhân khẩu học không phân biệt được các nhóm. 3.695 khách gây lỗ làm mất 267 nghìn USD (20% lợi nhuận nhóm A–C); 78% dòng đơn của họ giảm giá trên 20%."
+      },
+      "rfm-segmentation": {
+        "title": "Phân khúc khách hàng RFM",
+        "description": "Chấm điểm Recency, Frequency, Monetary cho 17.415 khách hàng và ánh xạ vào 11 phân khúc CRM.",
+        "goal": "Giúp đội CRM biết nên thưởng, phát triển hay kéo lại khách hàng nào.",
+        "methods": "Doanh thu thuần sau giảm giá; ngày chốt cố định; điểm R và M theo ngũ phân vị, F theo các mức tần suất riêng biệt; lưới phân khúc RFM chuẩn; treemap; xuất điểm từng khách để tạo tệp chiến dịch.",
+        "evidence": "Promising và Cannot Lose Them chiếm 80,5% doanh thu. 88,7% khách chỉ mua 1–2 lần nên đơn thứ hai là đòn bẩy tăng trưởng chính; Champions và Loyal chỉ 0,6% khách nhưng chi tiêu gấp khoảng 3 lần mỗi người."
+      },
+      "market-basket": {
+        "title": "Phân tích giỏ hàng: sản phẩm nào được mua cùng nhau?",
+        "description": "Đếm đồng xuất hiện bằng self-join và luật kết hợp Apriori trên 25.728 đơn hàng, 17 nhóm sản phẩm.",
+        "goal": "Tìm bundle và gợi ý sản phẩm có bằng chứng thật, không phải do ngẫu nhiên.",
+        "methods": "Đếm cặp bằng self-join với support, confidence, lift; Apriori (mlxtend) ở hai ngưỡng support; heatmap lift; kiểm tra độ tin cậy support–lift.",
+        "evidence": "Các luật lift khoảng 4,2 chỉ dựa trên khoảng 26 đơn. Với support từ 0,5%, lift cao nhất là 1,38 và 52% đơn chỉ có một nhóm sản phẩm, nên tăng số món trong giỏ là cơ hội lớn hơn bất kỳ bundle nào."
+      },
+      "netflix-eda": {
+        "title": "Phân tích khám phá danh mục Netflix",
+        "description": "Làm sạch, tạo biến và 9 biểu đồ phân tích 8.807 nội dung Netflix năm 2021.",
+        "goal": "Cung cấp cho đội chiến lược nội dung bức tranh thực tế về danh mục: cơ cấu, khán giả, tăng trưởng và nguồn cung.",
+        "methods": "Sửa thời lượng bị ghi nhầm cột, chiến lược xử lý dữ liệu thiếu, tách và explode trường nhiều giá trị, phân tích chuỗi thời gian, heatmap và tần suất từ.",
+        "evidence": "Phim lẻ chiếm 70% nhưng tỷ trọng TV Show trong nội dung mới tăng từ 25% (2018) lên 34% (2021). 67% series chỉ có một mùa; nhãn dành cho người lớn chiếm 46%; gần một nửa nội dung là quốc tế."
+      },
+      "otd-issue-tree": {
+        "title": "Vì sao tỷ lệ giao hàng đúng hạn giảm? Metric Tree & Issue Tree theo MECE",
+        "description": "Khung phân tích nguyên nhân có cấu trúc cho mức giảm 12 điểm % OTD tại một nhà máy linh kiện điện tử.",
+        "goal": "Phân rã chính xác mức giảm OTD, chuyển điểm nghẽn thành giả thuyết kiểm chứng được và xác định thứ tự điều tra.",
+        "methods": "Metric tree theo công đoạn trễ đầu tiên, issue tree 9 giả thuyết kèm dữ liệu cần kiểm chứng, kiểm tra MECE, quy tắc ra quyết định; script Python tự kiểm tra số liệu trong CI.",
+        "evidence": "Tình huống giả định: OTD giảm từ 96% xuống 84% khi đơn trễ tăng từ 40 lên 160. Sản xuất (65) và mua hàng (55) là nơi 75% đơn trễ bắt đầu chậm; ưu tiên kiểm chứng dừng máy (H3) và nhà cung cấp giao trễ (H1)."
       }
     },
     "stackHeading": "Từ dữ liệu đến quyết định",
@@ -1285,19 +1383,68 @@
         "methods": "具資料驗證的 Python 套件（世代與留存）、依規模加權的留存曲線、依折扣區間與品類診斷毛利、單元測試，以及每次推送自動重跑筆記本的 CI；附 Excel 報告與簡報。",
         "evidence": "2023 年營收 +24%，獲利卻 −12%，各品類毛利率由 18.0% 降至 12.8%。回購顧客佔 31%，卻貢獻 56% 獲利；折扣超過 20% 的訂單虧損 28.86 萬美元。"
       },
-      "analytics-playbook": {
-        "title": "顧客分析工具集",
-        "description": "八份筆記本涵蓋核心顧客分析方法：EDA、柏拉圖、ABC、RFM、世代、購物籃、漏斗與 Sankey 流程。",
-        "goal": "建立可重複使用的分析，回答常見商業問題：誰是最有價值的顧客、哪些商品一起購買、轉換在哪裡流失。",
-        "methods": "Python（pandas、Plotly、mlxtend）、分位數評分、關聯規則、漏斗轉換率與 Sankey 旅程圖。",
-        "evidence": "數據分析課程作業，整理為附說明的筆記本公開。"
-      },
       "sql": {
         "title": "供應鏈分析 SQL 實作",
         "description": "以虛構訂單與出貨資料建立的小型、可重現 SQL 入門專案。",
         "goal": "計算訂單履行前置時間、延遲交貨與訂單層級營運指標。",
         "methods": "SQL JOIN、CASE、分組與視窗函數，附範例 CSV 與 SQL 檔案。",
         "evidence": "使用虛構資料的入門專案，並非雇主績效分析。"
+      },
+      "funnel-conversion": {
+        "title": "產品績效與轉換漏斗分析",
+        "description": "分析 4 項產品在 472,871 個工作階段、119 萬次頁面瀏覽中的營收、退款與 6 步驟購買漏斗。",
+        "goal": "找出值得保留的產品、各產品漏斗的流失位置，以及進站當下最可能購買的流量。",
+        "methods": "扣除退款的產品營收；僅在 4 項產品同時銷售期間比較漏斗；為避免資料洩漏，隨機森林只使用進站時的訊號；Excel 成果報表。",
+        "evidence": "Mr. Fuzzy 貢獻 62% 淨營收，但 2014 年第 3 季退款率高達 10.6%。59% 的目錄訪客點入 Mr. Fuzzy，Love Bear 僅約 11%，但其加入購物車率較高（56% 對 43%）。桌機轉換率 8–10%，手機約 3%。"
+      },
+      "journey-sankey": {
+        "title": "顧客旅程桑基圖：從點擊到結帳",
+        "description": "以多階段桑基圖呈現 472,871 個工作階段的流量來源 → 到達頁 → 結果。",
+        "goal": "呈現流量如何轉為訂單，並在公平比較下找出真正轉換最佳的到達頁。",
+        "methods": "以工作階段建立旅程並區分自然搜尋與直接流量；各到達頁上線期間與裝置組成；同期間、同裝置比較並計算 95% 信賴區間。",
+        "evidence": "桌機非品牌流量中，/lander-5 比 /lander-2 高 1.57 個百分點（95% CI +1.03 至 +2.12）。全站轉換率由 4.1% 倍增至 8.4%，使較晚上線的頁面顯得較好；/lander-3 偏低是因為只服務手機流量。"
+      },
+      "channel-pareto": {
+        "title": "行銷通路柏拉圖分析：TeddyWorld 能否刪減一半廣告預算？",
+        "description": "依流量來源對 32,313 筆訂單、194 萬美元營收進行柏拉圖分析，並納入轉換率、客單價與毛利。",
+        "goal": "找出支撐營收的來源，並釐清刪減 50% 廣告預算前仍需哪些證據。",
+        "methods": "經多對一驗證的訂單與工作階段合併；柏拉圖與累積占比；將未標記流量拆為自然搜尋與直接流量；各來源的轉換率、每工作階段營收與毛利。",
+        "evidence": "4 個來源中 2 個貢獻 85% 營收，僅 gsearch 非品牌活動就占 58%。socialbook 轉換率 3.2%，僅為其他來源的一半，是分階段刪減的首選。"
+      },
+      "abc-customers": {
+        "title": "ABC 顧客獲利分析",
+        "description": "依終身獲利將 17,415 位電商顧客分為 ABC 三群，並分析顧客輪廓與虧損顧客。",
+        "goal": "找出值得投入客戶經營資源的顧客，以及利潤流失之處。",
+        "methods": "合併前驗證並修正鍵值；以累積利潤 80% 與 95% 為 ABC 門檻；依收入與職業描繪輪廓；分析虧損顧客的折扣；Excel 顧客名單。",
+        "evidence": "29% 的獲利顧客貢獻 80% 利潤，且人口統計無法區分各群。3,695 位虧損顧客造成 26.7 萬美元損失（相當於 A–C 群利潤的 20%），其 78% 的訂單明細折扣超過 20%。"
+      },
+      "rfm-segmentation": {
+        "title": "RFM 顧客分群",
+        "description": "對 17,415 位顧客進行近期性、頻率與金額評分，並對應至 11 個 CRM 分群。",
+        "goal": "協助 CRM 團隊決定應獎勵、培養或挽回哪些顧客。",
+        "methods": "折扣後淨營收；固定快照日；R 與 M 採五分位、F 依不同購買次數分箱；標準 RFM 分群表；樹狀圖；匯出每位顧客分數以建立活動名單。",
+        "evidence": "Promising 與 Cannot Lose Them 占 80.5% 營收。88.7% 顧客只購買一至兩次，第二筆訂單是主要成長槓桿；Champions 與 Loyal 僅占 0.6% 顧客，人均消費約為 3 倍。"
+      },
+      "market-basket": {
+        "title": "購物籃分析：哪些商品會一起購買？",
+        "description": "以自我合併共現計數與 Apriori 關聯規則分析 25,728 筆訂單、17 個子類別。",
+        "goal": "找出有證據支持、而非偶然出現的組合與推薦。",
+        "methods": "自我合併計算成對支持度、信賴度與提升度；mlxtend Apriori 於兩種支持度門檻；提升度熱圖；支持度與提升度穩健性檢查。",
+        "evidence": "提升度約 4.2 的規則僅約 26 筆訂單支持。支持度達 0.5% 時最高提升度為 1.38，且 52% 訂單只含一個子類別，因此提高購物籃件數比任何組合更具潛力。"
+      },
+      "netflix-eda": {
+        "title": "Netflix 片庫探索性資料分析",
+        "description": "對 2021 年 8,807 部 Netflix 作品進行清理、特徵工程與 9 張圖表分析。",
+        "goal": "為內容策略團隊提供片庫的客觀樣貌：組成、觀眾、成長與來源。",
+        "methods": "修正錯置的片長、缺漏值處理策略、多值欄位拆分展開、時間序列、熱圖與詞頻分析。",
+        "evidence": "電影占 70%，但新增作品中影集比例由 25%（2018）升至 34%（2021）。67% 影集只有一季；成人分級占 46%；近半數作品為國際內容。"
+      },
+      "otd-issue-tree": {
+        "title": "準時交貨率為何下降？MECE 指標樹與議題樹",
+        "description": "針對電子零件工廠準時交貨率下降 12 個百分點建立結構化的根因分析框架。",
+        "goal": "精確拆解 OTD 下降，將瓶頸轉為可驗證的假設，並決定調查順序。",
+        "methods": "依首個延遲工序建立指標樹、含 9 項假設與所需證據的議題樹、MECE 驗證與決策規則；以 Python 腳本在 CI 中檢查數字。",
+        "evidence": "假設情境：OTD 由 96% 降至 84%，延遲訂單由 40 增至 160。生產（65）與採購（55）是 75% 延遲訂單最先落後之處，優先驗證停機（H3）與供應延遲（H1）。"
       }
     },
     "stackHeading": "從數據走向決策",
@@ -1829,19 +1976,68 @@
         "methods": "带数据校验的 Python 包（同期群与留存）、按规模加权的留存曲线、按折扣区间与品类诊断毛利、单元测试，以及每次推送自动重跑笔记本的 CI；附 Excel 报告与汇报幻灯片。",
         "evidence": "2023 年收入 +24%，利润却 −12%，各品类毛利率由 18.0% 降至 12.8%。回购客户占 31%，却贡献 56% 利润；折扣超过 20% 的订单亏损 28.86 万美元。"
       },
-      "analytics-playbook": {
-        "title": "客户分析工具集",
-        "description": "八份笔记本覆盖核心客户分析方法：EDA、帕累托、ABC、RFM、同期群、购物篮、漏斗与 Sankey 流程。",
-        "goal": "构建可复用的分析，回答常见商业问题：谁是最有价值的客户、哪些商品一起购买、转化在哪里流失。",
-        "methods": "Python（pandas、Plotly、mlxtend）、分位数评分、关联规则、漏斗转化率与 Sankey 旅程图。",
-        "evidence": "数据分析课程作业，整理为带说明的笔记本公开。"
-      },
       "sql": {
         "title": "供应链分析 SQL 实践",
         "description": "基于虚构订单与发货数据的小型、可复现 SQL 入门项目。",
         "goal": "计算订单履约周期、延迟交付与订单层面的运营指标。",
         "methods": "SQL JOIN、CASE、分组与窗口函数，附示例 CSV 与 SQL 文件。",
         "evidence": "使用虚构数据的入门项目，并非雇主绩效分析。"
+      },
+      "funnel-conversion": {
+        "title": "产品绩效与转化漏斗分析",
+        "description": "分析 4 款产品在 472,871 个会话、119 万次页面浏览中的收入、退款与 6 步购买漏斗。",
+        "goal": "找出值得保留的产品、各产品漏斗的流失位置，以及进站时最可能购买的流量。",
+        "methods": "扣除退款的产品收入；仅在 4 款产品同时在售期间比较漏斗；为避免数据泄漏，随机森林只使用进站时的信号；Excel 结果报表。",
+        "evidence": "Mr. Fuzzy 贡献 62% 净收入，但 2014 年第 3 季度退款率高达 10.6%。59% 的目录访客点击 Mr. Fuzzy，Love Bear 仅约 11%，但其加购率更高（56% 对 43%）。桌面端转化率 8–10%，移动端约 3%。"
+      },
+      "journey-sankey": {
+        "title": "客户旅程桑基图：从点击到结账",
+        "description": "以多阶段桑基图呈现 472,871 个会话的流量来源 → 落地页 → 结果。",
+        "goal": "展示流量如何转化为订单，并在公平比较下找出真正转化最好的落地页。",
+        "methods": "按会话构建旅程并区分自然搜索与直接流量；各落地页上线时间与设备构成；同期、同设备比较并计算 95% 置信区间。",
+        "evidence": "桌面端非品牌流量中，/lander-5 比 /lander-2 高 1.57 个百分点（95% CI +1.03 至 +2.12）。全站转化率由 4.1% 翻倍至 8.4%，使较晚上线的页面显得更好；/lander-3 偏低是因为只服务移动端。"
+      },
+      "channel-pareto": {
+        "title": "营销渠道帕累托分析：TeddyWorld 能否削减一半广告预算？",
+        "description": "按流量来源对 32,313 笔订单、194 万美元收入进行帕累托分析，并纳入转化率、客单价与毛利。",
+        "goal": "找出支撑收入的来源，并明确削减 50% 广告预算前还需要哪些证据。",
+        "methods": "经多对一校验的订单与会话关联；帕累托与累计占比；将未标记流量拆分为自然搜索与直接流量；各来源的转化率、每会话收入与毛利。",
+        "evidence": "4 个来源中 2 个贡献 85% 收入，仅 gsearch 非品牌活动就占 58%。socialbook 转化率 3.2%，仅为其他来源的一半，是分阶段削减的首选。"
+      },
+      "abc-customers": {
+        "title": "ABC 客户盈利分析",
+        "description": "按终身利润将 17,415 位电商客户分为 ABC 三类，并分析客户画像与亏损客户。",
+        "goal": "找出值得投入客户经营资源的客户，以及利润流失之处。",
+        "methods": "关联前校验并修正键值；以累计利润 80% 与 95% 为 ABC 阈值；按收入与职业描绘画像；分析亏损客户的折扣；Excel 客户名单。",
+        "evidence": "29% 的盈利客户贡献 80% 利润，且人口统计无法区分各类。3,695 位亏损客户造成 26.7 万美元损失（相当于 A–C 类利润的 20%），其 78% 的订单明细折扣超过 20%。"
+      },
+      "rfm-segmentation": {
+        "title": "RFM 客户分群",
+        "description": "对 17,415 位客户进行最近性、频率与金额评分，并映射到 11 个 CRM 分群。",
+        "goal": "帮助 CRM 团队决定应奖励、培养或挽回哪些客户。",
+        "methods": "折扣后净收入；固定快照日；R 与 M 采用五分位、F 按不同购买次数分箱；标准 RFM 分群表；树状图；导出每位客户的分数用于活动名单。",
+        "evidence": "Promising 与 Cannot Lose Them 占 80.5% 收入。88.7% 的客户只购买一至两次，第二笔订单是主要增长杠杆；Champions 与 Loyal 仅占 0.6% 客户，人均消费约为 3 倍。"
+      },
+      "market-basket": {
+        "title": "购物篮分析：哪些商品会一起购买？",
+        "description": "用自连接共现计数与 Apriori 关联规则分析 25,728 笔订单、17 个子类别。",
+        "goal": "找出有证据支持、而非偶然出现的组合与推荐。",
+        "methods": "自连接计算成对支持度、置信度与提升度；mlxtend Apriori 两种支持度阈值；提升度热图；支持度与提升度稳健性检验。",
+        "evidence": "提升度约 4.2 的规则仅约 26 笔订单支持。支持度达 0.5% 时最高提升度为 1.38，且 52% 订单只含一个子类别，因此提高购物篮件数比任何组合更有潜力。"
+      },
+      "netflix-eda": {
+        "title": "Netflix 片库探索性数据分析",
+        "description": "对 2021 年 8,807 部 Netflix 作品进行清洗、特征工程与 9 张图表分析。",
+        "goal": "为内容策略团队提供片库的客观画像：构成、受众、增长与来源。",
+        "methods": "修正错位的片长、缺失值处理策略、多值字段拆分展开、时间序列、热图与词频分析。",
+        "evidence": "电影占 70%，但新增作品中剧集比例由 25%（2018）升至 34%（2021）。67% 剧集只有一季；成人分级占 46%；近半数作品为国际内容。"
+      },
+      "otd-issue-tree": {
+        "title": "准时交付率为何下降？MECE 指标树与问题树",
+        "description": "针对电子元件工厂准时交付率下降 12 个百分点构建结构化的根因分析框架。",
+        "goal": "精确拆解 OTD 下降，把瓶颈转化为可验证的假设，并确定调查顺序。",
+        "methods": "按首个延迟工序构建指标树、包含 9 个假设及所需证据的问题树、MECE 校验与决策规则；用 Python 脚本在 CI 中校验数字。",
+        "evidence": "假设情境：OTD 由 96% 降至 84%，延迟订单由 40 增至 160。生产（65）与采购（55）是 75% 延迟订单最先落后之处，优先验证停机（H3）与供应延迟（H1）。"
       }
     },
     "stackHeading": "从数据走向决策",

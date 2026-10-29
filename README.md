@@ -18,7 +18,15 @@ HTML5, CSS3 and vanilla JavaScript. `data/*.json` is the source of truth; `main.
   [fnb-supply-chain-analytics](https://github.com/Haven-Pham/fnb-supply-chain-analytics) ·
   [transport-logistics-otif-analytics](https://github.com/Haven-Pham/transport-logistics-otif-analytics) ·
   [ProtoSetFit](https://github.com/Haven-Pham/ProtoSetFit) ·
-  [customer-analytics-playbook](https://github.com/Haven-Pham/customer-analytics-playbook)
+  [ecommerce-cohort-retention-analysis](https://github.com/Haven-Pham/ecommerce-cohort-retention-analysis) ·
+  [product-funnel-conversion-analysis](https://github.com/Haven-Pham/product-funnel-conversion-analysis) ·
+  [customer-journey-sankey-analysis](https://github.com/Haven-Pham/customer-journey-sankey-analysis) ·
+  [marketing-channel-pareto-analysis](https://github.com/Haven-Pham/marketing-channel-pareto-analysis) ·
+  [abc-customer-profit-analysis](https://github.com/Haven-Pham/abc-customer-profit-analysis) ·
+  [rfm-customer-segmentation](https://github.com/Haven-Pham/rfm-customer-segmentation) ·
+  [market-basket-analysis](https://github.com/Haven-Pham/market-basket-analysis) ·
+  [netflix-content-eda](https://github.com/Haven-Pham/netflix-content-eda) ·
+  [otd-decline-issue-tree](https://github.com/Haven-Pham/otd-decline-issue-tree)
 - The "Live from GitHub" panel calls the public GitHub API in the browser, so new repositories appear on the site without editing it.
 - Research is summary-only while manuscripts are under review.
 

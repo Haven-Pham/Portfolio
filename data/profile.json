@@ -46,7 +46,15 @@
     "protosetfit": "https://github.com/Haven-Pham/ProtoSetFit",
     "fnb": "https://github.com/Haven-Pham/fnb-supply-chain-analytics",
     "transport": "https://github.com/Haven-Pham/transport-logistics-otif-analytics",
-    "playbook": "https://github.com/Haven-Pham/customer-analytics-playbook"
+    "cohort": "https://github.com/Haven-Pham/ecommerce-cohort-retention-analysis",
+    "funnel": "https://github.com/Haven-Pham/product-funnel-conversion-analysis",
+    "sankey": "https://github.com/Haven-Pham/customer-journey-sankey-analysis",
+    "pareto": "https://github.com/Haven-Pham/marketing-channel-pareto-analysis",
+    "abc": "https://github.com/Haven-Pham/abc-customer-profit-analysis",
+    "rfm": "https://github.com/Haven-Pham/rfm-customer-segmentation",
+    "basket": "https://github.com/Haven-Pham/market-basket-analysis",
+    "netflix": "https://github.com/Haven-Pham/netflix-content-eda",
+    "otd": "https://github.com/Haven-Pham/otd-decline-issue-tree"
   },
   "githubUser": "Haven-Pham",
   "githubFeedExclude": [

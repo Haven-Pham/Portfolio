@@ -79,21 +79,132 @@
     "demoUrl": null
   },
   {
-    "id": "analytics-playbook",
+    "id": "funnel-conversion",
+    "category": "analytics",
+    "icon": "⏷",
+    "chips": [
+      "Python",
+      "Funnel analysis",
+      "scikit-learn",
+      "Excel"
+    ],
+    "status": "completed",
+    "documentFile": null,
+    "githubUrl": "https://github.com/Haven-Pham/product-funnel-conversion-analysis",
+    "demoUrl": null,
+    "number": "06"
+  },
+  {
+    "id": "journey-sankey",
+    "category": "analytics",
+    "icon": "⇶",
+    "chips": [
+      "Python",
+      "Plotly Sankey",
+      "A/B comparison",
+      "Excel"
+    ],
+    "status": "completed",
+    "documentFile": null,
+    "githubUrl": "https://github.com/Haven-Pham/customer-journey-sankey-analysis",
+    "demoUrl": null,
+    "number": "07"
+  },
+  {
+    "id": "channel-pareto",
+    "category": "analytics",
+    "icon": "▤",
+    "chips": [
+      "Python",
+      "Pareto",
+      "Marketing analytics",
+      "Excel"
+    ],
+    "status": "completed",
+    "documentFile": null,
+    "githubUrl": "https://github.com/Haven-Pham/marketing-channel-pareto-analysis",
+    "demoUrl": null,
+    "number": "08"
+  },
+  {
+    "id": "abc-customers",
     "category": "analytics",
     "icon": "▥",
     "chips": [
       "Python",
-      "RFM",
-      "ABC",
-      "Market Basket",
-      "Funnel"
+      "ABC analysis",
+      "Profitability",
+      "Excel"
     ],
-    "status": "coursework",
+    "status": "completed",
     "documentFile": null,
-    "githubUrl": "https://github.com/Haven-Pham/customer-analytics-playbook",
+    "githubUrl": "https://github.com/Haven-Pham/abc-customer-profit-analysis",
     "demoUrl": null,
-    "number": "06"
+    "number": "09"
+  },
+  {
+    "id": "rfm-segmentation",
+    "category": "analytics",
+    "icon": "◫",
+    "chips": [
+      "Python",
+      "RFM",
+      "CRM segmentation",
+      "Excel"
+    ],
+    "status": "completed",
+    "documentFile": null,
+    "githubUrl": "https://github.com/Haven-Pham/rfm-customer-segmentation",
+    "demoUrl": null,
+    "number": "10"
+  },
+  {
+    "id": "market-basket",
+    "category": "analytics",
+    "icon": "⊞",
+    "chips": [
+      "Python",
+      "Apriori · mlxtend",
+      "Association rules",
+      "Excel"
+    ],
+    "status": "completed",
+    "documentFile": null,
+    "githubUrl": "https://github.com/Haven-Pham/market-basket-analysis",
+    "demoUrl": null,
+    "number": "11"
+  },
+  {
+    "id": "netflix-eda",
+    "category": "analytics",
+    "icon": "▶",
+    "chips": [
+      "Python",
+      "EDA",
+      "seaborn",
+      "Excel"
+    ],
+    "status": "completed",
+    "documentFile": null,
+    "githubUrl": "https://github.com/Haven-Pham/netflix-content-eda",
+    "demoUrl": null,
+    "number": "12"
+  },
+  {
+    "id": "otd-issue-tree",
+    "category": "supply",
+    "icon": "⌥",
+    "chips": [
+      "MECE",
+      "Issue tree",
+      "OTD",
+      "Python checks"
+    ],
+    "status": "completed",
+    "documentFile": null,
+    "githubUrl": "https://github.com/Haven-Pham/otd-decline-issue-tree",
+    "demoUrl": null,
+    "number": "13"
   },
   {
     "id": "sql",
@@ -105,7 +216,7 @@
       "Window Functions"
     ],
     "status": "starter",
-    "number": "07",
+    "number": "14",
     "documentFile": "projects/sql_supply_chain_starter.zip",
     "githubUrl": "https://github.com/Haven-Pham/Portfolio/tree/main/projects/sql_supply_chain_starter",
     "demoUrl": null
