@@ -1,9 +1,10 @@
 # Files kept in the repository but not published on the website.
 # Only the page itself, its scripts and styles, data/, assets/ and projects/ are served.
-automation/
-docs/
-resume/
-scripts/
-.github/
+# Paths start with "/" so they match only at the repository root (assets/resume/ must stay published).
+/automation/
+/docs/
+/resume/
+/scripts/
+/.github/
 /START_HERE_VI.txt
 /README.md
