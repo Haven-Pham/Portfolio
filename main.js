@@ -239,9 +239,18 @@
     const all = CONFIG.github ? `<a class="text-arrow gh-feed-all" href="${h(CONFIG.github)}?tab=repositories" target="_blank" rel="noopener noreferrer">${h(d.githubFeedAll)} ↗</a>` : '';
     if (GITHUB_REPOS === null) { box.innerHTML = head + `<div class="gh-feed-grid">${'<div class="gh-repo skeleton"></div>'.repeat(3)}</div>`; return; }
     if (!GITHUB_REPOS.length) { box.innerHTML = head + `<p class="content-note">${h(d.githubFeedError)}</p>` + all; return; }
+    // Prefer the project's own copy (in the visitor's language); fall back to the GitHub "About" text.
+    const repoKey = url => (url || '').toLowerCase().replace(/\/+$/, '');
+    const projectByRepo = new Map(DATA.projects.filter(p => p.githubUrl).map(p => [repoKey(p.githubUrl), p.id]));
+    const describe = r => {
+      const id = projectByRepo.get(repoKey(r.html_url));
+      if (id && d.projectData?.[id]?.description) return d.projectData[id].description;
+      if (r.name.toLowerCase() === 'portfolio' && d.githubFeedPortfolioDesc) return d.githubFeedPortfolioDesc;
+      return r.description || '';
+    };
     box.innerHTML = head + `<div class="gh-feed-grid">${GITHUB_REPOS.map(r => `<a class="gh-repo" href="${h(r.html_url)}" target="_blank" rel="noopener noreferrer">
         <span class="gh-repo-name"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#icon-github"></use></svg>${h(r.name)}</span>
-        <span class="gh-repo-desc">${h(r.description || '')}</span>
+        <span class="gh-repo-desc">${h(describe(r))}</span>
         <span class="gh-repo-meta">${r.language ? `<span><span class="gh-lang-dot"></span>${h(r.language)}</span>` : ''}<span>★ ${h(r.stargazers_count)}</span><span>${h(d.githubFeedUpdated)} ${h(formatCertDate(r.pushed_at))}</span></span>
       </a>`).join('')}</div>` + all;
   }
