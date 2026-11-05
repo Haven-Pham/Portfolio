@@ -154,6 +154,15 @@
         ]
       },
       {
+        "id": "taiwan-trade",
+        "title": "Taiwan Trade & Supply Chain Analysis (live dashboard)",
+        "tools": "Python, pandas, Plotly, CI",
+        "bullets": [
+          "Built a tested pipeline and a self-refreshing EN/繁中 dashboard on official trade and port data (2001 to Sep 2026).",
+          "Showed machinery supplied 106% of export growth since 2021 while other exports fell 17% and containers fell 13.1%."
+        ]
+      },
+      {
         "id": "ecommerce-cohort",
         "title": "E-Commerce Cohort, Retention & Profitability Analysis",
         "tools": "Python, pandas, pytest, GitHub Actions",
@@ -170,14 +179,6 @@
         "bullets": [
           "Ran a controlled 2×2 SetFit ablation on 8-shot emotion classification (5 seeds, 25 runs, 20-run λ sweep).",
           "Hard-negative mining: 51.94% vs 51.08% for SetFit on a frozen test set; not significant at N=5 (Holm-corrected)."
-        ]
-      },
-      {
-        "id": "fastfit",
-        "title": "Improving FastFit for Few-Shot Intent Classification (in progress)",
-        "tools": "PyTorch, statistics",
-        "bullets": [
-          "Reproducing FastFit (NAACL 2024) on 77-class BANKING77, 5-shot, with controlled optimizer and projection tests."
         ]
       }
     ],
@@ -384,6 +385,15 @@
         ]
       },
       {
+        "id": "taiwan-trade",
+        "title": "Phân tích thương mại & chuỗi cung ứng Đài Loan (dashboard trực tuyến)",
+        "tools": "Python, pandas, Plotly, CI",
+        "bullets": [
+          "Xây pipeline có kiểm thử và dashboard EN/繁中 tự cập nhật từ dữ liệu chính thức về thương mại và cảng biển (2001 đến 9/2026).",
+          "Chỉ ra máy móc đóng góp 106% mức tăng xuất khẩu từ 2021, trong khi hàng khác giảm 17% và container giảm 13,1%."
+        ]
+      },
+      {
         "id": "ecommerce-cohort",
         "title": "Phân tích cohort, giữ chân khách hàng & lợi nhuận TMĐT",
         "tools": "Python, pandas, pytest, GitHub Actions",
@@ -400,14 +410,6 @@
         "bullets": [
           "Thực hiện ablation 2×2 có kiểm soát trên SetFit cho phân loại cảm xúc 8-shot (5 seed, 25 lượt, quét λ 20 lượt).",
           "Hard-negative mining đạt 51,94% so với 51,08% của SetFit trên tập test đóng băng; chưa có ý nghĩa với N=5."
-        ]
-      },
-      {
-        "id": "fastfit",
-        "title": "Cải tiến FastFit cho phân loại ý định few-shot (đang thực hiện)",
-        "tools": "PyTorch, thống kê",
-        "bullets": [
-          "Tái lập FastFit (NAACL 2024) trên BANKING77 (77 lớp), 5-shot, với thí nghiệm có kiểm soát về optimizer và projection."
         ]
       }
     ],
@@ -613,6 +615,15 @@
         ]
       },
       {
+        "id": "taiwan-trade",
+        "title": "臺灣貿易與供應鏈分析（線上儀表板）",
+        "tools": "Python, pandas, Plotly, CI",
+        "bullets": [
+          "以官方貿易與港口資料（2001 年至 2026 年 9 月）建置具測試的資料流程及可自動更新的中英文儀表板。",
+          "指出機械及電機設備貢獻 2021 年以來出口增額的 106%，其他貨品下降 17%，貨櫃量減少 13.1%。"
+        ]
+      },
+      {
         "id": "ecommerce-cohort",
         "title": "電商顧客世代、留存與獲利分析",
         "tools": "Python、pandas、pytest、GitHub Actions",
@@ -629,14 +640,6 @@
         "bullets": [
           "於 8-shot 情緒分類上進行 SetFit 2×2 控制消融實驗（5 個種子、25 次實驗、20 次 λ 掃描）。",
           "困難負樣本挖掘於凍結測試集達 51.94%，SetFit 為 51.08%；N=5 下未達顯著（Holm 校正）。"
-        ]
-      },
-      {
-        "id": "fastfit",
-        "title": "改良 FastFit 少樣本意圖分類（進行中）",
-        "tools": "PyTorch、統計",
-        "bullets": [
-          "於 77 類 BANKING77 資料集以固定 5-shot 協定重現 FastFit（NAACL 2024），並進行優化器與投影維度控制實驗。"
         ]
       }
     ],
@@ -842,6 +845,15 @@
         ]
       },
       {
+        "id": "taiwan-trade",
+        "title": "台湾贸易与供应链分析（在线仪表板）",
+        "tools": "Python, pandas, Plotly, CI",
+        "bullets": [
+          "以官方贸易与港口数据（2001 年至 2026 年 9 月）建置带测试的数据流程及可自动更新的中英文仪表板。",
+          "指出机械及电机设备贡献 2021 年以来出口增量的 106%，其他货品下降 17%，货柜量减少 13.1%。"
+        ]
+      },
+      {
         "id": "ecommerce-cohort",
         "title": "电商客户同期群、留存与盈利分析",
         "tools": "Python、pandas、pytest、GitHub Actions",
@@ -858,14 +870,6 @@
         "bullets": [
           "在 8-shot 情绪分类上开展 SetFit 2×2 控制消融实验（5 个种子、25 次实验、20 次 λ 扫描）。",
           "困难负样本挖掘在冻结测试集上达到 51.94%，SetFit 为 51.08%；N=5 下未达显著（Holm 校正）。"
-        ]
-      },
-      {
-        "id": "fastfit",
-        "title": "改进 FastFit 少样本意图分类（进行中）",
-        "tools": "PyTorch、统计",
-        "bullets": [
-          "在 77 类 BANKING77 数据集上以固定 5-shot 协议复现 FastFit（NAACL 2024），并开展优化器与投影维度控制实验。"
         ]
       }
     ],

@@ -2363,6 +2363,7 @@ body.theme-light .project-card:hover .tech-tag {
 .project-actions {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   flex-wrap: wrap;
 }

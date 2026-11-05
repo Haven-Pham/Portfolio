@@ -259,6 +259,13 @@
         "goal": "Decompose the OTD drop exactly, turn bottlenecks into testable hypotheses and set the order of investigation.",
         "methods": "Metric tree by first-delayed stage, issue tree with nine hypotheses and the evidence each needs, MECE validation, decision rules; a Python script checks the arithmetic in CI.",
         "evidence": "Illustrative case: OTD fell from 96% to 84% as late orders rose from 40 to 160. Production (65) and procurement (55) are where 75% of late orders first slipped; downtime (H3) and late supply (H1) are tested first."
+      },
+      "taiwan-trade": {
+        "title": "Taiwan's Export Boom Through a Supply Chain Lens",
+        "description": "Official trade, price-index and port data through September 2026, with a live bilingual dashboard that refreshes itself.",
+        "goal": "Find out whether record exports mean the whole supply chain is busy, or only one part of it.",
+        "methods": "Reconciliation to published totals; like-for-like periods and rolling 12-month crossovers; HHI concentration; log decomposition of volume and price; value per TEU and lead-lag correlation; a first-order trade-lane stress test; a tested Python package with CI and an automated dashboard refresh.",
+        "evidence": "Exports rose 46.2% in Jan–Sep 2026, yet machinery and electrical goods supplied 106% of the growth since 2021 and other exports fell 17%. Containers fell 13.1% while trade value multiplied 1.93 times. US machinery alone is 28.8% of exports."
       }
     },
     "stackHeading": "From Data to Decisions",
@@ -591,7 +598,8 @@
       }
     },
     "researchAccepted": "ACCEPTED",
-    "skipLink": "Skip to content"
+    "skipLink": "Skip to content",
+    "liveDemo": "Live dashboard"
   },
   "vi": {
     "locale": "Tiếng Việt",
@@ -853,6 +861,13 @@
         "goal": "Phân rã chính xác mức giảm OTD, chuyển điểm nghẽn thành giả thuyết kiểm chứng được và xác định thứ tự điều tra.",
         "methods": "Metric tree theo công đoạn trễ đầu tiên, issue tree 9 giả thuyết kèm dữ liệu cần kiểm chứng, kiểm tra MECE, quy tắc ra quyết định; script Python tự kiểm tra số liệu trong CI.",
         "evidence": "Tình huống giả định: OTD giảm từ 96% xuống 84% khi đơn trễ tăng từ 40 lên 160. Sản xuất (65) và mua hàng (55) là nơi 75% đơn trễ bắt đầu chậm; ưu tiên kiểm chứng dừng máy (H3) và nhà cung cấp giao trễ (H1)."
+      },
+      "taiwan-trade": {
+        "title": "Cơn bùng nổ xuất khẩu của Đài Loan qua lăng kính chuỗi cung ứng",
+        "description": "Dữ liệu chính thức về thương mại, chỉ số giá và cảng biển đến tháng 9/2026, kèm dashboard song ngữ trực tuyến tự cập nhật.",
+        "goal": "Làm rõ xuất khẩu kỷ lục có nghĩa là cả chuỗi cung ứng đều bận rộn, hay chỉ một phần của chuỗi.",
+        "methods": "Đối chiếu với tổng số công bố; so sánh cùng kỳ và điểm giao cắt theo 12 tháng trượt; đo mức độ tập trung bằng HHI; phân rã log giữa sản lượng và giá; giá trị trên mỗi TEU và tương quan trễ; kiểm tra sức chịu đựng bậc nhất theo tuyến thương mại; package Python có kiểm thử, CI và tự động cập nhật dashboard.",
+        "evidence": "Xuất khẩu tăng 46,2% trong tháng 1–9/2026, nhưng máy móc và thiết bị điện đóng góp 106% mức tăng kể từ 2021, còn các mặt hàng khác giảm 17%. Container giảm 13,1% trong khi giá trị thương mại tăng 1,93 lần. Riêng máy móc sang Mỹ chiếm 28,8% xuất khẩu."
       }
     },
     "stackHeading": "Từ dữ liệu đến quyết định",
@@ -1185,7 +1200,8 @@
       }
     },
     "researchAccepted": "ĐÃ ĐƯỢC CHẤP NHẬN",
-    "skipLink": "Bỏ qua, tới nội dung"
+    "skipLink": "Bỏ qua, tới nội dung",
+    "liveDemo": "Dashboard trực tuyến"
   },
   "zh-Hant": {
     "locale": "繁體中文",
@@ -1447,6 +1463,13 @@
         "goal": "精確拆解 OTD 下降，將瓶頸轉為可驗證的假設，並決定調查順序。",
         "methods": "依首個延遲工序建立指標樹、含 9 項假設與所需證據的議題樹、MECE 驗證與決策規則；以 Python 腳本在 CI 中檢查數字。",
         "evidence": "假設情境：OTD 由 96% 降至 84%，延遲訂單由 40 增至 160。生產（65）與採購（55）是 75% 延遲訂單最先落後之處，優先驗證停機（H3）與供應延遲（H1）。"
+      },
+      "taiwan-trade": {
+        "title": "從供應鏈角度看臺灣出口榮景",
+        "description": "整合截至 2026 年 9 月的官方貿易、價格指數與港口資料，並建置可自動更新的雙語線上儀表板。",
+        "goal": "釐清出口創新高究竟代表整條供應鏈都忙碌，或只有其中一部分。",
+        "methods": "與官方公布總額勾稽；同期比較與近 12 個月交叉分析；HHI 集中度；數量與價格之對數分解；每 TEU 貿易值與領先落後相關；貿易路線一階壓力測試；具測試與 CI 的 Python 套件及儀表板自動更新。",
+        "evidence": "2026 年 1 至 9 月出口成長 46.2%，但機械及電機設備貢獻 2021 年以來增額的 106%，其他貨品出口下降 17%。貨櫃量下降 13.1%，貿易值卻增為 1.93 倍。對美機械及電機設備即占總出口 28.8%。"
       }
     },
     "stackHeading": "從數據走向決策",
@@ -1779,7 +1802,8 @@
       }
     },
     "researchAccepted": "已獲接受",
-    "skipLink": "跳至主要內容"
+    "skipLink": "跳至主要內容",
+    "liveDemo": "線上儀表板"
   },
   "zh-Hans": {
     "locale": "简体中文",
@@ -2041,6 +2065,13 @@
         "goal": "精确拆解 OTD 下降，把瓶颈转化为可验证的假设，并确定调查顺序。",
         "methods": "按首个延迟工序构建指标树、包含 9 个假设及所需证据的问题树、MECE 校验与决策规则；用 Python 脚本在 CI 中校验数字。",
         "evidence": "假设情境：OTD 由 96% 降至 84%，延迟订单由 40 增至 160。生产（65）与采购（55）是 75% 延迟订单最先落后之处，优先验证停机（H3）与供应延迟（H1）。"
+      },
+      "taiwan-trade": {
+        "title": "从供应链角度看台湾出口繁荣",
+        "description": "整合截至 2026 年 9 月的官方贸易、价格指数与港口数据，并建置可自动更新的双语在线仪表板。",
+        "goal": "厘清出口创新高究竟代表整条供应链都忙碌，还是只有其中一部分。",
+        "methods": "与官方公布总额核对；同期比较与近 12 个月交叉分析；HHI 集中度；数量与价格的对数分解；每 TEU 贸易值与领先滞后相关；贸易路线一阶压力测试；带测试与 CI 的 Python 包及仪表板自动更新。",
+        "evidence": "2026 年 1 至 9 月出口增长 46.2%，但机械及电机设备贡献 2021 年以来增量的 106%，其他货品出口下降 17%。货柜量下降 13.1%，贸易值却增至 1.93 倍。对美机械及电机设备即占总出口 28.8%。"
       }
     },
     "stackHeading": "从数据走向决策",
@@ -2373,6 +2404,7 @@
       }
     },
     "researchAccepted": "已获录用",
-    "skipLink": "跳至主要内容"
+    "skipLink": "跳至主要内容",
+    "liveDemo": "在线仪表板"
   }
 }

@@ -147,6 +147,7 @@
       const catLabel = d[projectCategoryKey[item.category]] || item.category;
       const statusLabel = d[statusKey[item.status]] || item.status;
       const githubMarkup = item.githubUrl ? `<a class="project-github-btn" href="${h(item.githubUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${h(p.title)} on GitHub"><svg class="project-btn-icon" aria-hidden="true" viewBox="0 0 24 24"><use href="#icon-github"></use></svg><span>GitHub</span><span class="action-icon" aria-hidden="true">↗</span></a>` : '';
+      const demoMarkup = item.demoUrl ? `<a class="project-github-btn" href="${h(item.demoUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${h(p.title)}: ${h(d.liveDemo || 'Live dashboard')}"><span>${h(d.liveDemo || 'Live dashboard')}</span><span class="action-icon" aria-hidden="true">↗</span></a>` : '';
       return `<article class="project-card reveal" aria-label="${h(p.title)}" data-category="${h(item.category)}">
         <div class="project-card-header">
           <div class="project-badge-group">
@@ -171,7 +172,7 @@
               <span>${h(d.projectDetails)}</span>
               <span class="action-icon" aria-hidden="true">↗</span>
             </button>
-            ${githubMarkup}
+            ${demoMarkup}${githubMarkup}
           </div>
         </div>
       </article>`;
@@ -199,7 +200,8 @@
     const isIpynb = Boolean(item.documentFile && item.documentFile.toLowerCase().endsWith('.ipynb'));
     const downloadBtn = item.documentFile ? `<a class="btn btn-primary dialog-download" href="${h(item.documentFile)}" download>${h(getAssetLabel(item.documentFile, d))} ↓</a>` : '';
     const viewBtn = item.githubUrl ? `<a class="btn btn-outline dialog-download" href="${h(item.githubUrl)}" target="_blank" rel="noopener noreferrer">${h(isIpynb ? (d.viewNotebook || 'VIEW NOTEBOOK') : 'GITHUB')} ↗</a>` : '';
-    const actionButtons = (downloadBtn || viewBtn) ? `<div style="display:flex;gap:11px;flex-wrap:wrap;align-items:center">${downloadBtn}${viewBtn}</div>` : '';
+    const demoBtn = item.demoUrl ? `<a class="btn btn-primary dialog-download" href="${h(item.demoUrl)}" target="_blank" rel="noopener noreferrer">${h(d.liveDemo || 'Live dashboard')} ↗</a>` : '';
+    const actionButtons = (demoBtn || downloadBtn || viewBtn) ? `<div style="display:flex;gap:11px;flex-wrap:wrap;align-items:center">${demoBtn}${downloadBtn}${viewBtn}</div>` : '';
 
     $('#project-dialog-content').innerHTML = `<div class="dialog-inner">
       <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;">
