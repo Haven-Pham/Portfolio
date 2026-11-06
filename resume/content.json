@@ -173,12 +173,12 @@
         ]
       },
       {
-        "id": "protosetfit",
-        "title": "ProtoSetFit: Few-Shot Text Classification (team of 3)",
-        "tools": "PyTorch, Hugging Face",
+        "id": "network-design",
+        "title": "Taiwan Distribution Network Design & Routing (live map)",
+        "tools": "Python, OR-Tools, CP-SAT",
         "bullets": [
-          "Ran a controlled 2×2 SetFit ablation on 8-shot emotion classification (5 seeds, 25 runs, 20-run λ sweep).",
-          "Hard-negative mining: 51.94% vs 51.08% for SetFit on a frozen test set; not significant at N=5 (Holm-corrected)."
+          "Chose DC sites with CP-SAT on real data for 349 townships and routed trucks with OR-Tools, for a fictional retailer.",
+          "Showed that 4 DCs cost the same as 3 but put 98.5% of people within 2 truck hours, against 77.7%."
         ]
       }
     ],
@@ -404,12 +404,12 @@
         ]
       },
       {
-        "id": "protosetfit",
-        "title": "ProtoSetFit: Phân loại văn bản few-shot (nhóm 3 người)",
-        "tools": "PyTorch, Hugging Face",
+        "id": "network-design",
+        "title": "Thiết kế mạng lưới phân phối và định tuyến tại Đài Loan (bản đồ trực tuyến)",
+        "tools": "Python, OR-Tools, CP-SAT",
         "bullets": [
-          "Thực hiện ablation 2×2 có kiểm soát trên SetFit cho phân loại cảm xúc 8-shot (5 seed, 25 lượt, quét λ 20 lượt).",
-          "Hard-negative mining đạt 51,94% so với 51,08% của SetFit trên tập test đóng băng; chưa có ý nghĩa với N=5."
+          "Chọn vị trí DC bằng CP-SAT trên dữ liệu thật của 349 quận/huyện và định tuyến xe bằng OR-Tools, cho một nhà bán lẻ giả định.",
+          "Chỉ ra 4 DC tốn bằng 3 DC nhưng đưa 98,5% dân số vào phạm vi 2 giờ xe tải, so với 77,7%."
         ]
       }
     ],
@@ -634,12 +634,12 @@
         ]
       },
       {
-        "id": "protosetfit",
-        "title": "ProtoSetFit：少樣本文本分類（3 人團隊）",
-        "tools": "PyTorch、Hugging Face",
+        "id": "network-design",
+        "title": "臺灣物流網路設計與路線規劃（線上地圖）",
+        "tools": "Python, OR-Tools, CP-SAT",
         "bullets": [
-          "於 8-shot 情緒分類上進行 SetFit 2×2 控制消融實驗（5 個種子、25 次實驗、20 次 λ 掃描）。",
-          "困難負樣本挖掘於凍結測試集達 51.94%，SetFit 為 51.08%；N=5 下未達顯著（Holm 校正）。"
+          "以 CP-SAT 與 349 個鄉鎮市區真實資料為假設零售商選址，並以 OR-Tools 規劃貨車路線。",
+          "指出 4 個物流中心成本與 3 個相當，但 2 小時車程內人口達 98.5%（3 個為 77.7%）。"
         ]
       }
     ],
@@ -864,12 +864,12 @@
         ]
       },
       {
-        "id": "protosetfit",
-        "title": "ProtoSetFit：少样本文本分类（3 人团队）",
-        "tools": "PyTorch、Hugging Face",
+        "id": "network-design",
+        "title": "台湾物流网络设计与路线规划（在线地图）",
+        "tools": "Python, OR-Tools, CP-SAT",
         "bullets": [
-          "在 8-shot 情绪分类上开展 SetFit 2×2 控制消融实验（5 个种子、25 次实验、20 次 λ 扫描）。",
-          "困难负样本挖掘在冻结测试集上达到 51.94%，SetFit 为 51.08%；N=5 下未达显著（Holm 校正）。"
+          "以 CP-SAT 与 349 个乡镇市区真实数据为假设零售商选址，并以 OR-Tools 规划货车路线。",
+          "指出 4 个物流中心成本与 3 个相当，但 2 小时车程内人口达 98.5%（3 个为 77.7%）。"
         ]
       }
     ],
