@@ -163,13 +163,13 @@
         ]
       },
       {
-        "id": "ecommerce-cohort",
-        "title": "E-Commerce Cohort, Retention & Profitability Analysis",
-        "tools": "Python, pandas, pytest, GitHub Actions",
+        "id": "demand-inventory",
+        "title": "Demand Forecasting & Inventory Policy (Walmart M5 data)",
+        "tools": "Python, LightGBM, simulation, pytest",
         "bullets": [
-          "Built a tested Python package for cohort and retention analysis of 51,290 order lines from 17,415 customers.",
-          "Found that 2023 sales rose 24% while profit fell 12% as margin dropped from 18.0% to 12.8% in every category, pointing to a company-wide cost or pricing change rather than discounts or mix.",
-          "Showed that repeat buyers (31% of customers) generate 56% of profit and that discounts above 20% lost $288.6K; delivered an Excel report and an executive deck."
+          "Backtested LightGBM against simple methods on 3,049 products over 52 weeks and simulated weekly replenishment with lost sales.",
+          "At a 95% fill rate, LightGBM needed 10.7% less stock than a textbook policy (8–11% across three stores); a second week of lead time added 47–50%.",
+          "Found that calibrated quantile models and ABC service tiers both needed more stock than simpler alternatives."
         ]
       },
       {
@@ -394,13 +394,13 @@
         ]
       },
       {
-        "id": "ecommerce-cohort",
-        "title": "Phân tích cohort, giữ chân khách hàng & lợi nhuận TMĐT",
-        "tools": "Python, pandas, pytest, GitHub Actions",
+        "id": "demand-inventory",
+        "title": "Dự báo nhu cầu và chính sách tồn kho (dữ liệu Walmart M5)",
+        "tools": "Python, LightGBM, mô phỏng, pytest",
         "bullets": [
-          "Xây dựng thư viện Python có kiểm thử để phân tích cohort trên 51.290 dòng đơn của 17.415 khách hàng.",
-          "Năm 2023 doanh thu +24% nhưng lợi nhuận −12% do biên giảm từ 18,0% xuống 12,8% ở mọi ngành hàng, cho thấy thay đổi chi phí hoặc giá trên toàn công ty.",
-          "Khách mua lặp lại (31%) tạo 56% lợi nhuận; giảm giá trên 20% làm lỗ 288,6 nghìn USD; bàn giao báo cáo Excel và slide."
+          "Backtest LightGBM với các phương pháp đơn giản trên 3.049 mặt hàng trong 52 tuần và mô phỏng bổ sung hàng hằng tuần có mất doanh số.",
+          "Ở mức đáp ứng 95%, LightGBM cần ít hơn 10,7% tồn kho so với công thức sách giáo khoa (8–11% trên ba cửa hàng); thêm một tuần lead time làm tồn kho tăng 47–50%.",
+          "Chỉ ra mô hình phân vị đã hiệu chuẩn và mức phục vụ theo ABC đều cần nhiều tồn kho hơn các cách đơn giản hơn."
         ]
       },
       {
@@ -624,13 +624,13 @@
         ]
       },
       {
-        "id": "ecommerce-cohort",
-        "title": "電商顧客世代、留存與獲利分析",
-        "tools": "Python、pandas、pytest、GitHub Actions",
+        "id": "demand-inventory",
+        "title": "需求預測與庫存政策（Walmart M5 資料）",
+        "tools": "Python, LightGBM, 模擬, pytest",
         "bullets": [
-          "開發含單元測試的 Python 套件，分析 17,415 位顧客的 51,290 筆訂單明細。",
-          "2023 年營收 +24%、獲利 −12%，各品類毛利率由 18.0% 降至 12.8%，顯示為全公司成本或定價變化。",
-          "回購顧客（31%）貢獻 56% 獲利；折扣超過 20% 虧損 28.86 萬美元；交付 Excel 報告與簡報。"
+          "以 52 週回測比較 LightGBM 與簡單方法（3,049 項商品），並模擬含缺貨損失的每週補貨。",
+          "在 95% 滿足率下，LightGBM 所需庫存較教科書政策少 10.7%（三家門市為 8–11%）；前置時間增加一週，庫存增加 47–50%。",
+          "發現已校準的分位數模型與 ABC 服務水準分級，所需庫存皆多於較簡單的做法。"
         ]
       },
       {
@@ -854,13 +854,13 @@
         ]
       },
       {
-        "id": "ecommerce-cohort",
-        "title": "电商客户同期群、留存与盈利分析",
-        "tools": "Python、pandas、pytest、GitHub Actions",
+        "id": "demand-inventory",
+        "title": "需求预测与库存策略（Walmart M5 数据）",
+        "tools": "Python, LightGBM, 模拟, pytest",
         "bullets": [
-          "开发含单元测试的 Python 包，分析 17,415 位客户的 51,290 条订单明细。",
-          "2023 年收入 +24%、利润 −12%，各品类毛利率由 18.0% 降至 12.8%，表明是全公司成本或定价变化。",
-          "回购客户（31%）贡献 56% 利润；折扣超过 20% 亏损 28.86 万美元；交付 Excel 报告与汇报材料。"
+          "以 52 周回测比较 LightGBM 与简单方法（3,049 项商品），并模拟含缺货损失的每周补货。",
+          "在 95% 满足率下，LightGBM 所需库存较教科书策略少 10.7%（三家门店为 8–11%）；提前期增加一周，库存增加 47–50%。",
+          "发现已校准的分位数模型与 ABC 服务水平分级，所需库存均多于较简单的做法。"
         ]
       },
       {
