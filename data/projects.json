@@ -80,6 +80,22 @@
     "number": "05"
   },
   {
+    "id": "olist-dbt",
+    "category": "sql",
+    "icon": "⛁",
+    "chips": [
+      "SQL",
+      "dbt",
+      "DuckDB",
+      "Data testing"
+    ],
+    "status": "completed",
+    "documentFile": null,
+    "githubUrl": "https://github.com/Haven-Pham/olist-delivery-analytics-dbt",
+    "demoUrl": "https://haven-pham.github.io/olist-delivery-analytics-dbt/",
+    "number": "06"
+  },
+  {
     "id": "protosetfit",
     "category": "ai",
     "icon": "✦",
@@ -93,7 +109,7 @@
     "documentFile": null,
     "githubUrl": "https://github.com/Haven-Pham/ProtoSetFit",
     "demoUrl": null,
-    "number": "06"
+    "number": "07"
   },
   {
     "id": "fastfit",
@@ -108,7 +124,7 @@
     "documentFile": null,
     "githubUrl": null,
     "demoUrl": null,
-    "number": "07"
+    "number": "08"
   },
   {
     "id": "ecommerce-cohort",
@@ -121,7 +137,7 @@
       "pytest · CI"
     ],
     "status": "completed",
-    "number": "08",
+    "number": "09",
     "documentFile": null,
     "githubUrl": "https://github.com/Haven-Pham/ecommerce-cohort-retention-analysis",
     "demoUrl": null
@@ -140,7 +156,7 @@
     "documentFile": null,
     "githubUrl": "https://github.com/Haven-Pham/product-funnel-conversion-analysis",
     "demoUrl": null,
-    "number": "09"
+    "number": "10"
   },
   {
     "id": "journey-sankey",
@@ -156,7 +172,7 @@
     "documentFile": null,
     "githubUrl": "https://github.com/Haven-Pham/customer-journey-sankey-analysis",
     "demoUrl": null,
-    "number": "10"
+    "number": "11"
   },
   {
     "id": "channel-pareto",
@@ -172,7 +188,7 @@
     "documentFile": null,
     "githubUrl": "https://github.com/Haven-Pham/marketing-channel-pareto-analysis",
     "demoUrl": null,
-    "number": "11"
+    "number": "12"
   },
   {
     "id": "abc-customers",
@@ -188,7 +204,7 @@
     "documentFile": null,
     "githubUrl": "https://github.com/Haven-Pham/abc-customer-profit-analysis",
     "demoUrl": null,
-    "number": "12"
+    "number": "13"
   },
   {
     "id": "rfm-segmentation",
@@ -204,7 +220,7 @@
     "documentFile": null,
     "githubUrl": "https://github.com/Haven-Pham/rfm-customer-segmentation",
     "demoUrl": null,
-    "number": "13"
+    "number": "14"
   },
   {
     "id": "market-basket",
@@ -220,7 +236,7 @@
     "documentFile": null,
     "githubUrl": "https://github.com/Haven-Pham/market-basket-analysis",
     "demoUrl": null,
-    "number": "14"
+    "number": "15"
   },
   {
     "id": "netflix-eda",
@@ -236,7 +252,7 @@
     "documentFile": null,
     "githubUrl": "https://github.com/Haven-Pham/netflix-content-eda",
     "demoUrl": null,
-    "number": "15"
+    "number": "16"
   },
   {
     "id": "otd-issue-tree",
@@ -252,7 +268,7 @@
     "documentFile": null,
     "githubUrl": "https://github.com/Haven-Pham/otd-decline-issue-tree",
     "demoUrl": null,
-    "number": "16"
+    "number": "17"
   },
   {
     "id": "sql",
@@ -264,7 +280,7 @@
       "Window Functions"
     ],
     "status": "starter",
-    "number": "17",
+    "number": "18",
     "documentFile": "projects/sql_supply_chain_starter.zip",
     "githubUrl": "https://github.com/Haven-Pham/Portfolio/tree/main/projects/sql_supply_chain_starter",
     "demoUrl": null

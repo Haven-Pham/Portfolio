@@ -144,13 +144,12 @@
         ]
       },
       {
-        "id": "transport-otif",
-        "title": "Transport OTIF Root-Cause Analysis (BharatLink Freight)",
-        "tools": "Python, statistics, Power BI",
+        "id": "olist-dbt",
+        "title": "Late-Delivery Analytics Warehouse (Olist orders)",
+        "tools": "SQL, dbt, DuckDB",
         "bullets": [
-          "Cleaned 3,582 GPS-tracked FTL bookings (mixed dates, 350+ messy locations, PII) to explain a 38.6% OTIF.",
-          "Showed through SLA feasibility tests and lane benchmarks that the flat 100-hour ETA made 0% of trips over 1,200 km feasible; tested drivers with χ² and Cramér’s V and flagged GPS anomalies.",
-          "Designed a 4-rule early-warning score (72% precision, 82% recall out-of-time) and a Power BI report with 27 DAX measures; with carrier re-tendering, the plan targets about +11.8 pp OTIF."
+          "Built a tested warehouse (21 dbt models, 67 tests) on about 100,000 real orders and answered the questions in SQL.",
+          "Late orders were 7% of reviewed orders but 33% of low reviews; a backtest rejected simply shortening promises."
         ]
       },
       {
@@ -375,13 +374,12 @@
         ]
       },
       {
-        "id": "transport-otif",
-        "title": "Phân tích nguyên nhân OTIF vận tải (BharatLink Freight)",
-        "tools": "Python, thống kê, Power BI",
+        "id": "olist-dbt",
+        "title": "Kho dữ liệu phân tích giao trễ (đơn hàng Olist)",
+        "tools": "SQL, dbt, DuckDB",
         "bullets": [
-          "Làm sạch 3.582 chuyến FTL có GPS (ngày lẫn định dạng, 350+ địa điểm sai lệch, PII) để giải thích OTIF 38,6%.",
-          "Kiểm tra khả thi SLA và benchmark tuyến cho thấy ETA cố định 100 giờ khiến 0% chuyến trên 1.200 km khả thi; kiểm định χ², Cramér’s V và phát hiện GPS bất thường.",
-          "Thiết kế điểm cảnh báo sớm 4 quy tắc (precision 72%, recall 82%) và báo cáo Power BI 27 DAX measure; kết hợp tái đấu thầu nhà xe hướng tới +11,8 điểm % OTIF."
+          "Xây kho dữ liệu có kiểm thử (21 model dbt, 67 test) trên khoảng 100.000 đơn hàng thật và phân tích bằng SQL.",
+          "Đơn trễ chiếm 7% số đơn có đánh giá nhưng 33% đánh giá xấu; backtest cho thấy không thể chỉ đơn giản rút ngắn ngày hẹn."
         ]
       },
       {
@@ -605,13 +603,12 @@
         ]
       },
       {
-        "id": "transport-otif",
-        "title": "運輸 OTIF 根因分析（BharatLink Freight）",
-        "tools": "Python、統計、Power BI",
+        "id": "olist-dbt",
+        "title": "延遲交貨分析資料倉儲（Olist 訂單）",
+        "tools": "SQL、dbt、DuckDB",
         "bullets": [
-          "清理 3,582 筆 GPS 追蹤整車訂單（日期格式混雜、350+ 筆地點不一致、移除個資），解釋 38.6% 的 OTIF。",
-          "以 SLA 可行性測試與路線基準證明固定 100 小時 ETA 使超過 1,200 公里的行程可行率為 0%；並以 χ²、Cramér’s V 檢定與 GPS 異常偵測。",
-          "設計 4 項規則的預警評分（precision 72%、recall 82%）與 27 個 DAX 量值的 Power BI 報表；搭配重新招標，目標提升約 11.8 個百分點。"
+          "以約 100,000 筆真實訂單建構經測試的資料倉儲（21 個 dbt 模型、67 項測試），並以 SQL 完成分析。",
+          "延遲訂單占有評價訂單的 7%，卻占低評價的 33%；回測顯示承諾交期無法直接縮短。"
         ]
       },
       {
@@ -835,13 +832,12 @@
         ]
       },
       {
-        "id": "transport-otif",
-        "title": "运输 OTIF 根因分析（BharatLink Freight）",
-        "tools": "Python、统计、Power BI",
+        "id": "olist-dbt",
+        "title": "延迟交货分析数据仓库（Olist 订单）",
+        "tools": "SQL、dbt、DuckDB",
         "bullets": [
-          "清洗 3,582 条 GPS 跟踪整车订单（日期格式混杂、350+ 条地点不一致、去除个人信息），解释 38.6% 的 OTIF。",
-          "通过 SLA 可行性测试与线路基准证明固定 100 小时 ETA 使超过 1,200 公里的行程可行率为 0%；并用 χ²、Cramér’s V 检验与 GPS 异常检测。",
-          "设计 4 条规则的预警评分（precision 72%、recall 82%）与 27 个 DAX 度量值的 Power BI 报表；结合重新招标，目标提升约 11.8 个百分点。"
+          "基于约 100,000 条真实订单构建经过测试的数据仓库（21 个 dbt 模型、67 项测试），并用 SQL 完成分析。",
+          "延迟订单占有评价订单的 7%，却占低评价的 33%；回测显示承诺交期无法直接缩短。"
         ]
       },
       {
